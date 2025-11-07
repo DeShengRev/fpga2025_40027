@@ -1,0 +1,12 @@
+{
+  "name": "isp_de",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "isp_de"
+  },
+  "template": "empty_hls_component"
+}

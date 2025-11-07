@@ -1,0 +1,69 @@
+-------------------------------------
+| Tool Version : Vivado v.2024.2
+| Date         : Tue Nov  4 15:48:47 2025
+| Host         : Win10-zsd
+| Design       : design_1
+| Device       : xczu2cg-sfvc784-1-I-
+-------------------------------------
+
+For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+
+***********************
+Running Pre-CRP Checker
+***********************
+Number of global clocks: 6
+	Number of BUFGCE: 4
+	Number of BUFGCE_HDIO: 0
+	Number of BUFG_CTRL: 0
+	Number of BUFGCE_DIV: 0
+	Number of BUFG_GT: 0
+	Number of BUFG_PS: 2
+	Number of BUFG_FABRIC: 0
+	Running suboptimal placement checker for 5 clocks (and their loads) which do not have the CLOCK_LOW_FANOUT property but have a fanout less than 2000...
+Pre-CRP Checker took 0 secs
+
+********************************
+Clock Net Route Info (CRP Input)
+********************************
+Clock 1: design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0
+	Clock source type: BUFG_PS
+	Clock source region: X0Y2
+	Clock regions with locked loads: X0Y0 X0Y2 
+	initial rect ((0, 0), (1, 2))
+
+Clock 2: design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG
+	Clock source type: BUFG_PS
+	Clock source region: X0Y2
+	Clock regions with locked loads: X1Y0 X1Y1 
+	initial rect ((0, 0), (1, 2))
+
+Clock 3: design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs
+	Clock source type: BUFGCE
+	Clock source region: X1Y0
+	Clock regions with locked loads: X1Y0 
+	initial rect ((0, 0), (1, 1))
+
+Clock 4: design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs
+	Clock source type: BUFGCE
+	Clock source region: X1Y1
+	Clock regions with locked loads: X1Y1 
+	initial rect ((0, 0), (1, 1))
+
+Clock 5: design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out
+	Clock source type: BUFGCE
+	Clock source region: X1Y0
+	initial rect ((1, 0), (1, 0))
+
+Clock 6: design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out
+	Clock source type: BUFGCE
+	Clock source region: X1Y1
+	initial rect ((1, 1), (1, 1))
+
+
+
+*****************
+User Constraints:
+*****************
+No user constraints found
+
+

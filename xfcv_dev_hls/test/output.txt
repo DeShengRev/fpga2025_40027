@@ -1,0 +1,5 @@
+	Number of lines to be stored = 18
+	Number of lines to be stored = 18
+
+finish
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2073600

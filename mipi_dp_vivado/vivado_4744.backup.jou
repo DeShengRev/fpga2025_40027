@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Oct  2 09:53:46 2025
+# Process ID: 4744
+# Current directory: E:/Temp/AXU2CGA/course_s2/27_an5641_mipi_dp/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13080 E:\Temp\AXU2CGA\course_s2\27_an5641_mipi_dp\vivado\mipi_dp.xpr
+# Log file: E:/Temp/AXU2CGA/course_s2/27_an5641_mipi_dp/vivado/vivado.log
+# Journal file: E:/Temp/AXU2CGA/course_s2/27_an5641_mipi_dp/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Temp/AXU2CGA/course_s2/27_an5641_mipi_dp/vivado/mipi_dp.xpr
+update_compile_order -fileset sources_1
+open_bd_design {E:/Temp/AXU2CGA/course_s2/27_an5641_mipi_dp/vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd}

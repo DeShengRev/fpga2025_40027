@@ -1,0 +1,48 @@
+<ENTRY>
+{
+ "thisFile": "E:/Dev\\QianSai\\xfcv_dev_hls\\stitcher\\stitcher\\stitcher.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/03/25 15:06:58",
+ "timestampMillis": "1762153618600",
+ "buildStep": {
+  "cmdId": "f31ce2c9-9f45-4201-8b0c-a2da0b70d1f0",
+  "name": "v++",
+  "logFile": "E:/Dev\\QianSai\\xfcv_dev_hls\\stitcher\\stitcher\\logs\\stitcher.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config E:\\Dev\\QianSai\\xfcv_dev_hls\\stitcher\\hls_config.cfg --work_dir stitcher ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "E:\\Dev\\QianSai\\xfcv_dev_hls\\stitcher\\hls_config.cfg",
+   "--work_dir",
+   "stitcher"
+  ],
+  "iniFiles": [
+   {
+    "path": "E:/Dev\\QianSai\\xfcv_dev_hls\\stitcher\\hls_config.cfg",
+    "content": "part=xczu2cg-sfvc784-1-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\ntb.cflags=-I E:/Dev/QianSai/Vitis_Libraries/vision/L1/include -I E:/Dev/QianSai/opencv4_4/build/install/include -I E:/Dev/QianSai/xfcv_dev_hls/source -I ./ -DSDSVHLS -std=c++14\nsim.ldflags=-L E:/Dev/QianSai/opencv4_4/build/install/x64/mingw/lib -lopencv_imgcodecs440 -lopencv_imgproc440 -lopencv_core440 -lopencv_highgui440 -lopencv_flann440 -lopencv_features2d440\nsyn.cflags=-I E:/Dev/QianSai/Vitis_Libraries/vision/L1/include -I E:/Dev/QianSai/opencv4_4/build/install/include -I E:/Dev/QianSai/xfcv_dev_hls/source -I ./ -DSDSVHLS -std=c++14\nsyn.csimflags=-I E:/Dev/QianSai/Vitis_Libraries/vision/L1/include -I E:/Dev/QianSai/opencv4_4/build/install/include -I E:/Dev/QianSai/xfcv_dev_hls/source -I ./ -DSDSVHLS -std=c++14\ncsim.code_analyzer=0\ncsim.clean=0\nsyn.top=isp_placeholder\ntb.file=E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/main.cpp\ntb.file=E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/stitch_tb.hpp\nsyn.file=E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/calc_seam.cpp\nsyn.file=E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/stitch.cpp\nsyn.file=E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/stitch.hpp\nsyn.file=E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/proj_align.cpp\nsyn.debug.enable=1"
+   }
+  ],
+  "cwd": "E:\\Dev\\QianSai\\xfcv_dev_hls\\stitcher"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/03/25 15:06:58",
+ "timestampMillis": "1762153618600",
+ "status": {
+  "cmdId": "f31ce2c9-9f45-4201-8b0c-a2da0b70d1f0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
