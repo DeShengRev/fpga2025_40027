@@ -28,3 +28,4 @@ build/
 *.cache/
 hls/
 *.log
+*.failed

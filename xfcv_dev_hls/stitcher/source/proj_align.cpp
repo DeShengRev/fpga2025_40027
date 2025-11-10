@@ -1,12 +1,11 @@
 
 
-#include "stitch.hpp"
+#include "proj_align.hpp"
 
 #define REMAP_WIN_ROWS1 10
 #define REMAP_WIN_ROWS2 10
-#define REMAP_INTERPOLATION_TYPE XF_INTERPOLATION_BILINEAR
+#define REMAP_INTERPOLATION_TYPE 
 
-typedef ap_uint<128> u128a;
 
 void proj_align(xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX> &img_in0,
                 xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX> &img_in1,
@@ -37,10 +36,10 @@ void proj_align(xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX> &img_in0,
     }
   }
 
-  xf::cv::remap<REMAP_WIN_ROWS1, REMAP_INTERPOLATION_TYPE>(img_in0, img_out0,
+  xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(img_in0, img_out0,
                                                            mapx0, mapy0);
 
-  xf::cv::remap<REMAP_WIN_ROWS1, REMAP_INTERPOLATION_TYPE>(img_in1, img_out1,
+  xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(img_in1, img_out1,
                                                            mapx1, mapy1);
   return;
 }

@@ -5,13 +5,19 @@ import largestinteriorrectangle as lir
 
 # 用于进行预对齐
 
-src_w, src_h = 1920, 1080
-bg_w, bg_h = 4200, 4630
-
-fx, fy = 696.6 * 1.5, 696.7 * 1.5
-cx, cy = 624.3 * 1.5, 355.9 * 1.5
+img_scale = 0.5
+src_w = int(1920 * img_scale)
+src_h = int(1080 * img_scale)
+bg_w = int(4320 * img_scale)
+bg_h = int(4530 * img_scale)
+fx = 696.6 * 1.5 * img_scale
+fy = 696.7 * 1.5 * img_scale
+cx = 696.7 * 1.5 * img_scale
+cy = 355.9 * 1.5 * img_scale
 k1, k2 = 0, 0
 p1, p2 = 0, 0
+exposure_gain = 0.6764233911767255
+
 
 np.set_printoptions(threshold=0xFFFFFFFF,linewidth=0xFFFFFFFF, suppress=True)
 
@@ -60,7 +66,7 @@ def create_sphere_proj_map(mask_undist):
     # 这一步计算的是从目标图像 (bg_w x bg_h) 到中间图像 (src_w x src_h) 的逆映射
 
     step1 = np.pi / bg_w
-    start1 = - np.pi / 2 + step1 / 2
+    start1 = - np.pi / 2 # + step1 / 2
     theta = np.linspace(start1, -start1, bg_w)
 
     step2 = np.pi / bg_h
@@ -82,10 +88,9 @@ def create_sphere_proj_map(mask_undist):
     map_x2 = fx * x_sph + cx # u 坐标
     map_y2 = fy * y_sph + cy # v 坐标
     
-    # 排除相机背后的点（与 sphere_proj.py 保持一致）
-    # 这里的 -1 是为了在 remap 时标记无效像素
-    map_x2[theta_grid > np.pi / 2] = 1e6
-    map_x2[theta_grid < -np.pi / 2] = 1e6
+    # 排除相机背后的点
+    # map_x2[theta_grid > np.pi / 2] = 1e6
+    # map_x2[theta_grid < -np.pi / 2] = 1e6
     
     map_x2 = map_x2.astype(np.float32)
     map_y2 = map_y2.astype(np.float32)
@@ -137,6 +142,7 @@ mapx_sph, mapy_sph, mask_undist_sph = create_sphere_proj_map(mask_undist) # 球�
 mapx_undist_sph = cv2.remap(mapx_undist, mapx_sph, mapy_sph, cv2.INTER_LINEAR)
 mapy_undist_sph = cv2.remap(mapy_undist, mapx_sph, mapy_sph, cv2.INTER_LINEAR)
 
+# sh("mask0", mask_undist_sph, 4)
 contours, _ = cv2.findContours(mask_undist_sph, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 assert len(contours) == 1, "多个轮廓"
 contour = contours[0]
@@ -156,15 +162,16 @@ mapy1_final = mapy_undist_sph[y:y+src_h, x:x+src_w]
 
 
 
-img1 = cv2.imread("./in/p1.jpg")
-img2 = cv2.imread("./in/p2.jpg")
+img1 = cv2.imread("./in/img0.png")
+img2 = cv2.imread("./in/img1.png")
 img1 = cv2.resize(img1, (src_w, src_h))
 img2 = cv2.resize(img2, (src_w, src_h))
+img2 = cv2.convertScaleAbs(img2 * exposure_gain)
 
 img1_sph = cv2.remap(img1, mapx1_final, mapy1_final,cv2.INTER_LINEAR)
 img2_sph = cv2.remap(img2, mapx1_final, mapy1_final,cv2.INTER_LINEAR)
 
-
+# sh("img1", img2_sph)
 
 kps1, des1 = calc_orb(img1_sph)
 kps2, des2 = calc_orb(img2_sph)
@@ -178,7 +185,9 @@ print(ts_mat[0, 2], ts_mat[1, 2])
 ts_mat[0, 2] = 0
 ts_mat[1, 2] = 0
 
-mask_af = cv2.warpAffine(mask_undist_sph, ts_mat, (bg_w, bg_h))[y:y+src_h, x:x+src_w]
+mask_af = cv2.warpAffine(mask_undist_sph, ts_mat, (bg_w, bg_h))
+# sh("mask2", mask_af,4)
+mask_af = mask_af[y:y+src_h, x:x+src_w]
 
 overlap_width = src_w - dx
 print("overlap: %d" % overlap_width)
@@ -192,14 +201,14 @@ ts_mat[1, 2] = - yt + dy
 
 mapx2_final = cv2.warpAffine(mapx_undist_sph, ts_mat, (src_w, src_h))
 mapy2_final = cv2.warpAffine(mapy_undist_sph, ts_mat, (src_w, src_h))
-mapx2_final[mask_af == 0] = -1
+# mapx2_final[mask_af == 0] = -1
 
-for i, line in enumerate(mapy2_final):
-    line[mask_af[i] == 0] = i
+# for i, line in enumerate(mapy2_final):
+#     line[mask_af[i] == 0] = i
     
     
-for line, i in enumerate(mapy1_final):
-    print(abs(line - i).astype(np.int32))
+# for line, i in enumerate(mapy1_final):
+#     print(abs(line - i).astype(np.int32))
 
 
 img2_sph = cv2.remap(img2, mapx2_final, mapy2_final, cv2.INTER_LINEAR)
@@ -207,17 +216,19 @@ img2_sph = cv2.remap(img2, mapx2_final, mapy2_final, cv2.INTER_LINEAR)
 
 # sh("img1_sph", img1_sph)
 # sh("img2_sph", img2_sph)
-cv2.imwrite("img1_sph.png", img1_sph)
-cv2.imwrite("img2_sph.png", img2_sph)
+cv2.imwrite("./out/img0.png", img1)
+cv2.imwrite("./out/img1.png", img2)
+cv2.imwrite("./out/img0_align.png", img1_sph)
+cv2.imwrite("./out/img1_align.png", img2_sph)
 
 
 
 overlap1 = cv2.cvtColor(img1_sph[ : , (-overlap_width - 1) : -1], cv2.COLOR_BGR2GRAY)
 overlap2 = cv2.cvtColor(img2_sph[ : , 0 : overlap_width], cv2.COLOR_BGR2GRAY)
+print(np.sum(overlap1) / np.sum(overlap2))
 
 # sh("overlap1", overlap1)
 # sh("overlap2", overlap2)
-cv2.waitKey(0)
 
 cost = absdiff(overlap1, overlap2)
 
@@ -227,7 +238,8 @@ mapxy[:, :, 0] = np.round(mapx1_final * (2 ** shift)).astype(np.int32)
 mapxy[:, :, 1] = np.round(mapy1_final * (2 ** shift)).astype(np.int32)
 mapxy[:, :, 2] = np.round(mapx2_final * (2 ** shift)).astype(np.int32)
 mapxy[:, :, 3] = np.round(mapy2_final * (2 ** shift)).astype(np.int32)
-mapxy.tofile("mapxy.bin")
+mapxy.tofile("./out/mapxy.bin")
 
-cv2.imwrite("cost.png", cost)
-
+cv2.imwrite("./out/cost.png", cost)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

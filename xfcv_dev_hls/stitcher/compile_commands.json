@@ -109,8 +109,8 @@
       "-DSDSVHLS",
       "-std=c++14",
       "-c",
-      "E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/main.cpp"
+      "E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/stitch_tb.cpp"
     ],
-    "file": "E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/main.cpp"
+    "file": "E:/Dev/QianSai/xfcv_dev_hls/stitcher/source/stitch_tb.cpp"
   }
 ]

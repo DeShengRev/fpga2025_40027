@@ -1,15 +1,21 @@
 
 #include "stitch.hpp"
-#include "common/xf_infra.hpp"
-#include "imgproc/xf_resize.hpp"
+#include "blend.hpp"
+#include "opencv2/stitching/detail/warpers.hpp"
+#include "source/share.h"
 
 void stitch_core(
     xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX> &img0,
     xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX> &img1,
     xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, OVERALL_WIDTH, NPPCX> &panorama,
-    ap_int<TRACK_AXI_WIDTH> *track) {
+    ap_int<TRACK_AXI_WIDTH> *track,
+    ap_uint<MAPXY_AXI_WIDTH> *mapxy) {
 
   static bool initialized = false;
+
+  xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX> img0_align(PROC_HEIGHT,
+                                                                   PROC_WIDTH),
+      img1_align(PROC_HEIGHT, PROC_WIDTH);
 
   xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, UNDERLAP_WIDTH, NPPCX> img0_underlap(
       PROC_HEIGHT, UNDERLAP_WIDTH),
@@ -36,6 +42,8 @@ void stitch_core(
   //   }
 
 #pragma HLS DATAFLOW
+
+    proj_align(img0, img1, img0_align, img1_align, mapxy);
   for (int y = 0; y < PROC_HEIGHT; ++y) {
     for (int x = 0; x < PROC_WIDTH; ++x) {
       int idx = y * PROC_WIDTH + x;
@@ -61,8 +69,8 @@ void stitch_core(
   calc_seam(cost, track, seam_path);
   generate_mask(seam_path, mask, 1);
 
-  pyramid_blend(img0_overlap, img1_overlap, mask, blending_overlap);
-  
+  simple_blend(img0_overlap, img1_overlap, mask, blending_overlap);
+
   for (int y = 0; y < PROC_HEIGHT; ++y) {
     for (int x = 0; x < OVERALL_WIDTH; ++x) {
 

@@ -1,6 +1,6 @@
 
 
-#include "stitch.hpp"
+#include "calc_seam.hpp"
 
 void calc_cost_map(
     xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, OVERLAP_WIDTH, NPPCX> &img0,
