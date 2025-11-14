@@ -1,0 +1,108 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 7 8 3",
+    "file": "v_demosaic.cpp",
+    "fileloc": 89,
+    "instructions": 33,
+    "name": "v_demosaic",
+    "total_instructions": 1933
+  },
+  "1": {
+    "basicblocks": 15,
+    "calls": "5 5",
+    "file": "v_demosaic.cpp",
+    "fileloc": 133,
+    "instructions": 102,
+    "loads": {
+      "L": 7
+    },
+    "name": "AXIvideo2MultiBayer",
+    "total_instructions": 124
+  },
+  "2": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 593,
+    "instructions": 345,
+    "loads": {
+      "L": 2
+    },
+    "name": "DebayerRatBorBatR",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 384
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 208,
+    "instructions": 61,
+    "name": "MultiPixStream2AXIvideo",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 103
+  },
+  "4": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 841,
+    "instructions": 355,
+    "loads": {
+      "L": 2
+    },
+    "name": "DebayerRandBatG",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 394
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 1,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "6": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 264,
+    "instructions": 667,
+    "loads": {
+      "G": 5,
+      "L": 4
+    },
+    "name": "DebayerG",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 691
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "6 2 4",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1060,
+    "instructions": 8,
+    "name": "Debayer",
+    "total_instructions": 1477
+  },
+  "8": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1077,
+    "instructions": 157,
+    "name": "ZipperRemoval",
+    "total_instructions": 196
+  }
+}

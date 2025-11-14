@@ -56,9 +56,10 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 set_param bd.open.in_stealth_mode 3
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xczu2cg-sfvc784-1-i
+create_project -in_memory -part xczu2cg-sfvc784-1-e
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -122,7 +123,6 @@ set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_150M_0/design_1_proc_sys_reset_150M_0.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_150M_0/design_1_proc_sys_reset_150M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/design_1_v_demosaic_0_2.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/design_1_v_demosaic_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0_board.xdc]
@@ -137,14 +137,13 @@ set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_12/bd_48ac_swn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_13/bd_48ac_sbn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_17/bd_48ac_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_18/bd_48ac_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_19/bd_48ac_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_20/bd_48ac_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_21/bd_48ac_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_22/bd_48ac_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_23/bd_48ac_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_24/bd_48ac_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_25/bd_48ac_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_18/bd_48ac_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_19/bd_48ac_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_20/bd_48ac_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_21/bd_48ac_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_22/bd_48ac_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_23/bd_48ac_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_24/bd_48ac_m00bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_1_0/design_1_v_demosaic_1_0.xdc]
@@ -154,9 +153,17 @@ set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/design_1_v_gamma_lut_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_1_0/design_1_v_gamma_lut_1_0.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_1_0/design_1_v_gamma_lut_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_isp_placeholder_0_1/constraints/isp_placeholder_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_stitcher_0_0/constraints/stitcher_ooc.xdc]
-set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_2_0/design_1_axis_subset_converter_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_1/design_1_ps8_0_axi_periph_imp_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_2/design_1_ps8_0_axi_periph_imp_auto_pc_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_3/design_1_ps8_0_axi_periph_imp_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_4/design_1_ps8_0_axi_periph_imp_auto_pc_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_5/design_1_ps8_0_axi_periph_imp_auto_pc_5_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_6/design_1_ps8_0_axi_periph_imp_auto_pc_6_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_7/design_1_ps8_0_axi_periph_imp_auto_pc_7_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -180,7 +187,7 @@ set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top design_1_wrapper -part xczu2cg-sfvc784-1-i
+synth_design -top design_1_wrapper -part xczu2cg-sfvc784-1-e
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

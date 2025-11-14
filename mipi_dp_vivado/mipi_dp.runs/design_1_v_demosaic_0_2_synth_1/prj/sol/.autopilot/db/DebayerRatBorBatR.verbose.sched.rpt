@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vitis HLS Report for 'DebayerRatBorBatR'
+================================================================
+* Date:           Thu Nov 13 19:38:02 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu2cg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.808 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+    |   min   |   max   |    min    |    max    | min |   max   |   Type  |
+    +---------+---------+-----------+-----------+-----+---------+---------+
+    |       11|  2086331|  73.337 ns|  13.910 ms|   11|  2086331|       no|
+    +---------+---------+-----------+-----------+-----+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+-----------+-----------+-----------+----------+----------+
+        |                    |  Latency (cycles) | Iteration |  Initiation Interval  |   Trip   |          |
+        |      Loop Name     |   min   |   max   |  Latency  |  achieved |   target  |   Count  | Pipelined|
+        +--------------------+---------+---------+-----------+-----------+-----------+----------+----------+
+        |- VITIS_LOOP_630_1  |       10|  2086330|  10 ~ 1930|          -|          -|  1 ~ 1081|        no|
+        +--------------------+---------+---------+-----------+-----------+-----------+----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.33>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%y = alloca i32 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 5 'alloca' 'y' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_0_0_09411390_lcssa1442_i = alloca i32 1"   --->   Operation 6 'alloca' 'p_0_0_09411390_lcssa1442_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_0_0_09401393_lcssa1444_i = alloca i32 1"   --->   Operation 7 'alloca' 'p_0_0_09401393_lcssa1444_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_0_0_09391396_lcssa1446_i = alloca i32 1"   --->   Operation 8 'alloca' 'p_0_0_09391396_lcssa1446_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_0_0_0941_21420_lcssa1454_i = alloca i32 1"   --->   Operation 9 'alloca' 'p_0_0_0941_21420_lcssa1454_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_0_0_0940_21423_lcssa1456_i = alloca i32 1"   --->   Operation 10 'alloca' 'p_0_0_0940_21423_lcssa1456_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_0_0_0939_21426_lcssa1458_i = alloca i32 1"   --->   Operation 11 'alloca' 'p_0_0_0939_21426_lcssa1458_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_0_0_0_0_09141487_lcssa1524_i = alloca i32 1"   --->   Operation 12 'alloca' 'p_0_0_0_0_09141487_lcssa1524_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_0_1_0_0_09151489_lcssa1526_i = alloca i32 1"   --->   Operation 13 'alloca' 'p_0_1_0_0_09151489_lcssa1526_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_0_2_0_0_09161491_lcssa1528_i = alloca i32 1"   --->   Operation 14 'alloca' 'p_0_2_0_0_09161491_lcssa1528_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_0_0_0941_114821494_lcssa1530_i = alloca i32 1"   --->   Operation 15 'alloca' 'p_0_0_0941_114821494_lcssa1530_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_0_0_0940_114841496_lcssa1532_i = alloca i32 1"   --->   Operation 16 'alloca' 'p_0_0_0940_114841496_lcssa1532_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_0_0_0939_114861498_lcssa1534_i = alloca i32 1"   --->   Operation 17 'alloca' 'p_0_0_0939_114861498_lcssa1534_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_0_0_0_0_09081499_lcssa1536_i = alloca i32 1"   --->   Operation 18 'alloca' 'p_0_0_0_0_09081499_lcssa1536_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_0_1_0_0_09091501_lcssa1538_i = alloca i32 1"   --->   Operation 19 'alloca' 'p_0_1_0_0_09091501_lcssa1538_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%p_0_2_0_0_09101503_lcssa1540_i = alloca i32 1"   --->   Operation 20 'alloca' 'p_0_2_0_0_09101503_lcssa1540_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bayerPhase_val11, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] ( I:2.16ns O:2.16ns )   --->   "%bayerPhase_val11_read = read i16 @_ssdm_op_Read.ap_fifo.i16P0A, i16 %bayerPhase_val11"   --->   Operation 22 'read' 'bayerPhase_val11_read' <Predicate = true> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bayerPhase_val11_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] ( I:2.16ns O:2.16ns )   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i16P0A, i16 %bayerPhase_val11_c, i16 %bayerPhase_val11_read"   --->   Operation 24 'write' 'write_ln0' <Predicate = true> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %width_val8, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] ( I:2.16ns O:2.16ns )   --->   "%width_val8_read = read i11 @_ssdm_op_Read.ap_fifo.i11P0A, i11 %width_val8"   --->   Operation 26 'read' 'width_val8_read' <Predicate = true> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %width_val8_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] ( I:2.16ns O:2.16ns )   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i11P0A, i11 %width_val8_c, i11 %width_val8_read"   --->   Operation 28 'write' 'write_ln0' <Predicate = true> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %height_val4, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] ( I:2.16ns O:2.16ns )   --->   "%height_val4_read = read i11 @_ssdm_op_Read.ap_fifo.i11P0A, i11 %height_val4"   --->   Operation 30 'read' 'height_val4_read' <Predicate = true> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %height_val4_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] ( I:2.16ns O:2.16ns )   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i11P0A, i11 %height_val4_c, i11 %height_val4_read"   --->   Operation 32 'write' 'write_ln0' <Predicate = true> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%x_phase = trunc i16 %bayerPhase_val11_read"   --->   Operation 33 'trunc' 'x_phase' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgRB, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgG, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.94ns)   --->   "%loopHeight = add i11 %height_val4_read, i11 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:606->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 36 'add' 'loopHeight' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.94ns)   --->   "%loopWidth = add i11 %width_val8_read, i11 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:607->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 37 'add' 'loopWidth' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i15 @_ssdm_op_PartSelect.i15.i16.i32.i32, i16 %bayerPhase_val11_read, i32 1, i32 15" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:622->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 38 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.48ns)   --->   "%store_ln603 = store i11 0, i11 %y" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 39 'store' 'store_ln603' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln630 = br void %VITIS_LOOP_633_2.i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 40 'br' 'br_ln630' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.43>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%y_3 = load i11 %y" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 41 'load' 'y_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.94ns)   --->   "%icmp_ln630 = icmp_eq  i11 %y_3, i11 %loopHeight" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 42 'icmp' 'icmp_ln630' <Predicate = true> <Delay = 0.94> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 1081, i64 0"   --->   Operation 43 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.94ns)   --->   "%y_4 = add i11 %y_3, i11 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 44 'add' 'y_4' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln630 = br i1 %icmp_ln630, void %VITIS_LOOP_633_2.split.i, void %DebayerRatBorBatR.exit" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 45 'br' 'br_ln630' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%p_0_0_09411390_lcssa1442_i_load = load i10 %p_0_0_09411390_lcssa1442_i"   --->   Operation 46 'load' 'p_0_0_09411390_lcssa1442_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%p_0_0_09401393_lcssa1444_i_load = load i10 %p_0_0_09401393_lcssa1444_i"   --->   Operation 47 'load' 'p_0_0_09401393_lcssa1444_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%p_0_0_09391396_lcssa1446_i_load = load i10 %p_0_0_09391396_lcssa1446_i"   --->   Operation 48 'load' 'p_0_0_09391396_lcssa1446_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%p_0_0_0941_21420_lcssa1454_i_load = load i10 %p_0_0_0941_21420_lcssa1454_i"   --->   Operation 49 'load' 'p_0_0_0941_21420_lcssa1454_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%p_0_0_0940_21423_lcssa1456_i_load = load i10 %p_0_0_0940_21423_lcssa1456_i"   --->   Operation 50 'load' 'p_0_0_0940_21423_lcssa1456_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%p_0_0_0939_21426_lcssa1458_i_load = load i10 %p_0_0_0939_21426_lcssa1458_i"   --->   Operation 51 'load' 'p_0_0_0939_21426_lcssa1458_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%p_0_0_0_0_09141487_lcssa1524_i_load = load i10 %p_0_0_0_0_09141487_lcssa1524_i"   --->   Operation 52 'load' 'p_0_0_0_0_09141487_lcssa1524_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%p_0_1_0_0_09151489_lcssa1526_i_load = load i10 %p_0_1_0_0_09151489_lcssa1526_i"   --->   Operation 53 'load' 'p_0_1_0_0_09151489_lcssa1526_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%p_0_2_0_0_09161491_lcssa1528_i_load = load i10 %p_0_2_0_0_09161491_lcssa1528_i"   --->   Operation 54 'load' 'p_0_2_0_0_09161491_lcssa1528_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%p_0_0_0941_114821494_lcssa1530_i_load = load i10 %p_0_0_0941_114821494_lcssa1530_i"   --->   Operation 55 'load' 'p_0_0_0941_114821494_lcssa1530_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%p_0_0_0940_114841496_lcssa1532_i_load = load i10 %p_0_0_0940_114841496_lcssa1532_i"   --->   Operation 56 'load' 'p_0_0_0940_114841496_lcssa1532_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%p_0_0_0939_114861498_lcssa1534_i_load = load i10 %p_0_0_0939_114861498_lcssa1534_i"   --->   Operation 57 'load' 'p_0_0_0939_114861498_lcssa1534_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%p_0_0_0_0_09081499_lcssa1536_i_load = load i10 %p_0_0_0_0_09081499_lcssa1536_i"   --->   Operation 58 'load' 'p_0_0_0_0_09081499_lcssa1536_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%p_0_1_0_0_09091501_lcssa1538_i_load = load i10 %p_0_1_0_0_09091501_lcssa1538_i"   --->   Operation 59 'load' 'p_0_1_0_0_09091501_lcssa1538_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%p_0_2_0_0_09101503_lcssa1540_i_load = load i10 %p_0_2_0_0_09101503_lcssa1540_i"   --->   Operation 60 'load' 'p_0_2_0_0_09101503_lcssa1540_i_load' <Predicate = (!icmp_ln630)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.48ns)   --->   "%store_ln603 = store i11 %y_4, i11 %y" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 61 'store' 'store_ln603' <Predicate = (!icmp_ln630)> <Delay = 0.48>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%ret_ln1072 = ret" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 62 'ret' 'ret_ln1072' <Predicate = (icmp_ln630)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.18>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%trunc_ln630 = trunc i11 %y_3" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 63 'trunc' 'trunc_ln630' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.33ns)   --->   "%and310_i = xor i1 %trunc_ln630, i1 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 64 'xor' 'and310_i' <Predicate = true> <Delay = 0.33> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%and310_cast_i = zext i1 %and310_i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 65 'zext' 'and310_cast_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.42ns)   --->   "%xor_i = xor i15 %trunc_ln, i15 %and310_cast_i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:622->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 66 'xor' 'xor_i' <Predicate = true> <Delay = 0.42> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 67 [2/2] (1.43ns)   --->   "%call_ln607 = call void @DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2, i10 %p_0_2_0_0_09101503_lcssa1540_i_load, i10 %p_0_1_0_0_09091501_lcssa1538_i_load, i10 %p_0_0_0_0_09081499_lcssa1536_i_load, i10 %p_0_0_0939_114861498_lcssa1534_i_load, i10 %p_0_0_0940_114841496_lcssa1532_i_load, i10 %p_0_0_0941_114821494_lcssa1530_i_load, i10 %p_0_2_0_0_09161491_lcssa1528_i_load, i10 %p_0_1_0_0_09151489_lcssa1526_i_load, i10 %p_0_0_0_0_09141487_lcssa1524_i_load, i10 %p_0_0_0939_21426_lcssa1458_i_load, i10 %p_0_0_0940_21423_lcssa1456_i_load, i10 %p_0_0_0941_21420_lcssa1454_i_load, i10 %p_0_0_09391396_lcssa1446_i_load, i10 %p_0_0_09401393_lcssa1444_i_load, i10 %p_0_0_09411390_lcssa1442_i_load, i11 %loopWidth, i1 %x_phase, i15 %xor_i, i11 %width_val8_read, i30 %imgG, i30 %imgRB, i1 %and310_i, i15 %trunc_ln, i1 %trunc_ln630, i11 %y_3, i11 %height_val4_read, i10 %p_0_2_0_0_09101503_lcssa1540_i, i10 %p_0_1_0_0_09091501_lcssa1538_i, i10 %p_0_0_0_0_09081499_lcssa1536_i, i10 %p_0_0_0939_114861498_lcssa1534_i, i10 %p_0_0_0940_114841496_lcssa1532_i, i10 %p_0_0_0941_114821494_lcssa1530_i, i10 %p_0_2_0_0_09161491_lcssa1528_i, i10 %p_0_1_0_0_09151489_lcssa1526_i, i10 %p_0_0_0_0_09141487_lcssa1524_i, i10 %p_0_0_0939_21426_lcssa1458_i, i10 %p_0_0_0940_21423_lcssa1456_i, i10 %p_0_0_0941_21420_lcssa1454_i, i10 %p_0_0_09391396_lcssa1446_i, i10 %p_0_0_09401393_lcssa1444_i, i10 %p_0_0_09411390_lcssa1442_i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:607->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 67 'call' 'call_ln607' <Predicate = true> <Delay = 1.43> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%specloopname_ln630 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 68 'specloopname' 'specloopname_ln630' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/2] (0.00ns)   --->   "%call_ln607 = call void @DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2, i10 %p_0_2_0_0_09101503_lcssa1540_i_load, i10 %p_0_1_0_0_09091501_lcssa1538_i_load, i10 %p_0_0_0_0_09081499_lcssa1536_i_load, i10 %p_0_0_0939_114861498_lcssa1534_i_load, i10 %p_0_0_0940_114841496_lcssa1532_i_load, i10 %p_0_0_0941_114821494_lcssa1530_i_load, i10 %p_0_2_0_0_09161491_lcssa1528_i_load, i10 %p_0_1_0_0_09151489_lcssa1526_i_load, i10 %p_0_0_0_0_09141487_lcssa1524_i_load, i10 %p_0_0_0939_21426_lcssa1458_i_load, i10 %p_0_0_0940_21423_lcssa1456_i_load, i10 %p_0_0_0941_21420_lcssa1454_i_load, i10 %p_0_0_09391396_lcssa1446_i_load, i10 %p_0_0_09401393_lcssa1444_i_load, i10 %p_0_0_09411390_lcssa1442_i_load, i11 %loopWidth, i1 %x_phase, i15 %xor_i, i11 %width_val8_read, i30 %imgG, i30 %imgRB, i1 %and310_i, i15 %trunc_ln, i1 %trunc_ln630, i11 %y_3, i11 %height_val4_read, i10 %p_0_2_0_0_09101503_lcssa1540_i, i10 %p_0_1_0_0_09091501_lcssa1538_i, i10 %p_0_0_0_0_09081499_lcssa1536_i, i10 %p_0_0_0939_114861498_lcssa1534_i, i10 %p_0_0_0940_114841496_lcssa1532_i, i10 %p_0_0_0941_114821494_lcssa1530_i, i10 %p_0_2_0_0_09161491_lcssa1528_i, i10 %p_0_1_0_0_09151489_lcssa1526_i, i10 %p_0_0_0_0_09141487_lcssa1524_i, i10 %p_0_0_0939_21426_lcssa1458_i, i10 %p_0_0_0940_21423_lcssa1456_i, i10 %p_0_0_0941_21420_lcssa1454_i, i10 %p_0_0_09391396_lcssa1446_i, i10 %p_0_0_09401393_lcssa1444_i, i10 %p_0_0_09411390_lcssa1442_i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:607->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 69 'call' 'call_ln607' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln630 = br void %VITIS_LOOP_633_2.i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 70 'br' 'br_ln630' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.667ns, clock uncertainty: 1.800ns.
+
+ <State 1>: 4.334ns
+The critical path consists of the following:
+	fifo read operation ('bayerPhase_val11_read') on port 'bayerPhase_val11' [26]  (2.167 ns)
+	fifo write operation ('write_ln0') on port 'bayerPhase_val11_c' [28]  (2.167 ns)
+
+ <State 2>: 1.437ns
+The critical path consists of the following:
+	'load' operation 11 bit ('y', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072) on local variable 'y', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072 [46]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln630', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072) [47]  (0.948 ns)
+	'store' operation 0 bit ('store_ln603', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072) of variable 'y', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072 on local variable 'y', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072 [73]  (0.489 ns)
+
+ <State 3>: 2.189ns
+The critical path consists of the following:
+	'xor' operation 1 bit ('and310_i', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:630->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072) [69]  (0.331 ns)
+	'xor' operation 15 bit ('xor_i', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:622->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072) [71]  (0.421 ns)
+	'call' operation 0 bit ('call_ln607', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:607->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072) to 'DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2' [72]  (1.437 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

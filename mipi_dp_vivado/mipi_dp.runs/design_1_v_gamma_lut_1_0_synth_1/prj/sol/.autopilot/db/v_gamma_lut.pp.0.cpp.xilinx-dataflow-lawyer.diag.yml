@@ -1,0 +1,12 @@
+---
+MainSourceFile:  'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '138:9'
+    FilePath:        'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp'
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '138:9'
+    FilePath:        'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp'
+...

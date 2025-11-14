@@ -1,0 +1,39 @@
+<dict>
+  <key>main-file</key>
+  <string>E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp</string>
+      <key>line</key>
+      <integer>102</integer>
+      <key>column</key>
+      <integer>23</integer>
+      <key>message</key>
+      <string>&apos;Ap_stable&apos; in &apos;#pragma HLS INTERFACE&apos; is deprecated, use &apos;Stable Pragma&apos; instead</string>
+      <key>ID</key>
+      <integer>5540</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp</string>
+      <key>line</key>
+      <integer>104</integer>
+      <key>column</key>
+      <integer>23</integer>
+      <key>message</key>
+      <string>&apos;Ap_stable&apos; in &apos;#pragma HLS INTERFACE&apos; is deprecated, use &apos;Stable Pragma&apos; instead</string>
+      <key>ID</key>
+      <integer>5540</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>

@@ -1,0 +1,1248 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_demosaic'
+================================================================
+* Date:           Thu Nov 13 19:32:16 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu2cg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.835 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------+-------------------------+---------+------------+-----------+------------+-----+------------+----------+
+        |                                    |                         |   Latency (cycles)   |   Latency (absolute)   |     Interval     | Pipeline |
+        |              Instance              |          Module         |   min   |     max    |    min    |     max    | min |     max    |   Type   |
+        +------------------------------------+-------------------------+---------+------------+-----------+------------+-----+------------+----------+
+        |call_ln114_entry_proc_fu_152        |entry_proc               |        0|           0|       0 ns|        0 ns|    0|           0|        no|
+        |grp_AXIvideo2MultiBayer_fu_159      |AXIvideo2MultiBayer      |        ?|           ?|          ?|           ?|    ?|           ?|        no|
+        |grp_Debayer_fu_182                  |Debayer                  |    65581|  4296212499|   0.437 ms|  28.643 sec|   40|  4296212500|  dataflow|
+        |grp_ZipperRemoval_fu_195            |ZipperRemoval            |        1|  4295360506|   6.667 ns|  28.637 sec|    1|  4295360506|        no|
+        |grp_MultiPixStream2AXIvideo_fu_203  |MultiPixStream2AXIvideo  |        2|     2079002|  13.334 ns|   13.861 ms|    2|     2079002|        no|
+        +------------------------------------+-------------------------+---------+------------+-----------+------------+-----+------------+----------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.16>
+ST_1 : Operation 11 [1/1] (1.00ns)   --->   "%bayer_phase_read = read i16 @_ssdm_op_Read.s_axilite.i16, i16 %bayer_phase" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 11 'read' 'bayer_phase_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 120 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%bayer_phase_c = alloca i64 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 12 'alloca' 'bayer_phase_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 3> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%imgBayer = alloca i64 1"   --->   Operation 13 'alloca' 'imgBayer' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 10> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%imgRgb = alloca i64 1"   --->   Operation 14 'alloca' 'imgRgb' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%imgUnzip = alloca i64 1"   --->   Operation 15 'alloca' 'imgUnzip' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_1 : Operation 16 [1/1] (2.16ns)   --->   "%call_ln114 = call void @entry_proc, i16 %bayer_phase_read, i16 %bayer_phase_c" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 16 'call' 'call_ln114' <Predicate = true> <Delay = 2.16> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 1.00>
+ST_2 : Operation 17 [1/1] (1.00ns)   --->   "%height_read = read i16 @_ssdm_op_Read.ap_stable.i16, i16 %height" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 17 'read' 'height_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 120 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 18 [1/1] (1.00ns)   --->   "%width_read = read i16 @_ssdm_op_Read.ap_stable.i16, i16 %width" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 18 'read' 'width_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 120 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 19 [2/2] (0.00ns)   --->   "%call_ln115 = call void @AXIvideo2MultiBayer, i16 %s_axis_video_V_data_V, i2 %s_axis_video_V_keep_V, i2 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i10 %imgBayer, i16 %height_read, i16 %width_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:115]   --->   Operation 19 'call' 'call_ln115' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.94>
+ST_3 : Operation 20 [1/2] (0.94ns)   --->   "%call_ln115 = call void @AXIvideo2MultiBayer, i16 %s_axis_video_V_data_V, i2 %s_axis_video_V_keep_V, i2 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, i10 %imgBayer, i16 %height_read, i16 %width_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:115]   --->   Operation 20 'call' 'call_ln115' <Predicate = true> <Delay = 0.94> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 2.16>
+ST_4 : Operation 21 [2/2] (2.16ns)   --->   "%call_ln116 = call void @Debayer, i10 %imgBayer, i30 %imgRgb, i16 %height_read, i16 %width_read, i16 %bayer_phase_c, i10 %DIV1_TABLE, i18 %DIV2_TABLE" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:116]   --->   Operation 21 'call' 'call_ln116' <Predicate = true> <Delay = 2.16> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 22 [1/2] (0.00ns)   --->   "%call_ln116 = call void @Debayer, i10 %imgBayer, i30 %imgRgb, i16 %height_read, i16 %width_read, i16 %bayer_phase_c, i10 %DIV1_TABLE, i18 %DIV2_TABLE" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:116]   --->   Operation 22 'call' 'call_ln116' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 1.01>
+ST_6 : Operation 23 [2/2] (1.01ns)   --->   "%call_ln118 = call void @ZipperRemoval, i30 %imgRgb, i30 %imgUnzip, i16 %height_read, i16 %width_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:118]   --->   Operation 23 'call' 'call_ln118' <Predicate = true> <Delay = 1.01> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 1.01>
+ST_7 : Operation 24 [1/2] (1.01ns)   --->   "%call_ln118 = call void @ZipperRemoval, i30 %imgRgb, i30 %imgUnzip, i16 %height_read, i16 %width_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:118]   --->   Operation 24 'call' 'call_ln118' <Predicate = true> <Delay = 1.01> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 0.96>
+ST_8 : Operation 25 [2/2] (0.96ns)   --->   "%call_ln119 = call void @MultiPixStream2AXIvideo, i30 %imgUnzip, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i16 %height_read, i16 %width_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:119]   --->   Operation 25 'call' 'call_ln119' <Predicate = true> <Delay = 0.96> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 26 [1/2] (0.00ns)   --->   "%call_ln119 = call void @MultiPixStream2AXIvideo, i30 %imgUnzip, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, i16 %height_read, i16 %width_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:119]   --->   Operation 26 'call' 'call_ln119' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 27 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @bayer_phase_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i16 %bayer_phase_c, i16 %bayer_phase_c" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 27 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln114 = specinterface void @_ssdm_op_SpecInterface, i16 %bayer_phase_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 28 'specinterface' 'specinterface_ln114' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 29 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln114 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_14" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:114]   --->   Operation 29 'specdataflowpipeline' 'specdataflowpipeline_ln114' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 30 [1/1] (0.00ns)   --->   "%spectopmodule_ln89 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_24" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:89]   --->   Operation 30 'spectopmodule' 'spectopmodule_ln89' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %width"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_11, i32 4294967295, i32 4294967295, void @empty_12, i32 0, i32 0, void @empty_13, void @empty_9, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %width, void @empty_15, i32 4294967295, i32 4294967295, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 34 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %height"   --->   Operation 34 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_11, i32 4294967295, i32 4294967295, void @empty_12, i32 0, i32 0, void @empty_13, void @empty_16, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %height, void @empty_15, i32 4294967295, i32 4294967295, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 37 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %bayer_phase"   --->   Operation 37 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bayer_phase, void @empty_11, i32 4294967295, i32 4294967295, void @empty_12, i32 0, i32 0, void @empty_13, void @empty_17, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bayer_phase, void @empty_3, i32 4294967295, i32 4294967295, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %s_axis_video_V_data_V, i2 %s_axis_video_V_keep_V, i2 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, void @empty_19, i32 1, i32 1, void @empty_12, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 41 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %s_axis_video_V_data_V"   --->   Operation 41 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 42 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %s_axis_video_V_keep_V"   --->   Operation 42 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 43 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i2 %s_axis_video_V_strb_V"   --->   Operation 43 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_user_V"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 45 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_last_V"   --->   Operation 45 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 46 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_id_V"   --->   Operation 46 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 47 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %s_axis_video_V_dest_V"   --->   Operation 47 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 48 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, void @empty_19, i32 1, i32 1, void @empty_12, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 48 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %m_axis_video_V_data_V"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %m_axis_video_V_keep_V"   --->   Operation 50 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %m_axis_video_V_strb_V"   --->   Operation 51 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %m_axis_video_V_user_V"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %m_axis_video_V_last_V"   --->   Operation 53 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %m_axis_video_V_id_V"   --->   Operation 54 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %m_axis_video_V_dest_V"   --->   Operation 55 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_11, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_13, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 57 [1/1] (0.00ns)   --->   "%empty_59 = specchannel i32 @_ssdm_op_SpecChannel, void @imgBayer_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i10 %imgBayer, i10 %imgBayer"   --->   Operation 57 'specchannel' 'empty_59' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %imgBayer, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 59 [1/1] (0.00ns)   --->   "%empty_60 = specchannel i32 @_ssdm_op_SpecChannel, void @imgRgb_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i30 %imgRgb, i30 %imgRgb"   --->   Operation 59 'specchannel' 'empty_60' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 60 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgRgb, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 60 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 61 [1/1] (0.00ns)   --->   "%empty_61 = specchannel i32 @_ssdm_op_SpecChannel, void @imgUnzip_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i30 %imgUnzip, i30 %imgUnzip"   --->   Operation 61 'specchannel' 'empty_61' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgUnzip, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 63 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln123 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %m_axis_video_V_data_V, i4 %m_axis_video_V_keep_V, i4 %m_axis_video_V_strb_V, i1 %m_axis_video_V_user_V, i1 %m_axis_video_V_last_V, i1 %m_axis_video_V_id_V, i1 %m_axis_video_V_dest_V, void @empty_22" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:123]   --->   Operation 63 'specaxissidechannel' 'specaxissidechannel_ln123' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 64 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln123 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %s_axis_video_V_data_V, i2 %s_axis_video_V_keep_V, i2 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, void @empty_23" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:123]   --->   Operation 64 'specaxissidechannel' 'specaxissidechannel_ln123' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 65 [1/1] (0.00ns)   --->   "%ret_ln123 = ret" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:123]   --->   Operation 65 'ret' 'ret_ln123' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ width]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_stable:ce=0
+Port [ height]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_stable:ce=0
+Port [ bayer_phase]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ s_axis_video_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_video_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_video_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_video_V_user_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_video_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_video_V_id_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ s_axis_video_V_dest_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_video_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_video_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_video_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_video_V_user_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_video_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_video_V_id_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ m_axis_video_V_dest_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ DIV1_TABLE]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ DIV2_TABLE]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+bayer_phase_read           (read                ) [ 00000000000]
+bayer_phase_c              (alloca              ) [ 01111111111]
+imgBayer                   (alloca              ) [ 00111111111]
+imgRgb                     (alloca              ) [ 00111111111]
+imgUnzip                   (alloca              ) [ 00111111111]
+call_ln114                 (call                ) [ 00000000000]
+height_read                (read                ) [ 00011111110]
+width_read                 (read                ) [ 00011111110]
+call_ln115                 (call                ) [ 00000000000]
+call_ln116                 (call                ) [ 00000000000]
+call_ln118                 (call                ) [ 00000000000]
+call_ln119                 (call                ) [ 00000000000]
+empty                      (specchannel         ) [ 00000000000]
+specinterface_ln114        (specinterface       ) [ 00000000000]
+specdataflowpipeline_ln114 (specdataflowpipeline) [ 00000000000]
+spectopmodule_ln89         (spectopmodule       ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specbitsmap_ln0            (specbitsmap         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+empty_59                   (specchannel         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+empty_60                   (specchannel         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+empty_61                   (specchannel         ) [ 00000000000]
+specinterface_ln0          (specinterface       ) [ 00000000000]
+specaxissidechannel_ln123  (specaxissidechannel ) [ 00000000000]
+specaxissidechannel_ln123  (specaxissidechannel ) [ 00000000000]
+ret_ln123                  (ret                 ) [ 00000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="width">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="width"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="height">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="height"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="bayer_phase">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bayer_phase"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="s_axis_video_V_data_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_video_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="s_axis_video_V_keep_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_video_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="s_axis_video_V_strb_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_video_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="s_axis_video_V_user_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_video_V_user_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="s_axis_video_V_last_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_video_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="s_axis_video_V_id_V">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_video_V_id_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="s_axis_video_V_dest_V">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="s_axis_video_V_dest_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="m_axis_video_V_data_V">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_video_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="m_axis_video_V_keep_V">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_video_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="m_axis_video_V_strb_V">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_video_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="m_axis_video_V_user_V">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_video_V_user_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="m_axis_video_V_last_V">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_video_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="m_axis_video_V_id_V">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_video_V_id_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="m_axis_video_V_dest_V">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="m_axis_video_V_dest_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="DIV1_TABLE">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DIV1_TABLE"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="DIV2_TABLE">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DIV2_TABLE"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.s_axilite.i16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="entry_proc"/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_stable.i16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="AXIvideo2MultiBayer"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Debayer"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ZipperRemoval"/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="MultiPixStream2AXIvideo"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="bayer_phase_c_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1001" name="const_72">
+<pin_list>
+<pin id="73" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="74" class="1001" name="const_74">
+<pin_list>
+<pin id="75" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="76" class="1001" name="const_76">
+<pin_list>
+<pin id="77" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecDataflowPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="78" class="1001" name="const_78">
+<pin_list>
+<pin id="79" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="80" class="1001" name="const_80">
+<pin_list>
+<pin id="81" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="82" class="1001" name="const_82">
+<pin_list>
+<pin id="83" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_24"/></StgValue>
+</bind>
+</comp>
+
+<comp id="84" class="1001" name="const_84">
+<pin_list>
+<pin id="85" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="86" class="1001" name="const_86">
+<pin_list>
+<pin id="87" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_11"/></StgValue>
+</bind>
+</comp>
+
+<comp id="88" class="1001" name="const_88">
+<pin_list>
+<pin id="89" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_12"/></StgValue>
+</bind>
+</comp>
+
+<comp id="90" class="1001" name="const_90">
+<pin_list>
+<pin id="91" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_13"/></StgValue>
+</bind>
+</comp>
+
+<comp id="92" class="1001" name="const_92">
+<pin_list>
+<pin id="93" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_9"/></StgValue>
+</bind>
+</comp>
+
+<comp id="94" class="1001" name="const_94">
+<pin_list>
+<pin id="95" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_15"/></StgValue>
+</bind>
+</comp>
+
+<comp id="96" class="1001" name="const_96">
+<pin_list>
+<pin id="97" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_16"/></StgValue>
+</bind>
+</comp>
+
+<comp id="98" class="1001" name="const_98">
+<pin_list>
+<pin id="99" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_17"/></StgValue>
+</bind>
+</comp>
+
+<comp id="100" class="1001" name="const_100">
+<pin_list>
+<pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="102" class="1001" name="const_102">
+<pin_list>
+<pin id="103" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_19"/></StgValue>
+</bind>
+</comp>
+
+<comp id="104" class="1001" name="const_104">
+<pin_list>
+<pin id="105" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="imgBayer_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="106" class="1001" name="const_106">
+<pin_list>
+<pin id="107" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_20"/></StgValue>
+</bind>
+</comp>
+
+<comp id="108" class="1001" name="const_108">
+<pin_list>
+<pin id="109" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="imgRgb_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="110" class="1001" name="const_110">
+<pin_list>
+<pin id="111" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="imgUnzip_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="112" class="1001" name="const_112">
+<pin_list>
+<pin id="113" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecAXISSideChannel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="114" class="1001" name="const_114">
+<pin_list>
+<pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_22"/></StgValue>
+</bind>
+</comp>
+
+<comp id="116" class="1001" name="const_116">
+<pin_list>
+<pin id="117" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_23"/></StgValue>
+</bind>
+</comp>
+
+<comp id="118" class="1004" name="bayer_phase_c_fu_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="1" slack="0"/>
+<pin id="120" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="bayer_phase_c/1 "/>
+</bind>
+</comp>
+
+<comp id="122" class="1004" name="imgBayer_fu_122">
+<pin_list>
+<pin id="123" dir="0" index="0" bw="1" slack="0"/>
+<pin id="124" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="imgBayer/1 "/>
+</bind>
+</comp>
+
+<comp id="126" class="1004" name="imgRgb_fu_126">
+<pin_list>
+<pin id="127" dir="0" index="0" bw="1" slack="0"/>
+<pin id="128" dir="1" index="1" bw="30" slack="3"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="imgRgb/1 "/>
+</bind>
+</comp>
+
+<comp id="130" class="1004" name="imgUnzip_fu_130">
+<pin_list>
+<pin id="131" dir="0" index="0" bw="1" slack="0"/>
+<pin id="132" dir="1" index="1" bw="30" slack="5"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="imgUnzip/1 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="bayer_phase_read_read_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="16" slack="0"/>
+<pin id="136" dir="0" index="1" bw="16" slack="0"/>
+<pin id="137" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="bayer_phase_read/1 "/>
+</bind>
+</comp>
+
+<comp id="140" class="1004" name="height_read_read_fu_140">
+<pin_list>
+<pin id="141" dir="0" index="0" bw="16" slack="0"/>
+<pin id="142" dir="0" index="1" bw="16" slack="0"/>
+<pin id="143" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="height_read/2 "/>
+</bind>
+</comp>
+
+<comp id="146" class="1004" name="width_read_read_fu_146">
+<pin_list>
+<pin id="147" dir="0" index="0" bw="16" slack="0"/>
+<pin id="148" dir="0" index="1" bw="16" slack="0"/>
+<pin id="149" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="width_read/2 "/>
+</bind>
+</comp>
+
+<comp id="152" class="1004" name="call_ln114_entry_proc_fu_152">
+<pin_list>
+<pin id="153" dir="0" index="0" bw="0" slack="0"/>
+<pin id="154" dir="0" index="1" bw="16" slack="0"/>
+<pin id="155" dir="0" index="2" bw="16" slack="0"/>
+<pin id="156" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln114/1 "/>
+</bind>
+</comp>
+
+<comp id="159" class="1004" name="grp_AXIvideo2MultiBayer_fu_159">
+<pin_list>
+<pin id="160" dir="0" index="0" bw="0" slack="0"/>
+<pin id="161" dir="0" index="1" bw="16" slack="0"/>
+<pin id="162" dir="0" index="2" bw="2" slack="0"/>
+<pin id="163" dir="0" index="3" bw="2" slack="0"/>
+<pin id="164" dir="0" index="4" bw="1" slack="0"/>
+<pin id="165" dir="0" index="5" bw="1" slack="0"/>
+<pin id="166" dir="0" index="6" bw="1" slack="0"/>
+<pin id="167" dir="0" index="7" bw="1" slack="0"/>
+<pin id="168" dir="0" index="8" bw="10" slack="1"/>
+<pin id="169" dir="0" index="9" bw="16" slack="0"/>
+<pin id="170" dir="0" index="10" bw="16" slack="0"/>
+<pin id="171" dir="1" index="11" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln115/2 "/>
+</bind>
+</comp>
+
+<comp id="182" class="1004" name="grp_Debayer_fu_182">
+<pin_list>
+<pin id="183" dir="0" index="0" bw="0" slack="0"/>
+<pin id="184" dir="0" index="1" bw="10" slack="3"/>
+<pin id="185" dir="0" index="2" bw="30" slack="3"/>
+<pin id="186" dir="0" index="3" bw="16" slack="2"/>
+<pin id="187" dir="0" index="4" bw="16" slack="2"/>
+<pin id="188" dir="0" index="5" bw="16" slack="3"/>
+<pin id="189" dir="0" index="6" bw="10" slack="0"/>
+<pin id="190" dir="0" index="7" bw="18" slack="0"/>
+<pin id="191" dir="1" index="8" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln116/4 "/>
+</bind>
+</comp>
+
+<comp id="195" class="1004" name="grp_ZipperRemoval_fu_195">
+<pin_list>
+<pin id="196" dir="0" index="0" bw="0" slack="0"/>
+<pin id="197" dir="0" index="1" bw="30" slack="5"/>
+<pin id="198" dir="0" index="2" bw="30" slack="5"/>
+<pin id="199" dir="0" index="3" bw="16" slack="4"/>
+<pin id="200" dir="0" index="4" bw="16" slack="4"/>
+<pin id="201" dir="1" index="5" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln118/6 "/>
+</bind>
+</comp>
+
+<comp id="203" class="1004" name="grp_MultiPixStream2AXIvideo_fu_203">
+<pin_list>
+<pin id="204" dir="0" index="0" bw="0" slack="0"/>
+<pin id="205" dir="0" index="1" bw="30" slack="7"/>
+<pin id="206" dir="0" index="2" bw="32" slack="0"/>
+<pin id="207" dir="0" index="3" bw="4" slack="0"/>
+<pin id="208" dir="0" index="4" bw="4" slack="0"/>
+<pin id="209" dir="0" index="5" bw="1" slack="0"/>
+<pin id="210" dir="0" index="6" bw="1" slack="0"/>
+<pin id="211" dir="0" index="7" bw="1" slack="0"/>
+<pin id="212" dir="0" index="8" bw="1" slack="0"/>
+<pin id="213" dir="0" index="9" bw="16" slack="6"/>
+<pin id="214" dir="0" index="10" bw="16" slack="6"/>
+<pin id="215" dir="1" index="11" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln119/8 "/>
+</bind>
+</comp>
+
+<comp id="224" class="1005" name="bayer_phase_c_reg_224">
+<pin_list>
+<pin id="225" dir="0" index="0" bw="16" slack="0"/>
+<pin id="226" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opset="bayer_phase_c "/>
+</bind>
+</comp>
+
+<comp id="230" class="1005" name="imgBayer_reg_230">
+<pin_list>
+<pin id="231" dir="0" index="0" bw="10" slack="1"/>
+<pin id="232" dir="1" index="1" bw="10" slack="1"/>
+</pin_list>
+<bind>
+<opset="imgBayer "/>
+</bind>
+</comp>
+
+<comp id="236" class="1005" name="imgRgb_reg_236">
+<pin_list>
+<pin id="237" dir="0" index="0" bw="30" slack="3"/>
+<pin id="238" dir="1" index="1" bw="30" slack="3"/>
+</pin_list>
+<bind>
+<opset="imgRgb "/>
+</bind>
+</comp>
+
+<comp id="242" class="1005" name="imgUnzip_reg_242">
+<pin_list>
+<pin id="243" dir="0" index="0" bw="30" slack="5"/>
+<pin id="244" dir="1" index="1" bw="30" slack="5"/>
+</pin_list>
+<bind>
+<opset="imgUnzip "/>
+</bind>
+</comp>
+
+<comp id="248" class="1005" name="height_read_reg_248">
+<pin_list>
+<pin id="249" dir="0" index="0" bw="16" slack="1"/>
+<pin id="250" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="height_read "/>
+</bind>
+</comp>
+
+<comp id="256" class="1005" name="width_read_reg_256">
+<pin_list>
+<pin id="257" dir="0" index="0" bw="16" slack="1"/>
+<pin id="258" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="width_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="121"><net_src comp="40" pin="0"/><net_sink comp="118" pin=0"/></net>
+
+<net id="125"><net_src comp="40" pin="0"/><net_sink comp="122" pin=0"/></net>
+
+<net id="129"><net_src comp="40" pin="0"/><net_sink comp="126" pin=0"/></net>
+
+<net id="133"><net_src comp="40" pin="0"/><net_sink comp="130" pin=0"/></net>
+
+<net id="138"><net_src comp="38" pin="0"/><net_sink comp="134" pin=0"/></net>
+
+<net id="139"><net_src comp="4" pin="0"/><net_sink comp="134" pin=1"/></net>
+
+<net id="144"><net_src comp="44" pin="0"/><net_sink comp="140" pin=0"/></net>
+
+<net id="145"><net_src comp="2" pin="0"/><net_sink comp="140" pin=1"/></net>
+
+<net id="150"><net_src comp="44" pin="0"/><net_sink comp="146" pin=0"/></net>
+
+<net id="151"><net_src comp="0" pin="0"/><net_sink comp="146" pin=1"/></net>
+
+<net id="157"><net_src comp="42" pin="0"/><net_sink comp="152" pin=0"/></net>
+
+<net id="158"><net_src comp="134" pin="2"/><net_sink comp="152" pin=1"/></net>
+
+<net id="172"><net_src comp="46" pin="0"/><net_sink comp="159" pin=0"/></net>
+
+<net id="173"><net_src comp="6" pin="0"/><net_sink comp="159" pin=1"/></net>
+
+<net id="174"><net_src comp="8" pin="0"/><net_sink comp="159" pin=2"/></net>
+
+<net id="175"><net_src comp="10" pin="0"/><net_sink comp="159" pin=3"/></net>
+
+<net id="176"><net_src comp="12" pin="0"/><net_sink comp="159" pin=4"/></net>
+
+<net id="177"><net_src comp="14" pin="0"/><net_sink comp="159" pin=5"/></net>
+
+<net id="178"><net_src comp="16" pin="0"/><net_sink comp="159" pin=6"/></net>
+
+<net id="179"><net_src comp="18" pin="0"/><net_sink comp="159" pin=7"/></net>
+
+<net id="180"><net_src comp="140" pin="2"/><net_sink comp="159" pin=9"/></net>
+
+<net id="181"><net_src comp="146" pin="2"/><net_sink comp="159" pin=10"/></net>
+
+<net id="192"><net_src comp="48" pin="0"/><net_sink comp="182" pin=0"/></net>
+
+<net id="193"><net_src comp="34" pin="0"/><net_sink comp="182" pin=6"/></net>
+
+<net id="194"><net_src comp="36" pin="0"/><net_sink comp="182" pin=7"/></net>
+
+<net id="202"><net_src comp="50" pin="0"/><net_sink comp="195" pin=0"/></net>
+
+<net id="216"><net_src comp="52" pin="0"/><net_sink comp="203" pin=0"/></net>
+
+<net id="217"><net_src comp="20" pin="0"/><net_sink comp="203" pin=2"/></net>
+
+<net id="218"><net_src comp="22" pin="0"/><net_sink comp="203" pin=3"/></net>
+
+<net id="219"><net_src comp="24" pin="0"/><net_sink comp="203" pin=4"/></net>
+
+<net id="220"><net_src comp="26" pin="0"/><net_sink comp="203" pin=5"/></net>
+
+<net id="221"><net_src comp="28" pin="0"/><net_sink comp="203" pin=6"/></net>
+
+<net id="222"><net_src comp="30" pin="0"/><net_sink comp="203" pin=7"/></net>
+
+<net id="223"><net_src comp="32" pin="0"/><net_sink comp="203" pin=8"/></net>
+
+<net id="227"><net_src comp="118" pin="1"/><net_sink comp="224" pin=0"/></net>
+
+<net id="228"><net_src comp="224" pin="1"/><net_sink comp="152" pin=2"/></net>
+
+<net id="229"><net_src comp="224" pin="1"/><net_sink comp="182" pin=5"/></net>
+
+<net id="233"><net_src comp="122" pin="1"/><net_sink comp="230" pin=0"/></net>
+
+<net id="234"><net_src comp="230" pin="1"/><net_sink comp="159" pin=8"/></net>
+
+<net id="235"><net_src comp="230" pin="1"/><net_sink comp="182" pin=1"/></net>
+
+<net id="239"><net_src comp="126" pin="1"/><net_sink comp="236" pin=0"/></net>
+
+<net id="240"><net_src comp="236" pin="1"/><net_sink comp="182" pin=2"/></net>
+
+<net id="241"><net_src comp="236" pin="1"/><net_sink comp="195" pin=1"/></net>
+
+<net id="245"><net_src comp="130" pin="1"/><net_sink comp="242" pin=0"/></net>
+
+<net id="246"><net_src comp="242" pin="1"/><net_sink comp="195" pin=2"/></net>
+
+<net id="247"><net_src comp="242" pin="1"/><net_sink comp="203" pin=1"/></net>
+
+<net id="251"><net_src comp="140" pin="2"/><net_sink comp="248" pin=0"/></net>
+
+<net id="252"><net_src comp="248" pin="1"/><net_sink comp="159" pin=9"/></net>
+
+<net id="253"><net_src comp="248" pin="1"/><net_sink comp="182" pin=3"/></net>
+
+<net id="254"><net_src comp="248" pin="1"/><net_sink comp="195" pin=3"/></net>
+
+<net id="255"><net_src comp="248" pin="1"/><net_sink comp="203" pin=9"/></net>
+
+<net id="259"><net_src comp="146" pin="2"/><net_sink comp="256" pin=0"/></net>
+
+<net id="260"><net_src comp="256" pin="1"/><net_sink comp="159" pin=10"/></net>
+
+<net id="261"><net_src comp="256" pin="1"/><net_sink comp="182" pin=4"/></net>
+
+<net id="262"><net_src comp="256" pin="1"/><net_sink comp="195" pin=4"/></net>
+
+<net id="263"><net_src comp="256" pin="1"/><net_sink comp="203" pin=10"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: m_axis_video_V_data_V | {8 9 }
+	Port: m_axis_video_V_keep_V | {8 9 }
+	Port: m_axis_video_V_strb_V | {8 9 }
+	Port: m_axis_video_V_user_V | {8 9 }
+	Port: m_axis_video_V_last_V | {8 9 }
+	Port: m_axis_video_V_id_V | {8 9 }
+	Port: m_axis_video_V_dest_V | {8 9 }
+ - Input state : 
+	Port: v_demosaic : width | {2 }
+	Port: v_demosaic : height | {2 }
+	Port: v_demosaic : bayer_phase | {1 }
+	Port: v_demosaic : s_axis_video_V_data_V | {2 3 }
+	Port: v_demosaic : s_axis_video_V_keep_V | {2 3 }
+	Port: v_demosaic : s_axis_video_V_strb_V | {2 3 }
+	Port: v_demosaic : s_axis_video_V_user_V | {2 3 }
+	Port: v_demosaic : s_axis_video_V_last_V | {2 3 }
+	Port: v_demosaic : s_axis_video_V_id_V | {2 3 }
+	Port: v_demosaic : s_axis_video_V_dest_V | {2 3 }
+	Port: v_demosaic : DIV1_TABLE | {4 5 }
+	Port: v_demosaic : DIV2_TABLE | {4 5 }
+  - Chain level:
+	State 1
+		call_ln114 : 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|           Functional Unit          |   BRAM  |   DSP   |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|------------------------------------|---------|---------|---------|---------|---------|---------|
+|          |    call_ln114_entry_proc_fu_152    |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |   grp_AXIvideo2MultiBayer_fu_159   |    0    |    0    |  0.978  |   117   |   116   |    0    |
+|   call   |         grp_Debayer_fu_182         |    24   |    8    |  14.786 |   4312  |   5633  |    0    |
+|          |      grp_ZipperRemoval_fu_195      |    0    |    0    |    0    |   296   |   420   |    0    |
+|          | grp_MultiPixStream2AXIvideo_fu_203 |    0    |    0    |  0.489  |    63   |   139   |    0    |
+|----------|------------------------------------|---------|---------|---------|---------|---------|---------|
+|          |    bayer_phase_read_read_fu_134    |    0    |    0    |    0    |    0    |    0    |    0    |
+|   read   |       height_read_read_fu_140      |    0    |    0    |    0    |    0    |    0    |    0    |
+|          |       width_read_read_fu_146       |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|------------------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                                    |    24   |    8    |  16.253 |   4788  |   6308  |    0    |
+|----------|------------------------------------|---------|---------|---------|---------|---------|---------|
+
+Memories:
++----------+--------+--------+--------+
+|          |  BRAM  |   FF   |   LUT  |
++----------+--------+--------+--------+
+|DIV1_TABLE|    2   |    0   |    0   |
+|DIV2_TABLE|    4   |    0   |    0   |
++----------+--------+--------+--------+
+|   Total  |    6   |    0   |    0   |
++----------+--------+--------+--------+
+
+* Register list:
++---------------------+--------+
+|                     |   FF   |
++---------------------+--------+
+|bayer_phase_c_reg_224|   16   |
+| height_read_reg_248 |   16   |
+|   imgBayer_reg_230  |   10   |
+|    imgRgb_reg_236   |   30   |
+|   imgUnzip_reg_242  |   30   |
+|  width_read_reg_256 |   16   |
++---------------------+--------+
+|        Total        |   118  |
++---------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------------------------------|------|------|------|--------||---------||---------||---------|
+|              Comp              |  Pin | Size |  BW  | S x BW ||  Delay  ||    FF   ||   LUT   |
+|--------------------------------|------|------|------|--------||---------||---------||---------|
+| grp_AXIvideo2MultiBayer_fu_159 |  p9  |   2  |  16  |   32   ||    0    ||    9    |
+| grp_AXIvideo2MultiBayer_fu_159 |  p10 |   2  |  16  |   32   ||    0    ||    9    |
+|--------------------------------|------|------|------|--------||---------||---------||---------|
+|              Total             |      |      |      |   64   ||  0.978  ||    0    ||    18   |
+|--------------------------------|------|------|------|--------||---------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |   24   |    8   |   16   |  4788  |  6308  |    0   |
+|   Memory  |    6   |    -   |    -   |    0   |    0   |    -   |
+|Multiplexer|    -   |    -   |    0   |    0   |   18   |    -   |
+|  Register |    -   |    -   |    -   |   118  |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   30   |    8   |   17   |  4906  |  6326  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

@@ -14,7 +14,6 @@ addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/b
 addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/qspipsu/src/libqspipsu.a
 addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/pciepsu/src/libpciepsu.a
 addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/mipicsiss/src/libmipicsiss.a
-addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/isp_placeholder/src/libisp_placeholder.a
 addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/libipipsu.a
 addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/iicps/src/libiicps.a
 addlib E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/gpiops/src/libgpiops.a

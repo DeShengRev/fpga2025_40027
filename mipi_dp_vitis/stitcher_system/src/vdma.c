@@ -26,7 +26,7 @@ int vdma_read_stop(XAxiVdma *Vdma) {
 }
 
 
-int vdma_read_init(short DeviceID,short HoriSizeInput,short VertSizeInput,short Stride,unsigned int FrameStoreStartAddr)
+int vdma_read_init(UINTPTR BaseAddress,short HoriSizeInput,short VertSizeInput,short Stride,unsigned int FrameStoreStartAddr)
 {
 	XAxiVdma Vdma;
 	XAxiVdma_Config *Config;
@@ -34,7 +34,7 @@ int vdma_read_init(short DeviceID,short HoriSizeInput,short VertSizeInput,short 
 	int Status;
 
 
-	Config = XAxiVdma_LookupConfig(DeviceID);
+	Config = XAxiVdma_LookupConfig(BaseAddress);
 	if (NULL == Config) {
 		xil_printf("XAxiVdma_LookupConfig failure\r\n");
 		return XST_FAILURE;
@@ -110,7 +110,7 @@ int vdma_write_stop(XAxiVdma *Vdma) {
 }
 
 
-int vdma_write_init(u32 BaseAddress,short HoriSizeInput,short VertSizeInput,short Stride,unsigned int FrameStoreStartAddr)
+int vdma_write_init(UINTPTR BaseAddress,short HoriSizeInput,short VertSizeInput,short Stride,unsigned int FrameStoreStartAddr)
 {
 	XAxiVdma Vdma;
 	XAxiVdma_Config *Config;

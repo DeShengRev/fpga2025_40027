@@ -1,0 +1,265 @@
+
+
+================================================================
+== Vitis HLS Report for 'ZipperRemoval_Pipeline_VITIS_LOOP_1101_2'
+================================================================
+* Date:           Thu Nov 13 19:38:04 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu2cg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  3.729 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-------+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval  |                    Pipeline                    |
+    |   min   |   max   |    min    |    max   | min |  max  |                      Type                      |
+    +---------+---------+-----------+----------+-----+-------+------------------------------------------------+
+    |        5|    65540|  33.335 ns|  0.437 ms|    2|  65537|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+----------+-----+-------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |    Trip   |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_1101_2  |        3|    65538|         4|          1|          1|  1 ~ 65536|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%x = alloca i32 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083]   --->   Operation 7 'alloca' 'x' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_0_0_0483_1662 = alloca i32 1"   --->   Operation 8 'alloca' 'p_0_0_0483_1662' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_0_0_0482_1663 = alloca i32 1"   --->   Operation 9 'alloca' 'p_0_0_0482_1663' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_0_0_0481_1665 = alloca i32 1"   --->   Operation 10 'alloca' 'p_0_0_0481_1665' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_0_0_0480_1667 = alloca i32 1"   --->   Operation 11 'alloca' 'p_0_0_0480_1667' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln1085_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %zext_ln1085"   --->   Operation 12 'read' 'zext_ln1085_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%loopWidth_read = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %loopWidth"   --->   Operation 13 'read' 'loopWidth_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%conv2_i_i_lcssa687_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %conv2_i_i_lcssa687"   --->   Operation 14 'read' 'conv2_i_i_lcssa687_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_0_0_0479657_lcssa664689_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %p_0_0_0479657_lcssa664689"   --->   Operation 15 'read' 'p_0_0_0479657_lcssa664689_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_0_0_0478653_lcssa666691_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %p_0_0_0478653_lcssa666691"   --->   Operation 16 'read' 'p_0_0_0478653_lcssa666691_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_0_0_0477655_lcssa668693_read = read i10 @_ssdm_op_Read.ap_auto.i10, i10 %p_0_0_0477655_lcssa668693"   --->   Operation 17 'read' 'p_0_0_0477655_lcssa668693_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln1085_cast = zext i16 %zext_ln1085_read"   --->   Operation 18 'zext' 'zext_ln1085_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgRgb, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgUnzip, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.48ns)   --->   "%store_ln0 = store i10 %p_0_0_0477655_lcssa668693_read, i10 %p_0_0_0480_1667"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 22 [1/1] (0.48ns)   --->   "%store_ln0 = store i10 %p_0_0_0478653_lcssa666691_read, i10 %p_0_0_0481_1665"   --->   Operation 22 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 23 [1/1] (0.48ns)   --->   "%store_ln0 = store i10 %p_0_0_0479657_lcssa664689_read, i10 %p_0_0_0482_1663"   --->   Operation 23 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 24 [1/1] (0.48ns)   --->   "%store_ln0 = store i7 %conv2_i_i_lcssa687_read, i7 %p_0_0_0483_1662"   --->   Operation 24 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 25 [1/1] (0.48ns)   --->   "%store_ln1083 = store i17 0, i17 %x" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083]   --->   Operation 25 'store' 'store_ln1083' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 26 [1/1] (0.48ns)   --->   "%store_ln0 = store i7 0, i7 %phi_ln1132_out"   --->   Operation 26 'store' 'store_ln0' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln1101 = br void %for.body25" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 27 'br' 'br_ln1101' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%x_1 = load i17 %x" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 28 'load' 'x_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (1.02ns)   --->   "%icmp_ln1101 = icmp_eq  i17 %x_1, i17 %loopWidth_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 29 'icmp' 'icmp_ln1101' <Predicate = true> <Delay = 1.02> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (1.02ns)   --->   "%x_2 = add i17 %x_1, i17 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 30 'add' 'x_2' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln1101 = br i1 %icmp_ln1101, void %for.body25.split, void %for.inc226.exitStub" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 31 'br' 'br_ln1101' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.02ns)   --->   "%icmp_ln1107 = icmp_ult  i17 %x_1, i17 %zext_ln1085_cast" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1107]   --->   Operation 32 'icmp' 'icmp_ln1107' <Predicate = (!icmp_ln1101)> <Delay = 1.02> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln1107 = br i1 %icmp_ln1107, void %for.inc_ifconv, void %if.then" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1107]   --->   Operation 33 'br' 'br_ln1107' <Predicate = (!icmp_ln1101)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.02ns)   --->   "%icmp_ln1159 = icmp_eq  i17 %x_1, i17 0" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1159]   --->   Operation 34 'icmp' 'icmp_ln1159' <Predicate = (!icmp_ln1101)> <Delay = 1.02> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln1159 = br i1 %icmp_ln1159, void %if.then221, void %for.inc223" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1159]   --->   Operation 35 'br' 'br_ln1159' <Predicate = (!icmp_ln1101)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.48ns)   --->   "%store_ln1083 = store i17 %x_2, i17 %x" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083]   --->   Operation 36 'store' 'store_ln1083' <Predicate = (!icmp_ln1101)> <Delay = 0.48>
+
+State 2 <SV = 1> <Delay = 2.65>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%p_0_0_0482_1663_load = load i10 %p_0_0_0482_1663"   --->   Operation 37 'load' 'p_0_0_0482_1663_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%p_0_0_0481_1665_load = load i10 %p_0_0_0481_1665"   --->   Operation 38 'load' 'p_0_0_0481_1665_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%p_0_0_0480_1667_load = load i10 %p_0_0_0480_1667"   --->   Operation 39 'load' 'p_0_0_0480_1667_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] ( I:2.16ns O:2.16ns )   --->   "%imgRgb_read = read i30 @_ssdm_op_Read.ap_fifo.volatile.i30P0A, i30 %imgRgb" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109]   --->   Operation 40 'read' 'imgRgb_read' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln1109 = trunc i30 %imgRgb_read" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109]   --->   Operation 41 'trunc' 'trunc_ln1109' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%trunc_ln1109_1 = partselect i10 @_ssdm_op_PartSelect.i10.i30.i32.i32, i30 %imgRgb_read, i32 10, i32 19" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109]   --->   Operation 42 'partselect' 'trunc_ln1109_1' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%trunc_ln1109_2 = partselect i10 @_ssdm_op_PartSelect.i10.i30.i32.i32, i30 %imgRgb_read, i32 20, i32 29" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109]   --->   Operation 43 'partselect' 'trunc_ln1109_2' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.48ns)   --->   "%store_ln1109 = store i10 %trunc_ln1109_1, i10 %p_0_0_0480_1667" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109]   --->   Operation 44 'store' 'store_ln1109' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 0.48>
+ST_2 : Operation 45 [1/1] (0.48ns)   --->   "%store_ln1109 = store i10 %trunc_ln1109, i10 %p_0_0_0481_1665" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109]   --->   Operation 45 'store' 'store_ln1109' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 0.48>
+ST_2 : Operation 46 [1/1] (0.48ns)   --->   "%store_ln1109 = store i10 %trunc_ln1109_2, i10 %p_0_0_0482_1663" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109]   --->   Operation 46 'store' 'store_ln1109' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 0.48>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln1110 = br void %for.inc_ifconv" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1110]   --->   Operation 47 'br' 'br_ln1110' <Predicate = (!icmp_ln1101 & icmp_ln1107)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.72>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%p_0_0_0483_1662_load_1 = load i7 %p_0_0_0483_1662" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 48 'load' 'p_0_0_0483_1662_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln1101 = zext i7 %p_0_0_0483_1662_load_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 49 'zext' 'zext_ln1101' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%specpipeline_ln1104 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_14" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1104]   --->   Operation 50 'specpipeline' 'specpipeline_ln1104' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%speclooptripcount_ln1083 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1, i64 65536, i64 32768" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083]   --->   Operation 51 'speclooptripcount' 'speclooptripcount_ln1083' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%specloopname_ln1101 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 52 'specloopname' 'specloopname_ln1101' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%p_0_0_0483_1658_out_load = load i10 %p_0_0_0483_1658_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 53 'load' 'p_0_0_0483_1658_out_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%p_0_0_0482_1659_out_load = load i10 %p_0_0_0482_1659_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 54 'load' 'p_0_0_0482_1659_out_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%p_0_0_0481_1660_out_load = load i10 %p_0_0_0481_1660_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 55 'load' 'p_0_0_0481_1660_out_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%p_0_0_0480_1661_out_load = load i10 %p_0_0_0480_1661_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 56 'load' 'p_0_0_0480_1661_out_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%p_0_0_0483_1662_load = load i7 %p_0_0_0483_1662" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 57 'load' 'p_0_0_0483_1662_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%p_0_0_0482_1663_load_1 = load i10 %p_0_0_0482_1663" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 58 'load' 'p_0_0_0482_1663_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%p_0_0_0481_1665_load_1 = load i10 %p_0_0_0481_1665" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 59 'load' 'p_0_0_0481_1665_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%p_0_0_0480_1667_load_1 = load i10 %p_0_0_0480_1667" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 60 'load' 'p_0_0_0480_1667_load_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i10.i32.i32, i10 %p_0_0_0482_1663_load_1, i32 2, i32 9" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 61 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln1129_1 = zext i8 %tmp" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 62 'zext' 'zext_ln1129_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%lshr_ln1129_1 = partselect i9 @_ssdm_op_PartSelect.i9.i10.i32.i32, i10 %p_0_0_0481_1665_load_1, i32 1, i32 9" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 63 'partselect' 'lshr_ln1129_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln1129_2 = zext i9 %lshr_ln1129_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 64 'zext' 'zext_ln1129_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%lshr_ln1129_2 = partselect i7 @_ssdm_op_PartSelect.i7.i10.i32.i32, i10 %p_0_0_0481_1665_load_1, i32 3, i32 9" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 65 'partselect' 'lshr_ln1129_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln1129_3 = zext i7 %lshr_ln1129_2" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 66 'zext' 'zext_ln1129_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i7 @_ssdm_op_PartSelect.i7.i10.i32.i32, i10 %p_0_0_0480_1667_load_1, i32 3, i32 9" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 67 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln1129_4 = zext i7 %tmp_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 68 'zext' 'zext_ln1129_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.90ns)   --->   "%add_ln1129 = add i9 %zext_ln1129_4, i9 %zext_ln1129_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 69 'add' 'add_ln1129' <Predicate = true> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln1129 = zext i9 %add_ln1129" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 70 'zext' 'zext_ln1129' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln1129_1 = add i10 %zext_ln1129, i10 %zext_ln1129_2" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 71 'add' 'add_ln1129_1' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.56> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 72 [1/1] (1.12ns) (root node of TernaryAdder)   --->   "%lum = add i10 %add_ln1129_1, i10 %zext_ln1129_3" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129]   --->   Operation 72 'add' 'lum' <Predicate = true> <Delay = 1.12> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.56> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i7 @_ssdm_op_PartSelect.i7.i10.i32.i32, i10 %lum, i32 3, i32 9" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 73 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.93ns)   --->   "%icmp_ln1144 = icmp_ult  i10 %p_0_0_0483_1658_out_load, i10 %zext_ln1101" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 74 'icmp' 'icmp_ln1144' <Predicate = true> <Delay = 0.93> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.89ns)   --->   "%icmp_ln1144_1 = icmp_ult  i7 %p_0_0_0483_1662_load, i7 %trunc_ln1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 75 'icmp' 'icmp_ln1144_1' <Predicate = true> <Delay = 0.89> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.89> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node or_ln1144)   --->   "%xor_ln1144 = xor i1 %icmp_ln1144_1, i1 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 76 'xor' 'xor_ln1144' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node or_ln1144)   --->   "%and_ln1144 = and i1 %icmp_ln1144, i1 %xor_ln1144" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 77 'and' 'and_ln1144' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.93ns)   --->   "%icmp_ln1144_2 = icmp_ult  i10 %p_0_0_0483_1658_out_load, i10 %zext_ln1101" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 78 'icmp' 'icmp_ln1144_2' <Predicate = true> <Delay = 0.93> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node or_ln1144)   --->   "%xor_ln1144_1 = xor i1 %icmp_ln1144_2, i1 1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 79 'xor' 'xor_ln1144_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (0.89ns)   --->   "%icmp_ln1144_3 = icmp_ult  i7 %p_0_0_0483_1662_load, i7 %trunc_ln1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 80 'icmp' 'icmp_ln1144_3' <Predicate = true> <Delay = 0.89> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.89> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node or_ln1144)   --->   "%and_ln1144_1 = and i1 %xor_ln1144_1, i1 %icmp_ln1144_3" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 81 'and' 'and_ln1144_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i10.i1, i10 %p_0_0_0482_1663_load, i1 0" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 82 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln1147 = zext i10 %p_0_0_0482_1663_load_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 83 'zext' 'zext_ln1147' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%zext_ln1147_1 = zext i11 %shl_ln" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 84 'zext' 'zext_ln1147_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%zext_ln1147_2 = zext i10 %p_0_0_0482_1659_out_load" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 85 'zext' 'zext_ln1147_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.93ns)   --->   "%add_ln1147 = add i11 %zext_ln1147, i11 %zext_ln1147_2" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 86 'add' 'add_ln1147' <Predicate = true> <Delay = 0.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%zext_ln1147_3 = zext i11 %add_ln1147" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 87 'zext' 'zext_ln1147_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.94ns)   --->   "%add_ln1147_1 = add i12 %zext_ln1147_3, i12 %zext_ln1147_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 88 'add' 'add_ln1147_1' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%r_s = partselect i10 @_ssdm_op_PartSelect.i10.i12.i32.i32, i12 %add_ln1147_1, i32 2, i32 11" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147]   --->   Operation 89 'partselect' 'r_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%shl_ln1 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i10.i1, i10 %p_0_0_0481_1665_load, i1 0" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 90 'bitconcatenate' 'shl_ln1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%zext_ln1148 = zext i10 %p_0_0_0481_1665_load_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 91 'zext' 'zext_ln1148' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln1148_1 = zext i11 %shl_ln1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 92 'zext' 'zext_ln1148_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%zext_ln1148_2 = zext i10 %p_0_0_0481_1660_out_load" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 93 'zext' 'zext_ln1148_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.93ns)   --->   "%add_ln1148 = add i11 %zext_ln1148, i11 %zext_ln1148_2" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 94 'add' 'add_ln1148' <Predicate = true> <Delay = 0.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln1148_3 = zext i11 %add_ln1148" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 95 'zext' 'zext_ln1148_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.94ns)   --->   "%add_ln1148_1 = add i12 %zext_ln1148_3, i12 %zext_ln1148_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 96 'add' 'add_ln1148_1' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%g_s = partselect i10 @_ssdm_op_PartSelect.i10.i12.i32.i32, i12 %add_ln1148_1, i32 2, i32 11" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1148]   --->   Operation 97 'partselect' 'g_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%shl_ln2 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i10.i1, i10 %p_0_0_0480_1667_load, i1 0" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 98 'bitconcatenate' 'shl_ln2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%zext_ln1149 = zext i10 %p_0_0_0480_1667_load_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 99 'zext' 'zext_ln1149' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln1149_1 = zext i11 %shl_ln2" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 100 'zext' 'zext_ln1149_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%zext_ln1149_2 = zext i10 %p_0_0_0480_1661_out_load" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 101 'zext' 'zext_ln1149_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.93ns)   --->   "%add_ln1149 = add i11 %zext_ln1149, i11 %zext_ln1149_2" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 102 'add' 'add_ln1149' <Predicate = true> <Delay = 0.93> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln1149_3 = zext i11 %add_ln1149" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 103 'zext' 'zext_ln1149_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.94ns)   --->   "%add_ln1149_1 = add i12 %zext_ln1149_3, i12 %zext_ln1149_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 104 'add' 'add_ln1149_1' <Predicate = true> <Delay = 0.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%b_s = partselect i10 @_ssdm_op_PartSelect.i10.i12.i32.i32, i12 %add_ln1149_1, i32 2, i32 11" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1149]   --->   Operation 105 'partselect' 'b_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.33ns) (out node of the LUT)   --->   "%or_ln1144 = or i1 %and_ln1144, i1 %and_ln1144_1" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 106 'or' 'or_ln1144' <Predicate = true> <Delay = 0.33> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 107 [1/1] (0.47ns)   --->   "%conv3_i_i671 = select i1 %or_ln1144, i10 %b_s, i10 %p_0_0_0480_1667_load" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 107 'select' 'conv3_i_i671' <Predicate = true> <Delay = 0.47> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 108 [1/1] (0.47ns)   --->   "%conv3_i_i79670 = select i1 %or_ln1144, i10 %g_s, i10 %p_0_0_0481_1665_load" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 108 'select' 'conv3_i_i79670' <Predicate = true> <Delay = 0.47> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 109 [1/1] (0.47ns)   --->   "%conv3_i_i188669 = select i1 %or_ln1144, i10 %r_s, i10 %p_0_0_0482_1663_load" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 109 'select' 'conv3_i_i188669' <Predicate = true> <Delay = 0.47> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 110 [1/1] (0.48ns)   --->   "%store_ln1144 = store i7 %trunc_ln1, i7 %p_0_0_0483_1662" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 110 'store' 'store_ln1144' <Predicate = true> <Delay = 0.48>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%store_ln0 = store i10 %p_0_0_0480_1667_load, i10 %p_0_0_0480_1661_out"   --->   Operation 111 'store' 'store_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%store_ln0 = store i10 %p_0_0_0481_1665_load, i10 %p_0_0_0481_1660_out"   --->   Operation 112 'store' 'store_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%store_ln0 = store i10 %p_0_0_0482_1663_load, i10 %p_0_0_0482_1659_out"   --->   Operation 113 'store' 'store_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%store_ln1101 = store i10 %zext_ln1101, i10 %p_0_0_0483_1658_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 114 'store' 'store_ln1101' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (0.48ns)   --->   "%store_ln1144 = store i7 %trunc_ln1, i7 %phi_ln1132_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144]   --->   Operation 115 'store' 'store_ln1144' <Predicate = true> <Delay = 0.48>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "%br_ln1101 = br void %for.body25" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101]   --->   Operation 116 'br' 'br_ln1101' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%store_ln0 = store i10 %p_0_0_0480_1667_load, i10 %p_0_0_0480_1667_out"   --->   Operation 120 'store' 'store_ln0' <Predicate = (icmp_ln1101)> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%store_ln0 = store i10 %p_0_0_0481_1665_load, i10 %p_0_0_0481_1665_out"   --->   Operation 121 'store' 'store_ln0' <Predicate = (icmp_ln1101)> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "%store_ln0 = store i10 %p_0_0_0482_1663_load, i10 %p_0_0_0482_1663_out"   --->   Operation 122 'store' 'store_ln0' <Predicate = (icmp_ln1101)> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.48ns)   --->   "%ret_ln0 = ret"   --->   Operation 123 'ret' 'ret_ln0' <Predicate = (icmp_ln1101)> <Delay = 0.48>
+
+State 4 <SV = 3> <Delay = 2.16>
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%or_ln1161_3 = bitconcatenate i30 @_ssdm_op_BitConcatenate.i30.i10.i10.i10, i10 %conv3_i_i188669, i10 %conv3_i_i671, i10 %conv3_i_i79670" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1161]   --->   Operation 117 'bitconcatenate' 'or_ln1161_3' <Predicate = (!icmp_ln1159)> <Delay = 0.00>
+ST_4 : Operation 118 [1/1] ( I:2.16ns O:2.16ns )   --->   "%write_ln1161 = write void @_ssdm_op_Write.ap_fifo.volatile.i30P0A, i30 %imgUnzip, i30 %or_ln1161_3" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1161]   --->   Operation 118 'write' 'write_ln1161' <Predicate = (!icmp_ln1159)> <Delay = 2.16> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_4 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln1162 = br void %for.inc223" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1162]   --->   Operation 119 'br' 'br_ln1162' <Predicate = (!icmp_ln1159)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.667ns, clock uncertainty: 1.800ns.
+
+ <State 1>: 2.006ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln1083', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083) of constant 0 on local variable 'x', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083 [35]  (0.489 ns)
+	'load' operation 17 bit ('x', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101) on local variable 'x', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083 [39]  (0.000 ns)
+	'add' operation 17 bit ('x', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101) [44]  (1.028 ns)
+	'store' operation 0 bit ('store_ln1083', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083) of variable 'x', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1101 on local variable 'x', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1083 [133]  (0.489 ns)
+
+ <State 2>: 2.656ns
+The critical path consists of the following:
+	fifo read operation ('imgRgb_read', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109) on port 'imgRgb' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109) [55]  (2.167 ns)
+	'store' operation 0 bit ('store_ln1109', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109) of variable 'trunc_ln1109_1', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1109 on local variable 'p_0_0_0480_1667' [59]  (0.489 ns)
+
+ <State 3>: 3.729ns
+The critical path consists of the following:
+	'load' operation 10 bit ('p_0_0_0482_1663_load_1', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1147) on local variable 'p_0_0_0482_1663' [69]  (0.000 ns)
+	'add' operation 9 bit ('add_ln1129', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129) [80]  (0.907 ns)
+	'add' operation 10 bit ('add_ln1129_1', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129) [82]  (0.000 ns)
+	'add' operation 10 bit ('lum', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129) [83]  (1.124 ns)
+	'icmp' operation 1 bit ('icmp_ln1144_3', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144) [91]  (0.897 ns)
+	'and' operation 1 bit ('and_ln1144_1', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144) [92]  (0.000 ns)
+	'or' operation 1 bit ('or_ln1144', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144) [117]  (0.331 ns)
+	'select' operation 10 bit ('conv3_i_i671', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1144) [118]  (0.470 ns)
+
+ <State 4>: 2.167ns
+The critical path consists of the following:
+	fifo write operation ('write_ln1161', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1161) on port 'imgUnzip' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1161) [125]  (2.167 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

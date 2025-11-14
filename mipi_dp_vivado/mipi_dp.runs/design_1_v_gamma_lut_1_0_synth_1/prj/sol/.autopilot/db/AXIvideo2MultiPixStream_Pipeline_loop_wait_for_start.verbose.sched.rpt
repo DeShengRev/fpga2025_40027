@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vitis HLS Report for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start'
+================================================================
+* Date:           Thu Nov 13 19:36:39 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu2cg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  1.113 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |        2|        2|  13.334 ns|  13.334 ns|    1|    1|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_wait_for_start  |        0|        0|         1|          1|          1|     0|       yes|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.11>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%axi_last = alloca i32 1"   --->   Operation 4 'alloca' 'axi_last' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %s_axis_video_V_data_V, i4 %s_axis_video_V_keep_V, i4 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V, void @empty_14"   --->   Operation 5 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %s_axis_video_V_data_V, void @empty_11, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %s_axis_video_V_keep_V, void @empty_11, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %s_axis_video_V_strb_V, void @empty_11, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_video_V_user_V, void @empty_11, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_video_V_last_V, void @empty_11, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_video_V_id_V, void @empty_11, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %s_axis_video_V_dest_V, void @empty_11, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.48ns)   --->   "%store_ln166 = store i30 0, i30 %axi_data_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:166->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 13 'store' 'store_ln166' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 14 [1/1] (0.48ns)   --->   "%br_ln181 = br void %while.cond.i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:181->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 14 'br' 'br_ln181' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sof = phi i1 0, void %newFuncRoot, i1 %axi_user, void %while.body.i"   --->   Operation 15 'phi' 'sof' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln181 = br i1 %sof, void %while.body.i, void %loop_height.i.exitStub" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:181->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 16 'br' 'br_ln181' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln182 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:182->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 17 'specpipeline' 'specpipeline_ln182' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%speclooptripcount_ln183 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 0, i64 0" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:183->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 18 'speclooptripcount' 'speclooptripcount_ln183' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln181 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:181->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 19 'specloopname' 'specloopname_ln181' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.13ns)   --->   "%empty = read i44 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A.i1P0A.i1P0A.i1P0A, i32 %s_axis_video_V_data_V, i4 %s_axis_video_V_keep_V, i4 %s_axis_video_V_strb_V, i1 %s_axis_video_V_user_V, i1 %s_axis_video_V_last_V, i1 %s_axis_video_V_id_V, i1 %s_axis_video_V_dest_V" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 20 'read' 'empty' <Predicate = (!sof)> <Delay = 0.13> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.90> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_cast11 = extractvalue i44 %empty" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 21 'extractvalue' 'p_cast11' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%axi_user = extractvalue i44 %empty" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 22 'extractvalue' 'axi_user' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%axi_last_6 = extractvalue i44 %empty" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 23 'extractvalue' 'axi_last_6' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%axi_data = trunc i32 %p_cast11" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 24 'trunc' 'axi_data' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.48ns)   --->   "%store_ln166 = store i30 %axi_data, i30 %axi_data_out" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:166->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 25 'store' 'store_ln166' <Predicate = (!sof)> <Delay = 0.48>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%store_ln181 = store i1 %axi_last_6, i1 %axi_last" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:181->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 26 'store' 'store_ln181' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln181 = br void %while.cond.i" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:181->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143]   --->   Operation 27 'br' 'br_ln181' <Predicate = (!sof)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%axi_last_load = load i1 %axi_last"   --->   Operation 28 'load' 'axi_last_load' <Predicate = (sof)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %axi_last_out, i1 %axi_last_load"   --->   Operation 29 'write' 'write_ln0' <Predicate = (sof)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.48ns)   --->   "%ret_ln0 = ret"   --->   Operation 30 'ret' 'ret_ln0' <Predicate = (sof)> <Delay = 0.48>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.667ns, clock uncertainty: 1.800ns.
+
+ <State 1>: 1.113ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation 1 bit ('axi.user') with incoming values : ('axi.user', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143) [22]  (0.489 ns)
+	'phi' operation 1 bit ('axi.user') with incoming values : ('axi.user', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143) [22]  (0.000 ns)
+	axis read operation ('empty', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143) on port 's_axis_video_V_data_V' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143) [28]  (0.135 ns)
+	'store' operation 0 bit ('store_ln166', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:166->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143) of variable 'axi.data', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:184->E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:143 on local variable 'axi_data_out' [33]  (0.489 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

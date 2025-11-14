@@ -1,0 +1,117 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "5 7 4 8",
+    "file": "v_demosaic.cpp",
+    "fileloc": 89,
+    "instructions": 25,
+    "name": "v_demosaic",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 1868
+  },
+  "1": {
+    "basicblocks": 23,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 593,
+    "instructions": 357,
+    "loads": {
+      "L": 5
+    },
+    "name": "DebayerRatBorBatR",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 357
+  },
+  "2": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 841,
+    "instructions": 367,
+    "loads": {
+      "L": 5
+    },
+    "name": "DebayerRandBatG",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 367
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 1,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "4": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1077,
+    "instructions": 169,
+    "loads": {
+      "L": 2
+    },
+    "name": "ZipperRemoval",
+    "total_instructions": 169
+  },
+  "5": {
+    "basicblocks": 15,
+    "calls": "3 3",
+    "file": "v_demosaic.cpp",
+    "fileloc": 133,
+    "instructions": 182,
+    "loads": {
+      "L": 9
+    },
+    "name": "AXIvideo2MultiBayer",
+    "total_instructions": 184
+  },
+  "6": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 264,
+    "instructions": 677,
+    "loads": {
+      "G": 5,
+      "L": 7
+    },
+    "name": "DebayerG",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 677
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "6 1 2",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1060,
+    "instructions": 8,
+    "name": "Debayer",
+    "total_instructions": 1409
+  },
+  "8": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 208,
+    "instructions": 81,
+    "loads": {
+      "L": 2
+    },
+    "name": "MultiPixStream2AXIvideo",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 81
+  }
+}

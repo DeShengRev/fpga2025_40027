@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Nov 13 19:33:39 2025
+# Process ID         : 23076
+# Current directory  : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/bd_115c_phy_0_synth_1
+# Command line       : vivado.exe -log bd_115c_phy_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_115c_phy_0.tcl
+# Log file           : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/bd_115c_phy_0_synth_1/bd_115c_phy_0.vds
+# Journal file       : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/bd_115c_phy_0_synth_1\vivado.jou
+# Running On         : Win10-zsd
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4600H with Radeon Graphics         
+# CPU Frequency      : 2994 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16505 MB
+# Swap memory        : 21764 MB
+# Total Virtual      : 38270 MB
+# Available Virtual  : 6238 MB
+#-----------------------------------------------------------
+source bd_115c_phy_0.tcl -notrace

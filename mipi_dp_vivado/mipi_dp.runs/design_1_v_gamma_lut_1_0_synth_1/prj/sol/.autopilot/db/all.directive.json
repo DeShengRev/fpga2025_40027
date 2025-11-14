@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "v_gamma_lut",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "v_gamma_lut"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_1_0_synth_1/runhls.tcl",
+    "sourceLine": 35,
+    "success": true
+  }
+]

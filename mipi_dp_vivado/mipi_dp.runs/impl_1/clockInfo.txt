@@ -1,9 +1,9 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.2
-| Date         : Tue Nov  4 15:48:47 2025
+| Date         : Thu Nov 13 22:38:20 2025
 | Host         : Win10-zsd
 | Design       : design_1
-| Device       : xczu2cg-sfvc784-1-I-
+| Device       : xczu2cg-sfvc784-1-E-
 -------------------------------------
 
 For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
@@ -47,7 +47,7 @@ Clock 4: design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_s
 	Clock source type: BUFGCE
 	Clock source region: X1Y1
 	Clock regions with locked loads: X1Y1 
-	initial rect ((0, 0), (1, 1))
+	initial rect ((0, 1), (1, 1))
 
 Clock 5: design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out
 	Clock source type: BUFGCE
@@ -57,7 +57,7 @@ Clock 5: design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_s
 Clock 6: design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out
 	Clock source type: BUFGCE
 	Clock source region: X1Y1
-	initial rect ((1, 1), (1, 1))
+	initial rect ((1, 0), (1, 1))
 
 
 

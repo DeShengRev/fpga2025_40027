@@ -1,0 +1,180 @@
+{
+    "1": {
+        "name": "AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "143",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "AXIvideo2MultiPixStream",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "132",
+        "instructions": "45",
+        "total_instructions": "154",
+        "calls": "6 6 10 7 1",
+        "basicblocks": "4",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "MultiPixStream2AXIvideo",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "132",
+        "instructions": "24",
+        "total_instructions": "48",
+        "calls": "9",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "Gamma_Pipeline_VITIS_LOOP_327_4",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "146",
+        "instructions": "31",
+        "total_instructions": "31",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "Gamma_Pipeline_VITIS_LOOP_315_1",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "146",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1",
+            "T": "3"
+        },
+        "stores": {
+            "L": "5"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "reg<unsigned short>",
+        "file": "x_hls_utils.h",
+        "fileloc": "222",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "AXIvideo2MultiPixStream_Pipeline_loop_width",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "143",
+        "instructions": "47",
+        "total_instructions": "47",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "v_gamma_lut",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "89",
+        "instructions": "57",
+        "total_instructions": "356",
+        "calls": "2 8 3",
+        "basicblocks": "1"
+    },
+    "8": {
+        "name": "Gamma",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "132",
+        "instructions": "31",
+        "total_instructions": "97",
+        "calls": "5 4",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "148",
+        "instructions": "24",
+        "total_instructions": "24",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start",
+        "file": "E:\/Dev\/QianSai\/mipi_dp_vivado\/mipi_dp.runs\/design_1_v_gamma_lut_1_0_synth_1\/prj\/sol\/.autopilot\/db\/v_gamma_lut.cpp",
+        "fileloc": "143",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

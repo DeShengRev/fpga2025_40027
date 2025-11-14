@@ -93,8 +93,6 @@ E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../incl
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_buf.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_hw.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder_hw.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr_secure.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_xppu.h
@@ -259,8 +257,6 @@ E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../incl
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_buf.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_hw.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder_hw.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr_secure.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_xppu.h
@@ -425,8 +421,6 @@ E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../incl
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_buf.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_hw.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder_hw.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr_secure.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_xppu.h
@@ -591,8 +585,6 @@ E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../incl
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_buf.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_hw.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder_hw.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr_secure.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_xppu.h
@@ -757,8 +749,6 @@ E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../incl
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_buf.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_hw.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder_hw.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr_secure.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_xppu.h
@@ -923,8 +913,6 @@ E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../incl
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_buf.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xipipsu_hw.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder.h
-E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xisp_placeholder_hw.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_slcr_secure.h
 E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/include/../include/xlpd_xppu.h

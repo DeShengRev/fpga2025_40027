@@ -33,11 +33,11 @@
                  <0x0 0x80000000 &mipi_csi2_rx_subsyst_0 0x0 0x80000000 0x0 0x2000>,
                  <0x0 0x80002000 &mipi_csi2_rx_subsyst_1 0x0 0x80002000 0x0 0x2000>,
                  <0x0 0x80010000 &axi_vdma_0 0x0 0x80010000 0x0 0x10000>,
-                 <0x0 0x80020000 &isp_placeholder_0 0x0 0x80020000 0x0 0x10000>,
-                 <0x0 0x80030000 &v_demosaic_0 0x0 0x80030000 0x0 0x10000>,
+                 <0x0 0x80020000 &v_demosaic_0 0x0 0x80020000 0x0 0x10000>,
+                 <0x0 0x80030000 &axi_vdma_1 0x0 0x80030000 0x0 0x10000>,
                  <0x0 0x80040000 &v_demosaic_1 0x0 0x80040000 0x0 0x10000>,
-                 <0x0 0x80050000 &v_gamma_lut_0 0x0 0x80050000 0x0 0x10000>,
-                 <0x0 0x80060000 &v_gamma_lut_1 0x0 0x80060000 0x0 0x10000>,
+                 <0x0 0x80070000 &v_gamma_lut_0 0x0 0x80070000 0x0 0x10000>,
+                 <0x0 0x80080000 &v_gamma_lut_1 0x0 0x80080000 0x0 0x10000>,
                  <0x0 0xf9010000 &gic 0x0 0xf9010000 0x0 0x70000>,
                  <0x0 0xffa80000 &lpd_dma_chan1 0x0 0xffa80000 0x0 0x10000>,
                  <0x0 0xffa90000 &lpd_dma_chan2 0x0 0xffa90000 0x0 0x10000>,
@@ -2369,14 +2369,12 @@
                         xlnx,enable-all = <0x0>;
                         xlnx,dynamic-resolution = <0x1>;
                         xlnx,enable-s2mm-rst-out = <0x0>;
-                        interrupt-names = "s2mm_introut";
                         xlnx,s2mm-sof-enable = <0x1>;
                         xlnx,mm2s-genlock-num-masters = <0x1>;
                         xlnx,enable-mm2s-fsync-out = <0x0>;
                         xlnx,mm2s-linebuffer-thresh = <0x4>;
                         compatible = "xlnx,axi-vdma-6.3", "xlnx,axi-vdma-1.00.a";
                         xlnx,enable-tstvec = <0x0>;
-                        interrupt-parent = <&gic>;
                         xlnx,s2mm-max-burst-length = <0x80>;
                         xlnx,enable-mm2s-rst-out = <0x0>;
                         xlnx,mm2s-sof-enable = <0x1>;
@@ -2389,20 +2387,19 @@
                         xlnx,include-mm2s-dre = <0x0>;
                         xlnx,name = "axi_vdma_0";
                         xlnx,enable-mm2s-frmstr-reg = <0x0>;
-                        interrupts = <0x0 0x5d 0x4>;
                         xlnx,m-axi-mm2s-data-width = <0x40>;
                         xlnx,flush-on-fsync = <0x1>;
                         xlnx,include-s2mm-sf = <0x1>;
                         xlnx,single-interface = <0x0>;
                         xlnx,s2mm-linebuffer-depth = <0x1000>;
                         xlnx,include-s2mm = <0x1>;
-                        xlnx,addr-width = <0x40>;
+                        xlnx,addr-width = <0x20>;
                         clocks = <&zynqmp_clk 0x47>,
                          <&zynqmp_clk 0x47>,
                          <&zynqmp_clk 0x47>;
                         xlnx,s-axis-s2mm-tdata-width = <0x20>;
                         xlnx,enable-debug-info-10 = <0x0>;
-                        xlnx,addrwidth = <0x40>;
+                        xlnx,addrwidth = <0x20>;
                         xlnx,enable-debug-info-11 = <0x0>;
                         xlnx,edk-iptype = "PERIPHERAL";
                         xlnx,enable-debug-info-12 = <0x0>;
@@ -2449,7 +2446,6 @@
                         phandle = <0xc>;
 
                         dma_channel_80010030: dma-channel@80010030 {
-                                interrupts = <0x0 0x5d 0x4>;
                                 xlnx,datawidth = <0x20>;
                                 xlnx,device-id = <0x0>;
                                 compatible = "xlnx,axi-vdma-s2mm-channel";
@@ -2458,24 +2454,107 @@
                         };
                 };
 
-                isp_placeholder_0: isp_placeholder@80020000 {
-                        compatible = "xlnx,isp-placeholder-1.0";
-                        xlnx,ii = "2083327 , ~ , 2084408";
-                        xlnx,machine = <0x40>;
+                axi_vdma_1: dma@80030000 {
+                        xlnx,enable-debug-info-9 = <0x0>;
+                        xlnx,enable-s2mm-frm-counter = <0x1>;
+                        xlnx,enable-mm2s-delay-counter = <0x1>;
+                        xlnx,dlytmr-resolution = <0x7d>;
+                        xlnx,enable-s2mm-buf-full = <0x0>;
                         xlnx,rable = <0x0>;
-                        xlnx,ip-name = "isp_placeholder";
-                        reg = <0x0 0x80020000 0x0 0x10000>;
-                        clocks = <&zynqmp_clk 0x47>;
-                        xlnx,s-axi-ctrl-addr-width = <0x4>;
-                        xlnx,clk-period = <0xa>;
-                        xlnx,edk-iptype = "PERIPHERAL";
+                        xlnx,ip-name = "axi_vdma";
+                        xlnx,s2mm-genlock-num-masters = <0x1>;
+                        reg = <0x0 0x80030000 0x0 0x10000>;
+                        xlnx,enable-s2mm-fsync-out = <0x0>;
+                        xlnx,use-mm2s-fsync = <0x0>;
+                        xlnx,s2mm-linebuffer-thresh = <0x4>;
+                        xlnx,enable-mm2s-frm-counter = <0x1>;
+                        xlnx,m-axis-mm2s-tdata-width = <0x20>;
+                        xlnx,enable-all = <0x0>;
+                        xlnx,dynamic-resolution = <0x1>;
+                        xlnx,enable-s2mm-rst-out = <0x0>;
+                        xlnx,s2mm-sof-enable = <0x1>;
+                        xlnx,mm2s-genlock-num-masters = <0x1>;
+                        xlnx,enable-mm2s-fsync-out = <0x0>;
+                        xlnx,mm2s-linebuffer-thresh = <0x4>;
+                        compatible = "xlnx,axi-vdma-6.3", "xlnx,axi-vdma-1.00.a";
+                        xlnx,enable-tstvec = <0x0>;
+                        xlnx,s2mm-max-burst-length = <0x80>;
+                        xlnx,enable-mm2s-rst-out = <0x0>;
+                        xlnx,mm2s-sof-enable = <0x1>;
+                        xlnx,include-s2mm-dre = <0x1>;
+                        xlnx,enable-s2mm-frmstr-reg = <0x0>;
+                        xlnx,m-axi-s2mm-data-width = <0x40>;
+                        xlnx,enable-s2mm-sts-reg = <0x0>;
+                        xlnx,mm2s-max-burst-length = <0x8>;
                         status = "okay";
-                        clock-names = "ap_clk";
-                        xlnx,combinational = <0x0>;
-                        xlnx,s-axi-ctrl-data-width = <0x20>;
-                        xlnx,latency = <0x1fc9fe>;
-                        xlnx,name = "isp_placeholder_0";
-                        phandle = <0xd>;
+                        xlnx,include-mm2s-dre = <0x0>;
+                        xlnx,name = "axi_vdma_1";
+                        xlnx,enable-mm2s-frmstr-reg = <0x0>;
+                        xlnx,m-axi-mm2s-data-width = <0x40>;
+                        xlnx,flush-on-fsync = <0x1>;
+                        xlnx,include-s2mm-sf = <0x1>;
+                        xlnx,single-interface = <0x0>;
+                        xlnx,s2mm-linebuffer-depth = <0x1000>;
+                        xlnx,include-s2mm = <0x1>;
+                        xlnx,addr-width = <0x20>;
+                        clocks = <&zynqmp_clk 0x47>,
+                         <&zynqmp_clk 0x47>,
+                         <&zynqmp_clk 0x47>;
+                        xlnx,s-axis-s2mm-tdata-width = <0x20>;
+                        xlnx,enable-debug-info-10 = <0x0>;
+                        xlnx,addrwidth = <0x20>;
+                        xlnx,enable-debug-info-11 = <0x0>;
+                        xlnx,edk-iptype = "PERIPHERAL";
+                        xlnx,enable-debug-info-12 = <0x0>;
+                        xlnx,use-fsync = <0x1>;
+                        xlnx,s2mm-genlock-repeat-en = <0x1>;
+                        xlnx,enable-debug-info-13 = <0x0>;
+                        xlnx,enable-vert-flip = <0x0>;
+                        xlnx,include-mm2s-sf = <0x0>;
+                        xlnx,enable-debug-info-14 = <0x1>;
+                        xlnx,include-internal-genlock = <0x1>;
+                        clock-names = "m_axi_s2mm_aclk", "s_axi_lite_aclk", "s_axis_s2mm_aclk";
+                        xlnx,enable-debug-info-15 = <0x1>;
+                        xlnx,mm2s-linebuffer-depth = <0x200>;
+                        xlnx,include-mm2s = <0x0>;
+                        xlnx,s2mm-genlock-mode = <0x0>;
+                        xlnx,flush-fsync = <0x1>;
+                        xlnx,select-xpm = <0x0>;
+                        xlnx,s2mm-data-width = <0x40>;
+                        xlnx,num-fstores = <0x3>;
+                        xlnx,enable-s2mm-param-updt = <0x0>;
+                        xlnx,enable-vidparam-reads = <0x1>;
+                        xlnx,mm2s-genlock-repeat-en = <0x0>;
+                        xlnx,prmry-is-aclk-async = <0x0>;
+                        xlnx,s2mm-tdata-width = <0x20>;
+                        #dma-cells = <0x1>;
+                        xlnx,enable-vidprmtr-reads = <0x1>;
+                        xlnx,mm2s-genlock-mode = <0x0>;
+                        xlnx,enable-debug-info-0 = <0x0>;
+                        xlnx,enable-debug-all = <0x0>;
+                        xlnx,enable-debug-info-1 = <0x0>;
+                        xlnx,mm2s-data-width = <0x40>;
+                        xlnx,enable-debug-info-2 = <0x0>;
+                        xlnx,enable-mm2s-param-updt = <0x0>;
+                        xlnx,enable-debug-info-3 = <0x0>;
+                        xlnx,enable-s2mm-delay-counter = <0x1>;
+                        xlnx,enable-debug-info-4 = <0x0>;
+                        xlnx,enable-debug-info-5 = <0x0>;
+                        xlnx,mm2s-tdata-width = <0x20>;
+                        xlnx,enable-debug-info-6 = <0x1>;
+                        xlnx,enable-debug-info-7 = <0x1>;
+                        xlnx,use-s2mm-fsync = <0x2>;
+                        xlnx,enable-debug-info-8 = <0x0>;
+                        xlnx,enable-mm2s-buf-empty = <0x0>;
+                        phandle = <0xe>;
+
+                        dma_channel_80030030: dma-channel@80030030 {
+                                xlnx,datawidth = <0x20>;
+                                xlnx,device-id = <0x1>;
+                                compatible = "xlnx,axi-vdma-s2mm-channel";
+                                xlnx,include-dre;
+                                phandle = <0x11b>;
+                        };
                 };
 
                 mipi_csi2_rx_subsyst_0: mipi_csi2_rx_subsystem@80000000 {
@@ -2580,14 +2659,14 @@
                         mipi_csi_portsmipi_csi2_rx_subsyst_0: ports {
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
-                                phandle = <0x11b>;
+                                phandle = <0x11c>;
 
                                 mipi_csi_port1mipi_csi2_rx_subsyst_0: port@1 {
                                         xlnx,video-width = <0x8>;
                                         reg = <0x1>;
                                         xlnx,video-format = <0xc>;
                                         xlnx,cfa-pattern = "rggb";
-                                        phandle = <0x11c>;
+                                        phandle = <0x11d>;
 
                                         mipi_csirx_outmipi_csi2_rx_subsyst_0: endpoint {
                                                 remote-endpoint = <0xa0>;
@@ -2600,11 +2679,11 @@
                                         reg = <0x0>;
                                         xlnx,video-format = <0xc>;
                                         xlnx,cfa-pattern = "rggb";
-                                        phandle = <0x11d>;
+                                        phandle = <0x11e>;
 
                                         mipi_csi_inmipi_csi2_rx_subsyst_0: endpoint {
                                                 data-lanes = <0x1 0x2>;
-                                                phandle = <0x11e>;
+                                                phandle = <0x11f>;
                                         };
                                 };
                         };
@@ -2628,7 +2707,6 @@
                         xlnx,cmn-inc-iic = <0x0>;
                         xlnx,clk-lane-io-loc = "W8";
                         xlnx,esc-timeout = <0x6400>;
-                        interrupt-names = "csirxss_csi_irq";
                         xlnx,cmn-inc-vfb;
                         xlnx,axis-tuser-width = <0x60>;
                         compatible = "xlnx,mipi-csi2-rx-subsystem-6.0", "xlnx,mipi-csi2-rx-subsystem-5.0";
@@ -2640,7 +2718,6 @@
                         xlnx,csi2rx-dbg = <0x0>;
                         xlnx,fifo-rd-en-control;
                         xlnx,vfb;
-                        interrupt-parent = <&gic>;
                         xlnx,data-lane1-io-loc-name = "IO_L3P_T0L_N4_AD15P_65";
                         dphy-connected = <0x78>;
                         xlnx,hs-timeout = <0x10005>;
@@ -2657,7 +2734,6 @@
                         xlnx,en-vcx = <0x0>;
                         xlnx,name = "mipi_csi2_rx_subsyst_1";
                         xlnx,csi-emb-non-img = <0x0>;
-                        interrupts = <0x0 0x5c 0x4>;
                         xlnx,dphyrx-board-interface = "Custom";
                         xlnx,data-lane3-io-loc = "None";
                         xlnx,hs-settle-ns = <0x91>;
@@ -2712,14 +2788,14 @@
                         mipi_csi_portsmipi_csi2_rx_subsyst_1: ports {
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
-                                phandle = <0x11f>;
+                                phandle = <0x120>;
 
                                 mipi_csi_port1mipi_csi2_rx_subsyst_1: port@1 {
                                         xlnx,video-width = <0x8>;
                                         reg = <0x1>;
                                         xlnx,video-format = <0xc>;
                                         xlnx,cfa-pattern = "rggb";
-                                        phandle = <0x120>;
+                                        phandle = <0x121>;
 
                                         mipi_csirx_outmipi_csi2_rx_subsyst_1: endpoint {
                                                 remote-endpoint = <0xa1>;
@@ -2732,27 +2808,25 @@
                                         reg = <0x0>;
                                         xlnx,video-format = <0xc>;
                                         xlnx,cfa-pattern = "rggb";
-                                        phandle = <0x121>;
+                                        phandle = <0x122>;
 
                                         mipi_csi_inmipi_csi2_rx_subsyst_1: endpoint {
                                                 data-lanes = <0x1 0x2>;
-                                                phandle = <0x122>;
+                                                phandle = <0x123>;
                                         };
                                 };
                         };
                 };
 
-                v_demosaic_0: v_demosaic@80030000 {
-                        interrupts = <0x0 0x5f 0x4>;
+                v_demosaic_0: v_demosaic@80020000 {
                         compatible = "xlnx,v-demosaic-1.1", "xlnx,v-demosaic";
                         xlnx,max-width = <0x780>;
                         xlnx,max-height = <0x438>;
-                        interrupt-parent = <&gic>;
                         xlnx,rable = <0x0>;
                         xlnx,max-rows = <0x438>;
                         xlnx,use-uram = <0x0>;
                         xlnx,ip-name = "v_demosaic";
-                        reg = <0x0 0x80030000 0x0 0x10000>;
+                        reg = <0x0 0x80020000 0x0 0x10000>;
                         clocks = <&zynqmp_clk 0x47>;
                         xlnx,s-axi-ctrl-addr-width = <0x6>;
                         xlnx,enable-zipper-removal;
@@ -2763,19 +2837,18 @@
                         status = "okay";
                         clock-names = "ap_clk";
                         xlnx,algorithm = <0x0>;
-                        interrupt-names = "interrupt";
                         xlnx,s-axi-ctrl-data-width = <0x20>;
                         xlnx,name = "v_demosaic_0";
-                        phandle = <0xe>;
+                        phandle = <0xd>;
 
                         demosaic_portsv_demosaic_0: ports {
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
-                                phandle = <0x123>;
+                                phandle = <0x124>;
 
                                 demosaic_port1v_demosaic_0: port@1 {
                                         reg = <0x1>;
-                                        phandle = <0x124>;
+                                        phandle = <0x125>;
 
                                         demo_outv_demosaic_0: endpoint {
                                                 remote-endpoint = <0xa2>;
@@ -2785,7 +2858,7 @@
 
                                 demosaic_port0v_demosaic_0: port@0 {
                                         reg = <0x0>;
-                                        phandle = <0x125>;
+                                        phandle = <0x126>;
 
                                         v_demosaic_0mipi_csi2_rx_subsyst_0: endpoint {
                                                 remote-endpoint = <0xa3>;
@@ -2796,11 +2869,9 @@
                 };
 
                 v_demosaic_1: v_demosaic@80040000 {
-                        interrupts = <0x0 0x5a 0x4>;
                         compatible = "xlnx,v-demosaic-1.1", "xlnx,v-demosaic";
                         xlnx,max-width = <0x780>;
                         xlnx,max-height = <0x438>;
-                        interrupt-parent = <&gic>;
                         xlnx,rable = <0x0>;
                         xlnx,max-rows = <0x438>;
                         xlnx,use-uram = <0x0>;
@@ -2816,7 +2887,6 @@
                         status = "okay";
                         clock-names = "ap_clk";
                         xlnx,algorithm = <0x0>;
-                        interrupt-names = "interrupt";
                         xlnx,s-axi-ctrl-data-width = <0x20>;
                         xlnx,name = "v_demosaic_1";
                         phandle = <0xf>;
@@ -2824,11 +2894,11 @@
                         demosaic_portsv_demosaic_1: ports {
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
-                                phandle = <0x126>;
+                                phandle = <0x127>;
 
                                 demosaic_port1v_demosaic_1: port@1 {
                                         reg = <0x1>;
-                                        phandle = <0x127>;
+                                        phandle = <0x128>;
 
                                         demo_outv_demosaic_1: endpoint {
                                                 remote-endpoint = <0xa4>;
@@ -2838,7 +2908,7 @@
 
                                 demosaic_port0v_demosaic_1: port@0 {
                                         reg = <0x0>;
-                                        phandle = <0x128>;
+                                        phandle = <0x129>;
 
                                         v_demosaic_1mipi_csi2_rx_subsyst_1: endpoint {
                                                 remote-endpoint = <0xa5>;
@@ -2848,16 +2918,14 @@
                         };
                 };
 
-                v_gamma_lut_0: v_gamma_lut@80050000 {
-                        interrupts = <0x0 0x5e 0x4>;
+                v_gamma_lut_0: v_gamma_lut@80070000 {
                         compatible = "xlnx,v-gamma-lut-1.1", "xlnx,v-gamma-lut";
                         xlnx,max-width = <0x780>;
                         xlnx,max-height = <0x438>;
-                        interrupt-parent = <&gic>;
                         xlnx,max-rows = <0x438>;
                         xlnx,rable = <0x0>;
                         xlnx,ip-name = "v_gamma_lut";
-                        reg = <0x0 0x80050000 0x0 0x10000>;
+                        reg = <0x0 0x80070000 0x0 0x10000>;
                         clocks = <&zynqmp_clk 0x47>;
                         xlnx,s-axi-ctrl-addr-width = <0xd>;
                         xlnx,samples-per-clock = <0x1>;
@@ -2866,7 +2934,6 @@
                         xlnx,max-cols = <0x780>;
                         status = "okay";
                         clock-names = "ap_clk";
-                        interrupt-names = "interrupt";
                         xlnx,s-axi-ctrl-data-width = <0x20>;
                         xlnx,name = "v_gamma_lut_0";
                         phandle = <0x10>;
@@ -2874,23 +2941,23 @@
                         gamma_portsv_gamma_lut_0: ports {
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
-                                phandle = <0x129>;
+                                phandle = <0x12a>;
 
                                 gamma_port1v_gamma_lut_0: port@1 {
                                         xlnx,video-width = <0xa>;
                                         reg = <0x1>;
-                                        phandle = <0x12a>;
+                                        phandle = <0x12b>;
 
                                         gamma_outv_gamma_lut_0: endpoint {
                                                 remote-endpoint = <0xffffffff>;
-                                                phandle = <0x12b>;
+                                                phandle = <0x12c>;
                                         };
                                 };
 
                                 gamma_port0v_gamma_lut_0: port@0 {
                                         xlnx,video-width = <0xa>;
                                         reg = <0x0>;
-                                        phandle = <0x12c>;
+                                        phandle = <0x12d>;
 
                                         v_gamma_lut_0v_demosaic_0: endpoint {
                                                 remote-endpoint = <0xa6>;
@@ -2900,16 +2967,14 @@
                         };
                 };
 
-                v_gamma_lut_1: v_gamma_lut@80060000 {
-                        interrupts = <0x0 0x5b 0x4>;
+                v_gamma_lut_1: v_gamma_lut@80080000 {
                         compatible = "xlnx,v-gamma-lut-1.1", "xlnx,v-gamma-lut";
                         xlnx,max-width = <0x780>;
                         xlnx,max-height = <0x438>;
-                        interrupt-parent = <&gic>;
                         xlnx,max-rows = <0x438>;
                         xlnx,rable = <0x0>;
                         xlnx,ip-name = "v_gamma_lut";
-                        reg = <0x0 0x80060000 0x0 0x10000>;
+                        reg = <0x0 0x80080000 0x0 0x10000>;
                         clocks = <&zynqmp_clk 0x47>;
                         xlnx,s-axi-ctrl-addr-width = <0xd>;
                         xlnx,samples-per-clock = <0x1>;
@@ -2918,7 +2983,6 @@
                         xlnx,max-cols = <0x780>;
                         status = "okay";
                         clock-names = "ap_clk";
-                        interrupt-names = "interrupt";
                         xlnx,s-axi-ctrl-data-width = <0x20>;
                         xlnx,name = "v_gamma_lut_1";
                         phandle = <0x11>;
@@ -2926,23 +2990,23 @@
                         gamma_portsv_gamma_lut_1: ports {
                                 #address-cells = <0x1>;
                                 #size-cells = <0x0>;
-                                phandle = <0x12d>;
+                                phandle = <0x12e>;
 
                                 gamma_port1v_gamma_lut_1: port@1 {
                                         xlnx,video-width = <0xa>;
                                         reg = <0x1>;
-                                        phandle = <0x12e>;
+                                        phandle = <0x12f>;
 
                                         gamma_outv_gamma_lut_1: endpoint {
                                                 remote-endpoint = <0xffffffff>;
-                                                phandle = <0x12f>;
+                                                phandle = <0x130>;
                                         };
                                 };
 
                                 gamma_port0v_gamma_lut_1: port@0 {
                                         xlnx,video-width = <0xa>;
                                         reg = <0x0>;
-                                        phandle = <0x130>;
+                                        phandle = <0x131>;
 
                                         v_gamma_lut_1v_demosaic_1: endpoint {
                                                 remote-endpoint = <0xa7>;
@@ -3671,7 +3735,8 @@
                 misc_clk_0 = "/amba_pl/misc_clk_0";
                 axi_vdma_0 = "/amba_pl/dma@80010000";
                 dma_channel_80010030 = "/amba_pl/dma@80010000/dma-channel@80010030";
-                isp_placeholder_0 = "/amba_pl/isp_placeholder@80020000";
+                axi_vdma_1 = "/amba_pl/dma@80030000";
+                dma_channel_80030030 = "/amba_pl/dma@80030000/dma-channel@80030030";
                 mipi_csi2_rx_subsyst_0 = "/amba_pl/mipi_csi2_rx_subsystem@80000000";
                 mipi_csi_portsmipi_csi2_rx_subsyst_0 = "/amba_pl/mipi_csi2_rx_subsystem@80000000/ports";
                 mipi_csi_port1mipi_csi2_rx_subsyst_0 = "/amba_pl/mipi_csi2_rx_subsystem@80000000/ports/port@1";
@@ -3684,30 +3749,30 @@
                 mipi_csirx_outmipi_csi2_rx_subsyst_1 = "/amba_pl/mipi_csi2_rx_subsystem@80002000/ports/port@1/endpoint";
                 mipi_csi_port0mipi_csi2_rx_subsyst_1 = "/amba_pl/mipi_csi2_rx_subsystem@80002000/ports/port@0";
                 mipi_csi_inmipi_csi2_rx_subsyst_1 = "/amba_pl/mipi_csi2_rx_subsystem@80002000/ports/port@0/endpoint";
-                v_demosaic_0 = "/amba_pl/v_demosaic@80030000";
-                demosaic_portsv_demosaic_0 = "/amba_pl/v_demosaic@80030000/ports";
-                demosaic_port1v_demosaic_0 = "/amba_pl/v_demosaic@80030000/ports/port@1";
-                demo_outv_demosaic_0 = "/amba_pl/v_demosaic@80030000/ports/port@1/endpoint";
-                demosaic_port0v_demosaic_0 = "/amba_pl/v_demosaic@80030000/ports/port@0";
-                v_demosaic_0mipi_csi2_rx_subsyst_0 = "/amba_pl/v_demosaic@80030000/ports/port@0/endpoint";
+                v_demosaic_0 = "/amba_pl/v_demosaic@80020000";
+                demosaic_portsv_demosaic_0 = "/amba_pl/v_demosaic@80020000/ports";
+                demosaic_port1v_demosaic_0 = "/amba_pl/v_demosaic@80020000/ports/port@1";
+                demo_outv_demosaic_0 = "/amba_pl/v_demosaic@80020000/ports/port@1/endpoint";
+                demosaic_port0v_demosaic_0 = "/amba_pl/v_demosaic@80020000/ports/port@0";
+                v_demosaic_0mipi_csi2_rx_subsyst_0 = "/amba_pl/v_demosaic@80020000/ports/port@0/endpoint";
                 v_demosaic_1 = "/amba_pl/v_demosaic@80040000";
                 demosaic_portsv_demosaic_1 = "/amba_pl/v_demosaic@80040000/ports";
                 demosaic_port1v_demosaic_1 = "/amba_pl/v_demosaic@80040000/ports/port@1";
                 demo_outv_demosaic_1 = "/amba_pl/v_demosaic@80040000/ports/port@1/endpoint";
                 demosaic_port0v_demosaic_1 = "/amba_pl/v_demosaic@80040000/ports/port@0";
                 v_demosaic_1mipi_csi2_rx_subsyst_1 = "/amba_pl/v_demosaic@80040000/ports/port@0/endpoint";
-                v_gamma_lut_0 = "/amba_pl/v_gamma_lut@80050000";
-                gamma_portsv_gamma_lut_0 = "/amba_pl/v_gamma_lut@80050000/ports";
-                gamma_port1v_gamma_lut_0 = "/amba_pl/v_gamma_lut@80050000/ports/port@1";
-                gamma_outv_gamma_lut_0 = "/amba_pl/v_gamma_lut@80050000/ports/port@1/endpoint";
-                gamma_port0v_gamma_lut_0 = "/amba_pl/v_gamma_lut@80050000/ports/port@0";
-                v_gamma_lut_0v_demosaic_0 = "/amba_pl/v_gamma_lut@80050000/ports/port@0/endpoint";
-                v_gamma_lut_1 = "/amba_pl/v_gamma_lut@80060000";
-                gamma_portsv_gamma_lut_1 = "/amba_pl/v_gamma_lut@80060000/ports";
-                gamma_port1v_gamma_lut_1 = "/amba_pl/v_gamma_lut@80060000/ports/port@1";
-                gamma_outv_gamma_lut_1 = "/amba_pl/v_gamma_lut@80060000/ports/port@1/endpoint";
-                gamma_port0v_gamma_lut_1 = "/amba_pl/v_gamma_lut@80060000/ports/port@0";
-                v_gamma_lut_1v_demosaic_1 = "/amba_pl/v_gamma_lut@80060000/ports/port@0/endpoint";
+                v_gamma_lut_0 = "/amba_pl/v_gamma_lut@80070000";
+                gamma_portsv_gamma_lut_0 = "/amba_pl/v_gamma_lut@80070000/ports";
+                gamma_port1v_gamma_lut_0 = "/amba_pl/v_gamma_lut@80070000/ports/port@1";
+                gamma_outv_gamma_lut_0 = "/amba_pl/v_gamma_lut@80070000/ports/port@1/endpoint";
+                gamma_port0v_gamma_lut_0 = "/amba_pl/v_gamma_lut@80070000/ports/port@0";
+                v_gamma_lut_0v_demosaic_0 = "/amba_pl/v_gamma_lut@80070000/ports/port@0/endpoint";
+                v_gamma_lut_1 = "/amba_pl/v_gamma_lut@80080000";
+                gamma_portsv_gamma_lut_1 = "/amba_pl/v_gamma_lut@80080000/ports";
+                gamma_port1v_gamma_lut_1 = "/amba_pl/v_gamma_lut@80080000/ports/port@1";
+                gamma_outv_gamma_lut_1 = "/amba_pl/v_gamma_lut@80080000/ports/port@1/endpoint";
+                gamma_port0v_gamma_lut_1 = "/amba_pl/v_gamma_lut@80080000/ports/port@0";
+                v_gamma_lut_1v_demosaic_1 = "/amba_pl/v_gamma_lut@80080000/ports/port@0/endpoint";
                 mipi_csi2_rx_subsyst_0_phy = "/amba_pl/mipi_csi2_rx_subsyst_0_phy@1000";
                 mipi_csi2_rx_subsyst_0_rx = "/amba_pl/mipi_csi2_rx_subsyst_0_rx@0";
                 mipi_csi2_rx_subsyst_1_phy = "/amba_pl/mipi_csi2_rx_subsyst_1_phy@1000";

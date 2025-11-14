@@ -187,10 +187,10 @@ drv_info:
     driver: axivdma
     ip_name: axi_vdma
     path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_16
-  isp_placeholder_0:
-    driver: isp_placeholder
-    ip_name: isp_placeholder
-    path: E:\Dev\QianSai\mipi_dp_vitis\mipi_dp\zynqmp_fsbl\zynqmp_fsbl_bsp\hw_artifacts\drivers\isp_placeholder_v1_0
+  axi_vdma_1:
+    driver: axivdma
+    ip_name: axi_vdma
+    path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_16
   mipi_csi2_rx_subsyst_0:
     driver: mipicsiss
     ip_name: mipi_csi2_rx_subsystem

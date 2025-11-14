@@ -1,0 +1,107 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "3 4 5",
+    "file": "v_gamma_lut.cpp",
+    "fileloc": 89,
+    "instructions": 52,
+    "loads": {
+      "T": 4
+    },
+    "name": "v_gamma_lut",
+    "total_instructions": 1703
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 1,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "hls_axi_io.h",
+    "fileloc": 60,
+    "instructions": 25,
+    "loads": {
+      "L": 1
+    },
+    "name": "AXIGetBitFields<30, ap_uint<10> >",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 68
+  },
+  "3": {
+    "basicblocks": 40,
+    "calls": "7 1 1 6",
+    "file": "v_gamma_lut.cpp",
+    "fileloc": 159,
+    "instructions": 134,
+    "loads": {
+      "L": 4
+    },
+    "name": "AXIvideo2MultiPixStream",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 421
+  },
+  "4": {
+    "basicblocks": 28,
+    "calls": "7 7",
+    "file": "v_gamma_lut.cpp",
+    "fileloc": 292,
+    "instructions": 212,
+    "loads": {
+      "L": 16
+    },
+    "name": "Gamma",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 300
+  },
+  "5": {
+    "basicblocks": 31,
+    "calls": "7",
+    "file": "v_gamma_lut.cpp",
+    "fileloc": 236,
+    "instructions": 209,
+    "loads": {
+      "L": 8
+    },
+    "name": "MultiPixStream2AXIvideo",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 928
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "hls_axi_io.h",
+    "fileloc": 83,
+    "instructions": 6,
+    "loads": {
+      "L": 1
+    },
+    "name": "AXIGetBitFields<30, ap_uint<10> >",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 74
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_video_core.h",
+    "fileloc": 195,
+    "instructions": 5,
+    "name": "Scalar",
+    "total_instructions": 5
+  }
+}

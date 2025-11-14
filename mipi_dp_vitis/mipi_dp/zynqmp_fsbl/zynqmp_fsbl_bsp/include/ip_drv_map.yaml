@@ -1,9 +1,9 @@
 axi_vdma_0:
 - axi_vdma
 - axivdma
-isp_placeholder_0:
-- isp_placeholder
-- isp_placeholder
+axi_vdma_1:
+- axi_vdma
+- axivdma
 mipi_csi2_rx_subsyst_0:
 - mipi_csi2_rx_subsystem
 - mipicsiss

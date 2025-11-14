@@ -1,0 +1,891 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_axi_io.h', 
+                   Line: 85, Column: 2 }
+Function:        _ZN3hls15AXIGetBitFieldsILi30E7ap_uintILi10EEEEvNS_4axisIS1_IXT_EELm1ELm1ELm1ELh56ELb0EEEiiRT0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void hls::AXIGetBitFields<30, ap_uint<10> >(ap_uint<30>, int, int, ap_uint<10>&)'
+    DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_axi_io.h', 
+                       Line: 60, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void hls::AXIGetBitFields<30, ap_uint<10> >(hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<10>&)'
+    DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_axi_io.h', 
+                       Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 167, Column: 21 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::Scalar<3, ap_uint<10> >::Scalar()'
+    DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                       Line: 195, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 209, Column: 21 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void hls::AXIGetBitFields<30, ap_uint<10> >(hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<10>&)'
+    DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_axi_io.h', 
+                       Line: 83, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 171, Column: 16 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - Callee:          'unsigned short reg<unsigned short>(unsigned short)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis/2024.2/common/technology/autopilot\utils/x_hls_utils.h', 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 305, Column: 21 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::Scalar<3, ap_uint<10> >::Scalar()'
+    DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                       Line: 195, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'Gamma(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 302, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 243, Column: 21 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::Scalar<3, ap_uint<10> >::Scalar()'
+    DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                       Line: 195, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 241, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 143, Column: 2 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 146, Column: 3 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'Gamma(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 302, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 148, Column: 4 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 241, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Adding '''
+  - Name:            dstpix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Adding '''
+  - Name:            srcpix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Adding '''
+  - Name:            dstpix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Adding '''
+  - Name:            srcpix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h', 
+                   Line: 197, Column: 9 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 167, Column: 21 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            pix
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 306, Column: 21 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            dstpix
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 305, Column: 21 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            srcpix
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 243, Column: 21 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            pix
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 276, Column: 31 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_276_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 278, Column: 35 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_278_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 335, Column: 31 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_335_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 205, Column: 31 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_205_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 207, Column: 35 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_207_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 241, Column: 0 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_276_3
+  - String:          ''' ('
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:276:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2AXIvideo
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 241, Column: 0 }
+Function:        _Z23MultiPixStream2AXIvideoRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEERNS0_INS_4axisIS2_ILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERtSC_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_278_4
+  - String:          ''' ('
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:278:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2AXIvideo
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 302, Column: 0 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_335_5
+  - String:          ''' ('
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:335:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          Gamma
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 164, Column: 0 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_205_1
+  - String:          ''' ('
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:205:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          AXIvideo2MultiPixStream
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 164, Column: 0 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_207_2
+  - String:          ''' ('
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:207:35'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          AXIvideo2MultiPixStream
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 170, Column: 16 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - Callee:          'unsigned short reg<unsigned short>(unsigned short)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis/2024.2/common/technology/autopilot\utils/x_hls_utils.h', 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 143, Column: 2 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 146, Column: 3 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'Gamma(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 302, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 148, Column: 4 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 241, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_v_gamma_lut_ir
+Args:            
+  - Callee:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_v_gamma_lut_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 136, Column: 19 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            imgRgb
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '30'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 136, Column: 27 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            imgGamma
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '30'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 181, Column: 5 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        loop_wait_for_start
+  - String:          ' '
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:181:5'
+  - String:          ' '
+  - Function:        'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 216, Column: 9 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        loop_wait_for_eol
+  - String:          ' '
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:216:9'
+  - String:          ' '
+  - Function:        'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 216, Column: 9 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        loop_wait_for_eol
+  - String:          '''('
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:216:9'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 181, Column: 5 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        loop_wait_for_start
+  - String:          '''('
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:181:5'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_315_1
+  - String:          '> at '
+  - LoopLoc:         'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:315:23'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 307, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           lut_0
+  - String:          ''' dimension '
+  - Dim:             '2'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 308, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           lut_1
+  - String:          ''' dimension '
+  - Dim:             '2'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 309, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Automatically partitioning array '''
+  - Value:           lut_2
+  - String:          ''' dimension '
+  - Dim:             '2'
+  - String:          ' completely based on constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 307, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=lut_0'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  Gamma
+  - String:          ' '
+  - varLoc:          'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:307:16'
+  - String:          ' '
+  - VarName:         lut_0
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 307, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            lut_0
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 308, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=lut_1'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  Gamma
+  - String:          ' '
+  - varLoc:          'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:308:16'
+  - String:          ' '
+  - VarName:         lut_1
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 308, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            lut_1
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 309, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=complete  variable=lut_2'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  Gamma
+  - String:          ' '
+  - varLoc:          'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:309:16'
+  - String:          ' '
+  - VarName:         lut_2
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 309, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            lut_2
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 307, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          lut_0
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 308, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          lut_1
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 309, Column: 16 }
+Function:        _Z5GammaRN3hls6streamINS_6ScalarILi3E7ap_uintILi10EEEELi0EEES6_RtS7_PtS8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          lut_2
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 170, Column: 16 }
+Function:        _Z23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi3ES2_ILi10EEEELi0EEERtSC_
+Args:            
+  - Callee:          'unsigned short reg<unsigned short>(unsigned short)'
+    DebugLoc:        { File: 'C:/Xilinx/Vitis/2024.2/common/technology/autopilot\utils/x_hls_utils.h', 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 143, Column: 2 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 164, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 146, Column: 3 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'Gamma(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 302, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                   Line: 148, Column: 4 }
+Function:        _Z11v_gamma_lutRtS_S_PtS0_S0_RN3hls6streamINS1_4axisI7ap_uintILi30EELm1ELm1ELm1ELh56ELb0EEELi0EEES8_
+Args:            
+  - Callee:          'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 241, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_gamma_lut(unsigned short&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp', 
+                       Line: 99, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

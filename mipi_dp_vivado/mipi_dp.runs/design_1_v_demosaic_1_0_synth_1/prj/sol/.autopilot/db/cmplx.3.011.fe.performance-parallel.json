@@ -1,0 +1,115 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 7 8 3",
+    "file": "v_demosaic.cpp",
+    "fileloc": 89,
+    "instructions": 33,
+    "name": "v_demosaic",
+    "total_instructions": 2020
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 1,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "2": {
+    "basicblocks": 17,
+    "calls": "1 1",
+    "file": "v_demosaic.cpp",
+    "fileloc": 133,
+    "instructions": 153,
+    "loads": {
+      "L": 14
+    },
+    "name": "AXIvideo2MultiBayer",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 182
+  },
+  "3": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 208,
+    "instructions": 82,
+    "loads": {
+      "G": 1,
+      "L": 3
+    },
+    "name": "MultiPixStream2AXIvideo",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 124
+  },
+  "4": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 841,
+    "instructions": 357,
+    "loads": {
+      "L": 2
+    },
+    "name": "DebayerRandBatG",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 396
+  },
+  "5": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 593,
+    "instructions": 347,
+    "loads": {
+      "L": 2
+    },
+    "name": "DebayerRatBorBatR",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 386
+  },
+  "6": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 264,
+    "instructions": 669,
+    "loads": {
+      "G": 5,
+      "L": 4
+    },
+    "name": "DebayerG",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 694
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "6 5 4",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1060,
+    "instructions": 8,
+    "name": "Debayer",
+    "total_instructions": 1484
+  },
+  "8": {
+    "basicblocks": 30,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1077,
+    "instructions": 158,
+    "name": "ZipperRemoval",
+    "total_instructions": 197
+  }
+}

@@ -108,7 +108,7 @@ set rc [catch {
   set_param bd.open.in_stealth_mode 3
   set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xczu2cg-sfvc784-1-i
+  create_project -in_memory -part xczu2cg-sfvc784-1-e
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
@@ -139,7 +139,7 @@ OPTRACE "read constraints: implementation_pre" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
   set_param project.isImplRun true
-  link_design -top design_1_wrapper -part xczu2cg-sfvc784-1-i 
+  link_design -top design_1_wrapper -part xczu2cg-sfvc784-1-e 
 OPTRACE "link_design" END { }
   set_param project.isImplRun false
 OPTRACE "gray box cells" START { }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu2cg-sfvc784-1-i" LaunchTime="1762242101">
+<GenRun Id="impl_1" LaunchPart="xczu2cg-sfvc784-1-e" LaunchTime="1763044354">
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
   <File Type="BITSTR-MMI" Name="design_1_wrapper.mmi"/>
@@ -137,11 +137,26 @@
     <Step Id="write_bitstream" PreStepTclHook="$PPRDIR/Scripts/drc_override.tcl"/>
     <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_stitcher_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_v_demosaic_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_mipi_csi2_rx_subsyst_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_isp_placeholder_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_115c_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_proc_sys_reset_150M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_demosaic_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_demosaic_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_subset_converter_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_gamma_lut_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_d10d_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_115c_r_sync_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_gamma_lut_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_mipi_csi2_rx_subsyst_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_d10d_phy_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_d10d_r_sync_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_d10d_vfb_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_115c_rx_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_115c_phy_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_d10d_rx_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="bd_115c_vfb_0_0"/>
 </GenRun>

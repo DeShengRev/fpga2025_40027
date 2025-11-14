@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vitis HLS Report for 'v_gamma_lut'
+================================================================
+* Date:           Thu Nov 13 19:31:43 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu2cg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  3.608 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+---------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |   max   |   Type   |
+    +---------+---------+-----------+-----------+------+---------+----------+
+    |     5448|  2084406|  36.322 us|  13.897 ms|  5445|  2084407|  dataflow|
+    +---------+---------+-----------+-----------+------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------+-------------------------+---------+---------+-----------+-----------+------+---------+---------+
+        |                            |                         |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline|
+        |          Instance          |          Module         |   min   |   max   |    min    |    max    |  min |   max   |   Type  |
+        +----------------------------+-------------------------+---------+---------+-----------+-----------+------+---------+---------+
+        |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        6|  2084406|  40.002 ns|  13.897 ms|     6|  2084406|       no|
+        |Gamma_U0                    |Gamma                    |     5444|  2080028|  36.295 us|  13.868 ms|  5444|  2080028|       no|
+        |MultiPixStream2AXIvideo_U0  |MultiPixStream2AXIvideo  |     4418|  2079002|  29.455 us|  13.861 ms|  4418|  2079002|       no|
+        +----------------------------+-------------------------+---------+---------+-----------+-----------+------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF  |  LUT  | URAM|
++-----------------+---------+-----+-------+-------+-----+
+|DSP              |        -|    -|      -|      -|    -|
+|Expression       |        -|    -|      0|     12|    -|
+|FIFO             |        -|    -|    198|    134|    -|
+|Instance         |        6|    -|    707|   1440|    0|
+|Memory           |        -|    -|      -|      -|    -|
+|Multiplexer      |        -|    -|      0|     18|    -|
+|Register         |        -|    -|      2|      -|    -|
++-----------------+---------+-----+-------+-------+-----+
+|Total            |        6|    0|    907|   1604|    0|
++-----------------+---------+-----+-------+-------+-----+
+|Available        |      300|  240|  94464|  47232|    0|
++-----------------+---------+-----+-------+-------+-----+
+|Utilization (%)  |        2|    0|     ~0|      3|    0|
++-----------------+---------+-----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+-------------------------+---------+----+-----+-----+-----+
+    |          Instance          |          Module         | BRAM_18K| DSP|  FF | LUT | URAM|
+    +----------------------------+-------------------------+---------+----+-----+-----+-----+
+    |AXIvideo2MultiPixStream_U0  |AXIvideo2MultiPixStream  |        0|   0|  170|  433|    0|
+    |CTRL_s_axi_U                |CTRL_s_axi               |        3|   0|  342|  346|    0|
+    |Gamma_U0                    |Gamma                    |        3|   0|   82|  371|    0|
+    |MultiPixStream2AXIvideo_U0  |MultiPixStream2AXIvideo  |        0|   0|  113|  290|    0|
+    +----------------------------+-------------------------+---------+----+-----+-----+-----+
+    |Total                       |                         |        6|   0|  707| 1440|    0|
+    +----------------------------+-------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------+---------+----+----+-----+------+-----+---------+
+    |    Name    | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +------------+---------+----+----+-----+------+-----+---------+
+    |imgGamma_U  |        0|  99|   0|    -|    16|   30|      480|
+    |imgRgb_U    |        0|  99|   0|    -|    16|   30|      480|
+    +------------+---------+----+----+-----+------+-----+---------+
+    |Total       |        0| 198|   0|    0|    32|   60|      960|
+    +------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+    |                Variable Name                | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+    |AXIvideo2MultiPixStream_U0_ap_start          |       and|   0|  0|   2|           1|           1|
+    |Gamma_U0_ap_start                            |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                      |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                                |       and|   0|  0|   2|           1|           1|
+    |ap_sync_AXIvideo2MultiPixStream_U0_ap_ready  |        or|   0|  0|   2|           1|           1|
+    |ap_sync_Gamma_U0_ap_ready                    |        or|   0|  0|   2|           1|           1|
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                        |          |   0|  0|  12|           6|           6|
+    +---------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |                       Name                      | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_AXIvideo2MultiPixStream_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_Gamma_U0_ap_ready                    |   9|          2|    1|          2|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                            |  18|          4|    2|          4|
+    +-------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------+---+----+-----+-----------+
+    |                       Name                      | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_AXIvideo2MultiPixStream_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_Gamma_U0_ap_ready                    |  1|   0|    1|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+    |Total                                            |  2|   0|    2|          0|
+    +-------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+-----------------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++---------------------+-----+-----+------------+-----------------------+--------------+
+|s_axi_CTRL_AWVALID   |   in|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_AWREADY   |  out|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_AWADDR    |   in|   13|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_WVALID    |   in|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_WREADY    |  out|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_WDATA     |   in|   32|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_WSTRB     |   in|    4|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_ARVALID   |   in|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_ARREADY   |  out|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_ARADDR    |   in|   13|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_RVALID    |  out|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_RREADY    |   in|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_RDATA     |  out|   32|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_RRESP     |  out|    2|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_BVALID    |  out|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_BREADY    |   in|    1|       s_axi|                   CTRL|         array|
+|s_axi_CTRL_BRESP     |  out|    2|       s_axi|                   CTRL|         array|
+|ap_clk               |   in|    1|  ap_ctrl_hs|            v_gamma_lut|  return value|
+|ap_rst_n             |   in|    1|  ap_ctrl_hs|            v_gamma_lut|  return value|
+|interrupt            |  out|    1|  ap_ctrl_hs|            v_gamma_lut|  return value|
+|s_axis_video_TDATA   |   in|   32|        axis|  s_axis_video_V_data_V|       pointer|
+|s_axis_video_TKEEP   |   in|    4|        axis|  s_axis_video_V_keep_V|       pointer|
+|s_axis_video_TSTRB   |   in|    4|        axis|  s_axis_video_V_strb_V|       pointer|
+|s_axis_video_TUSER   |   in|    1|        axis|  s_axis_video_V_user_V|       pointer|
+|s_axis_video_TLAST   |   in|    1|        axis|  s_axis_video_V_last_V|       pointer|
+|s_axis_video_TID     |   in|    1|        axis|    s_axis_video_V_id_V|       pointer|
+|s_axis_video_TDEST   |   in|    1|        axis|  s_axis_video_V_dest_V|       pointer|
+|s_axis_video_TVALID  |   in|    1|        axis|  s_axis_video_V_dest_V|       pointer|
+|s_axis_video_TREADY  |  out|    1|        axis|  s_axis_video_V_dest_V|       pointer|
+|m_axis_video_TDATA   |  out|   32|        axis|  m_axis_video_V_data_V|       pointer|
+|m_axis_video_TKEEP   |  out|    4|        axis|  m_axis_video_V_keep_V|       pointer|
+|m_axis_video_TSTRB   |  out|    4|        axis|  m_axis_video_V_strb_V|       pointer|
+|m_axis_video_TUSER   |  out|    1|        axis|  m_axis_video_V_user_V|       pointer|
+|m_axis_video_TLAST   |  out|    1|        axis|  m_axis_video_V_last_V|       pointer|
+|m_axis_video_TID     |  out|    1|        axis|    m_axis_video_V_id_V|       pointer|
+|m_axis_video_TDEST   |  out|    1|        axis|  m_axis_video_V_dest_V|       pointer|
+|m_axis_video_TVALID  |  out|    1|        axis|  m_axis_video_V_dest_V|       pointer|
+|m_axis_video_TREADY  |   in|    1|        axis|  m_axis_video_V_dest_V|       pointer|
++---------------------+-----+-----+------------+-----------------------+--------------+
+

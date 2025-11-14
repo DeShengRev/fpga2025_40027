@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vitis HLS Report for 'Debayer'
+================================================================
+* Date:           Thu Nov 13 19:32:14 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu2cg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.835 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+----------+------------+-----+------------+----------+
+    |   Latency (cycles)   |   Latency (absolute)  |     Interval     | Pipeline |
+    |   min   |     max    |    min   |     max    | min |     max    |   Type   |
+    +---------+------------+----------+------------+-----+------------+----------+
+    |    65581|  4296212499|  0.437 ms|  28.643 sec|   40|  4296212500|  dataflow|
+    +---------+------------+----------+------------+-----+------------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.16>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%width_val8_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %width_val8"   --->   Operation 7 'read' 'width_val8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%height_val4_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %height_val4"   --->   Operation 8 'read' 'height_val4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%bayerPhase_val11_c5 = alloca i64 1"   --->   Operation 9 'alloca' 'bayerPhase_val11_c5' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%bayerPhase_val11_c = alloca i64 1"   --->   Operation 10 'alloca' 'bayerPhase_val11_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%width_val8_c4 = alloca i64 1"   --->   Operation 11 'alloca' 'width_val8_c4' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%width_val8_c = alloca i64 1"   --->   Operation 12 'alloca' 'width_val8_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%height_val4_c3 = alloca i64 1"   --->   Operation 13 'alloca' 'height_val4_c3' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%height_val4_c = alloca i64 1"   --->   Operation 14 'alloca' 'height_val4_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 11> <Depth = 2> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%imgG = alloca i64 1"   --->   Operation 15 'alloca' 'imgG' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%imgRB = alloca i64 1"   --->   Operation 16 'alloca' 'imgRB' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.16> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 30> <Depth = 2> <FIFO>
+ST_1 : Operation 17 [2/2] (2.16ns)   --->   "%call_ln1071 = call void @DebayerG, i10 %imgBayer, i30 %imgG, i16 %height_val4_read, i16 %width_val8_read, i16 %bayerPhase_val11, i11 %height_val4_c3, i11 %width_val8_c4, i16 %bayerPhase_val11_c5, i10 %DIV1_TABLE, i18 %DIV2_TABLE" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1071]   --->   Operation 17 'call' 'call_ln1071' <Predicate = true> <Delay = 2.16> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 1.02>
+ST_2 : Operation 18 [1/2] (1.02ns)   --->   "%call_ln1071 = call void @DebayerG, i10 %imgBayer, i30 %imgG, i16 %height_val4_read, i16 %width_val8_read, i16 %bayerPhase_val11, i11 %height_val4_c3, i11 %width_val8_c4, i16 %bayerPhase_val11_c5, i10 %DIV1_TABLE, i18 %DIV2_TABLE" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1071]   --->   Operation 18 'call' 'call_ln1071' <Predicate = true> <Delay = 1.02> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 19 [2/2] (0.00ns)   --->   "%call_ln1072 = call void @DebayerRatBorBatR, i30 %imgG, i30 %imgRB, i11 %height_val4_c3, i11 %width_val8_c4, i16 %bayerPhase_val11_c5, i11 %height_val4_c, i11 %width_val8_c, i16 %bayerPhase_val11_c" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 19 'call' 'call_ln1072' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.94>
+ST_4 : Operation 20 [1/2] (0.94ns)   --->   "%call_ln1072 = call void @DebayerRatBorBatR, i30 %imgG, i30 %imgRB, i11 %height_val4_c3, i11 %width_val8_c4, i16 %bayerPhase_val11_c5, i11 %height_val4_c, i11 %width_val8_c, i16 %bayerPhase_val11_c" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072]   --->   Operation 20 'call' 'call_ln1072' <Predicate = true> <Delay = 0.94> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 21 [2/2] (0.00ns)   --->   "%call_ln1073 = call void @DebayerRandBatG, i30 %imgRB, i30 %imgRgb, i11 %height_val4_c, i11 %width_val8_c, i16 %bayerPhase_val11_c" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1073]   --->   Operation 21 'call' 'call_ln1073' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.94>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bayerPhase_val11, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @bayerPhase_OC_val11_c5_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i16 %bayerPhase_val11_c5, i16 %bayerPhase_val11_c5"   --->   Operation 23 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bayerPhase_val11_c5, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%empty_196 = specchannel i32 @_ssdm_op_SpecChannel, void @bayerPhase_OC_val11_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i16 %bayerPhase_val11_c, i16 %bayerPhase_val11_c"   --->   Operation 25 'specchannel' 'empty_196' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %bayerPhase_val11_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%empty_197 = specchannel i32 @_ssdm_op_SpecChannel, void @width_OC_val8_c4_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %width_val8_c4, i11 %width_val8_c4"   --->   Operation 27 'specchannel' 'empty_197' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %width_val8_c4, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%empty_198 = specchannel i32 @_ssdm_op_SpecChannel, void @width_OC_val8_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %width_val8_c, i11 %width_val8_c"   --->   Operation 29 'specchannel' 'empty_198' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %width_val8_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%empty_199 = specchannel i32 @_ssdm_op_SpecChannel, void @height_OC_val4_c3_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %height_val4_c3, i11 %height_val4_c3"   --->   Operation 31 'specchannel' 'empty_199' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %height_val4_c3, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%empty_200 = specchannel i32 @_ssdm_op_SpecChannel, void @height_OC_val4_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i11 %height_val4_c, i11 %height_val4_c"   --->   Operation 33 'specchannel' 'empty_200' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i11 %height_val4_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln0 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_14"   --->   Operation 35 'specdataflowpipeline' 'specdataflowpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgRgb, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i10 %imgBayer, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%empty_201 = specchannel i32 @_ssdm_op_SpecChannel, void @imgG_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i30 %imgG, i30 %imgG"   --->   Operation 38 'specchannel' 'empty_201' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgG, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%empty_202 = specchannel i32 @_ssdm_op_SpecChannel, void @imgRB_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i30 %imgRB, i30 %imgRB"   --->   Operation 40 'specchannel' 'empty_202' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i30 %imgRB, void @empty_20, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/2] (0.94ns)   --->   "%call_ln1073 = call void @DebayerRandBatG, i30 %imgRB, i30 %imgRgb, i11 %height_val4_c, i11 %width_val8_c, i16 %bayerPhase_val11_c" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1073]   --->   Operation 42 'call' 'call_ln1073' <Predicate = true> <Delay = 0.94> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%ret_ln1074 = ret" [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1074]   --->   Operation 43 'ret' 'ret_ln1074' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 6.667ns, clock uncertainty: 1.800ns.
+
+ <State 1>: 2.167ns
+The critical path consists of the following:
+	wire read operation ('width_val8_read') on port 'width_val8' [9]  (0.000 ns)
+	'call' operation 0 bit ('call_ln1071', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1071) to 'DebayerG' [38]  (2.167 ns)
+
+ <State 2>: 1.028ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln1071', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1071) to 'DebayerG' [38]  (1.028 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.948ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln1072', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1072) to 'DebayerRatBorBatR' [39]  (0.948 ns)
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.948ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln1073', E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_1_0_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1073) to 'DebayerRandBatG' [40]  (0.948 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

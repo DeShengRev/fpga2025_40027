@@ -1,11 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Nov  4 15:45:23 2025
+| Date         : Thu Nov 13 22:35:13 2025
 | Host         : Win10-zsd running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
-| Device       : xczu2cg-sfvc784-1-i
+| Device       : xczu2cg-sfvc784-1-e
 | Speed File   : -1
 | Design State : Synthesized
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -166,17 +166,22 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | design_1_v_gamma_lut_0_0                          |    1 |
 | design_1_v_demosaic_1_0                           |    1 |
 | design_1_v_demosaic_0_2                           |    1 |
-| design_1_stitcher_0_0                             |    1 |
 | design_1_smartconnect_0_0                         |    1 |
 | design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0 |    1 |
+| design_1_ps8_0_axi_periph_imp_auto_pc_7           |    1 |
+| design_1_ps8_0_axi_periph_imp_auto_pc_6           |    1 |
+| design_1_ps8_0_axi_periph_imp_auto_pc_5           |    1 |
+| design_1_ps8_0_axi_periph_imp_auto_pc_4           |    1 |
+| design_1_ps8_0_axi_periph_imp_auto_pc_3           |    1 |
+| design_1_ps8_0_axi_periph_imp_auto_pc_2           |    1 |
+| design_1_ps8_0_axi_periph_imp_auto_pc_1           |    1 |
 | design_1_ps8_0_axi_periph_imp_auto_pc_0           |    1 |
 | design_1_proc_sys_reset_150M_0                    |    1 |
 | design_1_mipi_csi2_rx_subsyst_1_0                 |    1 |
 | design_1_mipi_csi2_rx_subsyst_0_0                 |    1 |
-| design_1_isp_placeholder_0_1                      |    1 |
-| design_1_axis_subset_converter_2_0                |    1 |
 | design_1_axis_subset_converter_1_0                |    1 |
 | design_1_axis_subset_converter_0_0                |    1 |
+| design_1_axi_vdma_1_0                             |    1 |
 | design_1_axi_vdma_0_0                             |    1 |
 +---------------------------------------------------+------+
 

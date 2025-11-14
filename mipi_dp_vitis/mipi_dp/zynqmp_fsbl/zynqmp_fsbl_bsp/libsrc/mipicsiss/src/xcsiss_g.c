@@ -55,8 +55,8 @@ XCsiSs_Config XCsiSs_ConfigTable[] __attribute__ ((section (".drvcfg_sec"))) = {
 		0x0, /* mipi-dphy-connected */
 		0x0, /* rxphy-present */
 		0x0, /* rxphy-connected */
-		0x405c, /* interrupts */
-		0xf9010000 /* interrupt-parent */
+		0xffff, /* interrupts */
+		0xffff /* interrupt-parent */
 	},
 	 {
 		 NULL

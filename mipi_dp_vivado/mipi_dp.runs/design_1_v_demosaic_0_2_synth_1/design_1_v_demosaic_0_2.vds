@@ -1,0 +1,855 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Nov 13 19:36:10 2025
+# Process ID         : 9536
+# Current directory  : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1
+# Command line       : vivado.exe -log design_1_v_demosaic_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_v_demosaic_0_2.tcl
+# Log file           : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/design_1_v_demosaic_0_2.vds
+# Journal file       : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1\vivado.jou
+# Running On         : Win10-zsd
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4600H with Radeon Graphics         
+# CPU Frequency      : 2994 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16505 MB
+# Swap memory        : 13893 MB
+# Total Virtual      : 30399 MB
+# Available Virtual  : 6211 MB
+#-----------------------------------------------------------
+source design_1_v_demosaic_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Dev/QianSai/xfcv_dev_hls/stitcher/stitcher/hls/impl/ip'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/Dev/QianSai/xfcv_dev_hls/xf_isp/xf_isp/hls/impl/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+
+****** vitis-run v2024.2 (64-bit)
+  **** SW Build 5238363 on 2024-11-10-08:15:25
+  **** Start of session at: Thu Nov 13 19:36:22 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/runhls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset prj 
+INFO: [HLS 200-10] Creating and opening project 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj'.
+INFO: [HLS 200-1510] Running: set_top v_demosaic 
+INFO: [HLS 200-1510] Running: open_solution sol 
+INFO: [HLS 200-10] Creating and opening solution 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu2cg-sfvc784-1-e 
+INFO: [HLS 200-1611] Setting target device to 'xczu2cg-sfvc784-1-e'
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/v_demosaic_config.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/v_demosaic_config.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/v_demosaic.cpp 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/v_demosaic.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/v_demosaic.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/v_demosaic.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls_video.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls_video.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls_opencv.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls_opencv.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_axi_io.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_axi_io.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_arithm.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_arithm.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_fast.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_fast.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_haar.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_haar.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_harris.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_harris.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_histogram.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_histogram.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_hough.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_hough.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_imgbase.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_imgbase.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_imgproc.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_imgproc.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_io.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_io.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_stereobm.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_stereobm.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_types.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_types.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_undistort.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_undistort.h' to the project
+INFO: [HLS 200-1510] Running: create_clock -period 6.667 -name ap_clk 
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 6.667ns.
+INFO: [HLS 200-1510] Running: config_rtl -module_prefix design_1_v_demosaic_0_2_ 
+INFO: [HLS 200-1510] Running: config_export -vendor xilinx.com -library ip -version 1.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 265.590 MB.
+INFO: [HLS 200-10] Analyzing design file 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/v_demosaic.cpp' ... 
+WARNING: [HLS 207-5540] 'Ap_stable' in '#pragma HLS INTERFACE' is deprecated, use 'Stable Pragma' instead (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:102:23)
+WARNING: [HLS 207-5540] 'Ap_stable' in '#pragma HLS INTERFACE' is deprecated, use 'Stable Pragma' instead (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:104:23)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 41.775 seconds; current allocated memory: 285.176 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 24,156 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,590 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,588 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,219 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,169 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,047 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,858 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,868 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,030 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,122 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,102 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,020 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,933 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,924 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,839 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,897 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<10, ap_uint<10> >(ap_uint<10>, int, int, ap_uint<10>&)' into 'void hls::AXIGetBitFields<10, ap_uint<10> >(hls::axis<ap_uint<10>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<10>&)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_axi_io.h:85:2)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<1, ap_uint<10> >::Scalar()' into 'AXIvideo2MultiBayer(hls::stream<hls::axis<ap_uint<10>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:142:23)
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<10, ap_uint<10> >(hls::axis<ap_uint<10>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<10>&)' into 'AXIvideo2MultiBayer(hls::stream<hls::axis<ap_uint<10>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:182:17)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<5, 1921, ap_uint<10>, 0>::insert_top_row(ap_uint<10>, int)' into 'hls::LineBuffer<5, 1921, ap_uint<10>, 0>::insert_bottom(ap_uint<10>, int)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:888:2)
+INFO: [HLS 214-131] Inlining function 'hls::Window<5, 5, ap_uint<10> >::insert_pixel(ap_uint<10>, int, int)' into 'hls::Window<5, 5, ap_uint<10> >::insert(ap_uint<10>, int, int)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:587:2)
+INFO: [HLS 214-131] Inlining function 'hls::Window<5, 5, ap_uint<10> >::getval(int, int)' into 'hls::Window<5, 5, ap_uint<10> >::operator()(int, int)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:515:9)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:278:21)
+INFO: [HLS 214-131] Inlining function 'hls::Window<5, 5, ap_uint<10> >::operator()(int, int)' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:507:59)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<1, ap_uint<10> >::Scalar()' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:280:23)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<5, 1921, ap_uint<10>, 0>::LineBuffer()' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283:61)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<5, 1921, ap_uint<10>, 0>::getval(int, int)' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:333:67)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<5, 1921, ap_uint<10>, 0>::insert_bottom(ap_uint<10>, int)' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:354:33)
+INFO: [HLS 214-131] Inlining function 'hls::Window<5, 5, ap_uint<10> >::insert(ap_uint<10>, int, int)' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:383:37)
+INFO: [HLS 214-131] Inlining function 'hls::Window<5, 5, ap_uint<10> >::getval(int, int)' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:443:37)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::Window()' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:65:5)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::insert_top_row(ap_uint<30>, int)' into 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::insert_bottom(ap_uint<30>, int)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:888:2)
+INFO: [HLS 214-131] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::insert_pixel(hls::Scalar<3, ap_uint<10> >, int, int)' into 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::insert(hls::Scalar<3, ap_uint<10> >, int, int)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:587:2)
+INFO: [HLS 214-131] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::getval(int, int)' into 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::operator()(int, int)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:515:9)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'DebayerRatBorBatR(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:610:21)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::LineBuffer()' into 'DebayerRatBorBatR(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:614:67)
+INFO: [HLS 214-131] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::operator()(int, int)' into 'DebayerRatBorBatR(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:779:40)
+INFO: [HLS 214-131] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::insert(hls::Scalar<3, ap_uint<10> >, int, int)' into 'DebayerRatBorBatR(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:754:35)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::insert_bottom(ap_uint<30>, int)' into 'DebayerRatBorBatR(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:675:32)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::getval(int, int)' into 'DebayerRatBorBatR(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:648:60)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'DebayerRandBatG(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:858:21)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::LineBuffer()' into 'DebayerRandBatG(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:862:67)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::getval(int, int)' into 'DebayerRandBatG(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:896:60)
+INFO: [HLS 214-131] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::operator()(int, int)' into 'DebayerRandBatG(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1021:40)
+INFO: [HLS 214-131] Inlining function 'hls::Window<3, 3, hls::Scalar<3, ap_uint<10> > >::insert(hls::Scalar<3, ap_uint<10> >, int, int)' into 'DebayerRandBatG(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1001:35)
+INFO: [HLS 214-131] Inlining function 'hls::LineBuffer<3, 1921, ap_uint<30>, 0>::insert_bottom(ap_uint<30>, int)' into 'DebayerRandBatG(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:922:32)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'ZipperRemoval(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1087:21)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:215:21)
+INFO: [HLS 214-377] Adding 'pixWindow' into disaggregation list because there's array-partition pragma applied on the struct field (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:857:66)
+INFO: [HLS 214-377] Adding 'pixWindow' into disaggregation list because there's array-partition pragma applied on the struct field (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:609:66)
+INFO: [HLS 214-377] Adding 'bayerWindow' into disaggregation list because there's array-partition pragma applied on the struct field (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:277:18)
+INFO: [HLS 214-377] Adding 'pix' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'outpix' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'inpix' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'p' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'p163' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'PixBufVal' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'p252' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'lineBuffer' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:639:9)
+INFO: [HLS 214-377] Adding 'pixBuf' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_core.h:198:9)
+INFO: [HLS 214-377] Adding 'linebuf_yuv' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/src/hls/hls_video_mem.h:639:9)
+INFO: [HLS 214-210] Disaggregating variable 'pix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:142:23)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'PixBufVal' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:402:39)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'linebuf_yuv' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283:61)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pixBuf' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:281:23)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:280:23)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'outpix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:278:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'bayerWindow' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:277:18)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'p252' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:748:31)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'PixBufVal' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:727:37)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'p163' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:712:35)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'p' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:702:35)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'lineBuffer' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:614:67)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pixBuf' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:612:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'outpix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:610:26)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:610:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pixWindow' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:609:66)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'p252' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:995:31)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'PixBufVal' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:974:37)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'p163' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:959:35)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'p' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:949:35)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'lineBuffer' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:862:67)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pixBuf' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:860:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'outpix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:858:26)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:858:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pixWindow' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:857:66)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'outpix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1087:28)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'inpix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1087:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:215:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_248_3' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:248:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_250_4' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:250:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1112_3' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1112:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1115_4' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1115:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1135_5' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1135:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_894_3' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:894:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_897_4' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:897:39)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_899_5' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:899:43)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_907_6' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:907:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_914_7' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:914:39)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_916_8' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:916:43)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_929_9' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:929:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_931_10' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:931:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_993_17' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:993:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_999_18' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:999:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_940_11' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:940:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_943_12' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:943:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_963_13' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:963:44)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_971_14' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:971:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_979_15' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:979:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_981_16' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:981:44)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_1006_19' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1006:33)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_646_3' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:646:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_649_4' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:649:39)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_651_5' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:651:43)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_660_6' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:660:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_667_7' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:667:39)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_669_8' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:669:43)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_682_9' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:682:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_684_10' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:684:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_746_17' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:746:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_752_18' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:752:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_693_11' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:693:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_696_12' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:696:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_716_13' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:716:44)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_724_14' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:724:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_732_15' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:732:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_734_16' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:734:44)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_760_19' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:760:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_331_5' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:331:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_334_6' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:334:39)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_342_7' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:342:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_349_8' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:349:39)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_361_9' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:361:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_363_10' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:363:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_418_16' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:418:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_422_17' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:422:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_372_11' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:372:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_375_12' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:375:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_391_13' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:391:44)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_399_14' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:399:36)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_407_15' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:407:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_429_18' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:429:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_472_19' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:472:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_490_20' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:490:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_499_21' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:499:40)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_180_1' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:180:31)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_248_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:248:31) in function 'MultiPixStream2AXIvideo' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:213:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_250_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:250:35) in function 'MultiPixStream2AXIvideo' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:213:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1112_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1112:32) in function 'ZipperRemoval' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1082:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1115_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1115:36) in function 'ZipperRemoval' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1082:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1135_5' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1135:32) in function 'ZipperRemoval' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1082:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_894_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:894:35) in function 'DebayerRandBatG' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_897_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:897:39) in function 'DebayerRandBatG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_899_5' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:899:43) in function 'DebayerRandBatG' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_907_6' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:907:35) in function 'DebayerRandBatG' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_914_7' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:914:39) in function 'DebayerRandBatG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_916_8' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:916:43) in function 'DebayerRandBatG' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_929_9' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:929:31) in function 'DebayerRandBatG' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_931_10' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:931:36) in function 'DebayerRandBatG' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_993_17' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:993:36) in function 'DebayerRandBatG' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_999_18' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:999:40) in function 'DebayerRandBatG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_940_11' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:940:36) in function 'DebayerRandBatG' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_963_13' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:963:44) in function 'DebayerRandBatG' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_943_12' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:943:40) in function 'DebayerRandBatG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_971_14' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:971:36) in function 'DebayerRandBatG' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_979_15' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:979:40) in function 'DebayerRandBatG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_981_16' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:981:44) in function 'DebayerRandBatG' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_1006_19' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1006:33) in function 'DebayerRandBatG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_646_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:646:35) in function 'DebayerRatBorBatR' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_649_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:649:39) in function 'DebayerRatBorBatR' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_651_5' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:651:43) in function 'DebayerRatBorBatR' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_660_6' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:660:35) in function 'DebayerRatBorBatR' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_667_7' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:667:39) in function 'DebayerRatBorBatR' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_669_8' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:669:43) in function 'DebayerRatBorBatR' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_682_9' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:682:31) in function 'DebayerRatBorBatR' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_684_10' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:684:36) in function 'DebayerRatBorBatR' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_746_17' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:746:36) in function 'DebayerRatBorBatR' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_752_18' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:752:40) in function 'DebayerRatBorBatR' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_693_11' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:693:36) in function 'DebayerRatBorBatR' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_716_13' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:716:44) in function 'DebayerRatBorBatR' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_696_12' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:696:40) in function 'DebayerRatBorBatR' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_724_14' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:724:36) in function 'DebayerRatBorBatR' completely with a factor of 2 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_732_15' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:732:40) in function 'DebayerRatBorBatR' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_734_16' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:734:44) in function 'DebayerRatBorBatR' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_760_19' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:760:32) in function 'DebayerRatBorBatR' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_331_5' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:331:35) in function 'DebayerG' completely with a factor of 5 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_334_6' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:334:39) in function 'DebayerG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_342_7' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:342:35) in function 'DebayerG' completely with a factor of 4 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_349_8' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:349:39) in function 'DebayerG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_361_9' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:361:31) in function 'DebayerG' completely with a factor of 5 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_363_10' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:363:36) in function 'DebayerG' completely with a factor of 4 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_418_16' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:418:36) in function 'DebayerG' completely with a factor of 5 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_422_17' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:422:40) in function 'DebayerG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_372_11' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:372:36) in function 'DebayerG' completely with a factor of 5 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_391_13' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:391:44) in function 'DebayerG' completely with a factor of 4 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_375_12' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:375:40) in function 'DebayerG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_399_14' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:399:36) in function 'DebayerG' completely with a factor of 4 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_407_15' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:407:40) in function 'DebayerG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_429_18' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:429:32) in function 'DebayerG' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_499_21' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:499:40) in function 'DebayerG' completely with a factor of 4 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_490_20' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:490:40) in function 'DebayerG' completely with a factor of 4 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_472_19' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:472:40) in function 'DebayerG' completely with a factor of 4 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_180_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:180:31) in function 'AXIvideo2MultiBayer' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'std::abs(long long)' into 'DebayerG(hls::stream<hls::Scalar<1, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:270:0)
+INFO: [HLS 214-178] Inlining function 'std::abs(long long)' into 'DebayerRatBorBatR(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:599:0)
+INFO: [HLS 214-178] Inlining function 'std::abs(long long)' into 'DebayerRandBatG(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:847:0)
+INFO: [HLS 214-248] Applying array_partition to 'linebuf_yuv': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283:61)
+INFO: [HLS 214-248] Applying array_partition to 'lineBuffer': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:614:67)
+INFO: [HLS 214-248] Applying array_partition to 'upleft': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:775:31)
+INFO: [HLS 214-248] Applying array_partition to 'upright': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:776:31)
+INFO: [HLS 214-248] Applying array_partition to 'downleft': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:777:31)
+INFO: [HLS 214-248] Applying array_partition to 'downright': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:778:31)
+INFO: [HLS 214-248] Applying array_partition to 'center': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:779:31)
+INFO: [HLS 214-248] Applying array_partition to 'lineBuffer': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:862:67)
+INFO: [HLS 214-248] Applying array_partition to 'luma': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1089:16)
+INFO: [HLS 214-248] Applying array_partition to 'r': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1090:16)
+INFO: [HLS 214-248] Applying array_partition to 'g': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1091:16)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1092:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'imgUnzip' with compact=bit mode in 30-bits (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:110:21)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'imgRgb' with compact=bit mode in 30-bits (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:109:21)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'imgRB' with compact=bit mode in 30-bits (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1067:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'imgG' with compact=bit mode in 30-bits (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1067:21)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'imgBayer' with compact=bit mode in 10-bits (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:108:20)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1089:33 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1090:30 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1091:30 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< unknown> at E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1092:30 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 38.379 seconds; current allocated memory: 287.320 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 287.355 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 294.008 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 298.438 MB.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1920 for loop 'VITIS_LOOP_230_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:230:43) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1920) < AVE (= 32767)) for loop 'VITIS_LOOP_230_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:230:43) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1080 for loop 'VITIS_LOOP_228_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:228:39) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1080) < AVE (= 32767)) for loop 'VITIS_LOOP_228_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:228:39) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65536 to 1921 for loop 'VITIS_LOOP_633_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:632:13) in function 'DebayerRatBorBatR'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1921) < AVE (= 32768)) for loop 'VITIS_LOOP_633_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:632:13) in function 'DebayerRatBorBatR'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65536 to 1081 for loop 'VITIS_LOOP_630_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603:9) in function 'DebayerRatBorBatR'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1081) < AVE (= 32768)) for loop 'VITIS_LOOP_630_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:603:9) in function 'DebayerRatBorBatR'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65536 to 1921 for loop 'VITIS_LOOP_881_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:880:13) in function 'DebayerRandBatG'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1921) < AVE (= 32768)) for loop 'VITIS_LOOP_881_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:880:13) in function 'DebayerRandBatG'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65536 to 1081 for loop 'VITIS_LOOP_878_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:851:9) in function 'DebayerRandBatG'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1081) < AVE (= 32768)) for loop 'VITIS_LOOP_878_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:851:9) in function 'DebayerRandBatG'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1920 for loop 'loop_width' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:141:29) in function 'AXIvideo2MultiBayer'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1920) < AVE (= 32767)) for loop 'loop_width' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:141:29) in function 'AXIvideo2MultiBayer'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1080 for loop 'loop_height' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:141:29) in function 'AXIvideo2MultiBayer'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1080) < AVE (= 32767)) for loop 'loop_height' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:141:29) in function 'AXIvideo2MultiBayer'.
+WARNING: [HLS 200-805] An internal stream 'imgBayer' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'imgRgb' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'imgUnzip' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'imgG' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'imgRB' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'Debayer' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1071:1), detected/extracted 3 process function(s): 
+	 'DebayerG'
+	 'DebayerRatBorBatR'
+	 'DebayerRandBatG'.
+INFO: [XFORM 203-712] Applying dataflow to function 'v_demosaic' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:89), detected/extracted 5 process function(s): 
+	 'entry_proc'
+	 'AXIvideo2MultiBayer'
+	 'Debayer'
+	 'ZipperRemoval'
+	 'MultiPixStream2AXIvideo'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1089:33) to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1089:33) in function 'ZipperRemoval'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1090:30) to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1090:30) in function 'ZipperRemoval'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1091:30) to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1091:30) in function 'ZipperRemoval'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1092:30) to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1092:30) in function 'ZipperRemoval'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1129:51) to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1159:17) in function 'ZipperRemoval'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:742:13) in function 'DebayerRatBorBatR'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1009:27) to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:1052:27) in function 'DebayerRandBatG'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:989:13) in function 'DebayerRandBatG'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:439:65) to (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:585:27) in function 'DebayerG'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 3.888 seconds; current allocated memory: 324.027 MB.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer.1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:614).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:614).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer.1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:614).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:614).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer.2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:862).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'lineBuffer' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:862).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer.2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:862).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'lineBuffer' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:862).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv.3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv.2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv.1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'linebuf_yuv' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv.3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv.2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv.1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'linebuf_yuv' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/.autopilot/db/v_demosaic.cpp:283).
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.29 seconds; current allocated memory: 471.703 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'v_demosaic' ...
+WARNING: [SYN 201-103] Legalizing function name 'reg<unsigned short>' to 'reg_unsigned_short_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 475.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.039 seconds; current allocated memory: 477.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'reg<unsigned short>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<unsigned short>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 477.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.041 seconds; current allocated memory: 477.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiBayer_Pipeline_loop_wait_for_start' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_start'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 478.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 478.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiBayer_Pipeline_loop_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_width'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.251 seconds; current allocated memory: 478.867 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 479.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiBayer_Pipeline_loop_wait_for_eol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_eol'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 479.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 479.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiBayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 479.449 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.061 seconds; current allocated memory: 479.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerG_Pipeline_VITIS_LOOP_318_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln504_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln504) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_318_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'VITIS_LOOP_318_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.532 seconds; current allocated memory: 489.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.079 seconds; current allocated memory: 489.793 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.225 seconds; current allocated memory: 489.805 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 489.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_633_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_633_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.269 seconds; current allocated memory: 490.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 490.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerRatBorBatR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.149 seconds; current allocated memory: 490.820 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 490.902 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerRandBatG_Pipeline_VITIS_LOOP_881_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_881_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_881_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 492.684 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 493.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'DebayerRandBatG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 493.188 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 493.234 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Debayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 493.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 493.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ZipperRemoval_Pipeline_VITIS_LOOP_1101_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1101_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_1101_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 494.449 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 494.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ZipperRemoval' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 495.141 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 495.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_230_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_230_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_230_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.308 seconds; current allocated memory: 495.418 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 495.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 495.586 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 495.852 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_demosaic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 496.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 496.344 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 497.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'reg_unsigned_short_s' pipeline 'reg<unsigned short>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 498.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiBayer_Pipeline_loop_wait_for_start' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiBayer_Pipeline_loop_wait_for_start'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 498.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiBayer_Pipeline_loop_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIvideo2MultiBayer_Pipeline_loop_width' pipeline 'loop_width' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiBayer_Pipeline_loop_width'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.122 seconds; current allocated memory: 499.363 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiBayer_Pipeline_loop_wait_for_eol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiBayer_Pipeline_loop_wait_for_eol'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 500.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiBayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiBayer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.112 seconds; current allocated memory: 501.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerG_Pipeline_VITIS_LOOP_318_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DebayerG_Pipeline_VITIS_LOOP_318_4' pipeline 'VITIS_LOOP_318_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_14s_10ns_24s_25_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_14s_10ns_24_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_18s_8ns_18_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_18s_9ns_18_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerG_Pipeline_VITIS_LOOP_318_4'.
+INFO: [HLS 200-2168] Implementing memory 'design_1_v_demosaic_0_2_DebayerG_Pipeline_VITIS_LOOP_318_4_DIV1_TABLE_ROM_AUTO_1R' using auto ROMs with 4 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [RTMG 210-279] Implementing memory 'design_1_v_demosaic_0_2_DebayerG_Pipeline_VITIS_LOOP_318_4_DIV2_TABLE_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'design_1_v_demosaic_0_2_DebayerG_Pipeline_VITIS_LOOP_318_4_linebuf_yuv_3_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 508.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerG'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.745 seconds; current allocated memory: 518.934 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2' pipeline 'VITIS_LOOP_633_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2'.
+INFO: [RTMG 210-278] Implementing memory 'design_1_v_demosaic_0_2_DebayerRatBorBatR_Pipeline_VITIS_LOOP_633_2_lineBuffer_1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.558 seconds; current allocated memory: 520.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerRatBorBatR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerRatBorBatR'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.434 seconds; current allocated memory: 527.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerRandBatG_Pipeline_VITIS_LOOP_881_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'DebayerRandBatG_Pipeline_VITIS_LOOP_881_2' pipeline 'VITIS_LOOP_881_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerRandBatG_Pipeline_VITIS_LOOP_881_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.254 seconds; current allocated memory: 529.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'DebayerRandBatG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'DebayerRandBatG'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.394 seconds; current allocated memory: 535.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Debayer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'Debayer/imgRgb_read' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Debayer'.
+INFO: [RTMG 210-285] Implementing FIFO 'imgG_U(design_1_v_demosaic_0_2_fifo_w30_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_val4_c3_U(design_1_v_demosaic_0_2_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'width_val8_c4_U(design_1_v_demosaic_0_2_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'bayerPhase_val11_c5_U(design_1_v_demosaic_0_2_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRB_U(design_1_v_demosaic_0_2_fifo_w30_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_val4_c_U(design_1_v_demosaic_0_2_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'width_val8_c_U(design_1_v_demosaic_0_2_fifo_w11_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'bayerPhase_val11_c_U(design_1_v_demosaic_0_2_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_DebayerRatBorBatR_U0_U(design_1_v_demosaic_0_2_start_for_DebayerRatBorBatR_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_DebayerRandBatG_U0_U(design_1_v_demosaic_0_2_start_for_DebayerRandBatG_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.255 seconds; current allocated memory: 537.215 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ZipperRemoval_Pipeline_VITIS_LOOP_1101_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ZipperRemoval_Pipeline_VITIS_LOOP_1101_2' pipeline 'VITIS_LOOP_1101_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ZipperRemoval_Pipeline_VITIS_LOOP_1101_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.549 seconds; current allocated memory: 538.242 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ZipperRemoval' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ZipperRemoval'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 540.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_230_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_230_2' pipeline 'VITIS_LOOP_230_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_230_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 542.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 542.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_demosaic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/width' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/height' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/bayer_phase' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/s_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_demosaic/m_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'v_demosaic' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'width', 'height', 'bayer_phase' and 'return' to AXI-Lite port CTRL.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w30_d2_S' is changed to 'fifo_w30_d2_S_x' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_demosaic'.
+INFO: [RTMG 210-285] Implementing FIFO 'bayer_phase_c_U(design_1_v_demosaic_0_2_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgBayer_U(design_1_v_demosaic_0_2_fifo_w10_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRgb_U(design_1_v_demosaic_0_2_fifo_w30_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgUnzip_U(design_1_v_demosaic_0_2_fifo_w30_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Debayer_U0_U(design_1_v_demosaic_0_2_start_for_Debayer_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_ZipperRemoval_U0_U(design_1_v_demosaic_0_2_start_for_ZipperRemoval_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPixStream2AXIvideo_U0_U(design_1_v_demosaic_0_2_start_for_MultiPixStream2AXIvideo_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.565 seconds; current allocated memory: 544.180 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.673 seconds; current allocated memory: 547.941 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.052 seconds; current allocated memory: 562.570 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for v_demosaic with prefix design_1_v_demosaic_0_2_.
+INFO: [VLOG 209-307] Generating Verilog RTL for v_demosaic with prefix design_1_v_demosaic_0_2_.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 206.84 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:01:45; Allocated memory: 298.359 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Nov 13 19:38:21 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/sol_data.json outdir=E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip srcdir=E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip/misc
+INFO: Copied 48 verilog file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip/hdl/verilog
+INFO: Copied 40 vhdl file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip/drivers
+INFO: Import ports from HDL: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip/hdl/vhdl/design_1_v_demosaic_0_2_v_demosaic.vhd (design_1_v_demosaic_0_2_v_demosaic)
+INFO: Add axi4lite interface s_axi_CTRL
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: Add axi4stream interface s_axis_video
+INFO: Add axi4stream interface m_axis_video
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip/component.xml
+INFO: Created IP archive E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/prj/sol/impl/ip/xilinx_com_ip_v_demosaic_1_1.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 19:38:28 2025...
+INFO: [HLS 200-802] Generated output file prj/sol/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:12; Allocated memory: 5.785 MB.
+INFO: [HLS 200-112] Total CPU user time: 24 seconds. Total CPU system time: 4 seconds. Total elapsed time: 124.232 seconds; peak allocated memory: 569.289 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 6s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
+compile_c: Time (s): cpu = 00:00:00 ; elapsed = 00:02:09 . Memory (MB): peak = 448.324 ; gain = 0.000
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_v_demosaic_0_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 66fd029a1b885e76 to dir: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.cache/ip/2024.2/6/6/66fd029a1b885e76/design_1_v_demosaic_1_0.dcp to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/design_1_v_demosaic_0_2.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.cache/ip/2024.2/6/6/66fd029a1b885e76/design_1_v_demosaic_1_0_sim_netlist.v to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/design_1_v_demosaic_0_2_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.cache/ip/2024.2/6/6/66fd029a1b885e76/design_1_v_demosaic_1_0_sim_netlist.vhdl to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/design_1_v_demosaic_0_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.cache/ip/2024.2/6/6/66fd029a1b885e76/design_1_v_demosaic_1_0_stub.v to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/design_1_v_demosaic_0_2_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.cache/ip/2024.2/6/6/66fd029a1b885e76/design_1_v_demosaic_1_0_stub.vhdl to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_demosaic_0_2_synth_1/design_1_v_demosaic_0_2_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_v_demosaic_0_2, cache-ID = 66fd029a1b885e76.
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 19:38:30 2025...

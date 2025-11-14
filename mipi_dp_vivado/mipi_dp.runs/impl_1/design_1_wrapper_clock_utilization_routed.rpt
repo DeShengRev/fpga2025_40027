@@ -1,13 +1,13 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date              : Tue Nov  4 15:58:07 2025
+| Date              : Thu Nov 13 22:46:28 2025
 | Host              : Win10-zsd running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
 | Design            : design_1_wrapper
 | Device            : xczu2cg-sfvc784
 | Speed File        : -1  PRODUCTION 1.30 05-15-2022
-| Temperature Grade : I
+| Temperature Grade : E
 | Design State      : Routed
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -57,13 +57,13 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Root | Clock Delay Group | Clock Low Fanout | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                              | Driver Pin                                                                                                                                                                                            | Net                                                                                                                                                                               |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y65 | X0Y2         | X0Y1 |                   |                  |                 6 |       32659 |               0 |        6.666 | clk_pl_0                           | design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                                                                                                                     | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                         |
+| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y65 | X0Y2         | X0Y1 |                   |                  |                 6 |       32788 |               0 |        6.666 | clk_pl_0                           | design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                                                                                                                     | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                         |
 | g1        | src1      | BUFG_PS/O       | None       | BUFG_PS_X0Y54 | X0Y2         | X0Y1 |                   |                  |                 5 |        1014 |               2 |        5.000 | clk_pl_1                           | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG_inst/O                                                                                                                                                 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                                                                                                                    |
-| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y2   | X1Y0         | X0Y1 |                   |                  |                 5 |         445 |               3 |        8.000 | mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O                                                                                            | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
-| g3        | src3      | BUFGCE/O        | None       | BUFGCE_X0Y27  | X1Y1         | X1Y1 |                   |                  |                 3 |         445 |               3 |        8.000 | mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O                                                                                            | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
-| g4        | src4      | BUFGCE/O        | None       | BUFGCE_X0Y1   | X1Y0         | X1Y0 |                   |                  |                 1 |          10 |               0 |        5.333 | GEN_PLL_IN_IP_USP.pll0_clkout0     | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.pll0_clkout0_buf/O | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
-| g5        | src5      | BUFGCE/O        | None       | BUFGCE_X0Y47  | X1Y1         | X1Y0 |                   |                  |                 1 |          10 |               0 |        5.333 | GEN_PLL_IN_IP_USP.pll0_clkout0_1   | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.pll0_clkout0_buf/O | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
-| g6        | src6      | BUFGCE/O        | None       | BUFGCE_X0Y56  | X1Y2         | X1Y2 | n/a               |                  |                 6 |           0 |            4235 |          n/a | n/a                                | design_1_i/proc_sys_reset_150M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_bufg_place/O                                                                                                                    | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                                                                                                           |
+| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y2   | X1Y0         | X1Y0 |                   |                  |                 3 |         445 |               3 |        8.000 | mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O                                                                                            | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
+| g3        | src3      | BUFGCE/O        | None       | BUFGCE_X0Y25  | X1Y1         | X1Y1 |                   |                  |                 2 |         445 |               3 |        8.000 | mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O                                                                                            | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
+| g4        | src4      | BUFGCE/O        | None       | BUFGCE_X0Y23  | X1Y0         | X1Y0 |                   |                  |                 1 |          10 |               0 |        5.333 | GEN_PLL_IN_IP_USP.pll0_clkout0     | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.pll0_clkout0_buf/O | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
+| g5        | src5      | BUFGCE/O        | None       | BUFGCE_X0Y27  | X1Y1         | X1Y1 |                   |                  |                 1 |          10 |               0 |        5.333 | GEN_PLL_IN_IP_USP.pll0_clkout0_1   | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.pll0_clkout0_buf/O | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
+| g6        | src6      | BUFGCE/O        | None       | BUFGCE_X0Y56  | X1Y2         | X1Y2 | n/a               |                  |                 6 |           0 |            3350 |          n/a | n/a                                | design_1_i/proc_sys_reset_150M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_bufg_place/O                                                                                                                    | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                                                                                                           |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -81,7 +81,7 @@ Table of Contents
 | src3      | g3        | RX_BITSLICE/FIFO_WRCLK_OUT | BITSLICE_RX_TX_X0Y52 | BITSLICE_RX_TX_X0Y52 | X1Y1         |           1 |               0 |               8.000 | mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/bs_top_inst/u_rx_bs/RX_BS[0].rx_bitslice_if_bs/FIFO_WRCLK_OUT                  | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/bs_top_inst/u_rx_bs/fifo_wr_clk_0                               |
 | src4      | g4        | PLLE4_ADV/CLKOUT0          | None                 | PLL_X0Y1             | X1Y0         |           1 |               0 |               5.333 | GEN_PLL_IN_IP_USP.pll0_clkout0     | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.plle4_adv_pll0_inst/CLKOUT0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.pll0_clkout0 |
 | src5      | g5        | PLLE4_ADV/CLKOUT0          | None                 | PLL_X0Y3             | X1Y1         |           1 |               0 |               5.333 | GEN_PLL_IN_IP_USP.pll0_clkout0_1   | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.plle4_adv_pll0_inst/CLKOUT0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.pll0_clkout0 |
-| src6      | g6        | FDRE/Q                     | None                 | SLICE_X24Y101        | X0Y1         |           1 |               0 |                     |                                    | design_1_i/proc_sys_reset_150M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q                                                                                                                                        | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]_bufg_place                                                                                                                              |
+| src6      | g6        | FDRE/Q                     | None                 | SLICE_X1Y105         | X0Y1         |           1 |               0 |                     |                                    | design_1_i/proc_sys_reset_150M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q                                                                                                                                        | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]_bufg_place                                                                                                                              |
 +-----------+-----------+----------------------------+----------------------+----------------------+--------------+-------------+-----------------+---------------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -95,12 +95,12 @@ Table of Contents
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 | Clock Region Name | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail |
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
-| X0Y0              |     5 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
-| X1Y0              |     7 |    24 |     2 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     1 |     2 |
+| X0Y0              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
+| X1Y0              |     5 |    24 |     2 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     1 |     2 |
 | X0Y1              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
-| X1Y1              |     5 |    24 |     2 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     1 |     2 |
-| X0Y2              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     2 |    24 |     0 |     0 |     0 |     0 |
-| X1Y2              |     3 |    24 |     1 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X1Y1              |     6 |    24 |     2 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     1 |     2 |
+| X0Y2              |     3 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     2 |    24 |     0 |     0 |     0 |     0 |
+| X1Y2              |     4 |    24 |     1 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -113,12 +113,12 @@ Table of Contents
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 | Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
-| X0Y0              |      5 |      24 |   8549 |   27840 |    352 |    4800 |     19 |      72 |      6 |      72 |      0 |       0 |      0 |       0 |
-| X1Y0              |      7 |      24 |   1448 |   19200 |     34 |    4800 |      2 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
-| X0Y1              |      4 |      24 |   6224 |   27840 |    100 |    4800 |     45 |      72 |     34 |      72 |      0 |       0 |      0 |       0 |
-| X1Y1              |      5 |      24 |   2029 |   19200 |     68 |    4800 |     27 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
-| X0Y2              |      4 |      24 |  10008 |   27840 |    456 |    4800 |     41 |      72 |     12 |      72 |      0 |       0 |      0 |       0 |
-| X1Y2              |      3 |      24 |   4845 |   19200 |    295 |    4800 |     30 |      72 |      8 |      48 |      0 |       0 |      0 |       0 |
+| X0Y0              |      4 |      24 |   4783 |   27840 |    242 |    4800 |     14 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y0              |      5 |      24 |   1504 |   19200 |    120 |    4800 |      8 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y1              |      4 |      24 |  10327 |   27840 |    462 |    4800 |     21 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y1              |      6 |      24 |   4743 |   19200 |    215 |    4800 |     29 |      72 |      8 |      48 |      0 |       0 |      0 |       0 |
+| X0Y2              |      3 |      24 |   8947 |   27840 |    591 |    4800 |     34 |      72 |      8 |      72 |      0 |       0 |      0 |       0 |
+| X1Y2              |      4 |      24 |   2694 |   19200 |      2 |    4800 |      6 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -130,9 +130,9 @@ All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+
-| Y2 |  4 |  3 |
+| Y2 |  3 |  4 |
 | Y1 |  4 |  6 |
-| Y0 |  5 |  7 |
+| Y0 |  4 |  5 |
 +----+----+----+
 
 
@@ -145,12 +145,12 @@ All Modules
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 | Clock Region Name | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% |
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
-| X0Y0              |    2 |    24 |  8.33 |    5 |    24 | 20.83 |    0 |    24 |  0.00 |    3 |    24 | 12.50 |
-| X1Y0              |    2 |    24 |  8.33 |    7 |    24 | 29.17 |    1 |    24 |  4.17 |    3 |    24 | 12.50 |
-| X0Y1              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    3 |    24 | 12.50 |    3 |    24 | 12.50 |
-| X1Y1              |    1 |    24 |  4.17 |    5 |    24 | 20.83 |    1 |    24 |  4.17 |    2 |    24 |  8.33 |
-| X0Y2              |    3 |    24 | 12.50 |    4 |    24 | 16.67 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |
-| X1Y2              |    0 |    24 |  0.00 |    3 |    24 | 12.50 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
+| X0Y0              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    2 |    24 |  8.33 |
+| X1Y0              |    0 |    24 |  0.00 |    5 |    24 | 20.83 |    0 |    24 |  0.00 |    2 |    24 |  8.33 |
+| X0Y1              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    2 |    24 |  8.33 |    2 |    24 |  8.33 |
+| X1Y1              |    0 |    24 |  0.00 |    6 |    24 | 25.00 |    0 |    24 |  0.00 |    2 |    24 |  8.33 |
+| X0Y2              |    3 |    24 | 12.50 |    3 |    24 | 12.50 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |
+| X1Y2              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 
 
@@ -160,7 +160,7 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                       |
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------+
-| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |       6.666 | {0.000 3.333} | X0Y1     |       32659 |        0 |              0 |        0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
+| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |       6.666 | {0.000 3.333} | X0Y1     |       32788 |        0 |              0 |        0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
 +-----------+-----------------+-------------------+----------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -168,13 +168,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------------+-------+-----------------------+
-|    | X0         | X1    | HORIZONTAL PROG DELAY |
-+----+------------+-------+-----------------------+
-| Y2 |  (D) 10493 |  5081 |                     1 |
-| Y1 |   (R) 5941 |  1621 |                     1 |
-| Y0 |       8352 |  1171 |                     0 |
-+----+------------+-------+-----------------------+
++----+-----------+-------+-----------------------+
+|    | X0        | X1    | HORIZONTAL PROG DELAY |
++----+-----------+-------+-----------------------+
+| Y2 |  (D) 9565 |  2667 |                     1 |
+| Y1 |  (R) 9976 |  4054 |                     1 |
+| Y0 |      4983 |  1543 |                     0 |
++----+-----------+-------+-----------------------+
 
 
 9. Device Cell Placement Summary for Global Clock g1
@@ -194,9 +194,9 @@ All Modules
 +----+---------+------+-----------------------+
 |    | X0      | X1   | HORIZONTAL PROG DELAY |
 +----+---------+------+-----------------------+
-| Y2 |   (D) 4 |    0 |                     1 |
-| Y1 | (R) 419 |  193 |                     1 |
-| Y0 |     303 |   97 |                     0 |
+| Y2 |   (D) 0 |   21 |                     1 |
+| Y1 | (R) 441 |  487 |                     1 |
+| Y0 |       6 |   61 |                     0 |
 +----+---------+------+-----------------------+
 
 
@@ -206,7 +206,7 @@ All Modules
 +-----------+-----------------+-------------------+------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                              | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                         |
 +-----------+-----------------+-------------------+------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------+
-| g2        | BUFGCE/O        | X1Y0              | mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT |       8.000 | {0.000 4.000} | X0Y1     |         448 |        0 |              0 |        0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
+| g2        | BUFGCE/O        | X1Y0              | mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT |       8.000 | {0.000 4.000} | X1Y0     |         448 |        0 |              0 |        0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
 +-----------+-----------------+-------------------+------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -214,13 +214,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+--------+---------+-----------------------+
-|    | X0     | X1      | HORIZONTAL PROG DELAY |
-+----+--------+---------+-----------------------+
-| Y2 |      3 |      83 |                     1 |
-| Y1 | (R) 34 |     309 |                     1 |
-| Y0 |      0 |  (D) 19 |                     0 |
-+----+--------+---------+-----------------------+
++----+------+------------+-----------------------+
+|    | X0   | X1         | HORIZONTAL PROG DELAY |
++----+------+------------+-----------------------+
+| Y2 |    0 |          0 |                     - |
+| Y1 |  384 |          0 |                     0 |
+| Y0 |   45 | (R) (D) 19 |                     0 |
++----+------+------------+-----------------------+
 
 
 11. Device Cell Placement Summary for Global Clock g3
@@ -237,13 +237,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+-----------+-----------------------+
-|    | X0   | X1        | HORIZONTAL PROG DELAY |
-+----+------+-----------+-----------------------+
-| Y2 |    0 |         0 |                     - |
-| Y1 |    0 | (R) (D) 3 |                     1 |
-| Y0 |  264 |       181 |                     0 |
-+----+------+-----------+-----------------------+
++----+----+-------------+-----------------------+
+|    | X0 | X1          | HORIZONTAL PROG DELAY |
++----+----+-------------+-----------------------+
+| Y2 |  0 |          11 |                     0 |
+| Y1 |  0 | (R) (D) 437 |                     0 |
+| Y0 |  0 |           0 |                     - |
++----+----+-------------+-----------------------+
 
 
 12. Device Cell Placement Summary for Global Clock g4
@@ -275,7 +275,7 @@ All Modules
 +-----------+-----------------+-------------------+----------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                            | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                               |
 +-----------+-----------------+-------------------+----------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g5        | BUFGCE/O        | X1Y1              | GEN_PLL_IN_IP_USP.pll0_clkout0_1 |       5.333 | {0.000 2.667} | X1Y0     |          10 |        0 |              0 |        0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
+| g5        | BUFGCE/O        | X1Y1              | GEN_PLL_IN_IP_USP.pll0_clkout0_1 |       5.333 | {0.000 2.667} | X1Y1     |          10 |        0 |              0 |        0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
 +-----------+-----------------+-------------------+----------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -283,13 +283,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+--------+-----------------------+
-|    | X0 | X1     | HORIZONTAL PROG DELAY |
-+----+----+--------+-----------------------+
-| Y2 |  0 |      0 |                     - |
-| Y1 |  0 |  (D) 0 |                     - |
-| Y0 |  0 | (R) 10 |                     0 |
-+----+----+--------+-----------------------+
++----+----+------------+-----------------------+
+|    | X0 | X1         | HORIZONTAL PROG DELAY |
++----+----+------------+-----------------------+
+| Y2 |  0 |          0 |                     - |
+| Y1 |  0 | (R) (D) 10 |                     0 |
+| Y0 |  0 |          0 |                     - |
++----+----+------------+-----------------------+
 
 
 14. Device Cell Placement Summary for Global Clock g6
@@ -298,7 +298,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                     |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------+
-| g6        | BUFGCE/O        | X1Y2              |       |             |               | X1Y2     |        4235 |        0 |              0 |        0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0] |
+| g6        | BUFGCE/O        | X1Y2              |       |             |               | X1Y2     |        3350 |        0 |              0 |        0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0] |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -309,9 +309,9 @@ All Modules
 +----+-------+-------------+-----------------------+
 |    | X0    | X1          | HORIZONTAL PROG DELAY |
 +----+-------+-------------+-----------------------+
-| Y2 |   963 | (R) (D) 147 |                     0 |
-| Y1 |  1783 |         544 |                     0 |
-| Y0 |   706 |          92 |                     0 |
+| Y2 |   406 | (R) (D) 674 |                     0 |
+| Y1 |  1511 |         552 |                     0 |
+| Y0 |   201 |           6 |                     0 |
 +----+-------+-------------+-----------------------+
 
 
@@ -321,16 +321,14 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | 17    | BUFG_PS/O       | None       |        8352 |               0 | 7987 |         347 |   11 |   6 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                   |
-| g1        | 6     | BUFG_PS/O       | None       |         303 |               0 |  303 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                              |
-| g2+       | 2     | BUFGCE/O        | None       |           0 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
-| g3        | 3     | BUFGCE/O        | None       |         264 |               0 |  259 |           5 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs |
-| g6        | 8     | BUFGCE/O        | None       |           0 |             706 |  706 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                     |
+| g0        | 17    | BUFG_PS/O       | None       |        4983 |               0 | 4732 |         242 |    8 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                   |
+| g1        | 6     | BUFG_PS/O       | None       |           6 |               0 |    6 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                              |
+| g2        | 2     | BUFGCE/O        | None       |          45 |               0 |   45 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
+| g6        | 8     | BUFGCE/O        | None       |           0 |             201 |  201 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
-**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
 16. Clock Region Cell Placement per Global Clock: Region X1Y0
@@ -339,13 +337,11 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 17    | BUFG_PS/O       | None       |        1171 |               0 | 1137 |          33 |    1 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                         |
-| g1        | 6     | BUFG_PS/O       | None       |          96 |               1 |   95 |           0 |    0 |   0 |  0 |    0 |   1 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                                                                                                                    |
+| g0        | 17    | BUFG_PS/O       | None       |        1543 |               0 | 1419 |         120 |    4 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                         |
+| g1        | 6     | BUFG_PS/O       | None       |          60 |               1 |   59 |           0 |    0 |   0 |  0 |    0 |   1 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                                                                                                                    |
 | g2        | 2     | BUFGCE/O        | None       |          16 |               3 |   16 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
-| g3        | 3     | BUFGCE/O        | None       |         181 |               0 |  180 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
-| g4        | 1     | BUFGCE/O        | None       |          10 |               0 |   10 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
-| g5        | 23    | BUFGCE/O        | None       |          10 |               0 |   10 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
-| g6        | 8     | BUFGCE/O        | None       |           0 |              92 |   92 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                                                                                                           |
+| g4        | 23    | BUFGCE/O        | None       |          10 |               0 |   10 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
+| g6        | 8     | BUFGCE/O        | None       |           0 |               6 |    6 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                                                                                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -358,10 +354,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | 17    | BUFG_PS/O       | None       |        5941 |               0 | 5772 |          99 |   36 |  34 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                   |
-| g1        | 6     | BUFG_PS/O       | None       |         419 |               0 |  418 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                              |
-| g2        | 2     | BUFGCE/O        | None       |          34 |               0 |   34 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
-| g6        | 8     | BUFGCE/O        | None       |           0 |            1783 | 1783 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                     |
+| g0        | 17    | BUFG_PS/O       | None       |        9976 |               0 | 9509 |         455 |   12 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                   |
+| g1        | 6     | BUFG_PS/O       | None       |         441 |               0 |  440 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                              |
+| g2        | 2     | BUFGCE/O        | None       |         384 |               0 |  378 |           6 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
+| g6        | 8     | BUFGCE/O        | None       |           0 |            1511 | 1511 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -374,12 +370,12 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                               |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 17    | BUFG_PS/O       | None       |        1621 |               0 | 1532 |          65 |   24 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                         |
-| g1        | 6     | BUFG_PS/O       | None       |         192 |               1 |  190 |           1 |    0 |   0 |  0 |    0 |   1 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                                                                                                                    |
-| g2        | 2     | BUFGCE/O        | None       |         309 |               0 |  307 |           2 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
-| g3        | 3     | BUFGCE/O        | None       |           0 |               3 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
-| g5+       | 23    | BUFGCE/O        | None       |           0 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
-| g6        | 8     | BUFGCE/O        | None       |           0 |             544 |  544 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                                                                                                           |
+| g0        | 17    | BUFG_PS/O       | None       |        4054 |               0 | 3821 |         208 |   17 |   8 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                         |
+| g1        | 6     | BUFG_PS/O       | None       |         486 |               1 |  484 |           1 |    0 |   0 |  0 |    0 |   1 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                                                                                                                    |
+| g2+       | 2     | BUFGCE/O        | None       |           0 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
+| g3        | 1     | BUFGCE/O        | None       |         434 |               3 |  428 |           6 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs                                                                                       |
+| g5        | 3     | BUFGCE/O        | None       |          10 |               0 |   10 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.bd_115c_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/pll0_clkout0_out |
+| g6        | 8     | BUFGCE/O        | None       |           0 |             552 |  552 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                                                                                                           |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -390,17 +386,17 @@ All Modules
 19. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF    | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
-+-----------+-------+-----------------+------------+-------------+-----------------+-------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | 17    | BUFG_PS/O       | None       |       10493 |               0 | 10001 |         456 |   24 |  12 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                   |
-| g1        | 6     | BUFG_PS/O       | None       |           4 |               0 |     4 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                              |
-| g2        | 2     | BUFGCE/O        | None       |           3 |               0 |     3 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
-| g6        | 8     | BUFGCE/O        | None       |           0 |             963 |   963 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                     |
-+-----------+-------+-----------------+------------+-------------+-----------------+-------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
+| g0        | 17    | BUFG_PS/O       | None       |        9565 |               0 | 8947 |         591 |   19 |   8 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0               |
+| g1+       | 6     | BUFG_PS/O       | None       |           0 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG          |
+| g6        | 8     | BUFGCE/O        | None       |           0 |             406 |  406 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0] |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
 
 
 20. Clock Region Cell Placement per Global Clock: Region X1Y2
@@ -409,9 +405,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
-| g0        | 17    | BUFG_PS/O       | None       |        5081 |               0 | 4766 |         291 |   16 |   8 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                   |
-| g2        | 2     | BUFGCE/O        | None       |          83 |               0 |   79 |           4 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/rxbyteclkhs |
-| g6        | 8     | BUFGCE/O        | None       |           0 |             147 |  147 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                     |
+| g0        | 17    | BUFG_PS/O       | None       |        2667 |               0 | 2662 |           2 |    3 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                   |
+| g1        | 6     | BUFG_PS/O       | None       |          21 |               0 |   21 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/zynq_ultra_ps_e_0/inst/pl_clk1_BUFG                                              |
+| g3        | 1     | BUFGCE/O        | None       |          11 |               0 |   11 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/rxbyteclkhs |
+| g6        | 8     | BUFGCE/O        | None       |           0 |             674 |  674 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/proc_sys_reset_150M/U0/peripheral_aresetn[0]                                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads

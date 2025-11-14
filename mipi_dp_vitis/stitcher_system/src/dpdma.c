@@ -26,15 +26,16 @@
 #endif
 
 
-
-
 XDpDma DpDma;
 XDpPsu DpPsu;
 XAVBuf AVBuf;
 XScuGic Intr;
 Run_Config RunCfg;
 
-u8 frame_dp[BUFFERSIZE] __attribute__ ((__aligned__(256)));
+u8 cam0_frame[BUFFERSIZE * 3] __attribute__ ((__aligned__(256)));
+u8 cam1_frame[BUFFERSIZE * 3] __attribute__ ((__aligned__(256)));
+
+
 XDpDma_FrameBuffer FrameBuffer;
 
 
@@ -50,10 +51,10 @@ int DpdmaVideoExample(Run_Config *RunCfgPtr)
 	}
 
 	xil_printf("Generating Overlay.....\n\r");
-	GraphicsOverlay(frame_dp, RunCfgPtr);
+	GraphicsOverlay(cam1_frame, RunCfgPtr);
 
 	/* Populate the FrameBuffer structure with the frame attributes */
-	FrameBuffer.Address = (INTPTR)frame_dp;
+	FrameBuffer.Address = (INTPTR)cam1_frame;
 	FrameBuffer.Stride = STRIDE;
 	FrameBuffer.LineSize = HORSIZE;
 	FrameBuffer.Size = BUFFERSIZE;
@@ -252,27 +253,13 @@ void SetupInterrupts(Run_Config *RunCfgPtr)
 	XDpDma_InterruptEnable(RunCfgPtr->DpDmaPtr, XDPDMA_IEN_VSYNC_INT_MASK);
 #endif
 }
-/*****************************************************************************/
-/**
-*
-* The purpose of this function is to generate a Graphics frame of the format
-* RGBA8888 which generates an overlay on 1/2 of the bottom of the screen.
-* This is just to illustrate the functionality of the graphics overlay.
-*
-* @param	RunCfgPtr is a pointer to the application configuration structure.
-* @param	frame_dp is a pointer to a buffer which is going to be populated with
-* 			rendered frame
-*
-* @return	Returns a pointer to the frame.
-*
-* @note		None.
-*
-*****************************************************************************/
-u8 *GraphicsOverlay(u8* frame_dp, Run_Config *RunCfgPtr)
+
+
+u8 *GraphicsOverlay(u8* frame_addr, Run_Config *RunCfgPtr)
 {
 	u64 Index;
 	u32 *RGBA;
-	RGBA = (u32 *) frame_dp;
+	RGBA = (u32 *) frame_addr;
 	/*
 		 * Red at the top half
 		 * Alpha = 0x0F
@@ -287,5 +274,5 @@ u8 *GraphicsOverlay(u8* frame_dp, Run_Config *RunCfgPtr)
 		 * */
 		RGBA[Index] = 0xFFFFFFFF;
 	}
-	return frame_dp;
+	return frame_addr;
 }

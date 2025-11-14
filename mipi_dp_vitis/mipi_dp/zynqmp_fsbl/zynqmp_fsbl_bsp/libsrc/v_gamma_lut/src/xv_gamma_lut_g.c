@@ -4,7 +4,7 @@ XV_gamma_lut_Config XV_gamma_lut_ConfigTable[] __attribute__ ((section (".drvcfg
 
 	{
 		"xlnx,v-gamma-lut-1.1", /* compatible */
-		0x80050000, /* reg */
+		0x80070000, /* reg */
 		0x1, /* xlnx,samples-per-clock */
 		0x780, /* xlnx,max-cols */
 		0x438, /* xlnx,max-rows */
@@ -12,7 +12,7 @@ XV_gamma_lut_Config XV_gamma_lut_ConfigTable[] __attribute__ ((section (".drvcfg
 	},
 	{
 		"xlnx,v-gamma-lut-1.1", /* compatible */
-		0x80060000, /* reg */
+		0x80080000, /* reg */
 		0x1, /* xlnx,samples-per-clock */
 		0x780, /* xlnx,max-cols */
 		0x438, /* xlnx,max-rows */

@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'Debayer'
+================================================================
+* Date:           Thu Nov 13 19:38:11 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        prj
+* Solution:       sol (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu2cg-sfvc784-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  6.67 ns|  4.835 ns|     1.80 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+------------+----------+------------+-----+------------+----------+
+    |   Latency (cycles)   |   Latency (absolute)  |     Interval     | Pipeline |
+    |   min   |     max    |    min   |     max    | min |     max    |   Type   |
+    +---------+------------+----------+------------+-----+------------+----------+
+    |    65581|  4296212499|  0.437 ms|  28.643 sec|   40|  4296212500|  dataflow|
+    +---------+------------+----------+------------+-----+------------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------+-------------------+---------+------------+-----------+------------+-----+------------+---------+
+        |                      |                   |   Latency (cycles)   |   Latency (absolute)   |     Interval     | Pipeline|
+        |       Instance       |       Module      |   min   |     max    |    min    |     max    | min |     max    |   Type  |
+        +----------------------+-------------------+---------+------------+-----------+------------+-----+------------+---------+
+        |DebayerG_U0           |DebayerG           |       39|  4296212499|   0.260 us|  28.643 sec|   39|  4296212499|       no|
+        |DebayerRatBorBatR_U0  |DebayerRatBorBatR  |       11|     2086331|  73.337 ns|   13.910 ms|   11|     2086331|       no|
+        |DebayerRandBatG_U0    |DebayerRandBatG    |        9|     2084169|  60.003 ns|   13.895 ms|    9|     2084169|       no|
+        +----------------------+-------------------+---------+------------+-----------+------------+-----+------------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+-------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF  |  LUT  | URAM|
++-----------------+---------+-----+-------+-------+-----+
+|DSP              |        -|    -|      -|      -|    -|
+|Expression       |        -|    -|      0|      2|    -|
+|FIFO             |        -|    -|    792|    536|    -|
+|Instance         |       30|    8|   7406|   9141|    0|
+|Memory           |        -|    -|      -|      -|    -|
+|Multiplexer      |        -|    -|      0|      9|    -|
+|Register         |        -|    -|      1|      -|    -|
++-----------------+---------+-----+-------+-------+-----+
+|Total            |       30|    8|   8199|   9688|    0|
++-----------------+---------+-----+-------+-------+-----+
+|Available        |      300|  240|  94464|  47232|    0|
++-----------------+---------+-----+-------+-------+-----+
+|Utilization (%)  |       10|    3|      8|     20|    0|
++-----------------+---------+-----+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-------------------+---------+----+------+------+-----+
+    |       Instance       |       Module      | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------+-------------------+---------+----+------+------+-----+
+    |DebayerG_U0           |DebayerG           |       14|   8|  3817|  4865|    0|
+    |DebayerRandBatG_U0    |DebayerRandBatG    |        8|   0|  1132|  1893|    0|
+    |DebayerRatBorBatR_U0  |DebayerRatBorBatR  |        8|   0|  2457|  2383|    0|
+    +----------------------+-------------------+---------+----+------+------+-----+
+    |Total                 |                   |       30|   8|  7406|  9141|    0|
+    +----------------------+-------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-----------------------+---------+----+----+-----+------+-----+---------+
+    |          Name         | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-----------------------+---------+----+----+-----+------+-----+---------+
+    |bayerPhase_val11_c5_U  |        0|  99|   0|    -|     2|   16|       32|
+    |bayerPhase_val11_c_U   |        0|  99|   0|    -|     2|   16|       32|
+    |height_val4_c3_U       |        0|  99|   0|    -|     2|   11|       22|
+    |height_val4_c_U        |        0|  99|   0|    -|     2|   11|       22|
+    |imgG_U                 |        0|  99|   0|    -|     2|   30|       60|
+    |imgRB_U                |        0|  99|   0|    -|     2|   30|       60|
+    |width_val8_c4_U        |        0|  99|   0|    -|     2|   11|       22|
+    |width_val8_c_U         |        0|  99|   0|    -|     2|   11|       22|
+    +-----------------------+---------+----+----+-----+------+-----+---------+
+    |Total                  |        0| 792|   0|    0|    16|  136|      272|
+    +-----------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +--------------+----------+----+---+----+------------+------------+
+    | Variable Name| Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+----+---+----+------------+------------+
+    |ap_idle       |       and|   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
+    |Total         |          |   0|  0|   2|           1|           1|
+    +--------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------+----+-----------+-----+-----------+
+    |    Name    | LUT| Input Size| Bits| Total Bits|
+    +------------+----+-----------+-----+-----------+
+    |real_start  |   9|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+    |Total       |   9|          2|    1|          2|
+    +------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+---+----+-----+-----------+
+    |      Name      | FF| LUT| Bits| Const Bits|
+    +----------------+---+----+-----+-----------+
+    |start_once_reg  |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+    |Total           |  1|   0|    1|          0|
+    +----------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++--------------------------+-----+-----+------------+------------------+--------------+
+|ap_start                  |   in|    1|  ap_ctrl_hs|           Debayer|  return value|
+|start_full_n              |   in|    1|  ap_ctrl_hs|           Debayer|  return value|
+|start_out                 |  out|    1|  ap_ctrl_hs|           Debayer|  return value|
+|start_write               |  out|    1|  ap_ctrl_hs|           Debayer|  return value|
+|ap_clk                    |   in|    1|  ap_ctrl_hs|           Debayer|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|           Debayer|  return value|
+|imgRgb_dout               |   in|   30|  ap_ctrl_hs|           Debayer|  return value|
+|imgRgb_empty_n            |   in|    1|  ap_ctrl_hs|           Debayer|  return value|
+|imgRgb_read               |  out|    1|  ap_ctrl_hs|           Debayer|  return value|
+|imgRgb_num_data_valid     |   in|   32|  ap_ctrl_hs|           Debayer|  return value|
+|imgRgb_fifo_cap           |   in|   32|  ap_ctrl_hs|           Debayer|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|           Debayer|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|           Debayer|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|           Debayer|  return value|
+|ap_continue               |   in|    1|  ap_ctrl_hs|           Debayer|  return value|
+|imgBayer_dout             |   in|   10|     ap_fifo|          imgBayer|       pointer|
+|imgBayer_empty_n          |   in|    1|     ap_fifo|          imgBayer|       pointer|
+|imgBayer_read             |  out|    1|     ap_fifo|          imgBayer|       pointer|
+|imgRgb_din                |  out|   30|     ap_fifo|            imgRgb|       pointer|
+|imgRgb_full_n             |   in|    1|     ap_fifo|            imgRgb|       pointer|
+|imgRgb_write              |  out|    1|     ap_fifo|            imgRgb|       pointer|
+|height_val4               |   in|   16|     ap_none|       height_val4|        scalar|
+|height_val4_ap_vld        |   in|    1|     ap_none|       height_val4|        scalar|
+|width_val8                |   in|   16|     ap_none|        width_val8|        scalar|
+|width_val8_ap_vld         |   in|    1|     ap_none|        width_val8|        scalar|
+|bayerPhase_val11_dout     |   in|   16|     ap_fifo|  bayerPhase_val11|       pointer|
+|bayerPhase_val11_empty_n  |   in|    1|     ap_fifo|  bayerPhase_val11|       pointer|
+|bayerPhase_val11_read     |  out|    1|     ap_fifo|  bayerPhase_val11|       pointer|
++--------------------------+-----+-----+------------+------------------+--------------+
+

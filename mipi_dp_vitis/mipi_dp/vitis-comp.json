@@ -3,7 +3,7 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "E:\\Dev\\QianSai\\mipi_dp_vivado_2strm\\design_1_wrapper.xsa",
+    "xsa": "E:\\Dev\\QianSai\\mipi_dp_vivado\\design_1_wrapper.xsa",
     "xsaPathInPlatform": "mipi_dp\\hw\\design_1_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",

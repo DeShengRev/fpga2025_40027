@@ -8,7 +8,7 @@
 
 #Ignore logs folder and log files
 logs/
-*.log/
+*.log
 
 #Ignore lock files
 .lock
@@ -20,12 +20,10 @@ logs/
 
 _ide/
 
-/opencv4_4
-/Vitis_Libraries
+
 .venv/
 build/
 .debug/
 *.cache/
 hls/
-*.log
 *.failed

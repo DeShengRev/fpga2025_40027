@@ -434,15 +434,6 @@ ipipsu_IS_TOP_LEVEL:STATIC=OFF
 ipipsu_SOURCE_DIR:STATIC=E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ipipsu/src
 
 //Value Computed by CMake
-isp_placeholder_BINARY_DIR:STATIC=E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_placeholder/src
-
-//Value Computed by CMake
-isp_placeholder_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-isp_placeholder_SOURCE_DIR:STATIC=E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/isp_placeholder/src
-
-//Value Computed by CMake
 libxil_BINARY_DIR:STATIC=E:/Dev/QianSai/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc
 
 //Value Computed by CMake
@@ -775,7 +766,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=53
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=52
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

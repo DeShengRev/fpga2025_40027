@@ -19,3 +19,8 @@
 
 _ide/logs
 _ide/.wsdata
+
+*
+!_ide/
+!mipi_dp/
+!stitcher_system/

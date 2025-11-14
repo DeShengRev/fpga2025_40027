@@ -1,0 +1,108 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "6 1 4 7",
+    "file": "v_demosaic.cpp",
+    "fileloc": 89,
+    "instructions": 42,
+    "name": "v_demosaic",
+    "total_instructions": 1839
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "8 2 5",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1060,
+    "instructions": 10,
+    "name": "Debayer",
+    "total_instructions": 1440
+  },
+  "2": {
+    "basicblocks": 22,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 593,
+    "instructions": 340,
+    "loads": {
+      "L": 2
+    },
+    "name": "DebayerRatBorBatR",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 372
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 1,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "4": {
+    "basicblocks": 29,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 1077,
+    "instructions": 158,
+    "name": "ZipperRemoval",
+    "total_instructions": 190
+  },
+  "5": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 841,
+    "instructions": 351,
+    "loads": {
+      "L": 2
+    },
+    "name": "DebayerRandBatG",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 383
+  },
+  "6": {
+    "basicblocks": 15,
+    "calls": "3 3",
+    "file": "v_demosaic.cpp",
+    "fileloc": 133,
+    "instructions": 89,
+    "loads": {
+      "L": 7
+    },
+    "name": "AXIvideo2MultiBayer",
+    "total_instructions": 93
+  },
+  "7": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 208,
+    "instructions": 55,
+    "name": "MultiPixStream2AXIvideo",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 74
+  },
+  "8": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "v_demosaic.cpp",
+    "fileloc": 264,
+    "instructions": 662,
+    "loads": {
+      "G": 5,
+      "L": 4
+    },
+    "name": "DebayerG",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 675
+  }
+}

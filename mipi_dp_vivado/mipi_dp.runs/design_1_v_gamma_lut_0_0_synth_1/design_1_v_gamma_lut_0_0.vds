@@ -1,0 +1,1005 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Nov 13 19:29:21 2025
+# Process ID         : 19548
+# Current directory  : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1
+# Command line       : vivado.exe -log design_1_v_gamma_lut_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_v_gamma_lut_0_0.tcl
+# Log file           : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/design_1_v_gamma_lut_0_0.vds
+# Journal file       : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1\vivado.jou
+# Running On         : Win10-zsd
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4600H with Radeon Graphics         
+# CPU Frequency      : 2994 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16505 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 20129 MB
+# Available Virtual  : 4589 MB
+#-----------------------------------------------------------
+source design_1_v_gamma_lut_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 387.570 ; gain = 86.887
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Dev/QianSai/xfcv_dev_hls/stitcher/stitcher/hls/impl/ip'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'e:/Dev/QianSai/xfcv_dev_hls/xf_isp/xf_isp/hls/impl/ip'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+
+****** vitis-run v2024.2 (64-bit)
+  **** SW Build 5238363 on 2024-11-10-08:15:25
+  **** Start of session at: Thu Nov 13 19:29:43 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2024.2 5238294
+Sourcing Tcl script 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/runhls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset prj 
+INFO: [HLS 200-10] Creating and opening project 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj'.
+INFO: [HLS 200-1510] Running: set_top v_gamma_lut 
+INFO: [HLS 200-1510] Running: open_solution sol 
+INFO: [HLS 200-10] Creating and opening solution 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xczu2cg-sfvc784-1-e 
+INFO: [HLS 200-1611] Setting target device to 'xczu2cg-sfvc784-1-e'
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut_config.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut_config.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut.cpp 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls_video.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls_video.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls_opencv.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls_opencv.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_axi_io.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_axi_io.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_arithm.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_arithm.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_fast.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_fast.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_haar.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_haar.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_harris.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_harris.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_histogram.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_histogram.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_hough.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_hough.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_imgbase.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_imgbase.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_imgproc.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_imgproc.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_io.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_io.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_mem.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_mem.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_stereobm.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_stereobm.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_types.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_types.h' to the project
+INFO: [HLS 200-1510] Running: add_files -cflags  -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls -I e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src  e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_undistort.h 
+INFO: [HLS 200-10] Adding design file 'e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_undistort.h' to the project
+INFO: [HLS 200-1510] Running: create_clock -period 6.667 -name ap_clk 
+INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 6.667ns.
+INFO: [HLS 200-1510] Running: config_rtl -module_prefix design_1_v_gamma_lut_0_0_ 
+INFO: [HLS 200-1510] Running: config_export -vendor xilinx.com -library ip -version 1.1 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.564 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] Analyzing design file 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:138:9)
+Resolution: For help on HLS 214-114 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/v_gamma_lut.cpp
+Resolution: For help on HLS 200-471 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 66.934 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,703 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 615 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 403 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 430 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 430 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 371 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 371 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 377 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 451 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 510 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 509 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 482 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 410 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 410 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 356 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 375 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<30, ap_uint<10> >(ap_uint<30>, int, int, ap_uint<10>&)' into 'void hls::AXIGetBitFields<30, ap_uint<10> >(hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<10>&)' (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_axi_io.h:85:2)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:167:21)
+INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<30, ap_uint<10> >(hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<10>&)' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:209:21)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'Gamma(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, unsigned short&, unsigned short&, unsigned short*, unsigned short*, unsigned short*)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:305:21)
+INFO: [HLS 214-131] Inlining function 'hls::Scalar<3, ap_uint<10> >::Scalar()' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<3, ap_uint<10> >, 0>&, hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&)' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:243:21)
+INFO: [HLS 214-377] Adding 'pix' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h:197:9)
+INFO: [HLS 214-377] Adding 'dstpix' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h:197:9)
+INFO: [HLS 214-377] Adding 'srcpix' into disaggregation list because there's array-partition pragma applied on the struct field (e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/src/hls/hls_video_core.h:197:9)
+INFO: [HLS 214-210] Disaggregating variable 'pix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:167:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'dstpix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:306:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'srcpix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:305:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'pix' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:243:21)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_276_3' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:276:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_278_4' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:278:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_335_5' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:335:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_205_1' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:205:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_207_2' is marked as complete unroll implied by the pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:207:35)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_276_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:276:31) in function 'MultiPixStream2AXIvideo' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_278_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:278:35) in function 'MultiPixStream2AXIvideo' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_335_5' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:335:31) in function 'Gamma' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:302:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_205_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:205:31) in function 'AXIvideo2MultiPixStream' completely with a factor of 1 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:164:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_207_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:207:35) in function 'AXIvideo2MultiPixStream' completely with a factor of 3 (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:164:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'imgRgb' with compact=bit mode in 30-bits (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:136:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'imgGamma' with compact=bit mode in 30-bits (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:136:27)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_315_1> at E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:315:23 
+INFO: [HLS 214-449] Automatically partitioning array 'lut_0' dimension 2 completely based on constant index. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:307:16)
+INFO: [HLS 214-449] Automatically partitioning array 'lut_1' dimension 2 completely based on constant index. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:308:16)
+INFO: [HLS 214-449] Automatically partitioning array 'lut_2' dimension 2 completely based on constant index. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:309:16)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'lut_0' due to pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:307:16)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'lut_1' due to pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:308:16)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=2' for array 'lut_2' due to pipeline pragma (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:309:16)
+INFO: [HLS 214-248] Applying array_partition to 'lut_0': Complete partitioning on dimension 2. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:307:16)
+INFO: [HLS 214-248] Applying array_partition to 'lut_1': Complete partitioning on dimension 2. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:308:16)
+INFO: [HLS 214-248] Applying array_partition to 'lut_2': Complete partitioning on dimension 2. (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:309:16)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 13.216 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.009 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.209 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 265.668 MB.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1920 for loop 'VITIS_LOOP_258_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:258:43) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 64 for loop 'VITIS_LOOP_258_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:258:43) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1920) < AVE (= 32767)) for loop 'VITIS_LOOP_258_2' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:258:43) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1080 for loop 'VITIS_LOOP_256_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:256:39) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 64 for loop 'VITIS_LOOP_256_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:256:39) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1080) < AVE (= 32767)) for loop 'VITIS_LOOP_256_1' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:256:39) in function 'MultiPixStream2AXIvideo'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1920 for loop 'VITIS_LOOP_327_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:303:11) in function 'Gamma'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 64 for loop 'VITIS_LOOP_327_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:303:11) in function 'Gamma'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1920) < AVE (= 32767)) for loop 'VITIS_LOOP_327_4' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:303:11) in function 'Gamma'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1080 for loop 'VITIS_LOOP_325_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:303:9) in function 'Gamma'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 64 for loop 'VITIS_LOOP_325_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:303:9) in function 'Gamma'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1080) < AVE (= 32767)) for loop 'VITIS_LOOP_325_3' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:303:9) in function 'Gamma'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1920 for loop 'loop_width' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:166:31) in function 'AXIvideo2MultiPixStream'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1920) < AVE (= 32767)) for loop 'loop_width' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:166:31) in function 'AXIvideo2MultiPixStream'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1080 for loop 'loop_height' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:166:31) in function 'AXIvideo2MultiPixStream'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1080) < AVE (= 32767)) for loop 'loop_height' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:166:31) in function 'AXIvideo2MultiPixStream'.
+INFO: [XFORM 203-712] Applying dataflow to function 'v_gamma_lut' (E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/.autopilot/db/v_gamma_lut.cpp:89:1), detected/extracted 3 process function(s): 
+	 'AXIvideo2MultiPixStream'
+	 'Gamma'
+	 'MultiPixStream2AXIvideo'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.855 seconds; current allocated memory: 265.668 MB.
+WARNING: [HLS 200-1449] Process Gamma has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.394 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'v_gamma_lut' ...
+WARNING: [SYN 201-103] Legalizing function name 'reg<unsigned short>' to 'reg_unsigned_short_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'reg<unsigned short>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<unsigned short>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.364 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_start'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.156 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_width'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_eol'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.195 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.895 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Gamma_Pipeline_VITIS_LOOP_315_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_315_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_315_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.122 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Gamma_Pipeline_VITIS_LOOP_327_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_327_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_327_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Gamma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_258_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_258_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.293 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'v_gamma_lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 265.668 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'reg_unsigned_short_s' pipeline 'reg<unsigned short>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.171 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.268 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_width' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIvideo2MultiPixStream_Pipeline_loop_width' pipeline 'loop_width' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_width'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.273 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.205 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Gamma_Pipeline_VITIS_LOOP_315_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Gamma_Pipeline_VITIS_LOOP_315_1' pipeline 'VITIS_LOOP_315_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Gamma_Pipeline_VITIS_LOOP_315_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.299 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Gamma_Pipeline_VITIS_LOOP_327_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Gamma_Pipeline_VITIS_LOOP_327_4' pipeline 'VITIS_LOOP_327_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Gamma_Pipeline_VITIS_LOOP_327_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Gamma' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Gamma'.
+INFO: [RTMG 210-278] Implementing memory 'design_1_v_gamma_lut_0_0_Gamma_lut_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.293 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2' pipeline 'VITIS_LOOP_258_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.446 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.52 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'v_gamma_lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/width' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/height' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/video_format' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/gamma_lut_0' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/gamma_lut_1' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/gamma_lut_2' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/s_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/s_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/s_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/s_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/s_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/s_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/s_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/m_axis_video_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/m_axis_video_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/m_axis_video_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/m_axis_video_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/m_axis_video_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/m_axis_video_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'v_gamma_lut/m_axis_video_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'v_gamma_lut' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'width', 'height', 'video_format', 'gamma_lut_0', 'gamma_lut_1', 'gamma_lut_2' and 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'v_gamma_lut'.
+INFO: [RTMG 210-285] Implementing FIFO 'imgRgb_U(design_1_v_gamma_lut_0_0_fifo_w30_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'imgGamma_U(design_1_v_gamma_lut_0_0_fifo_w30_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPixStream2AXIvideo_U0_U(design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.103 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.851 seconds; current allocated memory: 265.668 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.992 seconds; current allocated memory: 265.668 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for v_gamma_lut with prefix design_1_v_gamma_lut_0_0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for v_gamma_lut with prefix design_1_v_gamma_lut_0_0_.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 277.16 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:01:41; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Thu Nov 13 19:32:03 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/sol_data.json outdir=E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip srcdir=E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip/misc
+INFO: Copied 23 verilog file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip/hdl/verilog
+INFO: Copied 17 vhdl file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 393.102 ; gain = 79.684
+INFO: Import ports from HDL: E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip/hdl/vhdl/design_1_v_gamma_lut_0_0_v_gamma_lut.vhd (design_1_v_gamma_lut_0_0_v_gamma_lut)
+INFO: Add axi4lite interface s_axi_CTRL
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: Add axi4stream interface s_axis_video
+INFO: Add axi4stream interface m_axis_video
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip/component.xml
+INFO: Created IP archive E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/prj/sol/impl/ip/xilinx_com_ip_v_gamma_lut_1_1.zip
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 19:32:21 2025...
+INFO: [HLS 200-802] Generated output file prj/sol/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:31; Allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 22 seconds. Total CPU system time: 6 seconds. Total elapsed time: 147.176 seconds; peak allocated memory: 265.668 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 39s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
+compile_c: Time (s): cpu = 00:00:01 ; elapsed = 00:02:44 . Memory (MB): peak = 448.371 ; gain = 0.000
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_v_gamma_lut_0_0
+Command: synth_design -top design_1_v_gamma_lut_0_0 -part xczu2cg-sfvc784-1-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23936
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1543.207 ; gain = 174.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/synth/design_1_v_gamma_lut_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_v_gamma_lut' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_v_gamma_lut.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_CTRL_s_axi' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_CTRL_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_CTRL_s_axi_ram' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_CTRL_s_axi.v:705]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_CTRL_s_axi_ram' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_CTRL_s_axi.v:705]
+INFO: [Synth 8-155] case statement is not full and has no default [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_CTRL_s_axi.v:345]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_CTRL_s_axi' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_CTRL_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_flow_control_loop_pipe_sequential_init' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_flow_control_loop_pipe_sequential_init' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_width' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_width.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_width' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_width.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_reg_unsigned_short_s' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_reg_unsigned_short_s.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_reg_unsigned_short_s' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_reg_unsigned_short_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_regslice_both' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_regslice_both' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized0' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized1' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_AXIvideo2MultiPixStream.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_Gamma' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_Gamma_lut_0_RAM_AUTO_1R1W' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma_lut_0_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_Gamma_lut_0_RAM_AUTO_1R1W' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma_lut_0_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_315_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_315_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_315_1' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_315_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_Gamma' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo.v:9]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_fifo_w30_d16_S' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_fifo_w30_d16_S.v:11]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_fifo_w30_d16_S_ShiftReg' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_fifo_w30_d16_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_fifo_w30_d16_S_ShiftReg' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_fifo_w30_d16_S.v:129]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_fifo_w30_d16_S' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_fifo_w30_d16_S.v:11]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0.v:11]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0_ShiftReg' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0_ShiftReg' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_start_for_MultiPixStream2AXIvideo_U0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0_v_gamma_lut' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_v_gamma_lut.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/synth/design_1_v_gamma_lut_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_CTRL_s_axi.v:423]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[4] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[3] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[2] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[1] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[0] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[4] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[3] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[2] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[1] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[0] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_258_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[4] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[3] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[2] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[1] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[0] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[4] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[3] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[2] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[1] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[0] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port height[15] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port height[14] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port height[13] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port height[12] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port height[11] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port width[15] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port width[14] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port width[13] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port width[12] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port width[11] in module design_1_v_gamma_lut_0_0_MultiPixStream2AXIvideo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_num_data_valid[4] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_num_data_valid[3] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_num_data_valid[2] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_num_data_valid[1] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_num_data_valid[0] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_fifo_cap[4] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_fifo_cap[3] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_fifo_cap[2] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_fifo_cap[1] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgRgb_fifo_cap[0] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[31] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[30] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[29] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[28] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[27] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[26] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[25] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[24] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[23] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[22] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[21] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[20] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[19] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[18] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[17] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[16] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[15] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[14] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[13] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[12] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[11] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[10] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[9] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[8] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[7] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[6] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[5] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[4] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[3] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[2] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[1] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_num_data_valid[0] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[31] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[30] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[29] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[28] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[27] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[26] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[25] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[24] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[23] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[22] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[21] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[20] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[19] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[18] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[17] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[16] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[15] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[14] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[13] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[12] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[11] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[10] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[9] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[8] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[7] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[6] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[5] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port imgGamma_fifo_cap[4] in module design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_327_4 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1672.434 ; gain = 303.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1672.434 ; gain = 303.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1672.434 ; gain = 303.578
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1672.434 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/design_1_v_gamma_lut_0_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1774.648 ; gain = 0.035
+Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/design_1_v_gamma_lut_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/design_1_v_gamma_lut_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/design_1_v_gamma_lut_0_0.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1774.648 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 1774.652 ; gain = 0.004
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 1774.652 ; gain = 405.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 1774.652 ; gain = 405.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 1774.652 ; gain = 405.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'design_1_v_gamma_lut_0_0_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'design_1_v_gamma_lut_0_0_CTRL_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'design_1_v_gamma_lut_0_0_regslice_both'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized1'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'zext_ln315_reg_189_reg' and it is trimmed from '11' to '10' bits. [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_Gamma_Pipeline_VITIS_LOOP_315_1.v:178]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'design_1_v_gamma_lut_0_0_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'design_1_v_gamma_lut_0_0_CTRL_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'design_1_v_gamma_lut_0_0_regslice_both'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'design_1_v_gamma_lut_0_0_regslice_both__parameterized1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1774.652 ; gain = 405.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 8     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               32 Bit    Registers := 12    
+	               30 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 16    
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 14    
+	                2 Bit    Registers := 16    
+	                1 Bit    Registers := 129   
++---RAMs : 
+	              16K Bit	(512 X 32 bit)          RAMs := 3     
+	              10K Bit	(1024 X 10 bit)          RAMs := 3     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 26    
+	   2 Input   30 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 19    
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 149   
+	   4 Input    2 Bit        Muxes := 56    
+	   2 Input    1 Bit        Muxes := 134   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'regslice_both_s_axis_video_V_data_V_U/data_p1_reg' and it is trimmed from '32' to '30' bits. [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:41]
+WARNING: [Synth 8-3936] Found unconnected internal register 'regslice_both_s_axis_video_V_data_V_U/data_p2_reg' and it is trimmed from '32' to '30' bits. [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_0_0/hdl/verilog/design_1_v_gamma_lut_0_0_regslice_both.v:63]
+WARNING: [Synth 8-3332] Sequential element (CTRL_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (CTRL_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_keep_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_keep_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_strb_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_strb_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_id_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_id_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_dest_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (AXIvideo2MultiPixStream_U0/regslice_both_s_axis_video_V_dest_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 1774.652 ; gain = 405.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name | RTL Object                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst        | CTRL_s_axi_U/int_gamma_lut_0/mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | CTRL_s_axi_U/int_gamma_lut_1/mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | CTRL_s_axi_U/int_gamma_lut_2/mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | Gamma_U0/lut_0_U/ram_reg             | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 1               | 
+|inst        | Gamma_U0/lut_1_U/ram_reg             | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 1               | 
+|inst        | Gamma_U0/lut_2_U/ram_reg             | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 1               | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:07 ; elapsed = 00:01:28 . Memory (MB): peak = 2406.734 ; gain = 1037.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:38 . Memory (MB): peak = 2490.074 ; gain = 1121.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name | RTL Object                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst        | CTRL_s_axi_U/int_gamma_lut_0/mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | CTRL_s_axi_U/int_gamma_lut_1/mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | CTRL_s_axi_U/int_gamma_lut_2/mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | Gamma_U0/lut_0_U/ram_reg             | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 1               | 
+|inst        | Gamma_U0/lut_1_U/ram_reg             | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 1               | 
+|inst        | Gamma_U0/lut_2_U/ram_reg             | 1 K x 10(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 1               | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_strb_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_strb_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_id_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_id_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_dest_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+WARNING: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_dest_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module design_1_v_gamma_lut_0_0_v_gamma_lut.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_gamma_lut_0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_gamma_lut_0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_gamma_lut_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_gamma_lut_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_gamma_lut_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/CTRL_s_axi_U/int_gamma_lut_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Gamma_U0/lut_0_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Gamma_U0/lut_1_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/Gamma_U0/lut_2_U/ram_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:39 . Memory (MB): peak = 2496.035 ; gain = 1127.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name        | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[15] | 30     | 30         | 30     | 0       | 0      | 0      | 0      | 
++------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    11|
+|2     |LUT2     |    40|
+|3     |LUT3     |   180|
+|4     |LUT4     |   157|
+|5     |LUT5     |   144|
+|6     |LUT6     |   269|
+|7     |RAMB18E2 |     3|
+|8     |RAMB36E2 |     3|
+|9     |SRL16E   |    60|
+|10    |FDRE     |   635|
+|11    |FDSE     |    15|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:02:03 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 164 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:57 . Memory (MB): peak = 2655.570 ; gain = 1184.496
+Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:02:13 . Memory (MB): peak = 2655.570 ; gain = 1286.715
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2655.570 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2655.570 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 31316432
+INFO: [Common 17-83] Releasing license: Synthesis
+95 Infos, 122 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:02:33 . Memory (MB): peak = 2655.570 ; gain = 2207.199
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2655.570 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/design_1_v_gamma_lut_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_v_gamma_lut_0_0, cache-ID = 12aaa2f06d8cb534
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2655.570 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/design_1_v_gamma_lut_0_0_synth_1/design_1_v_gamma_lut_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_v_gamma_lut_0_0_utilization_synth.rpt -pb design_1_v_gamma_lut_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 19:34:58 2025...
