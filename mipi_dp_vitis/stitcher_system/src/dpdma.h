@@ -56,7 +56,7 @@ typedef struct {
 } Run_Config;
 
 /************************** Function Prototypes ******************************/
-int DpdmaVideoExample(Run_Config *RunCfgPtr);
+
 void InitRunConfig(Run_Config *RunCfgPtr);
 int InitDpDmaSubsystem(Run_Config *RunCfgPtr);
 void SetupInterrupts(Run_Config *RunCfgPtr);
@@ -69,7 +69,9 @@ void DpPsu_Run(Run_Config *RunCfgPtr);
 void DpPsu_IsrHpdEvent(void *ref);
 void DpPsu_IsrHpdPulse(void *ref);
 
-/************************** Variable Definitions *****************************/
+
+
+int DpdmaVideoExample(UINTPTR cam_frame);
 
 
 #endif /* SRC_DPDMA_VIDEO_EXAMPLE_H_ */

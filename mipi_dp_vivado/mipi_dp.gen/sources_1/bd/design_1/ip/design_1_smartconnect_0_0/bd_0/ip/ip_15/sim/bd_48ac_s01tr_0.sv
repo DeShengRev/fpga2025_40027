@@ -213,7 +213,7 @@ output wire m_axi_bready;
     .C_NUM_WRITE_THREADS(1),
     .C_MEP_IDENTIFIER_WIDTH(3),
     .C_MEP_IDENTIFIER(2),
-    .C_SEP_ROUTE_WIDTH(0),
+    .C_SEP_ROUTE_WIDTH(1),
     .C_RDATA_WIDTH(64),
     .C_WDATA_WIDTH(64),
     .C_S_ID_WIDTH(0),

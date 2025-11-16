@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date              : Thu Nov 13 22:46:28 2025
+| Date              : Sun Nov 16 18:31:08 2025
 | Host              : Win10-zsd running 64-bit major release  (build 9200)
 | Command           : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
 | Design            : design_1_wrapper
@@ -23,18 +23,18 @@ Table of Contents
 
 Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
 --  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
-1   80        [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]}]]
+1   192       [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]}]]
                                               [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]]
-                                                                              Slow              6.666       0.533      6.133
-2   82        [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]}]]
+                                                                              Slow              6.666       0.434      6.232
+2   194       [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]}]]
                                               [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]]
-                                                                              Slow              6.666       0.471      6.195
-3   88        [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]}]]
+                                                                              Slow              6.666       0.567      6.099
+3   200       [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]}]]
                                               [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]]
-                                                                              Slow              6.666       0.552      6.114
-4   90        [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]}]]
+                                                                              Slow              6.666       0.616      6.050
+4   202       [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]}]]
                                               [get_cells [list {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]}]]
-                                                                              Slow              6.666       0.411      6.255
+                                                                              Slow              6.666       0.626      6.040
 
 
 2. Bus Skew Report Per Constraint
@@ -49,11 +49,11 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_pl_0              mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT
                                             design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                                                            Slow         0.533      6.133
+                                                                            design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.434      6.232
 
 
-Slack (MET) :             6.133ns  (requirement - actual skew)
+Slack (MET) :             6.232ns  (requirement - actual skew)
   Endpoint Source:        <hidden>
                             (rising edge-triggered cell FDRE clocked by clk_pl_0)
   Endpoint Destination:   <hidden>
@@ -64,10 +64,10 @@ Slack (MET) :             6.133ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            6.666ns
-  Endpoint Relative Delay:    0.110ns
-  Reference Relative Delay:  -1.819ns
-  Relative CRPR:              1.396ns
-  Actual Bus Skew:            0.533ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    0.362ns
+  Reference Relative Delay:  -1.521ns
+  Relative CRPR:              1.448ns
+  Actual Bus Skew:            0.434ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -78,13 +78,13 @@ Endpoint path:
                          net (fo=1, routed)           0.178     0.178    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.029     0.207 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       2.056     2.263    <hidden>
-    SLICE_X38Y118        FDRE                                         r  <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       2.075     2.282    <hidden>
+    SLICE_X40Y110        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X38Y118        FDRE (Prop_HFF2_SLICEL_C_Q)
-                                                      0.097     2.360 r  <hidden>
-                         net (fo=1, routed)           0.412     2.772    <hidden>
-    SLICE_X38Y118        FDRE                                         r  <hidden>
+    SLICE_X40Y110        FDRE (Prop_GFF2_SLICEM_C_Q)
+                                                      0.098     2.380 r  <hidden>
+                         net (fo=1, routed)           0.378     2.758    <hidden>
+    SLICE_X39Y110        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT rise edge)
@@ -109,16 +109,16 @@ Endpoint path:
                          net (fo=1, routed)           0.478     1.599    design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y25         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.623 r  design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         1.012     2.635    <hidden>
-    SLICE_X38Y118        FDRE                                         r  <hidden>
-                         clock pessimism              0.000     2.635    
-    SLICE_X38Y118        FDRE (Setup_DFF2_SLICEL_C_D)
-                                                      0.027     2.662    <hidden>
+    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         0.746     2.369    <hidden>
+    SLICE_X39Y110        FDRE                                         r  <hidden>
+                         clock pessimism              0.000     2.369    
+    SLICE_X39Y110        FDRE (Setup_GFF2_SLICEM_C_D)
+                                                      0.027     2.396    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           2.772    
-                         clock arrival                          2.662    
+                         data arrival                           2.758    
+                         clock arrival                          2.396    
   -------------------------------------------------------------------
-                         relative delay                         0.110    
+                         relative delay                         0.362    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -129,13 +129,13 @@ Reference path:
                          net (fo=1, routed)           0.140     0.140    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.027     0.167 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       1.831     1.998    <hidden>
-    SLICE_X40Y116        FDRE                                         r  <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       1.834     2.001    <hidden>
+    SLICE_X40Y110        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X40Y116        FDRE (Prop_DFF2_SLICEM_C_Q)
-                                                      0.073     2.071 r  <hidden>
-                         net (fo=1, routed)           0.148     2.219    <hidden>
-    SLICE_X39Y116        FDRE                                         r  <hidden>
+    SLICE_X40Y110        FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.070     2.071 r  <hidden>
+                         net (fo=1, routed)           0.104     2.175    <hidden>
+    SLICE_X41Y110        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT rise edge)
@@ -160,16 +160,16 @@ Reference path:
                          net (fo=1, routed)           0.594     2.757    design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y25         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     2.785 r  design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         1.198     3.983    <hidden>
-    SLICE_X39Y116        FDRE                                         r  <hidden>
-                         clock pessimism              0.000     3.983    
-    SLICE_X39Y116        FDRE (Hold_HFF2_SLICEM_C_D)
-                                                      0.055     4.038    <hidden>
+    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         0.856     3.641    <hidden>
+    SLICE_X41Y110        FDRE                                         r  <hidden>
+                         clock pessimism              0.000     3.641    
+    SLICE_X41Y110        FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.055     3.696    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           2.219    
-                         clock arrival                          4.038    
+                         data arrival                           2.175    
+                         clock arrival                          3.696    
   -------------------------------------------------------------------
-                         relative delay                        -1.819    
+                         relative delay                        -1.521    
 
 
 
@@ -181,12 +181,12 @@ Endpoints: 5
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT
-                      clk_pl_0              design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                      clk_pl_0              design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                                                                             design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
-                                                                                                            Slow         0.471      6.195
+                                                                                                            Slow         0.567      6.099
 
 
-Slack (MET) :             6.195ns  (requirement - actual skew)
+Slack (MET) :             6.099ns  (requirement - actual skew)
   Endpoint Source:        <hidden>
                             (rising edge-triggered cell FDRE clocked by mipi_phy_if_1_clk_p_FIFO_WRCLK_OUT)
   Endpoint Destination:   <hidden>
@@ -197,10 +197,10 @@ Slack (MET) :             6.195ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_pl_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            6.666ns
-  Endpoint Relative Delay:    2.383ns
-  Reference Relative Delay:   0.516ns
-  Relative CRPR:              1.396ns
-  Actual Bus Skew:            0.471ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    2.174ns
+  Reference Relative Delay:   0.191ns
+  Relative CRPR:              1.416ns
+  Actual Bus Skew:            0.567ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -227,13 +227,13 @@ Endpoint path:
                          net (fo=1, routed)           0.594     2.757    design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y25         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     2.785 r  design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         1.171     3.956    <hidden>
-    SLICE_X40Y117        FDRE                                         r  <hidden>
+    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         0.861     3.646    <hidden>
+    SLICE_X41Y109        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X40Y117        FDRE (Prop_GFF2_SLICEM_C_Q)
-                                                      0.098     4.054 r  <hidden>
-                         net (fo=1, routed)           0.364     4.418    <hidden>
-    SLICE_X40Y117        FDRE                                         r  <hidden>
+    SLICE_X41Y109        FDRE (Prop_CFF_SLICEL_C_Q)
+                                                      0.097     3.743 r  <hidden>
+                         net (fo=1, routed)           0.463     4.206    <hidden>
+    SLICE_X42Y110        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_pl_0 rise edge)
@@ -242,16 +242,16 @@ Endpoint path:
                          net (fo=1, routed)           0.140     0.140    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.027     0.167 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       1.841     2.008    <hidden>
-    SLICE_X40Y117        FDRE                                         r  <hidden>
-                         clock pessimism              0.000     2.008    
-    SLICE_X40Y117        FDRE (Setup_CFF2_SLICEM_C_D)
-                                                      0.027     2.035    <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       1.838     2.005    <hidden>
+    SLICE_X42Y110        FDRE                                         r  <hidden>
+                         clock pessimism              0.000     2.005    
+    SLICE_X42Y110        FDRE (Setup_DFF2_SLICEM_C_D)
+                                                      0.027     2.032    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           4.418    
-                         clock arrival                          2.035    
+                         data arrival                           4.206    
+                         clock arrival                          2.032    
   -------------------------------------------------------------------
-                         relative delay                         2.383    
+                         relative delay                         2.174    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -278,13 +278,13 @@ Reference path:
                          net (fo=1, routed)           0.478     1.599    design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y25         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.623 r  design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         1.012     2.635    <hidden>
-    SLICE_X38Y118        FDRE                                         r  <hidden>
+    X1Y1 (CLOCK_ROOT)    net (fo=523, routed)         0.739     2.362    <hidden>
+    SLICE_X40Y110        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X38Y118        FDRE (Prop_AFF_SLICEL_C_Q)
-                                                      0.070     2.705 r  <hidden>
-                         net (fo=1, routed)           0.129     2.834    <hidden>
-    SLICE_X38Y118        FDRE                                         r  <hidden>
+    SLICE_X40Y110        FDRE (Prop_AFF_SLICEM_C_Q)
+                                                      0.069     2.431 r  <hidden>
+                         net (fo=1, routed)           0.097     2.528    <hidden>
+    SLICE_X40Y110        FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_pl_0 rise edge)
@@ -293,16 +293,16 @@ Reference path:
                          net (fo=1, routed)           0.178     0.178    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.029     0.207 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       2.056     2.263    <hidden>
-    SLICE_X38Y118        FDRE                                         r  <hidden>
-                         clock pessimism              0.000     2.263    
-    SLICE_X38Y118        FDRE (Hold_GFF2_SLICEL_C_D)
-                                                      0.055     2.318    <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       2.075     2.282    <hidden>
+    SLICE_X40Y110        FDRE                                         r  <hidden>
+                         clock pessimism              0.000     2.282    
+    SLICE_X40Y110        FDRE (Hold_FFF2_SLICEM_C_D)
+                                                      0.055     2.337    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           2.834    
-                         clock arrival                          2.318    
+                         data arrival                           2.528    
+                         clock arrival                          2.337    
   -------------------------------------------------------------------
-                         relative delay                         0.516    
+                         relative delay                         0.191    
 
 
 
@@ -314,12 +314,12 @@ Endpoints: 5
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_pl_0              mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT
-                                            design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
-                                                                            design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                                                            Slow         0.552      6.114
+                                            design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.616      6.050
 
 
-Slack (MET) :             6.114ns  (requirement - actual skew)
+Slack (MET) :             6.050ns  (requirement - actual skew)
   Endpoint Source:        <hidden>
                             (rising edge-triggered cell FDRE clocked by clk_pl_0)
   Endpoint Destination:   <hidden>
@@ -330,10 +330,10 @@ Slack (MET) :             6.114ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            6.666ns
-  Endpoint Relative Delay:   -0.242ns
-  Reference Relative Delay:  -2.201ns
-  Relative CRPR:              1.407ns
-  Actual Bus Skew:            0.552ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    0.037ns
+  Reference Relative Delay:  -2.136ns
+  Relative CRPR:              1.556ns
+  Actual Bus Skew:            0.616ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -344,13 +344,13 @@ Endpoint path:
                          net (fo=1, routed)           0.178     0.178    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.029     0.207 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       1.934     2.141    <hidden>
-    SLICE_X14Y71         FDRE                                         r  <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       1.937     2.144    <hidden>
+    SLICE_X15Y49         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X14Y71         FDRE (Prop_EFF_SLICEM_C_Q)
-                                                      0.093     2.234 r  <hidden>
-                         net (fo=1, routed)           0.375     2.609    <hidden>
-    SLICE_X14Y71         FDRE                                         r  <hidden>
+    SLICE_X15Y49         FDRE (Prop_GFF2_SLICEL_C_Q)
+                                                      0.099     2.243 r  <hidden>
+                         net (fo=1, routed)           0.579     2.822    <hidden>
+    SLICE_X15Y49         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT rise edge)
@@ -375,16 +375,16 @@ Endpoint path:
                          net (fo=1, routed)           0.478     1.599    design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.623 r  design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.201     2.824    <hidden>
-    SLICE_X14Y71         FDRE                                         r  <hidden>
-                         clock pessimism              0.000     2.824    
-    SLICE_X14Y71         FDRE (Setup_DFF2_SLICEM_C_D)
-                                                      0.027     2.851    <hidden>
+    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.135     2.758    <hidden>
+    SLICE_X15Y49         FDRE                                         r  <hidden>
+                         clock pessimism              0.000     2.758    
+    SLICE_X15Y49         FDRE (Setup_CFF2_SLICEL_C_D)
+                                                      0.027     2.785    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           2.609    
-                         clock arrival                          2.851    
+                         data arrival                           2.822    
+                         clock arrival                          2.785    
   -------------------------------------------------------------------
-                         relative delay                        -0.242    
+                         relative delay                         0.037    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -395,13 +395,13 @@ Reference path:
                          net (fo=1, routed)           0.140     0.140    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.027     0.167 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       1.711     1.878    <hidden>
-    SLICE_X11Y70         FDRE                                         r  <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       1.709     1.876    <hidden>
+    SLICE_X15Y49         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X11Y70         FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.073     1.951 r  <hidden>
-                         net (fo=1, routed)           0.070     2.021    <hidden>
-    SLICE_X11Y71         FDRE                                         r  <hidden>
+    SLICE_X15Y49         FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.070     1.946 r  <hidden>
+                         net (fo=1, routed)           0.077     2.023    <hidden>
+    SLICE_X15Y47         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT rise edge)
@@ -426,16 +426,16 @@ Reference path:
                          net (fo=1, routed)           0.594     2.757    design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     2.785 r  design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.382     4.167    <hidden>
-    SLICE_X11Y71         FDRE                                         r  <hidden>
-                         clock pessimism              0.000     4.167    
-    SLICE_X11Y71         FDRE (Hold_HFF2_SLICEL_C_D)
-                                                      0.055     4.222    <hidden>
+    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.319     4.104    <hidden>
+    SLICE_X15Y47         FDRE                                         r  <hidden>
+                         clock pessimism              0.000     4.104    
+    SLICE_X15Y47         FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.055     4.159    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           2.021    
-                         clock arrival                          4.222    
+                         data arrival                           2.023    
+                         clock arrival                          4.159    
   -------------------------------------------------------------------
-                         relative delay                        -2.201    
+                         relative delay                        -2.136    
 
 
 
@@ -447,12 +447,12 @@ Endpoints: 5
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT
-                      clk_pl_0              design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                            design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                                                            Slow         0.411      6.255
+                      clk_pl_0              design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/gen_pkt_fifo/pkt_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         0.626      6.040
 
 
-Slack (MET) :             6.255ns  (requirement - actual skew)
+Slack (MET) :             6.040ns  (requirement - actual skew)
   Endpoint Source:        <hidden>
                             (rising edge-triggered cell FDRE clocked by mipi_phy_if_0_clk_p_FIFO_WRCLK_OUT)
   Endpoint Destination:   <hidden>
@@ -463,10 +463,10 @@ Slack (MET) :             6.255ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_pl_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            6.666ns
-  Endpoint Relative Delay:    2.766ns
-  Reference Relative Delay:   0.853ns
-  Relative CRPR:              1.502ns
-  Actual Bus Skew:            0.411ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+  Endpoint Relative Delay:    2.878ns
+  Reference Relative Delay:   0.782ns
+  Relative CRPR:              1.470ns
+  Actual Bus Skew:            0.626ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -493,13 +493,13 @@ Endpoint path:
                          net (fo=1, routed)           0.594     2.757    design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.028     2.785 r  design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.391     4.176    <hidden>
-    SLICE_X10Y68         FDRE                                         r  <hidden>
+    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.302     4.087    <hidden>
+    SLICE_X18Y52         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X10Y68         FDRE (Prop_DFF2_SLICEL_C_Q)
-                                                      0.098     4.274 r  <hidden>
-                         net (fo=1, routed)           0.403     4.677    <hidden>
-    SLICE_X10Y68         FDRE                                         r  <hidden>
+    SLICE_X18Y52         FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.096     4.183 r  <hidden>
+                         net (fo=1, routed)           0.605     4.788    <hidden>
+    SLICE_X15Y52         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_pl_0 rise edge)
@@ -508,16 +508,16 @@ Endpoint path:
                          net (fo=1, routed)           0.140     0.140    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.027     0.167 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       1.717     1.884    <hidden>
-    SLICE_X10Y68         FDRE                                         r  <hidden>
-                         clock pessimism              0.000     1.884    
-    SLICE_X10Y68         FDRE (Setup_HFF2_SLICEL_C_D)
-                                                      0.027     1.911    <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       1.716     1.883    <hidden>
+    SLICE_X15Y52         FDRE                                         r  <hidden>
+                         clock pessimism              0.000     1.883    
+    SLICE_X15Y52         FDRE (Setup_HFF2_SLICEL_C_D)
+                                                      0.027     1.910    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           4.677    
-                         clock arrival                          1.911    
+                         data arrival                           4.788    
+                         clock arrival                          1.910    
   -------------------------------------------------------------------
-                         relative delay                         2.766    
+                         relative delay                         2.878    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -544,13 +544,13 @@ Reference path:
                          net (fo=1, routed)           0.478     1.599    design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/div4_clk_t
     BUFGCE_X0Y2          BUFGCE (Prop_BUFCE_BUFGCE_I_O)
                                                       0.024     1.623 r  design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.rxbyteclkhs_buf/O
-    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.209     2.832    <hidden>
-    SLICE_X10Y68         FDRE                                         r  <hidden>
+    X1Y0 (CLOCK_ROOT)    net (fo=523, routed)         1.142     2.765    <hidden>
+    SLICE_X15Y55         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
-    SLICE_X10Y68         FDRE (Prop_CFF2_SLICEL_C_Q)
-                                                      0.071     2.903 r  <hidden>
-                         net (fo=1, routed)           0.147     3.050    <hidden>
-    SLICE_X11Y70         FDRE                                         r  <hidden>
+    SLICE_X15Y55         FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.070     2.835 r  <hidden>
+                         net (fo=1, routed)           0.143     2.978    <hidden>
+    SLICE_X15Y55         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_pl_0 rise edge)
@@ -559,16 +559,16 @@ Reference path:
                          net (fo=1, routed)           0.178     0.178    design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
     BUFG_PS_X0Y65        BUFG_PS (Prop_BUFG_PS_I_O)
                                                       0.029     0.207 r  design_1_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
-    X0Y1 (CLOCK_ROOT)    net (fo=33627, routed)       1.935     2.142    <hidden>
-    SLICE_X11Y70         FDRE                                         r  <hidden>
-                         clock pessimism              0.000     2.142    
-    SLICE_X11Y70         FDRE (Hold_BFF2_SLICEL_C_D)
-                                                      0.055     2.197    <hidden>
+    X0Y1 (CLOCK_ROOT)    net (fo=30356, routed)       1.934     2.141    <hidden>
+    SLICE_X15Y55         FDRE                                         r  <hidden>
+                         clock pessimism              0.000     2.141    
+    SLICE_X15Y55         FDRE (Hold_DFF2_SLICEL_C_D)
+                                                      0.055     2.196    <hidden>
   -------------------------------------------------------------------
-                         data arrival                           3.050    
-                         clock arrival                          2.197    
+                         data arrival                           2.978    
+                         clock arrival                          2.196    
   -------------------------------------------------------------------
-                         relative delay                         0.853    
+                         relative delay                         0.782    
 
 
 

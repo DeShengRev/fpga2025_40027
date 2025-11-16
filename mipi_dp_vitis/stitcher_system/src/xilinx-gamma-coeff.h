@@ -15,6 +15,9 @@
 
 #define GAMMA_BPC_10		(10)
 #define GAMMA10_TABLE_LENGTH	BIT(GAMMA_BPC_10)
+
+#include "xil_types.h"
+
 static u16 xgamma10_01[] = {
 	0, 512, 548, 571, 588, 601, 612, 621, 630, 637, 644,
 	650, 656, 661, 666, 671, 675, 679, 683, 687, 690, 694,

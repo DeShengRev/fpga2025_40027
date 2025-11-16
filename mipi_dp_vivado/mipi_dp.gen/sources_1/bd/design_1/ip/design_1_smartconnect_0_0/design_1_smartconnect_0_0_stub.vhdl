@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Thu Nov 13 19:34:58 2025
+-- Date        : Sun Nov 16 18:19:14 2025
 -- Host        : Win10-zsd running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_smartconnect_0_0 -prefix
---               design_1_smartconnect_0_0_ design_1_smartconnect_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/design_1_smartconnect_0_0_stub.vhdl
 -- Design      : design_1_smartconnect_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu2cg-sfvc784-1-e

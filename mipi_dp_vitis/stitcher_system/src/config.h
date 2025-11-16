@@ -16,7 +16,7 @@
 #define STRIDE HORSIZE /* The stride value should aligned to 256*/
 #define VERSIZE SRC_HEIGHT
 
-#define CAM0_EMIO 79
-#define CAM1_EMIO 78
+#define CAM0_EMIO 78
+#define CAM1_EMIO 79
 
 #endif /* SRC_CONFIG_H_ */

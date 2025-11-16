@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Nov 13 22:45:31 2025
+| Date         : Sun Nov 16 18:30:12 2025
 | Host         : Win10-zsd running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 26
+             Checks found: 24
 +-----------+------------------+----------------------------+--------+
 | Rule      | Severity         | Description                | Checks |
 +-----------+------------------+----------------------------+--------+
@@ -32,8 +32,7 @@ Table of Contents
 | DPIP-2    | Warning          | Input pipelining           | 4      |
 | DPOP-3    | Warning          | PREG Output pipelining     | 4      |
 | DPOP-4    | Warning          | MREG Output pipelining     | 12     |
-| PDRC-138  | Warning          | SLICE_PairEqSame_D6D5_WARN | 3      |
-| PDRC-146  | Warning          | SLICE_PairEqSame_D6D5_WARN | 1      |
+| PDRC-138  | Warning          | SLICE_PairEqSame_D6D5_WARN | 2      |
 | RTSTAT-10 | Warning          | No routable loads          | 1      |
 +-----------+------------------+----------------------------+--------+
 
@@ -156,37 +155,27 @@ Related violations: <none>
 
 PDRC-138#2 Warning
 SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X35Y60 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-138#3 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X3Y149 with different equations without A6 pin connected to Global Logic High.
-Related violations: <none>
-
-PDRC-146#1 Warning
-SLICE_PairEqSame_D6D5_WARN  
-Luts D6LUT and D5LUT in use in site SLICE_X4Y151 with different equations without A6 pin connected to Global Logic High.
+Luts D6LUT and D5LUT in use in site SLICE_X7Y124 with different equations without A6 pin connected to Global Logic High.
 Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-28 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[0].rx_data_lane_inst/fifo_rd_rst_t1_nxt,
+73 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[0].rx_data_lane_inst/fifo_rd_rst_t1_nxt,
 design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[0].rx_data_lane_inst/fifo_rd_rst_t2,
 design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[1].rx_data_lane_inst/fifo_rd_rst_t1_nxt,
 design_1_i/mipi_csi2_rx_subsyst_0/inst/phy/inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[1].rx_data_lane_inst/fifo_rd_rst_t2,
-design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/AXI_LITE.reg_inf/shutdown_i[3:0],
-design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/phecc/syndrome_code[6],
-design_1_i/mipi_csi2_rx_subsyst_0/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/phecc/syndrome_code[7],
 design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[0].rx_data_lane_inst/fifo_rd_rst_t1_nxt,
 design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[0].rx_data_lane_inst/fifo_rd_rst_t2,
 design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[1].rx_data_lane_inst/fifo_rd_rst_t1_nxt,
 design_1_i/mipi_csi2_rx_subsyst_1/inst/phy/inst/inst/bd_115c_phy_0_rx_support_i/slave_rx.dphy_rx_fab_top/gen_rx_data_lane[1].rx_data_lane_inst/fifo_rd_rst_t2,
-design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/AXI_LITE.reg_inf/shutdown_i[3:0],
-design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/phecc/syndrome_code[6],
-design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/phecc/syndrome_code[7],
-design_1_i/mipi_csi2_rx_subsyst_1/inst/rx/mipi_csi2_rx_ctrl_v1_0_11_top_dut/vc_fixed[3:0]
- (the first 15 of 16 listed).
+design_1_i/smartconnect_1/inst/m01_nodes/m01_ar_node/inst/mi_handler_m_sc_areset_pipe,
+design_1_i/smartconnect_1/inst/m01_nodes/m01_w_node/inst/mi_handler_m_sc_areset_pipe,
+design_1_i/smartconnect_1/inst/m03_nodes/m03_r_node/inst/mi_handler_m_sc_areset_pipe,
+design_1_i/smartconnect_1/inst/m03_nodes/m03_w_node/inst/mi_handler_m_sc_areset_pipe,
+design_1_i/smartconnect_1/inst/m04_nodes/m04_aw_node/inst/mi_handler_m_sc_areset_pipe,
+design_1_i/smartconnect_1/inst/m04_nodes/m04_w_node/inst/mi_handler_m_sc_areset_pipe,
+design_1_i/smartconnect_1/inst/m06_nodes/m06_r_node/inst/mi_handler_m_sc_areset_pipe
+ (the first 15 of 61 listed nets/buses).
 Related violations: <none>
 
 

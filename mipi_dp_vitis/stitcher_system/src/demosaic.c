@@ -1,65 +1,47 @@
-/*
-FILENAME: demosaic.c
-AUTHOR: Greg Taylor     CREATION DATE: 12 Aug 2019
 
-DESCRIPTION:
 
-CHANGE HISTORY:
-12 Aug 2019		Greg Taylor
-	Initial version
-
-MIT License
-
-Copyright (c) 2019 Greg Taylor <gtaylor@sonic.net>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
- */
-#include "xv_demosaic.h"
-#include "config.h"
 #include "demosaic.h"
+#include "xil_types.h"
+#include "config.h"
+#include "xv_demosaic.h"
+#include "xparameters.h"
 
-int demosaic_init(u32 BaseAddress) {
-	XV_demosaic demosaic;
-	XV_demosaic_Config *demosaic_config;
 
-	if ( (demosaic_config = XV_demosaic_LookupConfig(BaseAddress)) == NULL) {
-		xil_printf("XV_demosaic_LookupConfig() failed\r\n");
-		return XST_FAILURE;
-	}
-	if (XV_demosaic_CfgInitialize(&demosaic, demosaic_config, demosaic_config->BaseAddress)
-			!= XST_SUCCESS) {
-		xil_printf("XV_demosaic_CfgInitialize() failed\r\n");
-		return XST_FAILURE;
-	}
 
-	XV_demosaic_Set_HwReg_width(&demosaic, SRC_WIDTH);
-	XV_demosaic_Set_HwReg_height(&demosaic, SRC_HEIGHT);
-	XV_demosaic_Set_HwReg_bayer_phase(&demosaic, 3);
+XV_demosaic demosaic0,demosaic1;
+XV_demosaic_Config demosaic0_cfg, demosaic1_cfg;
 
-	if (!XV_demosaic_IsReady(&demosaic)) {
-		xil_printf("demosaic core not ready\r\n");
-		return XST_FAILURE;
-	}
-	XV_demosaic_EnableAutoRestart(&demosaic);
-	XV_demosaic_Start(&demosaic);
+int demosaic_init(u32 BaseAddress, XV_demosaic *p_demosaic,
+                  XV_demosaic_Config *p_cfg) {
 
-	xil_printf("Demosiac module initialized\r\n");
+  if ((p_cfg = XV_demosaic_LookupConfig(BaseAddress)) == NULL) {
+    xil_printf("XV_demosaic_LookupConfig() failed\r\n");
+    return XST_FAILURE;
+  }
+  if (XV_demosaic_CfgInitialize(p_demosaic, p_cfg,
+                                p_cfg->BaseAddress) !=
+      XST_SUCCESS) {
+    xil_printf("XV_demosaic_CfgInitialize() failed\r\n");
+    return XST_FAILURE;
+  }
 
-	return XST_SUCCESS;
+  XV_demosaic_Set_HwReg_width(p_demosaic, SRC_WIDTH);
+  XV_demosaic_Set_HwReg_height(p_demosaic, SRC_HEIGHT);
+  XV_demosaic_Set_HwReg_bayer_phase(p_demosaic, 3);
+
+  if (!XV_demosaic_IsReady(p_demosaic)) {
+    xil_printf("demosaic core not ready\r\n");
+    return XST_FAILURE;
+  }
+  XV_demosaic_EnableAutoRestart(p_demosaic);
+  XV_demosaic_Start(p_demosaic);
+
+  xil_printf("demosiac module at %p initialized\r\n", BaseAddress);
+
+  return XST_SUCCESS;
+}
+
+void demosaic_init_all() {
+    demosaic_init(XPAR_XV_DEMOSAIC_0_BASEADDR, &demosaic0, &demosaic0_cfg);
+    demosaic_init(XPAR_XV_DEMOSAIC_1_BASEADDR, &demosaic1, &demosaic1_cfg);
 }

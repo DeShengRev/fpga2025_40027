@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Nov 13 22:33:56 2025
-# Process ID         : 24712
+# Start of session at: Sun Nov 16 18:19:23 2025
+# Process ID         : 19164
 # Current directory  : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1
 # Command line       : vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file           : E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/design_1_wrapper.vds
@@ -17,9 +17,9 @@
 # CPU Physical cores : 6
 # CPU Logical cores  : 12
 # Host memory        : 16505 MB
-# Swap memory        : 7376 MB
-# Total Virtual      : 23882 MB
-# Available Virtual  : 5475 MB
+# Swap memory        : 4563 MB
+# Total Virtual      : 21069 MB
+# Available Virtual  : 3430 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -30,7 +30,7 @@ INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/dat
 INFO: [Project 1-5578] Found utility IPs instantiated in block design E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.srcs/sources_1/bd/design_1/design_1.bd which have equivalent inline hdl with improved performance and reduced diskspace.
 It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
 More information on inline hdl is available in UG994. 
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 494.047 ; gain = 87.148
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 520.473 ; gain = 113.434
 Command: synth_design -top design_1_wrapper -part xczu2cg-sfvc784-1-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
@@ -38,208 +38,135 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg
 INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2464
+INFO: [Synth 8-7075] Helper process launched with PID 19912
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1639.742 ; gain = 172.973
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1666.156 ; gain = 175.828
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axi_vdma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axi_vdma_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:380]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:380]
-WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'design_1_axi_vdma_0_0' has 44 connections declared, but only 42 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:380]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axi_vdma_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axi_vdma_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'design_1_axi_vdma_1_0' is unconnected for instance 'axi_vdma_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:423]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_vdma_1_0' is unconnected for instance 'axi_vdma_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:423]
-WARNING: [Synth 8-7023] instance 'axi_vdma_1' of module 'design_1_axi_vdma_1_0' has 44 connections declared, but only 42 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:423]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axis_subset_converter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axis_subset_converter_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'design_1_axis_subset_converter_0_0' is unconnected for instance 'axis_subset_converter_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:466]
-WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'design_1_axis_subset_converter_0_0' is unconnected for instance 'axis_subset_converter_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:466]
-WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'design_1_axis_subset_converter_0_0' is unconnected for instance 'axis_subset_converter_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:466]
-WARNING: [Synth 8-7023] instance 'axis_subset_converter_0' of module 'design_1_axis_subset_converter_0_0' has 20 connections declared, but only 17 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:466]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axis_subset_converter_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_axis_subset_converter_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'design_1_axis_subset_converter_1_0' is unconnected for instance 'axis_subset_converter_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:484]
-WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'design_1_axis_subset_converter_1_0' is unconnected for instance 'axis_subset_converter_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:484]
-WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'design_1_axis_subset_converter_1_0' is unconnected for instance 'axis_subset_converter_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:484]
-WARNING: [Synth 8-7023] instance 'axis_subset_converter_1' of module 'design_1_axis_subset_converter_1_0' has 20 connections declared, but only 17 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:484]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_csi2_rx_subsyst_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_csi2_rx_subsyst_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'rxbyteclkhs' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:502]
-WARNING: [Synth 8-7071] port 'clkoutphy_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:502]
-WARNING: [Synth 8-7071] port 'system_rst_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:502]
-WARNING: [Synth 8-7071] port 'pll_lock_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:502]
-WARNING: [Synth 8-7071] port 'frame_rcvd_pulse_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:502]
-WARNING: [Synth 8-7023] instance 'mipi_csi2_rx_subsyst_0' of module 'design_1_mipi_csi2_rx_subsyst_0_0' has 40 connections declared, but only 35 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:502]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_csi2_rx_subsyst_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_csi2_rx_subsyst_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_1_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'rxbyteclkhs' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:538]
-WARNING: [Synth 8-7071] port 'clkoutphy_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:538]
-WARNING: [Synth 8-7071] port 'system_rst_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:538]
-WARNING: [Synth 8-7071] port 'pll_lock_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:538]
-WARNING: [Synth 8-7071] port 'csirxss_csi_irq' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:538]
-WARNING: [Synth 8-7071] port 'frame_rcvd_pulse_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:538]
-WARNING: [Synth 8-7023] instance 'mipi_csi2_rx_subsyst_1' of module 'design_1_mipi_csi2_rx_subsyst_1_0' has 40 connections declared, but only 34 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:538]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_150M_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_proc_sys_reset_150M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_150M_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_proc_sys_reset_150M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_150M_0' is unconnected for instance 'proc_sys_reset_150M' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:573]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_150M_0' is unconnected for instance 'proc_sys_reset_150M' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:573]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_150M_0' is unconnected for instance 'proc_sys_reset_150M' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:573]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_150M' of module 'design_1_proc_sys_reset_150M_0' has 10 connections declared, but only 7 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:573]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1179]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3224]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_0' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3405]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_0' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3405]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_0' has 60 connections declared, but only 58 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3405]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3224]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3466]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_1' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_1' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3466]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3716]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_2' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_2' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_2_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_2' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3894]
-WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_2' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3894]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_2' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3894]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_2' has 60 connections declared, but only 57 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3894]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3716]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1E9R4HW' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3954]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_3' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_3' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_3_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_3' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4135]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_3' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4135]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_3' has 60 connections declared, but only 58 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4135]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1E9R4HW' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3954]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_NB1YAO' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4196]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_4' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_4' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_4_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_4' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4374]
-WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_4' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4374]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_4' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4374]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_4' has 60 connections declared, but only 57 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4374]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_NB1YAO' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4196]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1FZ4A9T' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4434]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_5' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_5' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1FZ4A9T' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4434]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_MPDFMR' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4684]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_MPDFMR' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4684]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1GV49DU' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4907]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1GV49DU' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:4907]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_K8X5UY' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5130]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_6' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_6' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_6_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_6' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5311]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_6' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5311]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_6' has 60 connections declared, but only 58 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5311]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_K8X5UY' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5130]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1AITGY3' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5372]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_7' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_7' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_7_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_7' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5553]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_7' is unconnected for instance 'auto_pc' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5553]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_ps8_0_axi_periph_imp_auto_pc_7' has 60 connections declared, but only 58 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5553]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1AITGY3' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5372]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5614]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:5614]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awuser' of module 'design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' is unconnected for instance 'xbar' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3141]
-WARNING: [Synth 8-7071] port 'm_axi_aruser' of module 'design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' is unconnected for instance 'xbar' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3141]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0' has 82 connections declared, but only 80 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:3141]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1179]
-WARNING: [Synth 8-7071] port 'M06_AXI_araddr' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arburst' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arcache' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arlen' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arlock' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arprot' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arqos' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arregion' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arsize' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_arvalid' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awaddr' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awburst' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awcache' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awlen' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awlock' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awprot' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awqos' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awregion' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awsize' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_awvalid' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_bready' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_rready' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_wdata' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_wlast' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_wstrb' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M06_AXI_wvalid' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_araddr' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arburst' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arcache' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arlen' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arlock' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arprot' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arqos' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arregion' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arsize' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_arvalid' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awaddr' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awburst' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awcache' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awlen' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awlock' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awprot' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awqos' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awregion' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awsize' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_awvalid' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_bready' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_rready' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_wdata' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_wlast' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_wstrb' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7071] port 'M07_AXI_wvalid' of module 'design_1_ps8_0_axi_periph_0' is unconnected for instance 'ps8_0_axi_periph' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-WARNING: [Synth 8-7023] instance 'ps8_0_axi_periph' of module 'design_1_ps8_0_axi_periph_0' has 271 connections declared, but only 219 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:581]
-INFO: [Synth 8-6157] synthesizing module 'design_1_smartconnect_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_smartconnect_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_smartconnect_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'S02_AXI_awready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-WARNING: [Synth 8-7071] port 'S02_AXI_wready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-WARNING: [Synth 8-7071] port 'S02_AXI_bid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-WARNING: [Synth 8-7071] port 'S02_AXI_bresp' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-WARNING: [Synth 8-7071] port 'S02_AXI_buser' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-WARNING: [Synth 8-7071] port 'S02_AXI_bvalid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-WARNING: [Synth 8-7071] port 'S02_AXI_arready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-WARNING: [Synth 8-7071] port 'S02_AXI_rid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'design_1_smartconnect_0_0' has 146 connections declared, but only 120 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:801]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_2' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_demosaic_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_2' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_demosaic_0_2_stub.v:6]
-WARNING: [Synth 8-7023] instance 'v_demosaic_0' of module 'design_1_v_demosaic_0_2' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:922]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_demosaic_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_demosaic_1_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'v_demosaic_1' of module 'design_1_v_demosaic_1_0' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:960]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_gamma_lut_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_gamma_lut_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'v_gamma_lut_0' of module 'design_1_v_gamma_lut_0_0' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:998]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_gamma_lut_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_v_gamma_lut_1_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'v_gamma_lut_1' of module 'design_1_v_gamma_lut_1_0' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1036]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axi_vdma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:381]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:381]
+WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'design_1_axi_vdma_0_0' has 44 connections declared, but only 42 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:381]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axi_vdma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axi_vdma_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'design_1_axi_vdma_1_0' is unconnected for instance 'axi_vdma_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:424]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_vdma_1_0' is unconnected for instance 'axi_vdma_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:424]
+WARNING: [Synth 8-7023] instance 'axi_vdma_1' of module 'design_1_axi_vdma_1_0' has 44 connections declared, but only 42 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:424]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axis_subset_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axis_subset_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'design_1_axis_subset_converter_0_0' is unconnected for instance 'axis_subset_converter_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:467]
+WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'design_1_axis_subset_converter_0_0' is unconnected for instance 'axis_subset_converter_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:467]
+WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'design_1_axis_subset_converter_0_0' is unconnected for instance 'axis_subset_converter_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:467]
+WARNING: [Synth 8-7023] instance 'axis_subset_converter_0' of module 'design_1_axis_subset_converter_0_0' has 20 connections declared, but only 17 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:467]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axis_subset_converter_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_axis_subset_converter_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'design_1_axis_subset_converter_1_0' is unconnected for instance 'axis_subset_converter_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:485]
+WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'design_1_axis_subset_converter_1_0' is unconnected for instance 'axis_subset_converter_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:485]
+WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'design_1_axis_subset_converter_1_0' is unconnected for instance 'axis_subset_converter_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:485]
+WARNING: [Synth 8-7023] instance 'axis_subset_converter_1' of module 'design_1_axis_subset_converter_1_0' has 20 connections declared, but only 17 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:485]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_csi2_rx_subsyst_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_csi2_rx_subsyst_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rxbyteclkhs' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'clkoutphy_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'system_rst_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'pll_lock_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'frame_rcvd_pulse_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7023] instance 'mipi_csi2_rx_subsyst_0' of module 'design_1_mipi_csi2_rx_subsyst_0_0' has 40 connections declared, but only 35 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:503]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_csi2_rx_subsyst_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_csi2_rx_subsyst_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_mipi_csi2_rx_subsyst_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rxbyteclkhs' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:539]
+WARNING: [Synth 8-7071] port 'clkoutphy_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:539]
+WARNING: [Synth 8-7071] port 'system_rst_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:539]
+WARNING: [Synth 8-7071] port 'pll_lock_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:539]
+WARNING: [Synth 8-7071] port 'frame_rcvd_pulse_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:539]
+WARNING: [Synth 8-7023] instance 'mipi_csi2_rx_subsyst_1' of module 'design_1_mipi_csi2_rx_subsyst_1_0' has 40 connections declared, but only 35 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:539]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_150M_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_proc_sys_reset_150M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_150M_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_proc_sys_reset_150M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_150M_0' is unconnected for instance 'proc_sys_reset_150M' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:575]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_150M_0' is unconnected for instance 'proc_sys_reset_150M' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:575]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_150M_0' is unconnected for instance 'proc_sys_reset_150M' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:575]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_150M' of module 'design_1_proc_sys_reset_150M_0' has 10 connections declared, but only 7 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:575]
+INFO: [Synth 8-6157] synthesizing module 'design_1_smartconnect_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_smartconnect_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_smartconnect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'S02_AXI_awready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_wready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_bid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_bresp' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_buser' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_bvalid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_arready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_rid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_rdata' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_rresp' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_rlast' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_ruser' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S02_AXI_rvalid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_awready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_wready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_bid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_bresp' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_buser' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_bvalid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_arready' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_rid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_rdata' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_rresp' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_rlast' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_ruser' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7071] port 'S03_AXI_rvalid' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'design_1_smartconnect_0_0' has 146 connections declared, but only 120 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:583]
+INFO: [Synth 8-6157] synthesizing module 'design_1_smartconnect_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_smartconnect_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_smartconnect_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_smartconnect_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M01_AXI_wstrb' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M04_AXI_awprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M04_AXI_arprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M06_AXI_awprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M06_AXI_arprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M07_AXI_awprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7071] port 'M07_AXI_arprot' of module 'design_1_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+WARNING: [Synth 8-7023] instance 'smartconnect_1' of module 'design_1_smartconnect_1_0' has 193 connections declared, but only 179 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:704]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_0_2' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_demosaic_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_0_2' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_demosaic_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_v_demosaic_0_2' is unconnected for instance 'v_demosaic_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:884]
+WARNING: [Synth 8-7023] instance 'v_demosaic_0' of module 'design_1_v_demosaic_0_2' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:884]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_demosaic_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_demosaic_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_demosaic_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_demosaic_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_v_demosaic_1_0' is unconnected for instance 'v_demosaic_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:922]
+WARNING: [Synth 8-7023] instance 'v_demosaic_1' of module 'design_1_v_demosaic_1_0' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:922]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_gamma_lut_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_gamma_lut_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_v_gamma_lut_0_0' is unconnected for instance 'v_gamma_lut_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:960]
+WARNING: [Synth 8-7023] instance 'v_gamma_lut_0' of module 'design_1_v_gamma_lut_0_0' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:960]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_gamma_lut_1_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_gamma_lut_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_gamma_lut_1_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_v_gamma_lut_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_v_gamma_lut_1_0' is unconnected for instance 'v_gamma_lut_1' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:998]
+WARNING: [Synth 8-7023] instance 'v_gamma_lut_1' of module 'design_1_v_gamma_lut_1_0' has 38 connections declared, but only 37 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:998]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-24712-Win10-zsd/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 100 connections declared, but only 92 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1084]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/.Xil/Vivado-19164-Win10-zsd/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7071] port 'saxigp2_arready' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7071] port 'saxigp2_rdata' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7071] port 'saxigp2_rresp' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7071] port 'saxigp2_rlast' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7071] port 'saxigp2_rvalid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7071] port 'pl_clk2' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 100 connections declared, but only 92 given [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:1046]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
@@ -344,18 +271,18 @@ WARNING: [Synth 8-7129] Port In106[0] in module xlconcat_v2_1_6_xlconcat is eith
 WARNING: [Synth 8-7129] Port In107[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1772.773 ; gain = 306.004
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1786.871 ; gain = 296.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1772.773 ; gain = 306.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1786.871 ; gain = 296.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1772.773 ; gain = 306.004
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1786.871 ; gain = 296.543
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1772.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1786.871 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -363,7 +290,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
-create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1855.188 ; gain = 0.465
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1893.492 ; gain = 0.008
 Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
 Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
 Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
@@ -375,24 +302,6 @@ Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_
 Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_1_0/design_1_mipi_csi2_rx_subsyst_1_0/design_1_mipi_csi2_rx_subsyst_1_0_in_context.xdc] for cell 'design_1_i/mipi_csi2_rx_subsyst_1'
 Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_150M_0/design_1_proc_sys_reset_150M_0/design_1_proc_sys_reset_150M_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_150M'
 Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_150M_0/design_1_proc_sys_reset_150M_0/design_1_proc_sys_reset_150M_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_150M'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0/design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m00_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m00_couplers/auto_pc'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_1/design_1_ps8_0_axi_periph_imp_auto_pc_1/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m01_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_1/design_1_ps8_0_axi_periph_imp_auto_pc_1/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m01_couplers/auto_pc'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_2/design_1_ps8_0_axi_periph_imp_auto_pc_2/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m02_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_2/design_1_ps8_0_axi_periph_imp_auto_pc_2/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m02_couplers/auto_pc'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_3/design_1_ps8_0_axi_periph_imp_auto_pc_3/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m03_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_3/design_1_ps8_0_axi_periph_imp_auto_pc_3/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m03_couplers/auto_pc'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_4/design_1_ps8_0_axi_periph_imp_auto_pc_4/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m04_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_4/design_1_ps8_0_axi_periph_imp_auto_pc_4/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m04_couplers/auto_pc'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_5/design_1_ps8_0_axi_periph_imp_auto_pc_5/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m05_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_5/design_1_ps8_0_axi_periph_imp_auto_pc_5/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m05_couplers/auto_pc'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_6/design_1_ps8_0_axi_periph_imp_auto_pc_6/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m08_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_6/design_1_ps8_0_axi_periph_imp_auto_pc_6/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m08_couplers/auto_pc'
-Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_7/design_1_ps8_0_axi_periph_imp_auto_pc_7/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m09_couplers/auto_pc'
-Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_7/design_1_ps8_0_axi_periph_imp_auto_pc_7/design_1_ps8_0_axi_periph_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/m09_couplers/auto_pc'
 Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/design_1_v_demosaic_0_2/design_1_v_demosaic_1_0_in_context.xdc] for cell 'design_1_i/v_demosaic_0'
 Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_demosaic_0_2/design_1_v_demosaic_0_2/design_1_v_demosaic_1_0_in_context.xdc] for cell 'design_1_i/v_demosaic_0'
 Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/design_1_smartconnect_0_0/design_1_smartconnect_0_0_in_context.xdc] for cell 'design_1_i/smartconnect_0'
@@ -407,6 +316,8 @@ Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_
 Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_v_gamma_lut_1_0/design_1_v_gamma_lut_1_0/design_1_v_gamma_lut_0_0_in_context.xdc] for cell 'design_1_i/v_gamma_lut_1'
 Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_1'
 Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_1'
+Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/design_1_smartconnect_1_0/design_1_smartconnect_1_0_in_context.xdc] for cell 'design_1_i/smartconnect_1'
+Finished Parsing XDC File [e:/Dev/QianSai/mipi_dp_vivado/mipi_dp.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/design_1_smartconnect_1_0/design_1_smartconnect_1_0_in_context.xdc] for cell 'design_1_i/smartconnect_1'
 Parsing XDC File [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.srcs/constrs_1/new/mipi.xdc]
 Finished Parsing XDC File [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.srcs/constrs_1/new/mipi.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.srcs/constrs_1/new/mipi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -417,16 +328,16 @@ Parsing XDC File [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/dont_touch.
 Finished Parsing XDC File [E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1855.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1893.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 99 instances were transformed.
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 99 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1855.188 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1893.520 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/mipi_csi2_rx_subsyst_0' at clock pin 'lite_aclk' is different from the actual clock period '6.666', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/mipi_csi2_rx_subsyst_1' at clock pin 'lite_aclk' is different from the actual clock period '6.666', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1858.441 ; gain = 391.672
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1893.617 ; gain = 403.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -434,7 +345,7 @@ Start Loading Part and Timing Information
 Loading part: xczu2cg-sfvc784-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1858.441 ; gain = 391.672
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1893.617 ; gain = 403.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -470,16 +381,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_subset_converter_
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/mipi_csi2_rx_subsyst_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/mipi_csi2_rx_subsyst_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/proc_sys_reset_150M. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m03_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m04_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m05_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m08_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph/m09_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps8_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/v_demosaic_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/smartconnect_0. (constraint file  auto generated constraint).
@@ -488,11 +389,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axis_subset_converter_
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/v_gamma_lut_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/v_gamma_lut_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_vdma_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/smartconnect_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1858.441 ; gain = 391.672
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1893.617 ; gain = 403.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1858.441 ; gain = 391.672
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1893.617 ; gain = 403.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -515,25 +417,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1858.441 ; gain = 391.672
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1893.617 ; gain = 403.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 2468.641 ; gain = 1001.871
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2488.508 ; gain = 998.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 2469.633 ; gain = 1002.863
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2488.805 ; gain = 998.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 2482.699 ; gain = 1015.930
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 2500.051 ; gain = 1009.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -551,114 +453,105 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------------------------------------------+----------+
-|      |BlackBox name                                     |Instances |
-+------+--------------------------------------------------+----------+
-|1     |design_1_axi_vdma_0_0                             |         1|
-|2     |design_1_axi_vdma_1_0                             |         1|
-|3     |design_1_axis_subset_converter_0_0                |         1|
-|4     |design_1_axis_subset_converter_1_0                |         1|
-|5     |design_1_mipi_csi2_rx_subsyst_0_0                 |         1|
-|6     |design_1_mipi_csi2_rx_subsyst_1_0                 |         1|
-|7     |design_1_proc_sys_reset_150M_0                    |         1|
-|8     |design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar_0 |         1|
-|9     |design_1_ps8_0_axi_periph_imp_auto_pc_0           |         1|
-|10    |design_1_ps8_0_axi_periph_imp_auto_pc_1           |         1|
-|11    |design_1_ps8_0_axi_periph_imp_auto_pc_2           |         1|
-|12    |design_1_ps8_0_axi_periph_imp_auto_pc_3           |         1|
-|13    |design_1_ps8_0_axi_periph_imp_auto_pc_4           |         1|
-|14    |design_1_ps8_0_axi_periph_imp_auto_pc_5           |         1|
-|15    |design_1_ps8_0_axi_periph_imp_auto_pc_6           |         1|
-|16    |design_1_ps8_0_axi_periph_imp_auto_pc_7           |         1|
-|17    |design_1_smartconnect_0_0                         |         1|
-|18    |design_1_v_demosaic_0_2                           |         1|
-|19    |design_1_v_demosaic_1_0                           |         1|
-|20    |design_1_v_gamma_lut_0_0                          |         1|
-|21    |design_1_v_gamma_lut_1_0                          |         1|
-|22    |design_1_zynq_ultra_ps_e_0_0                      |         1|
-+------+--------------------------------------------------+----------+
++------+-----------------------------------+----------+
+|      |BlackBox name                      |Instances |
++------+-----------------------------------+----------+
+|1     |design_1_axi_vdma_0_0              |         1|
+|2     |design_1_axi_vdma_1_0              |         1|
+|3     |design_1_axis_subset_converter_0_0 |         1|
+|4     |design_1_axis_subset_converter_1_0 |         1|
+|5     |design_1_mipi_csi2_rx_subsyst_0_0  |         1|
+|6     |design_1_mipi_csi2_rx_subsyst_1_0  |         1|
+|7     |design_1_proc_sys_reset_150M_0     |         1|
+|8     |design_1_smartconnect_0_0          |         1|
+|9     |design_1_smartconnect_1_0          |         1|
+|10    |design_1_v_demosaic_0_2            |         1|
+|11    |design_1_v_demosaic_1_0            |         1|
+|12    |design_1_v_gamma_lut_0_0           |         1|
+|13    |design_1_v_gamma_lut_1_0           |         1|
+|14    |design_1_zynq_ultra_ps_e_0_0       |         1|
++------+-----------------------------------+----------+
 
 Report Cell Usage: 
-+------+------------------------------------------------+------+
-|      |Cell                                            |Count |
-+------+------------------------------------------------+------+
-|1     |design_1_axi_vdma_0                             |     1|
-|2     |design_1_axi_vdma_1                             |     1|
-|3     |design_1_axis_subset_converter_0                |     1|
-|4     |design_1_axis_subset_converter_1                |     1|
-|5     |design_1_mipi_csi2_rx_subsyst_0                 |     1|
-|6     |design_1_mipi_csi2_rx_subsyst_1                 |     1|
-|7     |design_1_proc_sys_reset_150M                    |     1|
-|8     |design_1_ps8_0_axi_periph_imp_auto_pc           |     8|
-|16    |design_1_ps8_0_axi_periph_upgraded_ipi_imp_xbar |     1|
-|17    |design_1_smartconnect_0                         |     1|
-|18    |design_1_v_demosaic_0                           |     1|
-|19    |design_1_v_demosaic_1                           |     1|
-|20    |design_1_v_gamma_lut_0                          |     1|
-|21    |design_1_v_gamma_lut_1                          |     1|
-|22    |design_1_zynq_ultra_ps_e_0                      |     1|
-|23    |IOBUF                                           |    99|
-+------+------------------------------------------------+------+
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |design_1_axi_vdma_0              |     1|
+|2     |design_1_axi_vdma_1              |     1|
+|3     |design_1_axis_subset_converter_0 |     1|
+|4     |design_1_axis_subset_converter_1 |     1|
+|5     |design_1_mipi_csi2_rx_subsyst_0  |     1|
+|6     |design_1_mipi_csi2_rx_subsyst_1  |     1|
+|7     |design_1_proc_sys_reset_150M     |     1|
+|8     |design_1_smartconnect_0          |     1|
+|9     |design_1_smartconnect_1          |     1|
+|10    |design_1_v_demosaic_0            |     1|
+|11    |design_1_v_demosaic_1            |     1|
+|12    |design_1_v_gamma_lut_0           |     1|
+|13    |design_1_v_gamma_lut_1           |     1|
+|14    |design_1_zynq_ultra_ps_e_0       |     1|
+|15    |IOBUF                            |    99|
++------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:38 . Memory (MB): peak = 2696.066 ; gain = 1143.629
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 2696.066 ; gain = 1229.297
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:39 . Memory (MB): peak = 2715.664 ; gain = 1118.590
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 2715.664 ; gain = 1225.336
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.055 . Memory (MB): peak = 2696.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2715.664 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2696.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2715.664 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 99 instances were transformed.
   IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 99 instances
 
-Synth Design complete | Checksum: a2f4beca
+Synth Design complete | Checksum: caeee89c
 INFO: [Common 17-83] Releasing license: Synthesis
-102 Infos, 225 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 193 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 2696.066 ; gain = 2202.020
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2696.066 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:59 . Memory (MB): peak = 2715.664 ; gain = 2195.191
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2715.664 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/Dev/QianSai/mipi_dp_vivado/mipi_dp.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 13 22:35:13 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 16 18:20:40 2025...

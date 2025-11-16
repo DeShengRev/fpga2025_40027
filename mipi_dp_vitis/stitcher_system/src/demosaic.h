@@ -33,8 +33,9 @@ SOFTWARE.
 #ifndef SRC_DEMOSAIC_H_
 #define SRC_DEMOSAIC_H_
 
-#include "xil_types.h"
 
-int demosaic_init(u32 BaseAddress);
+// int demosaic_init(u32 BaseAddress, XV_demosaic *p_demosaic,
+//                   XV_demosaic_Config *p_demosaic_config);
+void demosaic_init_all(void);
 
 #endif /* SRC_DEMOSAIC_H_ */

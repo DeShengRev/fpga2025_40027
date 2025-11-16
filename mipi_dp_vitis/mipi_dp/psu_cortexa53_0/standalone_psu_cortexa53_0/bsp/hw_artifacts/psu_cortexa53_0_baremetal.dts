@@ -2604,7 +2604,7 @@
                         xlnx,en-vcx = <0x0>;
                         xlnx,name = "mipi_csi2_rx_subsyst_0";
                         xlnx,csi-emb-non-img = <0x0>;
-                        interrupts = <0x0 0x60 0x4>;
+                        interrupts = <0x0 0x59 0x4>;
                         xlnx,dphyrx-board-interface = "Custom";
                         xlnx,data-lane3-io-loc = "None";
                         xlnx,hs-settle-ns = <0x91>;
@@ -2707,6 +2707,7 @@
                         xlnx,cmn-inc-iic = <0x0>;
                         xlnx,clk-lane-io-loc = "W8";
                         xlnx,esc-timeout = <0x6400>;
+                        interrupt-names = "csirxss_csi_irq";
                         xlnx,cmn-inc-vfb;
                         xlnx,axis-tuser-width = <0x60>;
                         compatible = "xlnx,mipi-csi2-rx-subsystem-6.0", "xlnx,mipi-csi2-rx-subsystem-5.0";
@@ -2718,6 +2719,7 @@
                         xlnx,csi2rx-dbg = <0x0>;
                         xlnx,fifo-rd-en-control;
                         xlnx,vfb;
+                        interrupt-parent = <&gic>;
                         xlnx,data-lane1-io-loc-name = "IO_L3P_T0L_N4_AD15P_65";
                         dphy-connected = <0x78>;
                         xlnx,hs-timeout = <0x10005>;
@@ -2734,6 +2736,7 @@
                         xlnx,en-vcx = <0x0>;
                         xlnx,name = "mipi_csi2_rx_subsyst_1";
                         xlnx,csi-emb-non-img = <0x0>;
+                        interrupts = <0x0 0x5a 0x4>;
                         xlnx,dphyrx-board-interface = "Custom";
                         xlnx,data-lane3-io-loc = "None";
                         xlnx,hs-settle-ns = <0x91>;

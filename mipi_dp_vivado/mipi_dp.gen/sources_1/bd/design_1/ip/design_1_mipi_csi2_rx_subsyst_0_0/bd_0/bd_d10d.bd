@@ -34,11 +34,11 @@
           },
           "ARUSER_WIDTH": {
             "value": "0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "AWUSER_WIDTH": {
             "value": "0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "BUSER_WIDTH": {
             "value": "0",
@@ -101,23 +101,23 @@
           },
           "MAX_BURST_LENGTH": {
             "value": "1",
-            "value_src": "ip_prop"
+            "value_src": "default_prop"
           },
           "NUM_READ_OUTSTANDING": {
             "value": "8",
-            "value_src": "ip_prop"
+            "value_src": "user_prop"
           },
           "NUM_READ_THREADS": {
             "value": "1",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "NUM_WRITE_OUTSTANDING": {
             "value": "8",
-            "value_src": "ip_prop"
+            "value_src": "user_prop"
           },
           "NUM_WRITE_THREADS": {
             "value": "1",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "PHASE": {
             "value": "0.0",
@@ -132,7 +132,7 @@
           },
           "RUSER_BITS_PER_BYTE": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "RUSER_WIDTH": {
             "value": "0",
@@ -140,11 +140,11 @@
           },
           "SUPPORTS_NARROW_BURST": {
             "value": "0",
-            "value_src": "ip_prop"
+            "value_src": "default"
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "user_prop"
           },
           "WUSER_WIDTH": {
             "value": "0",
