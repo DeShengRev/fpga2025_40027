@@ -1,0 +1,73 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.935233",
+   "Default View_TopLeft":"-103,217",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port cam0_i2c -pg 1 -lvl 8 -x 4350 -y 90 -defaultsOSRD
+preplace port cam1_i2c -pg 1 -lvl 8 -x 4350 -y 110 -defaultsOSRD
+preplace port cam_gpio -pg 1 -lvl 8 -x 4350 -y 70 -defaultsOSRD
+preplace port mipi_phy_if_0 -pg 1 -lvl 0 -x -130 -y 840 -defaultsOSRD
+preplace port mipi_phy_if_1 -pg 1 -lvl 0 -x -130 -y 230 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 7 -x 3630 -y -90 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 5 -x 2510 -y 870 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 4 -x 2150 -y 880 -defaultsOSRD
+preplace inst mipi_csi2_rx_subsyst_0 -pg 1 -lvl 1 -x 830 -y 650 -defaultsOSRD
+preplace inst mipi_csi2_rx_subsyst_1 -pg 1 -lvl 1 -x 830 -y 410 -defaultsOSRD
+preplace inst proc_sys_reset_150M -pg 1 -lvl 2 -x 1230 -y -110 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 3040 -y 230 -defaultsOSRD
+preplace inst v_demosaic_0 -pg 1 -lvl 2 -x 1230 -y 670 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 6 -x 3040 -y -150 -defaultsOSRD -resize 240 176
+preplace inst v_demosaic_1 -pg 1 -lvl 2 -x 1230 -y 390 -defaultsOSRD
+preplace inst axis_subset_converter_1 -pg 1 -lvl 4 -x 2150 -y 470 -defaultsOSRD
+preplace inst v_gamma_lut_0 -pg 1 -lvl 3 -x 1750 -y 760 -defaultsOSRD
+preplace inst v_gamma_lut_1 -pg 1 -lvl 3 -x 1750 -y 440 -defaultsOSRD
+preplace inst axi_vdma_1 -pg 1 -lvl 5 -x 2510 -y 460 -defaultsOSRD
+preplace inst smartconnect_1 -pg 1 -lvl 3 -x 1750 -y -110 -defaultsOSRD
+preplace netloc mipi_csi2_rx_subsyst_0_csirxss_csi_irq 1 1 5 1000 160 NJ 160 NJ 160 NJ 160 NJ
+preplace netloc mipi_csi2_rx_subsyst_1_csirxss_csi_irq 1 1 5 1010J 180 NJ 180 NJ 180 NJ 180 NJ
+preplace netloc xlconcat_0_dout 1 6 1 3330 0n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 8 640 280 1030 40 1560 350 1980 350 2330 -40 2900 -40 3320 60 3930
+preplace netloc zynq_ultra_ps_e_0_pl_clk2 1 0 8 650 80 NJ 80 NJ 80 NJ 80 NJ 80 NJ 80 N 80 3940
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 7 1040J 70 NJ 70 NJ 70 NJ 70 NJ 70 N 70 3950
+preplace netloc axi_vdma_1_s2mm_introut 1 5 1 2700 200n
+preplace netloc axi_vdma_0_s2mm_introut 1 5 1 2710 220n
+preplace netloc proc_sys_reset_150M_interconnect_aresetn 1 2 4 1580 40 1960J -100 NJ -100 NJ
+preplace netloc proc_sys_reset_150M_peripheral_aresetn 1 0 5 670 290 990 290 1540 530 1990 550 2340
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 5 1 2690J -200n
+preplace netloc axi_vdma_1_M_AXI_S2MM 1 5 1 2680J -180n
+preplace netloc axis_subset_converter_0_M_AXIS 1 4 1 2310J 840n
+preplace netloc axis_subset_converter_1_M_AXIS 1 4 1 2310J 430n
+preplace netloc mipi_csi2_rx_subsyst_0_video_out 1 1 1 980 590n
+preplace netloc mipi_csi2_rx_subsyst_1_video_out 1 1 1 1020 350n
+preplace netloc mipi_phy_if_0_1 1 0 1 -110J 230n
+preplace netloc mipi_phy_if_0_2 1 0 1 -110J 590n
+preplace netloc smartconnect_0_M00_AXI 1 6 1 N -180
+preplace netloc v_demosaic_0_m_axis_video 1 2 1 1400 660n
+preplace netloc v_demosaic_1_m_axis_video 1 2 1 1550 380n
+preplace netloc v_gamma_lut_0_m_axis_video 1 3 1 1930 750n
+preplace netloc v_gamma_lut_1_m_axis_video 1 3 1 1990 430n
+preplace netloc zynq_ultra_ps_e_0_GPIO_0 1 7 1 3980 -140n
+preplace netloc zynq_ultra_ps_e_0_IIC_0 1 7 1 3970 -120n
+preplace netloc zynq_ultra_ps_e_0_IIC_1 1 7 1 3960 -100n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 2 6 1580J -260 NJ -260 NJ -260 NJ -260 N -260 3940
+preplace netloc smartconnect_1_M00_AXI 1 3 2 NJ -180 2320J
+preplace netloc smartconnect_1_M01_AXI 1 3 2 NJ -160 2310J
+preplace netloc smartconnect_1_M02_AXI 1 0 4 660 -250 N -250 N -250 1920
+preplace netloc smartconnect_1_M03_AXI 1 0 4 680 -240 N -240 N -240 1960
+preplace netloc smartconnect_1_M04_AXI 1 1 3 1050 20 N 20 1940
+preplace netloc smartconnect_1_M05_AXI 1 1 3 1060 30 N 30 1930
+preplace netloc smartconnect_1_M06_AXI 1 2 2 1570 50 1950
+preplace netloc smartconnect_1_M07_AXI 1 2 2 1580 60 1920
+preplace netloc smartconnect_0_M01_AXI 1 6 1 N -160
+preplace netloc smartconnect_0_M02_AXI 1 6 1 N -140
+preplace netloc smartconnect_0_M03_AXI 1 6 1 N -120
+levelinfo -pg 1 -130 830 1230 1750 2150 2510 3040 3630 4350
+pagesize -pg 1 -db -bbox -sgen -280 -340 4560 1320
+"
+}
+{
+   "da_axi4_cnt":"21",
+   "da_clkrst_cnt":"8"
+}

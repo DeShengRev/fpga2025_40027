@@ -1,0 +1,33 @@
+create libxil.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/zdma/src/libzdma.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/video_common/src/libvideo_common.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/v_gamma_lut/src/libv_gamma_lut.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/v_demosaic/src/libv_demosaic.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/usbpsu/src/libusbpsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src/libuartps.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/ttcps/src/libttcps.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src/libsysmonpsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/libsdps.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src/libscugic.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/rtcpsu/src/librtcpsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/resetps/src/libresetps.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/qspipsu/src/libqspipsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/pciepsu/src/libpciepsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/mipicsiss/src/libmipicsiss.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/libipipsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/iicps/src/libiicps.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/gpiops/src/libgpiops.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/emacps/src/libemacps.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/dppsu/src/libdppsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/dphy/src/libdphy.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/dpdma/src/libdpdma.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/ddrcpsu/src/libddrcpsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/csudma/src/libcsudma.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/csi/src/libcsi.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src/libcoresightps_dcc.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/clockps/src/libclockps.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/axivdma/src/libaxivdma.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/axipmon/src/libaxipmon.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/avbuf/src/libavbuf.a
+save
+end

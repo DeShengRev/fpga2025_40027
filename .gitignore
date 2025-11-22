@@ -1,0 +1,35 @@
+# Ignore build output directory
+/build
+/export
+
+# Ignore object files and dependent files
+.o
+.d
+*.obj
+
+#Ignore logs folder and log files
+logs/
+*.log
+*_log
+#Ignore lock files
+*.lock
+
+*.bak
+bak
+
+.pdi
+.vitisWorkspace.json
+
+
+_ide/
+
+
+.venv/
+build/
+.debug/
+*.cache/
+hls/
+*.failed
+
+/Vitis_Libraries
+/opencv4_4

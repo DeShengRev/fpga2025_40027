@@ -1,0 +1,4 @@
+
+
+
+// void stitcher_init();

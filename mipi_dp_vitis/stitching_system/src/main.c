@@ -1,0 +1,108 @@
+
+
+#include "ccv.h"
+#include "config.h"
+#include "demosaic.h"
+#include "dpdma.h"
+#include "gamma_lut.h"
+#include "imx219.h"
+#include "math.h"
+#include "ps_i2c.h"
+#include "sleep.h"
+#include "stitcher.h"
+#include "vdma.h"
+#include "xgpiops.h"
+#include "xiicps.h"
+#include "xil_cache.h"
+#include "xil_types.h"
+#include "xparameters.h"
+#include "xv_demosaic.h"
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <xil_io.h>
+#include <xil_printf.h>
+#include <xstatus.h>
+
+u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
+    __attribute__((__aligned__(256)));
+u8 cam1_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
+    __attribute__((__aligned__(256)));
+u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
+    __attribute__((__aligned__(256)));
+u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
+    __attribute__((__aligned__(256)));
+int mapxy[SRC_HEIGHT * SRC_WIDTH * 4];
+
+XGpioPs Gpio;
+
+int PsGpioSetup() {
+  XGpioPs_Config *GPIO_CONFIG;
+  int Status;
+
+  GPIO_CONFIG = XGpioPs_LookupConfig(XPAR_GPIO_BASEADDR);
+
+  Status = XGpioPs_CfgInitialize(&Gpio, GPIO_CONFIG, GPIO_CONFIG->BaseAddr);
+  if (Status != XST_SUCCESS) {
+    xil_printf("XGpioPs_CfgInitialize() failure\n");
+    return XST_FAILURE;
+  }
+
+  XGpioPs_SetDirectionPin(&Gpio, CAM0_EMIO, 1);
+  XGpioPs_SetDirectionPin(&Gpio, CAM1_EMIO, 1);
+
+  XGpioPs_SetOutputEnablePin(&Gpio, CAM0_EMIO, 1);
+  XGpioPs_SetOutputEnablePin(&Gpio, CAM1_EMIO, 1);
+
+  XGpioPs_WritePin(&Gpio, CAM0_EMIO, 0);
+  XGpioPs_WritePin(&Gpio, CAM1_EMIO, 0);
+  msleep(1000);
+  XGpioPs_WritePin(&Gpio, CAM0_EMIO, 1);
+  XGpioPs_WritePin(&Gpio, CAM1_EMIO, 1);
+  msleep(1000);
+
+  xil_printf("GPIO initialization succeeded\n");
+
+  return XST_SUCCESS;
+}
+
+int main(void) {
+  int status;
+  Xil_ICacheDisable();
+  Xil_DCacheDisable();
+
+  PsGpioSetup();
+  cam_init_all();
+  demosaic_init_all();
+  gamma_lut_init_all();
+  vdma_init_all();
+  DpdmaVideoExample((UINTPTR)bino_frame[0]);
+  
+  
+  msleep(1000);
+  printf("finish\n\n");
+
+  
+  Xil_ICacheEnable();
+  Xil_DCacheEnable();
+
+  while (1) {
+
+      Xil_DCacheInvalidateRange((INTPTR) cam0_frame[0], BUFFERSIZE);
+      Xil_DCacheInvalidateRange((INTPTR) cam0_frame[1], BUFFERSIZE);
+
+    make_bino((u8(*)[1920][4])cam1_frame[0][0],
+              (u8(*)[1920][4])cam0_frame[0][0], (u8(*)[1920][4]) bino_frame[0][540]);
+        printf("yes\n");
+
+
+    //   for (int x=300; x<310;++x) {
+    //       printf("%d ", cam0_frame[0][540][x][1]);
+    //   }
+    //   printf("\n");
+    //   msleep(66);
+      
+  }
+
+  return 0;
+}

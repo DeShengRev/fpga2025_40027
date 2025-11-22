@@ -1,0 +1,4 @@
+domain_path: E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\zynqmp_fsbl\zynqmp_fsbl_bsp
+app_src_dir: C:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\sw_apps\zynqmp_fsbl
+template: zynqmp_fsbl
+lang: c
