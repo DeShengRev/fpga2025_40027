@@ -20,6 +20,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <xil_io.h>
 #include <xil_printf.h>
 #include <xstatus.h>
@@ -66,6 +67,21 @@ int PsGpioSetup() {
   return XST_SUCCESS;
 }
 
+void buffer_init(u8 *start, int val, int len) {
+  int *arr = (int *)start;
+  for (int i = 0; i < len; ++i) {
+    arr[i] = val;
+  }
+  Xil_DCacheFlushRange((INTPTR)start, len * 4);
+}
+
+void printx(u8 *start, int len) {
+  int *arr = (int *)start;
+  for (int i = 0; i < len; ++i) {
+    printf("%08x ", arr[i]);
+  }
+  printf("\n");
+}
 int main(void) {
   int status;
   Xil_ICacheDisable();
@@ -76,33 +92,46 @@ int main(void) {
   demosaic_init_all();
   gamma_lut_init_all();
   vdma_init_all();
-  DpdmaVideoExample((UINTPTR)bino_frame[0]);
-  
-  
+  stitcher_init();
+  DpdmaVideoExample((UINTPTR)cam0_frame[0]);
+
   msleep(1000);
   printf("finish\n\n");
 
-  
   Xil_ICacheEnable();
   Xil_DCacheEnable();
 
+  // while (1) {
+
+  //   Xil_DCacheInvalidateRange((INTPTR)cam0_frame[0], BUFFERSIZE);
+  //   Xil_DCacheInvalidateRange((INTPTR)cam0_frame[1], BUFFERSIZE);
+  //   make_bino((u8(*)[1920][4])cam1_frame[0][0],
+  //             (u8(*)[1920][4])cam0_frame[0][0],
+  //             (u8(*)[1920][4])bino_frame[0][0]);
+
+  // }
+
+  buffer_init(cam0_frame, 0xFFFF0000, FRAME_PIXELS);
+  buffer_init(cam1_frame, 0xFF0000FF, FRAME_PIXELS);
+  buffer_init(bino_frame, 0xFF00FF00, FRAME_PIXELS);
+  buffer_init(stch_frame, 0xFFFFFFFF, FRAME_PIXELS);
+
   while (1) {
+    char cmd = inbyte();
 
-      Xil_DCacheInvalidateRange((INTPTR) cam0_frame[0], BUFFERSIZE);
-      Xil_DCacheInvalidateRange((INTPTR) cam0_frame[1], BUFFERSIZE);
-
-    make_bino((u8(*)[1920][4])cam1_frame[0][0],
-              (u8(*)[1920][4])cam0_frame[0][0], (u8(*)[1920][4]) bino_frame[0][540]);
-        printf("yes\n");
-
-
-    //   for (int x=300; x<310;++x) {
-    //       printf("%d ", cam0_frame[0][540][x][1]);
-    //   }
-    //   printf("\n");
-    //   msleep(66);
-      
+    if (cmd == '0') {
+      switch_screen(CAM0_FRAME);
+      printx(cam0_frame, 10);
+    } else if (cmd == '1') {
+      switch_screen(CAM1_FRAME);
+      printx(cam1_frame, 10);
+    } else if (cmd == '2') {
+      switch_screen(BINO_FRAME);
+      printx(bino_frame, 10);
+    } else if (cmd == '3') {
+      switch_screen(STCH_FRAME);
+      printx(stch_frame, 10);
+    }
   }
-
   return 0;
 }

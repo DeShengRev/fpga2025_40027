@@ -5,6 +5,7 @@
 #include "xil_cache.h"
 #include "xil_exception.h"
 #include "xil_printf.h"
+#include <sleep.h>
 #include <xil_types.h>
 
 #ifndef SDT
@@ -38,6 +39,10 @@ extern u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 
 void switch_screen(FrameId id) {
+
+  Xil_ICacheDisable();
+  Xil_DCacheDisable();
+
   u8 *frame_ptr;
   if (id == CAM0_FRAME) {
     frame_ptr = (u8 *)cam0_frame;
@@ -52,6 +57,10 @@ void switch_screen(FrameId id) {
   }
   FrameBuffer.Address = (UINTPTR)frame_ptr;
   XDpDma_DisplayGfxFrameBuffer(RunCfg.DpDmaPtr, &FrameBuffer);
+
+  msleep(100);
+  Xil_ICacheEnable();
+  Xil_DCacheEnable();
 }
 
 int DpdmaVideoExample(UINTPTR cam_frame) {

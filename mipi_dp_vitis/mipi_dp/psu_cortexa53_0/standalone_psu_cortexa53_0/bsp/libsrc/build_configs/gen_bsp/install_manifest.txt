@@ -113,6 +113,8 @@ E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsdps_core.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsdps_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstatus.h
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstitcher.h
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstitcher_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsysmonpsu.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsysmonpsu_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xtimer_config.h
@@ -250,6 +252,8 @@ E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsdps_core.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsdps_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstatus.h
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstitcher.h
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstitcher_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsysmonpsu.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsysmonpsu_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xtimer_config.h
@@ -387,6 +391,8 @@ E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsdps_core.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsdps_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstatus.h
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstitcher.h
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xstitcher_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsysmonpsu.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xsysmonpsu_hw.h
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xtimer_config.h

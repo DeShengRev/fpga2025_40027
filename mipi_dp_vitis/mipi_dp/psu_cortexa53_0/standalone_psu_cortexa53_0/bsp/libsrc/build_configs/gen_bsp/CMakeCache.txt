@@ -567,6 +567,15 @@ standalone_xpm_support:STRING=None
 standalone_zynqmp_fsbl_bsp:BOOL=OFF
 
 //Value Computed by CMake
+stitcher_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher/src
+
+//Value Computed by CMake
+stitcher_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+stitcher_SOURCE_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher/src
+
+//Value Computed by CMake
 sysmonpsu_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src
 
 //Value Computed by CMake
@@ -766,7 +775,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=52
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=53
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

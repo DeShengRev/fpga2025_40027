@@ -7,6 +7,7 @@ addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/b
 addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src/libuartps.a
 addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/ttcps/src/libttcps.a
 addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src/libsysmonpsu.a
+addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher/src/libstitcher.a
 addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/libsdps.a
 addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src/libscugic.a
 addlib E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/rtcpsu/src/librtcpsu.a

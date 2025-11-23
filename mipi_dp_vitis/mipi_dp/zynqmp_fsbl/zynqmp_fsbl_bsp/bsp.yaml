@@ -191,6 +191,18 @@ drv_info:
     driver: axivdma
     ip_name: axi_vdma
     path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_16
+  axi_vdma_2:
+    driver: axivdma
+    ip_name: axi_vdma
+    path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_16
+  axi_vdma_3:
+    driver: axivdma
+    ip_name: axi_vdma
+    path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_16
+  axi_vdma_4:
+    driver: axivdma
+    ip_name: axi_vdma
+    path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_16
   mipi_csi2_rx_subsyst_0:
     driver: mipicsiss
     ip_name: mipi_csi2_rx_subsystem
@@ -452,6 +464,10 @@ drv_info:
     driver: usbpsu
     ip_name: psu_usb_xhci
     path: C:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\usbpsu_v1_16
+  stitcher_0:
+    driver: stitcher
+    ip_name: stitcher
+    path: E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\zynqmp_fsbl\zynqmp_fsbl_bsp\hw_artifacts\drivers\stitcher_v1_0
   v_demosaic_0:
     driver: v_demosaic
     ip_name: v_demosaic
