@@ -1,16 +1,12 @@
 
 
 #include "ccv.h"
-#include "config.h"
-#include "demosaic.h"
 #include "dpdma.h"
-#include "gamma_lut.h"
 #include "imx219.h"
 #include "math.h"
 #include "ps_i2c.h"
+#include "share.h"
 #include "sleep.h"
-#include "stitcher.h"
-#include "vdma.h"
 #include "xgpiops.h"
 #include "xiicps.h"
 #include "xil_cache.h"
@@ -21,6 +17,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <xaxivdma.h>
 #include <xil_io.h>
 #include <xil_printf.h>
 #include <xstatus.h>
@@ -33,7 +30,11 @@ u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
     __attribute__((__aligned__(256)));
 u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
     __attribute__((__aligned__(256)));
-int mapxy[SRC_HEIGHT * SRC_WIDTH * 4];
+int mapxy[MAPXY_LEN] __attribute__((__aligned__(256)));
+u8 remap_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
+    __attribute__((__aligned__(256)));
+
+extern XAxiVdma vdma0, vdma1, vdma2, vdma3, vdma4, vdma5;
 
 XGpioPs Gpio;
 
@@ -92,14 +93,24 @@ int main(void) {
   demosaic_init_all();
   gamma_lut_init_all();
   vdma_init_all();
+
   stitcher_init();
   DpdmaVideoExample((UINTPTR)cam0_frame[0]);
 
   msleep(1000);
-  printf("finish\n\n");
 
   Xil_ICacheEnable();
   Xil_DCacheEnable();
+
+  load_mapxy();
+//   buffer_init(cam0_frame, 0xFFFF0000, FRAME_PIXELS);
+//   buffer_init(cam1_frame, 0xFF0000FF, FRAME_PIXELS);
+//   buffer_init(bino_frame, 0xFF00FF00, FRAME_PIXELS);
+//   buffer_init(stch_frame, 0xFFFFFFFF, FRAME_PIXELS);
+  Xil_DCacheFlush();
+  Xil_DCacheInvalidate();
+
+  printf("finish\n\n");
 
   // while (1) {
 
@@ -111,13 +122,11 @@ int main(void) {
 
   // }
 
-  buffer_init(cam0_frame, 0xFFFF0000, FRAME_PIXELS);
-  buffer_init(cam1_frame, 0xFF0000FF, FRAME_PIXELS);
-  buffer_init(bino_frame, 0xFF00FF00, FRAME_PIXELS);
-  buffer_init(stch_frame, 0xFFFFFFFF, FRAME_PIXELS);
-
   while (1) {
     char cmd = inbyte();
+
+    Xil_DCacheFlush();
+    Xil_DCacheInvalidate();
 
     if (cmd == '0') {
       switch_screen(CAM0_FRAME);
@@ -132,6 +141,11 @@ int main(void) {
       switch_screen(STCH_FRAME);
       printx(stch_frame, 10);
     }
+
+    debug_vdma_status(&vdma2, "vdma2", XAXIVDMA_READ);
+    debug_vdma_status(&vdma3, "vdma3", XAXIVDMA_READ);
+    debug_vdma_status(&vdma4, "vdma4", XAXIVDMA_READ);
+    debug_vdma_status(&vdma5, "vdma5", XAXIVDMA_WRITE);
   }
   return 0;
 }

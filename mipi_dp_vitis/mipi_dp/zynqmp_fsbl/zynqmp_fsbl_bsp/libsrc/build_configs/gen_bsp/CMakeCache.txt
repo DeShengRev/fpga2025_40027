@@ -677,13 +677,13 @@ standalone_xpm_support:STRING=None
 standalone_zynqmp_fsbl_bsp:BOOL=ON
 
 //Value Computed by CMake
-stitcher_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher/src
+stitcher_remap_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src
 
 //Value Computed by CMake
-stitcher_IS_TOP_LEVEL:STATIC=OFF
+stitcher_remap_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-stitcher_SOURCE_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/stitcher/src
+stitcher_remap_SOURCE_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/stitcher_remap/src
 
 //Value Computed by CMake
 sysmonpsu_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src

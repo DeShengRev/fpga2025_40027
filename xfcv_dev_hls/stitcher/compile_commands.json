@@ -1,0 +1,108 @@
+[
+  {
+    "directory": "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=stitcher_remap",
+      "-I",
+      "E:/Software/Vitis_Libraries/vision/L1/include",
+      "-I",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source",
+      "-I",
+      "./",
+      "-DSDSVHLS",
+      "-std=c++14",
+      "-c",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/proj_align.cpp"
+    ],
+    "file": "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/proj_align.cpp"
+  },
+  {
+    "directory": "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=stitcher_remap",
+      "-I",
+      "E:/Software/Vitis_Libraries/vision/L1/include",
+      "-I",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source",
+      "-I",
+      "./",
+      "-DSDSVHLS",
+      "-std=c++14",
+      "-c",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/stitch.cpp"
+    ],
+    "file": "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/stitch.cpp"
+  },
+  {
+    "directory": "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=stitcher_remap",
+      "-I",
+      "E:/Software/Vitis_Libraries/vision/L1/include",
+      "-I",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source",
+      "-I",
+      "./",
+      "-DSDSVHLS",
+      "-std=c++14",
+      "-c",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/calc_seam.cpp"
+    ],
+    "file": "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/calc_seam.cpp"
+  },
+  {
+    "directory": "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\common\\technology\\autopilot",
+      "-fhlstoplevel=stitcher_remap",
+      "-I",
+      "E:/Software/Vitis_Libraries/vision/L1/include",
+      "-I",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source",
+      "-I",
+      "./",
+      "-DSDSVHLS",
+      "-std=c++14",
+      "-c",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/blend.cpp"
+    ],
+    "file": "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/blend.cpp"
+  },
+  {
+    "directory": "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher",
+    "arguments": [
+      "C:\\Xilinx\\Vitis\\2024.2\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis\\2024.2\\include",
+      "-I",
+      "E:/Software/Vitis_Libraries/vision/L1/include",
+      "-I",
+      "E:/Software/opencv4_4/build/install/include",
+      "-I",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source",
+      "-I",
+      "./",
+      "-DSDSVHLS",
+      "-std=c++14",
+      "-c",
+      "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/stitch_tb.cpp"
+    ],
+    "file": "E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/stitch_tb.cpp"
+  }
+]

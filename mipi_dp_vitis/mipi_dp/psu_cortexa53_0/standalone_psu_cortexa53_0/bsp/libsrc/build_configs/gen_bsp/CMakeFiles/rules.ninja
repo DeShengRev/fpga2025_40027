@@ -440,7 +440,7 @@ rule C_STATIC_LIBRARY_LINKER__sdps_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__stitcher_
+rule C_COMPILER__stitcher_remap_
   depfile = $DEP_FILE
   deps = gcc
   command = C:\Xilinx\Vitis\2024.2\gnu\aarch64\nt\aarch64-none\bin\aarch64-none-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -450,7 +450,7 @@ rule C_COMPILER__stitcher_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER__stitcher_
+rule C_STATIC_LIBRARY_LINKER__stitcher_remap_
   command = cmd.exe /C "$PRE_LINK && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E rm -f $TARGET_FILE && aarch64-none-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && C:\Xilinx\Vitis\2024.2\gnu\aarch64\nt\aarch64-none\bin\aarch64-none-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -651,6 +651,25 @@ rule C_COMPILER__xiltimer_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__xiltimer_
+  command = cmd.exe /C "$PRE_LINK && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E rm -f $TARGET_FILE && aarch64-none-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && C:\Xilinx\Vitis\2024.2\gnu\aarch64\nt\aarch64-none\bin\aarch64-none-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__xilffs_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = C:\Xilinx\Vitis\2024.2\gnu\aarch64\nt\aarch64-none\bin\aarch64-none-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__xilffs_
   command = cmd.exe /C "$PRE_LINK && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E rm -f $TARGET_FILE && aarch64-none-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && C:\Xilinx\Vitis\2024.2\gnu\aarch64\nt\aarch64-none\bin\aarch64-none-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT

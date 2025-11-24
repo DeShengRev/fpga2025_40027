@@ -1,0 +1,166 @@
+<ENTRY>
+{
+ "thisFile": "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\stitcher\\stitcher.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/24/25 18:54:38",
+ "timestampMillis": "1763981678406",
+ "buildStep": {
+  "cmdId": "8f6a4c58-bb0f-4a2b-b26e-5ff5d7f7994b",
+  "name": "vitis-run",
+  "logFile": "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\stitcher\\logs\\stitcher.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher\\hls_config.cfg --work_dir stitcher ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher\\hls_config.cfg",
+   "--work_dir",
+   "stitcher"
+  ],
+  "iniFiles": [],
+  "cwd": "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/24/25 18:54:38",
+ "timestampMillis": "1763981678406",
+ "status": {
+  "cmdId": "8f6a4c58-bb0f-4a2b-b26e-5ff5d7f7994b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/24/25 18:54:46",
+ "timestampMillis": "1763981686058",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "stitcher_remap",
+     "file": "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\stitcher\\stitcher_remap.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\blend.cpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\blend.hpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\calc_seam.cpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\calc_seam.hpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\proj_align.cpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\proj_align.hpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\share.h",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\stitch.cpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\stitch.hpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\stitcher.hpp",
+     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\utils.hpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/24/25 18:54:46",
+ "timestampMillis": "1763981686060",
+ "buildStep": {
+  "cmdId": "a21a149d-2eb3-4c3f-aebf-40a7462bd9f3",
+  "name": "",
+  "logFile": "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\stitcher\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/24/25 18:54:46",
+ "timestampMillis": "1763981686060",
+ "status": {
+  "cmdId": "a21a149d-2eb3-4c3f-aebf-40a7462bd9f3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/24/25 18:55:03",
+ "timestampMillis": "1763981703595",
+ "status": {
+  "cmdId": "a21a149d-2eb3-4c3f-aebf-40a7462bd9f3",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/24/25 18:55:03",
+ "timestampMillis": "1763981703764",
+ "status": {
+  "cmdId": "8f6a4c58-bb0f-4a2b-b26e-5ff5d7f7994b",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/24/25 18:55:03",
+ "timestampMillis": "1763981703765",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/24/25 18:55:03",
+ "timestampMillis": "1763981703766",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,6 +1,6 @@
 
 #include "xil_types.h"
-#include "config.h"
+#include "share.h"
 
 
 void make_bino(u8 src0[SRC_HEIGHT][SRC_WIDTH][4],

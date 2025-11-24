@@ -1,6 +1,6 @@
 
 #include "ccv.h"
-#include "config.h"
+#include "share.h"
 #include "xil_types.h"
 
 extern u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];

@@ -1,8 +1,8 @@
 
 
-#include "demosaic.h"
+
 #include "xil_types.h"
-#include "config.h"
+#include "share.h"
 #include "xv_demosaic.h"
 #include "xparameters.h"
 

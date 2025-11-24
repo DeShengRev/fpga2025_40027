@@ -33,5 +33,7 @@
 int imx219_init(XIicPs *iic, u32 BaseAddress);
 int imx219_write(XIicPs *iic, u16 addr, u8 data);
 int imx219_read(XIicPs *iic, u16 addr, u8 *data);
-void cam_init_all();
+
+
+
 #endif /* SRC_IMX219_H_ */

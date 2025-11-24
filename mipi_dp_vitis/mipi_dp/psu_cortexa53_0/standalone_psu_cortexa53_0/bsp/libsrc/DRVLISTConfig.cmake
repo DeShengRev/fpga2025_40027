@@ -1,1 +1,1 @@
-set(DRIVER_LIST avbuf;axipmon;axivdma;clockps;common;coresightps_dcc;csi;csudma;ddrcpsu;dpdma;dphy;dppsu;emacps;gpiops;iicps;ipipsu;mipicsiss;pciepsu;qspipsu;resetps;rtcpsu;scugic;sdps;stitcher;sysmonpsu;ttcps;uartps;usbpsu;v_demosaic;v_gamma_lut;video_common;zdma)
+set(DRIVER_LIST avbuf;axipmon;axivdma;clockps;common;coresightps_dcc;csi;csudma;ddrcpsu;dpdma;dphy;dppsu;emacps;gpiops;iicps;ipipsu;mipicsiss;pciepsu;qspipsu;resetps;rtcpsu;scugic;sdps;stitcher_remap;sysmonpsu;ttcps;uartps;usbpsu;v_demosaic;v_gamma_lut;video_common;zdma)

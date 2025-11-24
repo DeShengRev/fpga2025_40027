@@ -1,7 +1,7 @@
 
-#include "gamma_lut.h"
-
-
+#include "share.h"
+#include "xv_gamma_lut.h"
+#include "xilinx-gamma-coeff.h"
 
 XV_gamma_lut gamma_lut0, gamma_lut1;
 XV_gamma_lut_Config gamma_lut0_cfg, gamma_lut1_cfg;

@@ -1,7 +1,7 @@
 
 
 #include "dpdma.h"
-#include "config.h"
+#include "share.h"
 #include "xil_cache.h"
 #include "xil_exception.h"
 #include "xil_printf.h"
@@ -37,6 +37,7 @@ extern u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 cam1_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
+extern u8 remap_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 
 void switch_screen(FrameId id) {
 
@@ -80,7 +81,7 @@ int DpdmaVideoExample(UINTPTR cam_frame) {
 
   /* Populate the FrameBuffer structure with the frame attributes */
   FrameBuffer.Address = cam_frame;
-  FrameBuffer.Stride = STRIDE;
+  FrameBuffer.Stride = HORSIZE;
   FrameBuffer.LineSize = HORSIZE;
   FrameBuffer.Size = BUFFERSIZE;
 

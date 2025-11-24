@@ -109,7 +109,7 @@ build install/strip: phony CMakeFiles/install/strip.util
 #############################################
 # Utility command for combined
 
-build libsrc/combined: phony libsrc/CMakeFiles/combined libsrc/avbuf/src/libavbuf.a libsrc/axipmon/src/libaxipmon.a libsrc/axivdma/src/libaxivdma.a libsrc/clockps/src/libclockps.a libsrc/coresightps_dcc/src/libcoresightps_dcc.a libsrc/csi/src/libcsi.a libsrc/csudma/src/libcsudma.a libsrc/ddrcpsu/src/libddrcpsu.a libsrc/dpdma/src/libdpdma.a libsrc/dphy/src/libdphy.a libsrc/dppsu/src/libdppsu.a libsrc/emacps/src/libemacps.a libsrc/gpiops/src/libgpiops.a libsrc/iicps/src/libiicps.a libsrc/ipipsu/src/libipipsu.a libsrc/mipicsiss/src/libmipicsiss.a libsrc/pciepsu/src/libpciepsu.a libsrc/qspipsu/src/libqspipsu.a libsrc/resetps/src/libresetps.a libsrc/rtcpsu/src/librtcpsu.a libsrc/scugic/src/libscugic.a libsrc/sdps/src/libsdps.a libsrc/stitcher/src/libstitcher.a libsrc/sysmonpsu/src/libsysmonpsu.a libsrc/ttcps/src/libttcps.a libsrc/uartps/src/libuartps.a libsrc/usbpsu/src/libusbpsu.a libsrc/v_demosaic/src/libv_demosaic.a libsrc/v_gamma_lut/src/libv_gamma_lut.a libsrc/video_common/src/libvideo_common.a libsrc/zdma/src/libzdma.a
+build libsrc/combined: phony libsrc/CMakeFiles/combined libsrc/avbuf/src/libavbuf.a libsrc/axipmon/src/libaxipmon.a libsrc/axivdma/src/libaxivdma.a libsrc/clockps/src/libclockps.a libsrc/coresightps_dcc/src/libcoresightps_dcc.a libsrc/csi/src/libcsi.a libsrc/csudma/src/libcsudma.a libsrc/ddrcpsu/src/libddrcpsu.a libsrc/dpdma/src/libdpdma.a libsrc/dphy/src/libdphy.a libsrc/dppsu/src/libdppsu.a libsrc/emacps/src/libemacps.a libsrc/gpiops/src/libgpiops.a libsrc/iicps/src/libiicps.a libsrc/ipipsu/src/libipipsu.a libsrc/mipicsiss/src/libmipicsiss.a libsrc/pciepsu/src/libpciepsu.a libsrc/qspipsu/src/libqspipsu.a libsrc/resetps/src/libresetps.a libsrc/rtcpsu/src/librtcpsu.a libsrc/scugic/src/libscugic.a libsrc/sdps/src/libsdps.a libsrc/stitcher_remap/src/libstitcher_remap.a libsrc/sysmonpsu/src/libsysmonpsu.a libsrc/ttcps/src/libttcps.a libsrc/uartps/src/libuartps.a libsrc/usbpsu/src/libusbpsu.a libsrc/v_demosaic/src/libv_demosaic.a libsrc/v_gamma_lut/src/libv_gamma_lut.a libsrc/video_common/src/libvideo_common.a libsrc/zdma/src/libzdma.a
 
 
 #############################################
@@ -180,7 +180,7 @@ build libsrc/install/strip: phony libsrc/CMakeFiles/install/strip.util
 #############################################
 # Custom command for libsrc\CMakeFiles\combined
 
-build libsrc/CMakeFiles/combined | ${cmake_ninja_workdir}libsrc/CMakeFiles/combined: CUSTOM_COMMAND libsrc/avbuf/src/libavbuf.a libsrc/axipmon/src/libaxipmon.a libsrc/axivdma/src/libaxivdma.a libsrc/clockps/src/libclockps.a libsrc/coresightps_dcc/src/libcoresightps_dcc.a libsrc/csi/src/libcsi.a libsrc/csudma/src/libcsudma.a libsrc/ddrcpsu/src/libddrcpsu.a libsrc/dpdma/src/libdpdma.a libsrc/dphy/src/libdphy.a libsrc/dppsu/src/libdppsu.a libsrc/emacps/src/libemacps.a libsrc/gpiops/src/libgpiops.a libsrc/iicps/src/libiicps.a libsrc/ipipsu/src/libipipsu.a libsrc/mipicsiss/src/libmipicsiss.a libsrc/pciepsu/src/libpciepsu.a libsrc/qspipsu/src/libqspipsu.a libsrc/resetps/src/libresetps.a libsrc/rtcpsu/src/librtcpsu.a libsrc/scugic/src/libscugic.a libsrc/sdps/src/libsdps.a libsrc/stitcher/src/libstitcher.a libsrc/sysmonpsu/src/libsysmonpsu.a libsrc/ttcps/src/libttcps.a libsrc/uartps/src/libuartps.a libsrc/usbpsu/src/libusbpsu.a libsrc/v_demosaic/src/libv_demosaic.a libsrc/v_gamma_lut/src/libv_gamma_lut.a libsrc/video_common/src/libvideo_common.a libsrc/zdma/src/libzdma.a || libsrc/avbuf/src/libavbuf.a libsrc/axipmon/src/libaxipmon.a libsrc/axivdma/src/libaxivdma.a libsrc/clockps/src/libclockps.a libsrc/coresightps_dcc/src/libcoresightps_dcc.a libsrc/csi/src/libcsi.a libsrc/csudma/src/libcsudma.a libsrc/ddrcpsu/src/libddrcpsu.a libsrc/dpdma/src/libdpdma.a libsrc/dphy/src/libdphy.a libsrc/dppsu/src/libdppsu.a libsrc/emacps/src/libemacps.a libsrc/gpiops/src/libgpiops.a libsrc/iicps/src/libiicps.a libsrc/ipipsu/src/libipipsu.a libsrc/mipicsiss/src/libmipicsiss.a libsrc/pciepsu/src/libpciepsu.a libsrc/qspipsu/src/libqspipsu.a libsrc/resetps/src/libresetps.a libsrc/rtcpsu/src/librtcpsu.a libsrc/scugic/src/libscugic.a libsrc/sdps/src/libsdps.a libsrc/stitcher/src/libstitcher.a libsrc/sysmonpsu/src/libsysmonpsu.a libsrc/ttcps/src/libttcps.a libsrc/uartps/src/libuartps.a libsrc/usbpsu/src/libusbpsu.a libsrc/v_demosaic/src/libv_demosaic.a libsrc/v_gamma_lut/src/libv_gamma_lut.a libsrc/video_common/src/libvideo_common.a libsrc/zdma/src/libzdma.a
+build libsrc/CMakeFiles/combined | ${cmake_ninja_workdir}libsrc/CMakeFiles/combined: CUSTOM_COMMAND libsrc/avbuf/src/libavbuf.a libsrc/axipmon/src/libaxipmon.a libsrc/axivdma/src/libaxivdma.a libsrc/clockps/src/libclockps.a libsrc/coresightps_dcc/src/libcoresightps_dcc.a libsrc/csi/src/libcsi.a libsrc/csudma/src/libcsudma.a libsrc/ddrcpsu/src/libddrcpsu.a libsrc/dpdma/src/libdpdma.a libsrc/dphy/src/libdphy.a libsrc/dppsu/src/libdppsu.a libsrc/emacps/src/libemacps.a libsrc/gpiops/src/libgpiops.a libsrc/iicps/src/libiicps.a libsrc/ipipsu/src/libipipsu.a libsrc/mipicsiss/src/libmipicsiss.a libsrc/pciepsu/src/libpciepsu.a libsrc/qspipsu/src/libqspipsu.a libsrc/resetps/src/libresetps.a libsrc/rtcpsu/src/librtcpsu.a libsrc/scugic/src/libscugic.a libsrc/sdps/src/libsdps.a libsrc/stitcher_remap/src/libstitcher_remap.a libsrc/sysmonpsu/src/libsysmonpsu.a libsrc/ttcps/src/libttcps.a libsrc/uartps/src/libuartps.a libsrc/usbpsu/src/libusbpsu.a libsrc/v_demosaic/src/libv_demosaic.a libsrc/v_gamma_lut/src/libv_gamma_lut.a libsrc/video_common/src/libvideo_common.a libsrc/zdma/src/libzdma.a || libsrc/avbuf/src/libavbuf.a libsrc/axipmon/src/libaxipmon.a libsrc/axivdma/src/libaxivdma.a libsrc/clockps/src/libclockps.a libsrc/coresightps_dcc/src/libcoresightps_dcc.a libsrc/csi/src/libcsi.a libsrc/csudma/src/libcsudma.a libsrc/ddrcpsu/src/libddrcpsu.a libsrc/dpdma/src/libdpdma.a libsrc/dphy/src/libdphy.a libsrc/dppsu/src/libdppsu.a libsrc/emacps/src/libemacps.a libsrc/gpiops/src/libgpiops.a libsrc/iicps/src/libiicps.a libsrc/ipipsu/src/libipipsu.a libsrc/mipicsiss/src/libmipicsiss.a libsrc/pciepsu/src/libpciepsu.a libsrc/qspipsu/src/libqspipsu.a libsrc/resetps/src/libresetps.a libsrc/rtcpsu/src/librtcpsu.a libsrc/scugic/src/libscugic.a libsrc/sdps/src/libsdps.a libsrc/stitcher_remap/src/libstitcher_remap.a libsrc/sysmonpsu/src/libsysmonpsu.a libsrc/ttcps/src/libttcps.a libsrc/uartps/src/libuartps.a libsrc/usbpsu/src/libusbpsu.a libsrc/v_demosaic/src/libv_demosaic.a libsrc/v_gamma_lut/src/libv_gamma_lut.a libsrc/video_common/src/libvideo_common.a libsrc/zdma/src/libzdma.a
   COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp && aarch64-none-elf-ar -M<E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libxil.mri && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E copy E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libxil.a E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/lib"
 
 # =============================================================================
@@ -3161,122 +3161,122 @@ build libsrc/sdps/src/install/strip: phony libsrc/sdps/src/CMakeFiles/install/st
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target stitcher
+# Object build statements for STATIC_LIBRARY target stitcher_remap
 
 
 #############################################
-# Order-only phony target for stitcher
+# Order-only phony target for stitcher_remap
 
-build cmake_object_order_depends_target_stitcher: phony || libsrc/stitcher/src/CMakeFiles/stitcher.dir
+build cmake_object_order_depends_target_stitcher_remap: phony || libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir
 
-build libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher.c.obj: C_COMPILER__stitcher_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher/src/xstitcher.c || cmake_object_order_depends_target_stitcher
-  DEP_FILE = libsrc\stitcher\src\CMakeFiles\stitcher.dir\xstitcher.c.obj.d
+build libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap.c.obj: C_COMPILER__stitcher_remap_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher_remap/src/xstitcher_remap.c || cmake_object_order_depends_target_stitcher_remap
+  DEP_FILE = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir\xstitcher_remap.c.obj.d
   FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
-  OBJECT_FILE_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
+  OBJECT_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
+  OBJECT_FILE_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
 
-build libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher_sinit.c.obj: C_COMPILER__stitcher_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher/src/xstitcher_sinit.c || cmake_object_order_depends_target_stitcher
-  DEP_FILE = libsrc\stitcher\src\CMakeFiles\stitcher.dir\xstitcher_sinit.c.obj.d
+build libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap_sinit.c.obj: C_COMPILER__stitcher_remap_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher_remap/src/xstitcher_remap_sinit.c || cmake_object_order_depends_target_stitcher_remap
+  DEP_FILE = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir\xstitcher_remap_sinit.c.obj.d
   FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
-  OBJECT_FILE_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
+  OBJECT_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
+  OBJECT_FILE_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
 
-build libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher_linux.c.obj: C_COMPILER__stitcher_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher/src/xstitcher_linux.c || cmake_object_order_depends_target_stitcher
-  DEP_FILE = libsrc\stitcher\src\CMakeFiles\stitcher.dir\xstitcher_linux.c.obj.d
+build libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap_linux.c.obj: C_COMPILER__stitcher_remap_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher_remap/src/xstitcher_remap_linux.c || cmake_object_order_depends_target_stitcher_remap
+  DEP_FILE = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir\xstitcher_remap_linux.c.obj.d
   FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
-  OBJECT_FILE_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
+  OBJECT_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
+  OBJECT_FILE_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
 
-build libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher_g.c.obj: C_COMPILER__stitcher_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher/src/xstitcher_g.c || cmake_object_order_depends_target_stitcher
-  DEP_FILE = libsrc\stitcher\src\CMakeFiles\stitcher.dir\xstitcher_g.c.obj.d
+build libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap_g.c.obj: C_COMPILER__stitcher_remap_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher_remap/src/xstitcher_remap_g.c || cmake_object_order_depends_target_stitcher_remap
+  DEP_FILE = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir\xstitcher_remap_g.c.obj.d
   FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
-  OBJECT_FILE_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
+  OBJECT_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
+  OBJECT_FILE_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target stitcher
+# Link build statements for STATIC_LIBRARY target stitcher_remap
 
 
 #############################################
-# Link the static library libsrc\stitcher\src\libstitcher.a
+# Link the static library libsrc\stitcher_remap\src\libstitcher_remap.a
 
-build libsrc/stitcher/src/libstitcher.a: C_STATIC_LIBRARY_LINKER__stitcher_ libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher.c.obj libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher_sinit.c.obj libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher_linux.c.obj libsrc/stitcher/src/CMakeFiles/stitcher.dir/xstitcher_g.c.obj
+build libsrc/stitcher_remap/src/libstitcher_remap.a: C_STATIC_LIBRARY_LINKER__stitcher_remap_ libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap.c.obj libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap_sinit.c.obj libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap_linux.c.obj libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir/xstitcher_remap_g.c.obj
   LANGUAGE_COMPILE_FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include
-  OBJECT_DIR = libsrc\stitcher\src\CMakeFiles\stitcher.dir
+  OBJECT_DIR = libsrc\stitcher_remap\src\CMakeFiles\stitcher_remap.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = libsrc\stitcher\src\libstitcher.a
-  TARGET_PDB = stitcher.a.dbg
+  TARGET_FILE = libsrc\stitcher_remap\src\libstitcher_remap.a
+  TARGET_PDB = stitcher_remap.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build libsrc/stitcher/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build libsrc/stitcher_remap/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher_remap\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build libsrc/stitcher/src/edit_cache: phony libsrc/stitcher/src/CMakeFiles/edit_cache.util
+build libsrc/stitcher_remap/src/edit_cache: phony libsrc/stitcher_remap/src/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build libsrc/stitcher/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp -BE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp"
+build libsrc/stitcher_remap/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher_remap\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp -BE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build libsrc/stitcher/src/rebuild_cache: phony libsrc/stitcher/src/CMakeFiles/rebuild_cache.util
+build libsrc/stitcher_remap/src/rebuild_cache: phony libsrc/stitcher_remap/src/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build libsrc/stitcher/src/list_install_components: phony
+build libsrc/stitcher_remap/src/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build libsrc/stitcher/src/CMakeFiles/install.util: CUSTOM_COMMAND libsrc/stitcher/src/all
-  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -P cmake_install.cmake"
+build libsrc/stitcher_remap/src/CMakeFiles/install.util: CUSTOM_COMMAND libsrc/stitcher_remap/src/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher_remap\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build libsrc/stitcher/src/install: phony libsrc/stitcher/src/CMakeFiles/install.util
+build libsrc/stitcher_remap/src/install: phony libsrc/stitcher_remap/src/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build libsrc/stitcher/src/CMakeFiles/install/local.util: CUSTOM_COMMAND libsrc/stitcher/src/all
-  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build libsrc/stitcher_remap/src/CMakeFiles/install/local.util: CUSTOM_COMMAND libsrc/stitcher_remap/src/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher_remap\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build libsrc/stitcher/src/install/local: phony libsrc/stitcher/src/CMakeFiles/install/local.util
+build libsrc/stitcher_remap/src/install/local: phony libsrc/stitcher_remap/src/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build libsrc/stitcher/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND libsrc/stitcher/src/all
-  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build libsrc/stitcher_remap/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND libsrc/stitcher_remap/src/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\stitcher_remap\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build libsrc/stitcher/src/install/strip: phony libsrc/stitcher/src/CMakeFiles/install/strip.util
+build libsrc/stitcher_remap/src/install/strip: phony libsrc/stitcher_remap/src/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -6091,6 +6091,199 @@ build libsrc/xiltimer/src/core/default_timer/CMakeFiles/install/strip.util: CUST
 build libsrc/xiltimer/src/core/default_timer/install/strip: phony libsrc/xiltimer/src/core/default_timer/CMakeFiles/install/strip.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target xilffs
+
+
+#############################################
+# Order-only phony target for xilffs
+
+build cmake_object_order_depends_target_xilffs: phony || libsrc/xilffs/src/CMakeFiles/xilffs.dir
+
+build libsrc/xilffs/src/CMakeFiles/xilffs.dir/diskio.c.obj: C_COMPILER__xilffs_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/diskio.c || cmake_object_order_depends_target_xilffs
+  DEP_FILE = libsrc\xilffs\src\CMakeFiles\xilffs.dir\diskio.c.obj.d
+  FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+  OBJECT_FILE_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+
+build libsrc/xilffs/src/CMakeFiles/xilffs.dir/ff.c.obj: C_COMPILER__xilffs_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/ff.c || cmake_object_order_depends_target_xilffs
+  DEP_FILE = libsrc\xilffs\src\CMakeFiles\xilffs.dir\ff.c.obj.d
+  FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+  OBJECT_FILE_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+
+build libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffsystem.c.obj: C_COMPILER__xilffs_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/ffsystem.c || cmake_object_order_depends_target_xilffs
+  DEP_FILE = libsrc\xilffs\src\CMakeFiles\xilffs.dir\ffsystem.c.obj.d
+  FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+  OBJECT_FILE_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+
+build libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffunicode.c.obj: C_COMPILER__xilffs_ E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/ffunicode.c || cmake_object_order_depends_target_xilffs
+  DEP_FILE = libsrc\xilffs\src\CMakeFiles\xilffs.dir\ffunicode.c.obj.d
+  FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include   -c  -g -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/include -isystem E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/aarch64/nt/aarch64-none/aarch64-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+  OBJECT_FILE_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target xilffs
+
+
+#############################################
+# Link the static library libsrc\xilffs\src\libxilffs.a
+
+build libsrc/xilffs/src/libxilffs.a: C_STATIC_LIBRARY_LINKER__xilffs_ libsrc/xilffs/src/CMakeFiles/xilffs.dir/diskio.c.obj libsrc/xilffs/src/CMakeFiles/xilffs.dir/ff.c.obj libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffsystem.c.obj libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffunicode.c.obj
+  LANGUAGE_COMPILE_FLAGS = -O2 -DSDT  -MMD -MP -specs=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Xilinx.spec -IE:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include
+  OBJECT_DIR = libsrc\xilffs\src\CMakeFiles\xilffs.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libsrc\xilffs\src\libxilffs.a
+  TARGET_PDB = xilffs.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build libsrc/xilffs/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build libsrc/xilffs/src/edit_cache: phony libsrc/xilffs/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build libsrc/xilffs/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp -BE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/rebuild_cache: phony libsrc/xilffs/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build libsrc/xilffs/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build libsrc/xilffs/src/CMakeFiles/install.util: CUSTOM_COMMAND libsrc/xilffs/src/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/install: phony libsrc/xilffs/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build libsrc/xilffs/src/CMakeFiles/install/local.util: CUSTOM_COMMAND libsrc/xilffs/src/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/install/local: phony libsrc/xilffs/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build libsrc/xilffs/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND libsrc/xilffs/src/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/install/strip: phony libsrc/xilffs/src/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build libsrc/xilffs/src/include/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src\include && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build libsrc/xilffs/src/include/edit_cache: phony libsrc/xilffs/src/include/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build libsrc/xilffs/src/include/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src\include && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp -BE:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/include/rebuild_cache: phony libsrc/xilffs/src/include/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build libsrc/xilffs/src/include/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build libsrc/xilffs/src/include/CMakeFiles/install.util: CUSTOM_COMMAND libsrc/xilffs/src/include/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src\include && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/include/install: phony libsrc/xilffs/src/include/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build libsrc/xilffs/src/include/CMakeFiles/install/local.util: CUSTOM_COMMAND libsrc/xilffs/src/include/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src\include && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/include/install/local: phony libsrc/xilffs/src/include/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build libsrc/xilffs/src/include/CMakeFiles/install/strip.util: CUSTOM_COMMAND libsrc/xilffs/src/include/all
+  COMMAND = cmd.exe /C "cd /D E:\Dev\QianSal\mipi_dp_vitis\mipi_dp\psu_cortexa53_0\standalone_psu_cortexa53_0\bsp\libsrc\build_configs\gen_bsp\libsrc\xilffs\src\include && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build libsrc/xilffs/src/include/install/strip: phony libsrc/xilffs/src/include/CMakeFiles/install/strip.util
+
+# =============================================================================
 # Target aliases.
 
 build avbuf: phony libsrc/avbuf/src/libavbuf.a
@@ -6169,7 +6362,7 @@ build libscugic.a: phony libsrc/scugic/src/libscugic.a
 
 build libsdps.a: phony libsrc/sdps/src/libsdps.a
 
-build libstitcher.a: phony libsrc/stitcher/src/libstitcher.a
+build libstitcher_remap.a: phony libsrc/stitcher_remap/src/libstitcher_remap.a
 
 build libsysmonpsu.a: phony libsrc/sysmonpsu/src/libsysmonpsu.a
 
@@ -6184,6 +6377,8 @@ build libv_demosaic.a: phony libsrc/v_demosaic/src/libv_demosaic.a
 build libv_gamma_lut.a: phony libsrc/v_gamma_lut/src/libv_gamma_lut.a
 
 build libvideo_common.a: phony libsrc/video_common/src/libvideo_common.a
+
+build libxilffs.a: phony libsrc/xilffs/src/libxilffs.a
 
 build libxilstandalone.a: phony libsrc/standalone/src/libxilstandalone.a
 
@@ -6205,7 +6400,7 @@ build scugic: phony libsrc/scugic/src/libscugic.a
 
 build sdps: phony libsrc/sdps/src/libsdps.a
 
-build stitcher: phony libsrc/stitcher/src/libstitcher.a
+build stitcher_remap: phony libsrc/stitcher_remap/src/libstitcher_remap.a
 
 build sysmonpsu: phony libsrc/sysmonpsu/src/libsysmonpsu.a
 
@@ -6221,6 +6416,8 @@ build v_gamma_lut: phony libsrc/v_gamma_lut/src/libv_gamma_lut.a
 
 build video_common: phony libsrc/video_common/src/libvideo_common.a
 
+build xilffs: phony libsrc/xilffs/src/libxilffs.a
+
 build xilstandalone: phony libsrc/standalone/src/libxilstandalone.a
 
 build xiltimer: phony libsrc/xiltimer/src/libxiltimer.a
@@ -6235,14 +6432,14 @@ build zdma: phony libsrc/zdma/src/libzdma.a
 #############################################
 # Folder: E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp
 
-build all: phony libsrc/all libsrc/standalone/src/all libsrc/xiltimer/src/all
+build all: phony libsrc/all libsrc/standalone/src/all libsrc/xiltimer/src/all libsrc/xilffs/src/all
 
 # =============================================================================
 
 #############################################
 # Folder: E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc
 
-build libsrc/all: phony libsrc/combined libsrc/avbuf/src/all libsrc/axipmon/src/all libsrc/axivdma/src/all libsrc/clockps/src/all libsrc/common/src/all libsrc/coresightps_dcc/src/all libsrc/csi/src/all libsrc/csudma/src/all libsrc/ddrcpsu/src/all libsrc/dpdma/src/all libsrc/dphy/src/all libsrc/dppsu/src/all libsrc/emacps/src/all libsrc/gpiops/src/all libsrc/iicps/src/all libsrc/ipipsu/src/all libsrc/mipicsiss/src/all libsrc/pciepsu/src/all libsrc/qspipsu/src/all libsrc/resetps/src/all libsrc/rtcpsu/src/all libsrc/scugic/src/all libsrc/sdps/src/all libsrc/stitcher/src/all libsrc/sysmonpsu/src/all libsrc/ttcps/src/all libsrc/uartps/src/all libsrc/usbpsu/src/all libsrc/v_demosaic/src/all libsrc/v_gamma_lut/src/all libsrc/video_common/src/all libsrc/zdma/src/all
+build libsrc/all: phony libsrc/combined libsrc/avbuf/src/all libsrc/axipmon/src/all libsrc/axivdma/src/all libsrc/clockps/src/all libsrc/common/src/all libsrc/coresightps_dcc/src/all libsrc/csi/src/all libsrc/csudma/src/all libsrc/ddrcpsu/src/all libsrc/dpdma/src/all libsrc/dphy/src/all libsrc/dppsu/src/all libsrc/emacps/src/all libsrc/gpiops/src/all libsrc/iicps/src/all libsrc/ipipsu/src/all libsrc/mipicsiss/src/all libsrc/pciepsu/src/all libsrc/qspipsu/src/all libsrc/resetps/src/all libsrc/rtcpsu/src/all libsrc/scugic/src/all libsrc/sdps/src/all libsrc/stitcher_remap/src/all libsrc/sysmonpsu/src/all libsrc/ttcps/src/all libsrc/uartps/src/all libsrc/usbpsu/src/all libsrc/v_demosaic/src/all libsrc/v_gamma_lut/src/all libsrc/video_common/src/all libsrc/zdma/src/all
 
 # =============================================================================
 
@@ -6520,9 +6717,9 @@ build libsrc/standalone/src/common/intr/all: phony
 # =============================================================================
 
 #############################################
-# Folder: E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher/src
+# Folder: E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src
 
-build libsrc/stitcher/src/all: phony libsrc/stitcher/src/libstitcher.a
+build libsrc/stitcher_remap/src/all: phony libsrc/stitcher_remap/src/libstitcher_remap.a
 
 # =============================================================================
 
@@ -6576,6 +6773,20 @@ build libsrc/video_common/src/all: phony libsrc/video_common/src/libvideo_common
 # =============================================================================
 
 #############################################
+# Folder: E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xilffs/src
+
+build libsrc/xilffs/src/all: phony libsrc/xilffs/src/libxilffs.a libsrc/xilffs/src/include/all
+
+# =============================================================================
+
+#############################################
+# Folder: E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xilffs/src/include
+
+build libsrc/xilffs/src/include/all: phony
+
+# =============================================================================
+
+#############################################
 # Folder: E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src
 
 build libsrc/xiltimer/src/all: phony libsrc/xiltimer/src/libxiltimer.a libsrc/xiltimer/src/core/all
@@ -6608,14 +6819,14 @@ build libsrc/zdma/src/all: phony libsrc/zdma/src/libzdma.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommon.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommonmeta.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/cortexa53_toolchain.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/DRVLISTConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/avbuf/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axipmon/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axivdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/clockps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/coresightps_dcc/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csi/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csudma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ddrcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dpdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dphy/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dppsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/emacps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/gpiops/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/iicps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ipipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/mipicsiss/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/pciepsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/qspipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/resetps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/rtcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/SCUGICConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sdps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/MemConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/bspconfig.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/clocking/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/xilstandalone.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sysmonpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ttcps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/uartps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/usbpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_demosaic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_gamma_lut/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/video_common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xiltimer.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/zdma/src/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommon.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommonmeta.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/cortexa53_toolchain.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/DRVLISTConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/avbuf/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axipmon/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axivdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/clockps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/coresightps_dcc/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csi/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csudma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ddrcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dpdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dphy/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dppsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/emacps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/gpiops/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/iicps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ipipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/mipicsiss/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/pciepsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/qspipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/resetps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/rtcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/SCUGICConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sdps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/MemConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/bspconfig.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/clocking/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/xilstandalone.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher_remap/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sysmonpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ttcps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/uartps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/usbpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_demosaic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_gamma_lut/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/video_common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/include/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/xilffs.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/xilffs_config.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xiltimer.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/zdma/src/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommon.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommonmeta.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/cortexa53_toolchain.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/DRVLISTConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/avbuf/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axipmon/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axivdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/clockps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/coresightps_dcc/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csi/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csudma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ddrcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dpdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dphy/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dppsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/emacps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/gpiops/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/iicps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ipipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/mipicsiss/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/pciepsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/qspipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/resetps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/rtcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/SCUGICConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sdps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/MemConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/bspconfig.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/clocking/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/xilstandalone.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sysmonpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ttcps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/uartps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/usbpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_demosaic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_gamma_lut/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/video_common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xiltimer.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/zdma/src/CMakeLists.txt: phony
+build C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommon.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/Findcommonmeta.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/cortexa53_toolchain.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/DRVLISTConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/avbuf/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axipmon/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/axivdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/clockps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/coresightps_dcc/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csi/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/csudma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ddrcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dpdma/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dphy/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/dppsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/emacps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/gpiops/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/iicps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ipipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/mipicsiss/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/pciepsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/qspipsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/resetps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/rtcpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/scugic/src/SCUGICConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sdps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/MemConfig.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/64bit/platform/ZynqMP/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/ARMv8/includes_ps/platform/ZynqMP/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/arm/common/gcc/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/bspconfig.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/clocking/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/standalone/src/xilstandalone.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher_remap/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/sysmonpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ttcps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/uartps/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/usbpsu/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_demosaic/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/v_gamma_lut/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/video_common/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/include/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/xilffs.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xilffs/src/xilffs_config.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xiltimer.cmake E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in E$:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/zdma/src/CMakeLists.txt: phony
 
 
 #############################################

@@ -37,6 +37,7 @@ set(USER_COMPILE_SOURCES
 "stitcher.c"
 "vdma.c"
 "ccv.c"
+"ps_sd.c"
 )
 
 # -----------------------------------------

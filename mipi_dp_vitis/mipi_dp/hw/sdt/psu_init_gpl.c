@@ -100,15 +100,15 @@ unsigned long psu_pll_init_data(void)
     *  PSU_CRL_APB_RPLL_CFG_LFHF                                   0x3
 
     * Lock circuit counter setting
-    *  PSU_CRL_APB_RPLL_CFG_LOCK_CNT                               0x258
+    *  PSU_CRL_APB_RPLL_CFG_LOCK_CNT                               0x271
 
     * Lock circuit configuration settings for lock windowsize
     *  PSU_CRL_APB_RPLL_CFG_LOCK_DLY                               0x3f
 
     * Helper data. Values are to be looked up in a table from Data Sheet
-    * (OFFSET, MASK, VALUE)      (0XFF5E0034, 0xFE7FEDEFU ,0x7E4B0C62U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E0034, 0xFE7FEDEFU ,0x7E4E2C62U)
     */
-	PSU_Mask_Write(CRL_APB_RPLL_CFG_OFFSET, 0xFE7FEDEFU, 0x7E4B0C62U);
+	PSU_Mask_Write(CRL_APB_RPLL_CFG_OFFSET, 0xFE7FEDEFU, 0x7E4E2C62U);
 /*##################################################################### */
 
     /*
@@ -123,16 +123,16 @@ unsigned long psu_pll_init_data(void)
     *  PSU_CRL_APB_RPLL_CTRL_PRE_SRC                               0x0
 
     * The integer portion of the feedback divider to the PLL
-    *  PSU_CRL_APB_RPLL_CTRL_FBDIV                                 0x48
+    *  PSU_CRL_APB_RPLL_CTRL_FBDIV                                 0x3c
 
     * This turns on the divide by 2 that is inside of the PLL. This does not c
     * hange the VCO frequency, just the output frequency
     *  PSU_CRL_APB_RPLL_CTRL_DIV2                                  0x1
 
     * PLL Basic Control
-    * (OFFSET, MASK, VALUE)      (0XFF5E0030, 0x00717F00U ,0x00014800U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E0030, 0x00717F00U ,0x00013C00U)
     */
-	PSU_Mask_Write(CRL_APB_RPLL_CTRL_OFFSET, 0x00717F00U, 0x00014800U);
+	PSU_Mask_Write(CRL_APB_RPLL_CTRL_OFFSET, 0x00717F00U, 0x00013C00U);
 /*##################################################################### */
 
     /*
@@ -221,14 +221,14 @@ unsigned long psu_pll_init_data(void)
     * Register : RPLL_TO_FPD_CTRL @ 0XFF5E0048
 
     * Divisor value for this clock.
-    *  PSU_CRL_APB_RPLL_TO_FPD_CTRL_DIVISOR0                       0x3
+    *  PSU_CRL_APB_RPLL_TO_FPD_CTRL_DIVISOR0                       0x2
 
     * Control for a clock that will be generated in the LPD, but used in the F
     * PD as a clock source for the peripheral clock muxes.
-    * (OFFSET, MASK, VALUE)      (0XFF5E0048, 0x00003F00U ,0x00000300U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E0048, 0x00003F00U ,0x00000200U)
     */
 	PSU_Mask_Write(CRL_APB_RPLL_TO_FPD_CTRL_OFFSET,
-		0x00003F00U, 0x00000300U);
+		0x00003F00U, 0x00000200U);
 /*##################################################################### */
 
     /*
@@ -1132,7 +1132,7 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRL_APB_IOU_SWITCH_CTRL_CLKACT                          0x1
 
     * 6 bit divider
-    *  PSU_CRL_APB_IOU_SWITCH_CTRL_DIVISOR0                        0x5
+    *  PSU_CRL_APB_IOU_SWITCH_CTRL_DIVISOR0                        0x4
 
     * 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -1140,10 +1140,10 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRL_APB_IOU_SWITCH_CTRL_SRCSEL                          0x0
 
     * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E009C, 0x01003F07U ,0x01000500U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E009C, 0x01003F07U ,0x01000400U)
     */
 	PSU_Mask_Write(CRL_APB_IOU_SWITCH_CTRL_OFFSET,
-		0x01003F07U, 0x01000500U);
+		0x01003F07U, 0x01000400U);
 /*##################################################################### */
 
     /*
@@ -1284,7 +1284,7 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRL_APB_PL1_REF_CTRL_DIVISOR1                           0x1
 
     * 6 bit divider
-    *  PSU_CRL_APB_PL1_REF_CTRL_DIVISOR0                           0x6
+    *  PSU_CRL_APB_PL1_REF_CTRL_DIVISOR0                           0x5
 
     * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -1292,34 +1292,10 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRL_APB_PL1_REF_CTRL_SRCSEL                             0x2
 
     * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E00C4, 0x013F3F07U ,0x01010602U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E00C4, 0x013F3F07U ,0x01010502U)
     */
 	PSU_Mask_Write(CRL_APB_PL1_REF_CTRL_OFFSET,
-		0x013F3F07U, 0x01010602U);
-/*##################################################################### */
-
-    /*
-    * Register : PL2_REF_CTRL @ 0XFF5E00C8
-
-    * Clock active signal. Switch to 0 to disable the clock
-    *  PSU_CRL_APB_PL2_REF_CTRL_CLKACT                             0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_PL2_REF_CTRL_DIVISOR1                           0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_PL2_REF_CTRL_DIVISOR0                           0xc
-
-    * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
-    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
-    *  usually an issue, but designers must be aware.)
-    *  PSU_CRL_APB_PL2_REF_CTRL_SRCSEL                             0x2
-
-    * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E00C8, 0x013F3F07U ,0x01010C02U)
-    */
-	PSU_Mask_Write(CRL_APB_PL2_REF_CTRL_OFFSET,
-		0x013F3F07U, 0x01010C02U);
+		0x013F3F07U, 0x01010502U);
 /*##################################################################### */
 
     /*
@@ -1435,7 +1411,7 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRF_APB_DP_AUDIO_REF_CTRL_DIVISOR1                      0x1
 
     * 6 bit divider
-    *  PSU_CRF_APB_DP_AUDIO_REF_CTRL_DIVISOR0                      0x10
+    *  PSU_CRF_APB_DP_AUDIO_REF_CTRL_DIVISOR0                      0x14
 
     * 000 = VPLL; 010 = DPLL; 011 = RPLL_TO_FPD - might be using extra mux; (T
     * his signal may only be toggled after 4 cycles of the old clock and 4 cyc
@@ -1447,10 +1423,10 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRF_APB_DP_AUDIO_REF_CTRL_CLKACT                        0x1
 
     * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFD1A0074, 0x013F3F07U ,0x01011003U)
+    * (OFFSET, MASK, VALUE)      (0XFD1A0074, 0x013F3F07U ,0x01011403U)
     */
 	PSU_Mask_Write(CRF_APB_DP_AUDIO_REF_CTRL_OFFSET,
-		0x013F3F07U, 0x01011003U);
+		0x013F3F07U, 0x01011403U);
 /*##################################################################### */
 
     /*
@@ -1460,7 +1436,7 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRF_APB_DP_STC_REF_CTRL_DIVISOR1                        0x1
 
     * 6 bit divider
-    *  PSU_CRF_APB_DP_STC_REF_CTRL_DIVISOR0                        0xf
+    *  PSU_CRF_APB_DP_STC_REF_CTRL_DIVISOR0                        0x13
 
     * 000 = VPLL; 010 = DPLL; 011 = RPLL_TO_FPD; (This signal may only be togg
     * led after 4 cycles of the old clock and 4 cycles of the new clock. This
@@ -1471,10 +1447,10 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRF_APB_DP_STC_REF_CTRL_CLKACT                          0x1
 
     * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFD1A007C, 0x013F3F07U ,0x01010F03U)
+    * (OFFSET, MASK, VALUE)      (0XFD1A007C, 0x013F3F07U ,0x01011303U)
     */
 	PSU_Mask_Write(CRF_APB_DP_STC_REF_CTRL_OFFSET,
-		0x013F3F07U, 0x01010F03U);
+		0x013F3F07U, 0x01011303U);
 /*##################################################################### */
 
     /*
@@ -20773,6 +20749,32 @@ unsigned long psu_afi_config(void)
 /*##################################################################### */
 
     /*
+    * Register : AFIFM_RDCTRL @ 0XFD360000
+
+    * Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
+    * 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+    *  PSU_AFIFM0_AFIFM_RDCTRL_FABRIC_WIDTH                        0x0
+
+    * Read Channel Control Register
+    * (OFFSET, MASK, VALUE)      (0XFD360000, 0x00000003U ,0x00000000U)
+    */
+	PSU_Mask_Write(AFIFM0_AFIFM_RDCTRL_OFFSET, 0x00000003U, 0x00000000U);
+/*##################################################################### */
+
+    /*
+    * Register : AFIFM_RDCTRL @ 0XFD370000
+
+    * Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
+    * 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+    *  PSU_AFIFM1_AFIFM_RDCTRL_FABRIC_WIDTH                        0x0
+
+    * Read Channel Control Register
+    * (OFFSET, MASK, VALUE)      (0XFD370000, 0x00000003U ,0x00000000U)
+    */
+	PSU_Mask_Write(AFIFM1_AFIFM_RDCTRL_OFFSET, 0x00000003U, 0x00000000U);
+/*##################################################################### */
+
+    /*
     * Register : AFIFM_RDCTRL @ 0XFD380000
 
     * Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
@@ -20799,29 +20801,29 @@ unsigned long psu_afi_config(void)
 /*##################################################################### */
 
     /*
-    * Register : AFIFM_RDCTRL @ 0XFD3A0000
+    * Register : AFIFM_WRCTRL @ 0XFD360014
 
-    * Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
-    * 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
-    *  PSU_AFIFM4_AFIFM_RDCTRL_FABRIC_WIDTH                        0x0
+    * Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
+    * b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+    *  PSU_AFIFM0_AFIFM_WRCTRL_FABRIC_WIDTH                        0x0
 
-    * Read Channel Control Register
-    * (OFFSET, MASK, VALUE)      (0XFD3A0000, 0x00000003U ,0x00000000U)
+    * Write Channel Control Register
+    * (OFFSET, MASK, VALUE)      (0XFD360014, 0x00000003U ,0x00000000U)
     */
-	PSU_Mask_Write(AFIFM4_AFIFM_RDCTRL_OFFSET, 0x00000003U, 0x00000000U);
+	PSU_Mask_Write(AFIFM0_AFIFM_WRCTRL_OFFSET, 0x00000003U, 0x00000000U);
 /*##################################################################### */
 
     /*
-    * Register : AFIFM_RDCTRL @ 0XFD3B0000
+    * Register : AFIFM_WRCTRL @ 0XFD370014
 
-    * Configures the Read Channel Fabric interface width. 2'b11 : Reserved 2'b
-    * 10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
-    *  PSU_AFIFM5_AFIFM_RDCTRL_FABRIC_WIDTH                        0x0
+    * Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
+    * b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
+    *  PSU_AFIFM1_AFIFM_WRCTRL_FABRIC_WIDTH                        0x0
 
-    * Read Channel Control Register
-    * (OFFSET, MASK, VALUE)      (0XFD3B0000, 0x00000003U ,0x00000000U)
+    * Write Channel Control Register
+    * (OFFSET, MASK, VALUE)      (0XFD370014, 0x00000003U ,0x00000000U)
     */
-	PSU_Mask_Write(AFIFM5_AFIFM_RDCTRL_OFFSET, 0x00000003U, 0x00000000U);
+	PSU_Mask_Write(AFIFM1_AFIFM_WRCTRL_OFFSET, 0x00000003U, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -20848,32 +20850,6 @@ unsigned long psu_afi_config(void)
     * (OFFSET, MASK, VALUE)      (0XFD390014, 0x00000003U ,0x00000000U)
     */
 	PSU_Mask_Write(AFIFM3_AFIFM_WRCTRL_OFFSET, 0x00000003U, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * Register : AFIFM_WRCTRL @ 0XFD3A0014
-
-    * Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
-    * b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
-    *  PSU_AFIFM4_AFIFM_WRCTRL_FABRIC_WIDTH                        0x0
-
-    * Write Channel Control Register
-    * (OFFSET, MASK, VALUE)      (0XFD3A0014, 0x00000003U ,0x00000000U)
-    */
-	PSU_Mask_Write(AFIFM4_AFIFM_WRCTRL_OFFSET, 0x00000003U, 0x00000000U);
-/*##################################################################### */
-
-    /*
-    * Register : AFIFM_WRCTRL @ 0XFD3B0014
-
-    * Configures the Write Channel Fabric interface width. 2'b11 : Reserved 2'
-    * b10 : 32-bit Fabric 2'b01 : 64-bit enabled 2'b00 : 128-bit enabled
-    *  PSU_AFIFM5_AFIFM_WRCTRL_FABRIC_WIDTH                        0x0
-
-    * Write Channel Control Register
-    * (OFFSET, MASK, VALUE)      (0XFD3B0014, 0x00000003U ,0x00000000U)
-    */
-	PSU_Mask_Write(AFIFM5_AFIFM_WRCTRL_OFFSET, 0x00000003U, 0x00000000U);
 /*##################################################################### */
 
 

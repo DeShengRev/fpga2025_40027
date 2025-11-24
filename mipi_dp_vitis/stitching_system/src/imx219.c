@@ -1,7 +1,6 @@
 
 
 #include "imx219.h"
-#include "config.h"
 #include "sleep.h"
 #include "xiicps.h"
 #include <xil_printf.h>

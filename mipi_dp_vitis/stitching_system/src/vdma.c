@@ -1,18 +1,19 @@
 
 
-#include "vdma.h"
-#include "config.h"
+#include "share.h"
 #include "xil_printf.h"
 
 extern u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 cam1_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
+extern int mapxy[MAPXY_LEN];
 
-XAxiVdma vdma0, vdma1, vdma2, vdma3, vdma4;
-XAxiVdma_Config vdma0_cfg, vdma1_cfg, vdma2_cfg, vdma3_cfg, vdma4_cfg;
+XAxiVdma vdma0, vdma1, vdma2, vdma3, vdma4, vdma5;
+XAxiVdma_Config vdma0_cfg, vdma1_cfg, vdma2_cfg, vdma3_cfg, vdma4_cfg,
+    vdma5_cfg;
 XAxiVdma_DmaSetup vdma0_wr_cfg, vdma1_wr_cfg, vdma2_rd_cfg, vdma3_rd_cfg,
-    vdma4_wr_cfg;
+    vdma4_rd_cfg, vdma5_wr_cfg;
 
 u32 vdma_version(XAxiVdma *Vdma) { return XAxiVdma_GetVersion(Vdma); }
 
@@ -88,6 +89,9 @@ int vdma_read_init(UINTPTR BaseAddress, XAxiVdma *p_vdma,
     xil_printf("error starting VDMA..!");
     return Status;
   }
+
+  xil_printf("VDMA module at %p initialized\n", BaseAddress);
+
   return XST_SUCCESS;
 }
 
@@ -131,8 +135,8 @@ int vdma_write_init(UINTPTR BaseAddress, XAxiVdma *p_vdma,
   p_wr_cfg->EnableCircularBuf = 0;
   p_wr_cfg->EnableFrameCounter = 0;
   p_wr_cfg->FixedFrameStoreAddr = 0;
-  p_wr_cfg->EnableSync = 1;
-  p_wr_cfg->PointNum = 1;
+  p_wr_cfg->EnableSync = 0;
+  p_wr_cfg->PointNum = 0;
   p_wr_cfg->FrameDelay = 0;
   p_wr_cfg->VertSizeInput = VertSizeInput;
   p_wr_cfg->HoriSizeInput = HoriSizeInput;
@@ -167,34 +171,37 @@ int vdma_write_init(UINTPTR BaseAddress, XAxiVdma *p_vdma,
 
 void vdma_init_all() {
   int status;
-    status = vdma_write_init(XPAR_AXI_VDMA_0_BASEADDR, &vdma0, &vdma0_cfg,
-                             &vdma0_wr_cfg, HORSIZE, VERSIZE, STRIDE,
-                             (unsigned int)cam0_frame);
+  status = vdma_write_init(XPAR_AXI_VDMA_0_BASEADDR, &vdma0, &vdma0_cfg,
+                           &vdma0_wr_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
+                           (u32)cam0_frame);
 
-    status = vdma_write_init(XPAR_AXI_VDMA_1_BASEADDR, &vdma1, &vdma1_cfg,
-                             &vdma1_wr_cfg, HORSIZE, VERSIZE, STRIDE,
-                             (unsigned int)cam1_frame);
+  status = vdma_write_init(XPAR_AXI_VDMA_1_BASEADDR, &vdma1, &vdma1_cfg,
+                           &vdma1_wr_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
+                           (u32)cam1_frame);
 
-  status =
-      vdma_read_init(XPAR_AXI_VDMA_2_BASEADDR, &vdma2, &vdma2_cfg,
-                     &vdma2_rd_cfg, HORSIZE, VERSIZE, STRIDE, (u32)cam0_frame);
+  status = vdma_read_init(XPAR_AXI_VDMA_2_BASEADDR, &vdma2, &vdma2_cfg,
+                          &vdma2_rd_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
+                          (u32)cam1_frame);
 
-  status =
-      vdma_read_init(XPAR_AXI_VDMA_3_BASEADDR, &vdma3, &vdma3_cfg,
-                     &vdma3_rd_cfg, HORSIZE, VERSIZE, STRIDE, (u32)cam1_frame);
+  status = vdma_read_init(XPAR_AXI_VDMA_3_BASEADDR, &vdma3, &vdma3_cfg,
+                          &vdma3_rd_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
+                          (u32)cam0_frame);
 
-  status =
-      vdma_write_init(XPAR_AXI_VDMA_4_BASEADDR, &vdma4, &vdma4_cfg,
-                      &vdma4_wr_cfg, HORSIZE, VERSIZE, STRIDE, (u32)stch_frame);
+  status = vdma_read_init(XPAR_AXI_VDMA_4_BASEADDR, &vdma4, &vdma4_cfg,
+                          &vdma4_rd_cfg, PROC_WIDTH * 16, PROC_HEIGHT,
+                          PROC_WIDTH * 16, (u32)mapxy);
+
+  status = vdma_write_init(XPAR_AXI_VDMA_5_BASEADDR, &vdma5, &vdma5_cfg,
+                           &vdma5_wr_cfg, HORSIZE, PROC_HEIGHT, HORSIZE,
+                           (u32)stch_frame);
 }
 
-void debug_vdma_status(XAxiVdma *vdma, const char *name) {
+void debug_vdma_status(XAxiVdma *vdma, const char *name, u16 Direction) {
   u32 status;
 
   xil_printf("=== %s Status ===\n", name);
-
-  status = XAxiVdma_GetStatus(vdma, XAXIVDMA_WRITE);
-  xil_printf("Write Channel Status: 0x%x\n", status);
+  status = XAxiVdma_GetStatus(vdma, Direction);
+  xil_printf("Channel Status: 0x%x\n", status);
 
   if (status & XAXIVDMA_SR_HALTED_MASK) {
     xil_printf("  - HALTED");

@@ -16,7 +16,6 @@
 #include "xavbuf_clk.h" /* Clock Driver for Video(VPLL) and Audio(RPLL) clocks */
 #include "xdppsu.h"     /* DP controller device driver */
 
-
 /****************************** Type Definitions ******************************/
 
 typedef enum { CAM0_FRAME, CAM1_FRAME, BINO_FRAME, STCH_FRAME } FrameId;
@@ -68,6 +67,5 @@ void DpPsu_IsrHpdPulse(void *ref);
 
 int DpdmaVideoExample(UINTPTR cam_frame);
 void switch_screen(FrameId id);
-
 
 #endif /* SRC_DPDMA_VIDEO_EXAMPLE_H_ */
