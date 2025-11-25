@@ -5,8 +5,6 @@
 #include "share.h"
 #include <cstdio>
 
-#define REMAP_WIN_ROWS0 22
-#define REMAP_WIN_ROWS1 22
 
 int _axis_to_mapxy(MapStrm &map_strm, MapPic &mapx0, MapPic &mapy0,
                    MapPic &mapx1, MapPic &mapy1) {
@@ -59,21 +57,20 @@ loop_row_axi2mat:
       mapx1.write(idx, axi.data(95, 64));
       mapy1.write(idx, axi.data(127, 96));
 
-    //   if (idx % 100 == 99)
-    //   {
-    //     printf("%d %d ", idx, last);
-    //   }
-      
+      //   if (idx % 100 == 99)
+      //   {
+      //     printf("%d %d ", idx, last);
+      //   }
+
       ++idx;
     }
-
 
   loop_last_hunt:
     while (!last) {
 #pragma HLS pipeline II = 1
 #pragma HLS loop_tripcount avg = 1 max = 1
 
-    // printf("wrong line end\n");
+      // printf("wrong line end\n");
       map_strm >> axi;
       last = axi.last.to_bool();
       res |= ERROR_IO_EOL_LATE;
@@ -83,23 +80,21 @@ loop_row_axi2mat:
   return res;
 }
 
-void proj_align(ProcPic &img0, ProcPic &img1, ProcPic &img0_remap,
-                ProcPic &img1_remap, MapStrm &map_strm) {
-#pragma HLS INLINE
+void _arr128_to_mapxy(u128a *m_axi_mapxy, MapPic &mapx0, MapPic &mapy0,
+                      MapPic &mapx1, MapPic &mapy1) {
+  int idx = 0;
+  for (int y = 0; y < PROC_HEIGHT; ++y) {
+#pragma HLS loop_tripcount min = PROC_HEIGHT max = PROC_HEIGHT
+    for (int x = 0; x < PROC_WIDTH; ++x) {
+#pragma HLS loop_tripcount min = PROC_WIDTH max = PROC_WIDTH
 
-  MapPic mapx0(PROC_HEIGHT, PROC_WIDTH), mapy0(PROC_HEIGHT, PROC_WIDTH),
-      mapx1(PROC_HEIGHT, PROC_WIDTH), mapy1(PROC_HEIGHT, PROC_WIDTH);
-
-  _axis_to_mapxy(map_strm, mapx0, mapy0, mapx1, mapy1);
-    // printf("axis2mapxy finish\n");
-
-
-  xf::cv::remap<REMAP_WIN_ROWS0, XF_INTERPOLATION_BILINEAR>(img0, img0_remap,
-                                                            mapx0, mapy0);
-  xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(img1, img1_remap,
-                                                            mapx1, mapy1);
-
-
-  return;
-                 
+      u128a val = m_axi_mapxy[idx];
+      mapx0.write(idx, val.range(31, 0));
+      mapy0.write(idx, val.range(63, 32));
+      mapx1.write(idx, val.range(95, 64));
+      mapy1.write(idx, val.range(127, 96));
+      ++idx;
+    }
+  }
 }
+

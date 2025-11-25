@@ -1,13 +1,13 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.624998",
-   "Default View_TopLeft":"2162,-232",
+   "Default View_ScaleFactor":"0.384731",
+   "Default View_TopLeft":"1190,-8",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port cam0_i2c -pg 1 -lvl 12 -x 5020 -y -80 -defaultsOSRD
-preplace port cam1_i2c -pg 1 -lvl 12 -x 5020 -y -60 -defaultsOSRD
-preplace port cam_gpio -pg 1 -lvl 12 -x 5020 -y -100 -defaultsOSRD
+preplace port cam0_i2c -pg 1 -lvl 12 -x 5030 -y -80 -defaultsOSRD
+preplace port cam1_i2c -pg 1 -lvl 12 -x 5030 -y -60 -defaultsOSRD
+preplace port cam_gpio -pg 1 -lvl 12 -x 5030 -y -100 -defaultsOSRD
 preplace port mipi_phy_if_0 -pg 1 -lvl 0 -x -130 -y 510 -defaultsOSRD
 preplace port mipi_phy_if_1 -pg 1 -lvl 0 -x -130 -y 230 -defaultsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 6 -x 2690 -y -50 -defaultsOSRD
@@ -37,24 +37,30 @@ preplace netloc axi_vdma_0_s2mm_introut 1 5 1 2290 240n
 preplace netloc axi_vdma_1_s2mm_introut 1 5 1 2280 220n
 preplace netloc axi_vdma_2_mm2s_introut 1 5 3 2300 -290 N -290 3550
 preplace netloc axi_vdma_3_mm2s_introut 1 5 3 2310 -280 N -280 3540
+preplace netloc axi_vdma_4_mm2s_introut 1 5 3 2320 -270 NJ -270 3520
+preplace netloc axi_vdma_5_s2mm_introut 1 5 7 2330 -260 NJ -260 NJ -260 NJ -260 NJ -260 NJ -260 5000
 preplace netloc mipi_csi2_rx_subsyst_0_csirxss_csi_irq 1 1 5 620 180 NJ 180 NJ 180 NJ 180 NJ
 preplace netloc mipi_csi2_rx_subsyst_1_csirxss_csi_irq 1 1 5 630J 200 NJ 200 NJ 200 NJ 200 NJ
 preplace netloc proc_sys_reset_150M_interconnect_aresetn 1 4 2 1760 -410 2270J
-preplace netloc proc_sys_reset_150M_peripheral_aresetn 1 0 11 260 160 610 220 990 220 1360 220 1730 440 N 440 3140 340 3580 510 3920 580 4310 560 N
+preplace netloc proc_sys_reset_150M_peripheral_aresetn 1 0 11 260 160 610 220 990 220 1360 220 1730 440 N 440 3140 340 3580 510 3950 570 4310 560 N
 preplace netloc xlconcat_0_dout 1 5 2 2350 -240 3040
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 11 270 170 600 210 1010 210 1380 -340 1750 -390 2260 -310 3120 350 3570 490 3930 590 4300 550 4630
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 11 270 170 600 210 1010 210 1380 -340 1750 -390 2260 -310 3120 350 3570 490 3960 580 4300 550 4630
 preplace netloc zynq_ultra_ps_e_0_pl_clk2 1 0 7 250 -440 NJ -440 NJ -440 NJ -440 NJ -440 NJ -440 3060J
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 4 1390 -420 N -420 N -420 3020
-preplace netloc axi_vdma_5_s2mm_introut 1 5 7 2330 -260 NJ -260 NJ -260 NJ -260 NJ -260 NJ -260 5000
-preplace netloc axi_vdma_4_mm2s_introut 1 5 3 2320 -270 NJ -270 3520
 preplace netloc axi_vdma_0_M_AXI_S2MM 1 5 1 2330J 501n
 preplace netloc axi_vdma_1_M_AXI_S2MM 1 5 1 2180J 290n
 preplace netloc axi_vdma_2_M_AXIS_MM2S 1 7 1 3560 220n
 preplace netloc axi_vdma_2_M_AXI_MM2S 1 5 3 2350 380 3130 370 3510
 preplace netloc axi_vdma_3_M_AXIS_MM2S 1 7 1 3550 770n
 preplace netloc axi_vdma_3_M_AXI_MM2S 1 5 3 2360 390 N 390 3530
+preplace netloc axi_vdma_4_M_AXIS_MM2S 1 7 2 3550 470 NJ
+preplace netloc axi_vdma_4_M_AXI_MM2S 1 5 3 2370 400 NJ 400 3510
+preplace netloc axi_vdma_5_M_AXI_S2MM 1 5 7 2380 410 3150J 380 NJ 380 3900J 560 4250J 390 NJ 390 4990
 preplace netloc axis_subset_converter_0_M_AXIS 1 4 1 1740J 550n
 preplace netloc axis_subset_converter_1_M_AXIS 1 4 1 1740J 280n
+preplace netloc axis_subset_converter_2_M_AXIS 1 8 1 3910 250n
+preplace netloc axis_subset_converter_3_M_AXIS 1 8 1 3970 450n
+preplace netloc axis_subset_converter_5_M_AXIS 1 10 1 4630 470n
 preplace netloc mipi_csi2_rx_subsyst_0_video_out 1 1 1 580 510n
 preplace netloc mipi_csi2_rx_subsyst_1_video_out 1 1 1 640 230n
 preplace netloc mipi_phy_if_0_1 1 0 1 NJ 230
@@ -73,6 +79,10 @@ preplace netloc smartconnect_1_M06_AXI 1 2 4 1020 430 N 430 N 430 2130
 preplace netloc smartconnect_1_M07_AXI 1 2 4 1020 -400 N -400 N -400 2140
 preplace netloc smartconnect_1_M08_AXI 1 5 2 2190 -200 3140
 preplace netloc smartconnect_1_M09_AXI 1 5 2 2290 100 3070
+preplace netloc smartconnect_1_M10_AXI 1 5 2 2210J 110 3060
+preplace netloc smartconnect_1_M11_AXI 1 5 6 2180J -300 NJ -300 NJ -300 NJ -300 NJ -300 4630
+preplace netloc smartconnect_1_M12_AXI 1 5 4 2200J -250 NJ -250 NJ -250 3930
+preplace netloc stitcher_remap_0_m_axis_align 1 9 1 N 450
 preplace netloc v_demosaic_0_m_axis_video 1 2 1 1000 550n
 preplace netloc v_demosaic_1_m_axis_video 1 2 1 N 300
 preplace netloc v_gamma_lut_0_m_axis_video 1 3 1 1370 530n
@@ -81,17 +91,7 @@ preplace netloc zynq_ultra_ps_e_0_GPIO_0 1 6 6 3070 -100 N -100 N -100 N -100 N 
 preplace netloc zynq_ultra_ps_e_0_IIC_0 1 6 6 3070 -80 N -80 N -80 N -80 N -80 N
 preplace netloc zynq_ultra_ps_e_0_IIC_1 1 6 6 3070 -60 N -60 N -60 N -60 N -60 N
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 4 3 1770 -380 NJ -380 3000
-preplace netloc stitcher_remap_0_m_axis_align 1 9 1 N 450
-preplace netloc axi_vdma_4_M_AXI_MM2S 1 5 3 2370 400 NJ 400 3510
-preplace netloc axi_vdma_4_M_AXIS_MM2S 1 7 2 3550 470 NJ
-preplace netloc axis_subset_converter_2_M_AXIS 1 8 1 3910 250n
-preplace netloc axis_subset_converter_3_M_AXIS 1 8 1 3940 450n
-preplace netloc axis_subset_converter_5_M_AXIS 1 10 1 4630 470n
-preplace netloc axi_vdma_5_M_AXI_S2MM 1 5 7 2380 410 3150J 380 NJ 380 3900J 570 4280J 390 NJ 390 4990
-preplace netloc smartconnect_1_M10_AXI 1 5 2 2210J 110 3060
-preplace netloc smartconnect_1_M11_AXI 1 5 6 2180J -300 NJ -300 NJ -300 NJ -300 NJ -300 4630
-preplace netloc smartconnect_1_M12_AXI 1 5 4 2200J -250 NJ -250 NJ -250 3930
-levelinfo -pg 1 -130 430 820 1190 1560 1960 2690 3330 3740 4110 4470 4810 5020
+levelinfo -pg 1 -130 430 820 1190 1560 1960 2690 3330 3740 4110 4470 4810 5030
 pagesize -pg 1 -db -bbox -sgen -280 -600 5490 1320
 "
 }

@@ -53,7 +53,7 @@ template <int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH>
 void calc_seam(xf::cv::Mat<COST_TYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &cost,
                hls::stream<u16t> &seam_path) {
 
-  ap_int<4> track[_ROWS][_COLS] = {0};
+  ap_int<4> track[_ROWS * _COLS] = {0};
   u32t prev_dp[_COLS] = {0};
   u32t curr_dp[_COLS] = {0};
   u16t seam_path_rev[_ROWS] = {0};

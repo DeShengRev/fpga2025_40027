@@ -61,6 +61,9 @@ typedef int16_t i16t;
 #define DST_HEIGHT 1080
 #define DST_WIDTH 1920
 
+constexpr int SRC_PIXELS = SRC_HEIGHT * SRC_WIDTH;
+constexpr int HALF_PIXELS = PROC_HEIGHT * SRC_WIDTH;
+constexpr int PROC_PIXELS = PROC_HEIGHT * PROC_WIDTH;
 
 #define OVERLAP_WIDTH 392
 constexpr int UNDERLAP_WIDTH = PROC_WIDTH - OVERLAP_WIDTH;
