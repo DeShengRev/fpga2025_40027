@@ -3,27 +3,11 @@
 #include "share.h"
 #include <cassert>
 
-// template <typename T>
-// void broadcast_stream_2(hls::stream<T> strm_in, hls::stream<T> strm_out0,
-//                         hls::stream<T> strm_out1) {
 
-//   while (true) {
-// #pragma HLS PIPELINE II = 1
-//     SrcStrmBus pix = strm_in.read();
-
-//     strm_out0.write(pix);
-//     strm_out1.write(pix);
-
-//     if (pix.last) {
-//       break;
-//     }
-//   }
-// }
-
-template <int _PTYPE, int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH>
-void copy_xf_mat(xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &_src,
-                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &_dst0,
-                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &_dst1) {
+template <int _PTYPE, int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH_IN, int _XFCVDEPTH_OUT0, int _XFCVDEPTH_OUT1>
+void copy_xf_mat(xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_IN> &_src,
+                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT0> &_dst0,
+                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT1> &_dst1) {
 
   int idx = 0;
   constexpr int TOTAL_ITER_N = _ROWS * _COLS / _NPC;

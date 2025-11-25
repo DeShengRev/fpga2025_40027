@@ -25,38 +25,12 @@ int mapxy[PROC_HEIGHT][PROC_WIDTH][4];
 
 void read_map(const char *map_path, int *map_arr) {
   FILE *fxy = fopen(map_path, "rb");
-  int cnt = fread(mapxy, sizeof(int), MAPXY_HEIGHT * MAPXY_WIDTH * 4, fxy);
-  assert(cnt == MAPXY_HEIGHT * MAPXY_WIDTH * 4);
+  int cnt = fread(mapxy, sizeof(int), PROC_HEIGHT * PROC_WIDTH * 4, fxy);
+  assert(cnt == PROC_HEIGHT * PROC_WIDTH * 4);
   fclose(fxy);
 }
 
-void map_arr_to_strm(int map_arr[PROC_HEIGHT][PROC_WIDTH][4],
-                     MapStrm &map_strm) {
-  MapStrmBus axi;
 
-  for (int y = 0; y < PROC_HEIGHT; ++y) {
-    for (int x = 0; x < PROC_WIDTH; ++x) {
-      if (y == 0 && x == 0) {
-        axi.user = 1;
-      } else {
-        axi.user = 0;
-      }
-
-      if (x == PROC_WIDTH - 1) {
-        axi.last = 1;
-      } else {
-        axi.last = 0;
-      }
-
-      axi.data(31, 0) = map_arr[y][x][0];
-      axi.data(63, 32) = map_arr[y][x][1];
-      axi.data(95, 64) = map_arr[y][x][2];
-      axi.data(127, 96) = map_arr[y][x][3];
-
-      map_strm.write(axi);
-    }
-  }
-}
 
 void remap_preproc_test(int map_arr[PROC_HEIGHT][PROC_WIDTH][4]) {
 
