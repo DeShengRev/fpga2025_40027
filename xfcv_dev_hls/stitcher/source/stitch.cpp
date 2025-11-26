@@ -10,6 +10,7 @@
 #include "proj_align.hpp"
 #include "share.h"
 #include "utils.hpp"
+#include <cstdio>
 
 template <int _PTYPE, int _ROWS, int _COLS, int _XFCVDEPTH_IN,
           int _XFCVDEPTH_OUT>
@@ -131,47 +132,71 @@ void _24mat_to_32arr(xf::cv::Mat<XF_8UC3, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_src,
   }
 }
 
-void _init_seam_path_stream(hls::stream<u16t> &seam_path, bool &initialized) {
+template <int XF_8UC3, int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH_IN,
+          int _XFCVDEPTH_OUT0, int _XFCVDEPTH_OUT1>
+void _cp_24mat(
+    xf::cv::Mat<XF_8UC3, _ROWS, _COLS, _NPC, _XFCVDEPTH_IN> &_src,
+    xf::cv::Mat<XF_8UC3, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT0> &_dst0,
+    xf::cv::Mat<XF_8UC3, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT1> &_dst1) {
 
-  if (!initialized) {
-    for (int y = 0; y < COST_HEIGHT; ++y) {
-#pragma HLS LOOP_TRIPCOUNT min = COST_HEIGHT max = COST_HEIGHT
-      seam_path.write(OVERLAP_WIDTH / 2);
-    }
+  constexpr int TOTAL_ITER_N = _ROWS * _COLS / _NPC;
+
+  for (int i = 0; i < TOTAL_ITER_N; ++i) {
+#pragma HLS PIPELINE II = 1
+
+    u24a val = _src.read(i);
+    _dst0.write(i, val);
+    _dst1.write(i, val);
   }
 }
 
-void isp_stitcher_core(SrcPic &img0, SrcPic &img1, MapPic &mapx0, MapPic &mapy0,
-                       MapPic &mapx1, MapPic &mapy1, HalfPic &img_align) {
-#pragma HLS DATAFLOW
+// void isp_stitcher_core(SrcPic &img0, SrcPic &img1, MapPic &mapx0, MapPic
+// &mapy0,
+//                        MapPic &mapx1, MapPic &mapy1,
+//                        hls::stream<u16t> &seam_path, HalfPic &img_out) {
+// #pragma HLS INLINE
 
-  ProcPic img0_res, img1_res, img0_align, img1_align;
-#pragma HLS stream variable = img0_res.data type = fifo depth = XF_CV_DEPTH
-#pragma HLS stream variable = img1_res.data type = fifo depth = XF_CV_DEPTH
-#pragma HLS stream variable = img0_align.data type = fifo depth = XF_CV_DEPTH
-#pragma HLS stream variable = img1_align.data type = fifo depth = XF_CV_DEPTH
+//   ProcPic img0_res, img1_res, img0_align, img1_align, img0_a0, img0_a1,
+//   img1_a0,
+//       img1_a1;
+// #pragma HLS stream variable = img0_res.data type = fifo depth = XF_CV_DEPTH
+// #pragma HLS stream variable = img1_res.data type = fifo depth = XF_CV_DEPTH
+// #pragma HLS stream variable = img0_align.data type = fifo depth = XF_CV_DEPTH
+// #pragma HLS stream variable = img1_align.data type = fifo depth = XF_CV_DEPTH
 
-  //   HalfPic img_align(PROC_HEIGHT, SRC_WIDTH);
+//   //   printf("axis2xfMat finish\n");
 
-  //   printf("axis2xfMat finish\n");
+//   xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
+//                  PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img0, img0_res);
+//   xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
+//                  PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img1, img1_res);
 
-  xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
-                 PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img0, img0_res);
-  xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
-                 PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img1, img1_res);
+//   //   printf("resize finish\n");
 
-  //   printf("resize finish\n");
+//   xf::cv::remap<REMAP_WIN_ROWS0, XF_INTERPOLATION_BILINEAR>(
+//       img0_res, img0_align, mapx0, mapy0);
+//   xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(
+//       img1_res, img1_align, mapx1, mapy1);
 
-  xf::cv::remap<REMAP_WIN_ROWS0, XF_INTERPOLATION_BILINEAR>(
-      img0_res, img0_align, mapx0, mapy0);
-  xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(
-      img1_res, img1_align, mapx1, mapy1);
+//   //   printf("proj_align finish\n");
+//   _cp_24mat(img0_align, img0_a0, img0_a1);
+//   _cp_24mat(img1_align, img1_a0, img1_a1);
 
-  //   printf("proj_align finish\n");
-  _stitch_2_quat(img0_align, img1_align, img_align);
+//   // #ifndef __SYNTHESIS__
+//   //   xf_imwrite(get_path("img0_a0.png"), img0_a0);
+//   //   xf_imwrite(get_path("img0_a1.png"), img0_a1);
+//   //   xf_imwrite(get_path("img1_a0.png"), img1_a0);
+//   //   xf_imwrite(get_path("img1_a1.png"), img1_a1);
+//   // #endif
 
-  return;
-}
+//   base_seam_blend(img0_a1, img1_a1, true, seam_path, img_out);
+//   //   printf("blend finish\n");
+
+//   update_seam(img0_a0, img1_a0, seam_path);
+//   //   printf("update_seam finish\n");
+
+//   return;
+// }
 
 void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
                   u128a *m_axi_mapxy, u32a *m_axi_out) {
@@ -188,22 +213,47 @@ void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
 
 #pragma HLS DATAFLOW
 
-  SrcPic img0, img1;
-  MapPic mapx0, mapy0, mapx1, mapy1;
-  HalfPic img_out;
-  
+  static hls::stream<u16t> seam_path;
+#pragma HLS stream variable = seam_path type = fifo depth = COST_HEIGHT * 2
 
+
+  SrcPic img0, img1;
 #pragma HLS stream variable = img0.data type = fifo depth = SRC_WIDTH
 #pragma HLS stream variable = img1.data type = fifo depth = SRC_WIDTH
+  MapPic mapx0, mapy0, mapx1, mapy1;
 #pragma HLS stream variable = mapx0.data type = fifo depth = PROC_WIDTH
 #pragma HLS stream variable = mapy0.data type = fifo depth = PROC_WIDTH
 #pragma HLS stream variable = mapx1.data type = fifo depth = PROC_WIDTH
 #pragma HLS stream variable = mapy1.data type = fifo depth = PROC_WIDTH
+  HalfPic img_out;
+
+  ProcPic img0_res, img1_res, img0_align, img1_align, img0_a0, img0_a1, img1_a0,
+      img1_a1;
+#pragma HLS stream variable = img0_res.data type = fifo depth = XF_CV_DEPTH
+#pragma HLS stream variable = img1_res.data type = fifo depth = XF_CV_DEPTH
+#pragma HLS stream variable = img0_align.data type = fifo depth = XF_CV_DEPTH
+#pragma HLS stream variable = img1_align.data type = fifo depth = XF_CV_DEPTH
 
   _32arr_to_24mat(m_axi_in0, img0);
   _32arr_to_24mat(m_axi_in1, img1);
   _128arr_to_mapxy(m_axi_mapxy, mapx0, mapy0, mapx1, mapy1);
 
-  isp_stitcher_core(img0, img1, mapx0, mapy0, mapx1, mapy1, img_out);
+  xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
+                 PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img0, img0_res);
+  xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
+                 PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img1, img1_res);
+
+  xf::cv::remap<REMAP_WIN_ROWS0, XF_INTERPOLATION_BILINEAR>(
+      img0_res, img0_align, mapx0, mapy0);
+  xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(
+      img1_res, img1_align, mapx1, mapy1);
+
+  _cp_24mat(img0_align, img0_a0, img0_a1);
+  _cp_24mat(img1_align, img1_a0, img1_a1);
+
+  update_seam(img0_a0, img1_a0, seam_path);
+
+  base_seam_blend(img0_a1, img1_a1, true, seam_path, img_out);
+
   _24mat_to_32arr(img_out, m_axi_out);
 }

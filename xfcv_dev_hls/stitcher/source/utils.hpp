@@ -1,7 +1,6 @@
 
 
 #include "share.h"
-#include <cassert>
 
 
 template <int _PTYPE, int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH_IN, int _XFCVDEPTH_OUT0, int _XFCVDEPTH_OUT1>
@@ -9,53 +8,22 @@ void copy_xf_mat(xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_IN> &_src,
                  xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT0> &_dst0,
                  xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT1> &_dst1) {
 
-  int idx = 0;
+
   constexpr int TOTAL_ITER_N = _ROWS * _COLS / _NPC;
 
   for (int i = 0; i < TOTAL_ITER_N; ++i) {
-#pragma HLS LOOP_TRIPCOUNT min = TOTAL_ITER_N max = TOTAL_ITER_N
 #pragma HLS PIPELINE II = 1
 
-    XF_TNAME(_PTYPE, _NPC) val = _src.read(idx);
-    _dst0.write(idx, val);
-    _dst1.write(idx, val);
-    ++idx;
+    XF_TNAME(_PTYPE, _NPC) val = _src.read(i);
+    _dst0.write(i, val);
+    _dst1.write(i, val);
   }
 }
 
-template <int _SCALE_Y, int _SCALE_X, int _ROWS, int _COLS, int _NPC,
-          int _XFCVDEPTH>
-void zoom_out_int_scale(
-    xf::cv::Mat<SRC_TYPE, _ROWS * _SCALE_Y, _COLS * _SCALE_X, _NPC, _XFCVDEPTH> &_src,
-    xf::cv::Mat<SRC_TYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &_dst)
-    {
-        
-        assert(_SCALE_X * _SCALE_Y < 64);
-
-        for (int y=0; y < _ROWS; ++y)
-        {
-            for (int x=0; x < _COLS; ++x)
-            {
-                int src_x = _SCALE_X * x;
-                int src_y = _SCALE_X * y;
-                u16t sum_val0 = 0;
-                u16t sum_val1 = 0;
-                u16t sum_val2 = 0;
-
-                for (int dy = 0; dy < _SCALE_X; ++dy)
-                {
-                    for (int dx = 0; dx < _SCALE_Y; ++dy)
-                    {
-                    }
-                }
-            }
-        }
-
-    }
-
-
 
 #ifndef __SYNTHESIS__
+
+#include <cassert>
 
 static const std::string test_dir = "E:/Dev/QianSal/xfcv_dev_hls/test/";
 inline char *get_path(const char *name) {

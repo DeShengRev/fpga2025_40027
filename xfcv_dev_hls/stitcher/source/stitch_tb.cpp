@@ -1,5 +1,7 @@
 
 
+#include <cstdlib>
+#include <synchapi.h>
 #ifndef __SYNTHESIS__
 
 #include "common/xf_headers.hpp"
@@ -19,7 +21,7 @@
 #include <cstdio>
 #include <cstring>
 #include <string>
-
+#include "windows.h"
 
 int mapxy[PROC_HEIGHT][PROC_WIDTH][4];
 
@@ -29,8 +31,6 @@ void read_map(const char *map_path, int *map_arr) {
   assert(cnt == PROC_HEIGHT * PROC_WIDTH * 4);
   fclose(fxy);
 }
-
-
 
 void remap_preproc_test(int map_arr[PROC_HEIGHT][PROC_WIDTH][4]) {
 
@@ -71,15 +71,26 @@ int main() {
 
   read_map(get_path("mapxy.bin"), (int *)mapxy);
 
-  remap_preproc_test(mapxy);
+  //   remap_preproc_test(mapxy);
 
   isp_stitcher(0, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
-                 (u128a *)mapxy, (u32a *)result_rgba.data);
+               (u128a *)mapxy, (u32a *)result_rgba.data);
 
   cv::cvtColor(result_rgba, result, cv::COLOR_RGBA2BGRA);
-  cv::imwrite(get_path("remap.png"), result);
+  cv::imwrite(get_path("stitch0.png"), result);
 
-  printf("csim finish\n");
+//   std::this_thread::sleep_for(std::chrono::milliseconds(33));
+
+  printf("stitch0 finish\n");
+
+  Sleep(33);
+
+  isp_stitcher(0, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
+               (u128a *)mapxy, (u32a *)result_rgba.data);
+  cv::cvtColor(result_rgba, result, cv::COLOR_RGBA2BGRA);
+  cv::imwrite(get_path("stitch1.png"), result);
+
+  printf("stitch1 finish\n");
   return 0;
 }
 
