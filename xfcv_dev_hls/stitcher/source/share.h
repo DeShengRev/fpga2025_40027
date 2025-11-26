@@ -24,7 +24,6 @@
 
 
 #ifndef __SYNTHESIS__
-#include "common/xf_sw_utils.hpp"
 #include "opencv2/core/matx.hpp"
 #include "opencv2/core/types.hpp"
 #include "opencv2/imgcodecs.hpp"
@@ -76,21 +75,25 @@ constexpr int OVERALL_WIDTH = PROC_WIDTH + UNDERLAP_WIDTH;
 #define SRC_TYPE XF_8UC3
 
 #define XF_CV_DEPTH 4
+#define XF_CV_DEPTH_SRC 2048
+#define XF_CV_DEPTH_PROC 1024
 
 #define HALF_BLENDING_WIDTH 32
 #define BLENDING_SHIFT 6
 constexpr int BLENDING_WIDTH = 2 * HALF_BLENDING_WIDTH + 1;
 
 
-typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, SRC_WIDTH, NPPCX, XF_CV_DEPTH>
+typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, SRC_WIDTH, NPPCX, XF_CV_DEPTH_PROC>
     HalfPic;
 typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX, XF_CV_DEPTH>
-    ProcPic;
+    SProcPic;
+typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX, XF_CV_DEPTH_PROC>
+    LProcPic;
 typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, UNDERLAP_WIDTH, NPPCX, XF_CV_DEPTH>
     UnderlapPic;
 typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, OVERLAP_WIDTH, NPPCX, XF_CV_DEPTH>
     OverlapPic;
-typedef xf::cv::Mat<SRC_TYPE, SRC_HEIGHT, SRC_WIDTH, NPPCX, SRC_WIDTH> SrcPic;
-typedef xf::cv::Mat<MAPXY_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX, PROC_WIDTH>
+typedef xf::cv::Mat<SRC_TYPE, SRC_HEIGHT, SRC_WIDTH, NPPCX, XF_CV_DEPTH_SRC> SrcPic;
+typedef xf::cv::Mat<MAPXY_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX, XF_CV_DEPTH_PROC>
     MapPic;
-// SrcPic 和 MapPic 是从内存中直接读的，所以需要缓存比较多的像素
+    

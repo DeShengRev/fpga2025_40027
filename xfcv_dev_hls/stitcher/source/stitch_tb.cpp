@@ -1,12 +1,9 @@
 
 
-#include <cstdlib>
-#include <synchapi.h>
 #ifndef __SYNTHESIS__
 
 #include "common/xf_headers.hpp"
 #include "common/xf_infra.hpp"
-#include "common/xf_sw_utils.hpp"
 #include "common/xf_utility.hpp"
 #include "opencv2/core/matx.hpp"
 #include "opencv2/core/types.hpp"
@@ -17,11 +14,12 @@
 #include "source/share.h"
 #include "stitch.hpp"
 #include "utils.hpp"
+#include "windows.h"
 #include <cassert>
 #include <cstdio>
 #include <cstring>
 #include <string>
-#include "windows.h"
+
 
 int mapxy[PROC_HEIGHT][PROC_WIDTH][4];
 
@@ -79,7 +77,7 @@ int main() {
   cv::cvtColor(result_rgba, result, cv::COLOR_RGBA2BGRA);
   cv::imwrite(get_path("stitch0.png"), result);
 
-//   std::this_thread::sleep_for(std::chrono::milliseconds(33));
+  //   std::this_thread::sleep_for(std::chrono::milliseconds(33));
 
   printf("stitch0 finish\n");
 

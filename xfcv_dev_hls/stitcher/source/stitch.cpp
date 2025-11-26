@@ -41,52 +41,6 @@ void _stitch_2_quat(
   }
 }
 
-void _split_img(ProcPic &_src0, ProcPic &_src1, hls::stream<u16t> seam_path,
-                OverlapPic &overlap0, OverlapPic &overlap1,
-                xf::cv::Mat<SRC_TYPE, BLENDING_WIDTH, PROC_HEIGHT, NPPCX,
-                            XF_CV_DEPTH> &blend,
-                xf::cv::Mat<SRC_TYPE, PROC_WIDTH - BLENDING_WIDTH, PROC_HEIGHT,
-                            NPPCX, XF_CV_DEPTH> &leftover) {
-
-#pragma HLS DATAFLOW
-
-  UnderlapPic upl, upr;
-  OverlapPic &opl0 = overlap0;
-  OverlapPic &opr0 = overlap1;
-  OverlapPic opl1, opr1;
-
-  for (int y = 0; y < PROC_HEIGHT; ++y) {
-    for (int x = 0; x < UNDERLAP_WIDTH; ++x) {
-      u24a val = _src0.read(y * PROC_WIDTH + x);
-      upl.write(y * UNDERLAP_WIDTH + x, val);
-    }
-    for (int x = 0; x < OVERLAP_WIDTH; ++x) {
-      u24a val = _src0.read(y * PROC_WIDTH + UNDERLAP_WIDTH + x);
-      opl0.write(y * OVERLAP_WIDTH + x, val);
-      opl1.write(y * OVERLAP_WIDTH + x, val);
-    }
-
-    for (int x = 0; x < OVERLAP_WIDTH; ++x) {
-      u24a val = _src1.read(y * PROC_WIDTH + x);
-      opr0.write(y * OVERLAP_WIDTH + x, val);
-      opr1.write(y * OVERLAP_WIDTH + x, val);
-    }
-    for (int x = 0; x < UNDERLAP_WIDTH; ++x) {
-      u24a val = _src1.read(y * PROC_WIDTH + OVERLAP_WIDTH + x);
-      upr.write(y * UNDERLAP_WIDTH + x, val);
-    }
-  }
-
-  for (int y = 0; y < PROC_HEIGHT; ++y) {
-    int spx = seam_path.read();
-    int spxl = spx - HALF_BLENDING_WIDTH;
-    int spxr = spx + HALF_BLENDING_WIDTH;
-
-    for (int x = 0; x < OVERALL_WIDTH; ++x) {
-    }
-  }
-}
-
 template <int _ROWS, int _COLS, int _XFCVDEPTH_IN>
 void _32arr_to_24mat(
     u32a *_src, xf::cv::Mat<XF_8UC3, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_dst) {
@@ -94,7 +48,7 @@ void _32arr_to_24mat(
   constexpr int TOTAL_ITER_N = _ROWS * _COLS;
   for (int i = 0; i < TOTAL_ITER_N; ++i) {
 #pragma HLS LOOP_TRIPCOUNT max = TOTAL_ITER_N min = TOTAL_ITER_N
-#pragma HLS PIPELINE II = 1
+#pragma HLS PIPELINE II = 2
     u24a val = _src[i].range(23, 0);
     _dst.write(i, val);
   }
@@ -107,7 +61,7 @@ void _128arr_to_mapxy(u128a *m_axi_mapxy, MapPic &mapx0, MapPic &mapy0,
 
   for (int i = 0; i < TOTAL_ITER_N; ++i) {
 #pragma HLS LOOP_TRIPCOUNT max = TOTAL_ITER_N min = TOTAL_ITER_N
-#pragma HLS PIPELINE II = 1
+#pragma HLS PIPELINE II = 2
 
     u128a val = m_axi_mapxy[i];
     mapx0.write(i, val.range(31, 0));
@@ -134,15 +88,17 @@ void _24mat_to_32arr(xf::cv::Mat<XF_8UC3, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_src,
 
 template <int XF_8UC3, int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH_IN,
           int _XFCVDEPTH_OUT0, int _XFCVDEPTH_OUT1>
-void _cp_24mat(
+void _duplicate_for_seam_blend(
     xf::cv::Mat<XF_8UC3, _ROWS, _COLS, _NPC, _XFCVDEPTH_IN> &_src,
     xf::cv::Mat<XF_8UC3, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT0> &_dst0,
     xf::cv::Mat<XF_8UC3, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT1> &_dst1) {
 
   constexpr int TOTAL_ITER_N = _ROWS * _COLS / _NPC;
 
+#pragma HLS DATAFLOW
+
   for (int i = 0; i < TOTAL_ITER_N; ++i) {
-#pragma HLS PIPELINE II = 1
+#pragma HLS PIPELINE II = 2
 
     u24a val = _src.read(i);
     _dst0.write(i, val);
@@ -150,53 +106,25 @@ void _cp_24mat(
   }
 }
 
-// void isp_stitcher_core(SrcPic &img0, SrcPic &img1, MapPic &mapx0, MapPic
-// &mapy0,
-//                        MapPic &mapx1, MapPic &mapy1,
-//                        hls::stream<u16t> &seam_path, HalfPic &img_out) {
-// #pragma HLS INLINE
+void _init_seam(u16t *rd) {
+  u16t val = OVERLAP_WIDTH / 2;
+  for (int i = 0; i < COST_HEIGHT; ++i) {
+#pragma HLS PIPELINE
+    val = rd[i];
+    // printf("%d ", val);
+    if (val < HALF_BLENDING_WIDTH) {
+      val = HALF_BLENDING_WIDTH;
+    } else if (val > OVERLAP_WIDTH - HALF_BLENDING_WIDTH - 1) {
+      val = OVERLAP_WIDTH - HALF_BLENDING_WIDTH - 1;
+    }
+    rd[i] = val + UNDERLAP_WIDTH;
+    // printf("%d ", rd[i]);
+  }
+  //   printf("\n");
+}
 
-//   ProcPic img0_res, img1_res, img0_align, img1_align, img0_a0, img0_a1,
-//   img1_a0,
-//       img1_a1;
-// #pragma HLS stream variable = img0_res.data type = fifo depth = XF_CV_DEPTH
-// #pragma HLS stream variable = img1_res.data type = fifo depth = XF_CV_DEPTH
-// #pragma HLS stream variable = img0_align.data type = fifo depth = XF_CV_DEPTH
-// #pragma HLS stream variable = img1_align.data type = fifo depth = XF_CV_DEPTH
-
-//   //   printf("axis2xfMat finish\n");
-
-//   xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
-//                  PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img0, img0_res);
-//   xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
-//                  PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img1, img1_res);
-
-//   //   printf("resize finish\n");
-
-//   xf::cv::remap<REMAP_WIN_ROWS0, XF_INTERPOLATION_BILINEAR>(
-//       img0_res, img0_align, mapx0, mapy0);
-//   xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(
-//       img1_res, img1_align, mapx1, mapy1);
-
-//   //   printf("proj_align finish\n");
-//   _cp_24mat(img0_align, img0_a0, img0_a1);
-//   _cp_24mat(img1_align, img1_a0, img1_a1);
-
-//   // #ifndef __SYNTHESIS__
-//   //   xf_imwrite(get_path("img0_a0.png"), img0_a0);
-//   //   xf_imwrite(get_path("img0_a1.png"), img0_a1);
-//   //   xf_imwrite(get_path("img1_a0.png"), img1_a0);
-//   //   xf_imwrite(get_path("img1_a1.png"), img1_a1);
-//   // #endif
-
-//   base_seam_blend(img0_a1, img1_a1, true, seam_path, img_out);
-//   //   printf("blend finish\n");
-
-//   update_seam(img0_a0, img1_a0, seam_path);
-//   //   printf("update_seam finish\n");
-
-//   return;
-// }
+static bool tg = true;
+static u16t seam_path_pipo[2][COST_HEIGHT];
 
 void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
                   u128a *m_axi_mapxy, u32a *m_axi_out) {
@@ -213,26 +141,20 @@ void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
 
 #pragma HLS DATAFLOW
 
-  static hls::stream<u16t> seam_path;
-#pragma HLS stream variable = seam_path type = fifo depth = COST_HEIGHT * 2
+  u16t *rd = seam_path_pipo[tg];
+  u16t *wr = seam_path_pipo[!tg];
+  tg = !tg;
+
+  _init_seam(rd);
 
 
   SrcPic img0, img1;
-#pragma HLS stream variable = img0.data type = fifo depth = SRC_WIDTH
-#pragma HLS stream variable = img1.data type = fifo depth = SRC_WIDTH
   MapPic mapx0, mapy0, mapx1, mapy1;
-#pragma HLS stream variable = mapx0.data type = fifo depth = PROC_WIDTH
-#pragma HLS stream variable = mapy0.data type = fifo depth = PROC_WIDTH
-#pragma HLS stream variable = mapx1.data type = fifo depth = PROC_WIDTH
-#pragma HLS stream variable = mapy1.data type = fifo depth = PROC_WIDTH
+
   HalfPic img_out;
 
-  ProcPic img0_res, img1_res, img0_align, img1_align, img0_a0, img0_a1, img1_a0,
-      img1_a1;
-#pragma HLS stream variable = img0_res.data type = fifo depth = XF_CV_DEPTH
-#pragma HLS stream variable = img1_res.data type = fifo depth = XF_CV_DEPTH
-#pragma HLS stream variable = img0_align.data type = fifo depth = XF_CV_DEPTH
-#pragma HLS stream variable = img1_align.data type = fifo depth = XF_CV_DEPTH
+  LProcPic img0_res, img1_res, img0_align, img1_align;
+  LProcPic img0_a0, img1_a0, img0_a1, img1_a1;
 
   _32arr_to_24mat(m_axi_in0, img0);
   _32arr_to_24mat(m_axi_in1, img1);
@@ -243,17 +165,16 @@ void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
   xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
                  PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img1, img1_res);
 
-  xf::cv::remap<REMAP_WIN_ROWS0, XF_INTERPOLATION_BILINEAR>(
-      img0_res, img0_align, mapx0, mapy0);
-  xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_BILINEAR>(
-      img1_res, img1_align, mapx1, mapy1);
+  xf::cv::remap<REMAP_WIN_ROWS0, XF_INTERPOLATION_NN>(img0_res, img0_align,
+                                                      mapx0, mapy0);
+  xf::cv::remap<REMAP_WIN_ROWS1, XF_INTERPOLATION_NN>(img1_res, img1_align,
+                                                      mapx1, mapy1);
 
-  _cp_24mat(img0_align, img0_a0, img0_a1);
-  _cp_24mat(img1_align, img1_a0, img1_a1);
+  _duplicate_for_seam_blend(img0_align, img0_a0, img0_a1);
+  _duplicate_for_seam_blend(img1_align, img1_a0, img1_a1);
 
-  update_seam(img0_a0, img1_a0, seam_path);
-
-  base_seam_blend(img0_a1, img1_a1, true, seam_path, img_out);
+  base_seam_blend(img0_a0, img1_a0, true, rd, img_out);
+  update_seam(img0_a1, img1_a1, wr);
 
   _24mat_to_32arr(img_out, m_axi_out);
 }

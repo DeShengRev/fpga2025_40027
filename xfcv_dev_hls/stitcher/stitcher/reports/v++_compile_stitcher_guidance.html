@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2024.2 (win64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Wed Nov 26 11:44:12 2025</td></tr>
+<tr><td><b>Date</b></td><td>Wed Nov 26 23:27:56 2025</td></tr>
 <tr><td><b>Host</b></td><td>Win10-zsd running 64-bit major release  (build 9200)</td></tr>
 <tr><td><b>Command</b></td><td>C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config E:\Dev\QianSal\xfcv_dev_hls\stitcher\hls_config.cfg --work_dir stitcher </td></tr>
 </table></center><br>
@@ -3416,7 +3416,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 42
+<pre>Violations found: 39
 </pre>
 <pre>Rule Specs Violated: 4
 </pre>
@@ -3434,189 +3434,24 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">27</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 2, Depth = 9, loop 'VITIS_LOOP_404_4_VITIS_LOOP_411_5'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">5</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/calc_seam.cpp#line=11">calc_seam.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">24</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'scaleCompute_17_42_20_48_16_1_s'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">18</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 2, Depth = 5, loop 'VITIS_LOOP_404_4_VITIS_LOOP_411_5'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 28, loop 'loop_width'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (E:/Software/Vitis_Libraries/vision/L1/include\imgproc/xf_remap.hpp:57:9)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">23</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_26_3_VITIS_LOOP_27_4'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">12</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_95_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_354_1_VITIS_LOOP_359_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">11</td>
-<td align="left">Latency</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Latency Related</td>
-<td align="left">Accelerator.isp_stitcher.Latency</td>
-<td align="left">Cannot flatten loop 'VITIS_LOOP_51_1' (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/blend.cpp#line=51">blend.cpp</a>) in function 'base_seam_blend' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
 <td align="left">13</td>
 <td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_95_1'
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_62_1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">40</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.isp_stitcher.Interface</td>
-<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">6</td>
-<td align="left">Throughput</td>
+<td align="left">10</td>
+<td align="left">Latency</td>
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Dataflow form checks found 1 issue(s) in file source/calc_seam.cpp
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">34</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'VITIS_LOOP_87_3'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">30</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">41</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.isp_stitcher.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">31</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 3'
+<td align="left">HLS Latency Related</td>
+<td align="left">Accelerator.isp_stitcher.Latency</td>
+<td align="left">Cannot flatten loop 'Loop-2' (E:/Dev/QianSal/xfcv_dev_hls/stitcher/source/calc_seam.hpp:56:35) in function 'calc_seam<90, 64, 1, 4>' either the parent loop or sub loop is do-while loop.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3627,29 +3462,40 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'VITIS_LOOP_67_2'
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_91_4'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">25</td>
+<td align="left">27</td>
 <td align="left">Throughput</td>
-<td align="left">WARNING</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">The II Violation in module 'resizeNNBilinear_16_540_384_1_false_4_4_90_64_1_6_s' (loop 'VITIS_LOOP_404_4_VITIS_LOOP_411_5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'icmp' operation 1 bit ('cmp_i_i376_i', E:/Software/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:409) and 'call' operation 42 bit ('indexy_pre_comp', E:/Software/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:409) to 'scaleCompute_17_42_20_48_16_1_s'.
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">16</td>
+<td align="left">29</td>
 <td align="left">Throughput</td>
-<td align="left">WARNING</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">The II Violation in module 'resizeNNBilinear_16_1080_1920_1_false_1920_4_540_960_0_2_s' (loop 'VITIS_LOOP_404_4_VITIS_LOOP_411_5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'select' operation 17 bit ('indexy', E:/Software/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:240->E:/Software/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:420) and 'call' operation 42 bit ('indexy_pre_comp', E:/Software/Vitis_Libraries/vision/L1/include\imgproc/xf_resize_nn_bilinear.hpp:409) to 'scaleCompute_17_42_20_48_16_0_s'.
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 3'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 52, loop 'loop_height_loop_width'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3660,29 +3506,29 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_101_5'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_79_1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">35</td>
+<td align="left">34</td>
 <td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_94_4'
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_98_5'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">1</td>
+<td align="left">17</td>
 <td align="left">Throughput</td>
-<td align="left">WARNING</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=51">stitch.cpp</a>)
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3693,18 +3539,117 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'scaleCompute_17_42_20_48_16_0_s'
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_354_1_VITIS_LOOP_359_2'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">4</td>
+<td align="left">31</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 5, loop 'VITIS_LOOP_64_2'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_49_1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.isp_stitcher.Interface</td>
+<td align="left">Multiple burst reads of length 2073600 and bit width 32 in loop 'VITIS_LOOP_49_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=49">stitch.cpp</a>) has been inferred on bundle 'HP0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=49">stitch.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">1</td>
 <td align="left">Throughput</td>
 <td align="left">WARNING</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Dataflow form checks found 3 issue(s) in file source/stitch.cpp
+<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=142">stitch.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_8_1_VITIS_LOOP_9_2'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_354_1_VITIS_LOOP_359_2'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_24_1_VITIS_LOOP_26_2'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_100_1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">39</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.isp_stitcher.Kernel</td>
+<td align="left">**** Estimated Fmax: 136.99 MHz
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">38</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.isp_stitcher.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3715,7 +3660,40 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.isp_stitcher.Interface</td>
-<td align="left">Multiple burst reads of length 2073600 and bit width 32 in loop 'VITIS_LOOP_95_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=95">stitch.cpp</a>) has been inferred on bundle 'HP0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=95">stitch.cpp</a>)
+<td align="left">Multiple burst reads of length 2073600 and bit width 32 in loop 'VITIS_LOOP_49_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=49">stitch.cpp</a>) has been inferred on bundle 'HP1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=49">stitch.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 5, loop 'VITIS_LOOP_404_4_VITIS_LOOP_411_5'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Dataflow form checks found 4 issue(s) in file source/stitch.cpp
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_100_1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3731,35 +3709,24 @@ window.onload = function () { addSorting(); }
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">10</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
+<td align="left">2</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.isp_stitcher.Interface</td>
-<td align="left">Multiple burst writes of length 1036800 and bit width 32 in loop 'VITIS_LOOP_125_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=125">stitch.cpp</a>) has been inferred on bundle 'HP3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=125">stitch.cpp</a>)
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (E:/Software/Vitis_Libraries/vision/L1/include\imgproc/xf_remap.hpp:57:9)
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">9</td>
-<td align="left">Interface</td>
+<td align="left">25</td>
+<td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.isp_stitcher.Interface</td>
-<td align="left">Multiple burst reads of length 518400 and bit width 128 in loop 'VITIS_LOOP_108_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=108">stitch.cpp</a>) has been inferred on bundle 'HP2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=108">stitch.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">42</td>
-<td align="left">Kernel</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.isp_stitcher.Kernel</td>
-<td align="left">**** Estimated Fmax: 136.99 MHz
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 7, loop 'VITIS_LOOP_411_5'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3770,7 +3737,40 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_24_1_VITIS_LOOP_27_2'
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 2.1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Throughput</td>
+<td align="left">WARNING</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=98">stitch.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.isp_stitcher.Interface</td>
+<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 3, loop 'VITIS_LOOP_49_1'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3781,84 +3781,40 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_84_3'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_21_1_VITIS_LOOP_22_2'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
 <td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 4'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">22</td>
-<td align="left">Throughput</td>
+<td align="left">9</td>
+<td align="left">Interface</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_16_1_VITIS_LOOP_17_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">26</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_354_1_VITIS_LOOP_359_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">21</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_144_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">37</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_108_6'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">39</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_125_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">29</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">38</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 33, loop 'VITIS_LOOP_67_2'
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.isp_stitcher.Interface</td>
+<td align="left">Multiple burst writes of length 1036800 and bit width 32 in loop 'VITIS_LOOP_79_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=79">stitch.cpp</a>) has been inferred on bundle 'HP3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=79">stitch.cpp</a>)
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3869,18 +3825,29 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_108_1'
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 1, function 'scaleCompute_17_42_20_48_16_0_s'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">20</td>
+<td align="left">35</td>
 <td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.isp_stitcher.Throughput</td>
-<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_144_1'
+<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_111_1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.isp_stitcher.Throughput</td>
+<td align="left">Pipelining result : Target II = 1, Final II = 1, Depth = 34, loop 'VITIS_LOOP_50_1_VITIS_LOOP_62_2'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3891,7 +3858,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.isp_stitcher.Interface</td>
-<td align="left">Multiple burst reads of length 2073600 and bit width 32 in loop 'VITIS_LOOP_95_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=95">stitch.cpp</a>) has been inferred on bundle 'HP1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=95">stitch.cpp</a>)
+<td align="left">Multiple burst reads of length 518400 and bit width 128 in loop 'VITIS_LOOP_62_1'(<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=62">stitch.cpp</a>) has been inferred on bundle 'HP2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///E:/Dev/QianSal/xfcv_dev_hls/stitcher\source/stitch.cpp#line=62">stitch.cpp</a>)
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

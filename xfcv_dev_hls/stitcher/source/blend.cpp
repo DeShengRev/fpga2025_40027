@@ -39,33 +39,28 @@
 //   feathering_blend(ts0, ts1, ts);
 // }
 
-void base_seam_blend(ProcPic &img0, ProcPic &img1, bool draw_seam,
-                     hls::stream<u16t> &seam_path, HalfPic &blend) {
+void base_seam_blend(LProcPic &img0, LProcPic &img1, bool draw_seam,
+                     u16t *seam_path, HalfPic &blend) {
 
   int idx = 0, idx0 = 0, idx1 = 0;
+  int seam_idx = 0;
   int spm = 765, spl = 765 - 32, spr = 765 + 32;
   int cnt6 = 5;
-
-  bool seam_ok = seam_path.size() >= COST_HEIGHT;
 
   for (int y = 0; y < PROC_HEIGHT; ++y) {
 
     if (cnt6 == 5) {
       cnt6 = 0;
-      if (seam_ok) {
-        spm = seam_path.read() + UNDERLAP_WIDTH;
-      } else {
-        spm = OVERALL_WIDTH / 2;
-      }
-      //   printf(" read seam %d, %d\n", seam_path.size(), spm);
+      spm = seam_path[seam_idx++];
       spl = spm - HALF_BLENDING_WIDTH;
       spr = spm + HALF_BLENDING_WIDTH;
+      // printf(" read seam %d, %d\n", seam_idx, spm);
     } else {
       ++cnt6;
     }
 
     for (int x = 0; x < SRC_WIDTH; ++x) {
-#pragma HLS PIPELINE
+#pragma HLS PIPELINE II = 1
       if (x < UNDERLAP_WIDTH) {
         u24a val = img0.read(idx0++);
         blend.write(idx++, val);
