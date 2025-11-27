@@ -1,25 +1,46 @@
 
 
+#include "common/xf_types.hpp"
 #include "share.h"
 
-
-template <int _PTYPE, int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH_IN, int _XFCVDEPTH_OUT0, int _XFCVDEPTH_OUT1>
-void copy_xf_mat(xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_IN> &_src,
-                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT0> &_dst0,
-                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH_OUT1> &_dst1) {
-
-
-  constexpr int TOTAL_ITER_N = _ROWS * _COLS / _NPC;
-
-  for (int i = 0; i < TOTAL_ITER_N; ++i) {
+template <int _PTYPE, int _ROWS, int _COLS, int _XFCVDEPTH_IN,
+          int _XFCVDEPTH_OUT>
+void _copy_mat(xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_src,
+               xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH_OUT> &_dst) {
+  for (int i = 0; i < _ROWS * _COLS; ++i) {
 #pragma HLS PIPELINE II = 1
-
-    XF_TNAME(_PTYPE, _NPC) val = _src.read(i);
-    _dst0.write(i, val);
-    _dst1.write(i, val);
+    XF_TNAME(_PTYPE, 1) val = _src.read(i);
+    _dst.write(i, val);
   }
 }
 
+template <int _PTYPE, int _ROWS, int _COLS, int _XFCVDEPTH_IN,
+          int _XFCVDEPTH_OUT>
+void _copy_mat_2(xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_src0,
+                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_src1,
+                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH_OUT> &_dst0,
+                 xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH_OUT> &_dst1) {
+#pragma HLS DATAFLOW
+  _copy_mat(_src0, _dst0);
+  _copy_mat(_src1, _dst1);
+}
+
+template <int _PTYPE, int _ROWS, int _COLS, int _XFCVDEPTH>
+void _fill_val(XF_TNAME(_PTYPE, 1) val,
+               xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH> &_dst) {
+  for (int i = 0; i < _ROWS * _COLS; ++i) {
+#pragma HLS PIPELINE II = 1
+    _dst.write(i, val);
+  }
+}
+
+template <int _PTYPE, int _ROWS, int _COLS, int _XFCVDEPTH>
+void _consume_mat(xf::cv::Mat<_PTYPE, _ROWS, _COLS, 1, _XFCVDEPTH> &_src) {
+  for (int i = 0; i < _ROWS * _COLS; ++i) {
+#pragma HLS PIPELINE II = 1
+    _src.read(i);
+  }
+}
 
 #ifndef __SYNTHESIS__
 

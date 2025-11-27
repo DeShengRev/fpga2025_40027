@@ -24,7 +24,7 @@ void calc_cost_map(
   for (int y = 0; y < _ROWS; ++y) {
 
     for (int x = 0; x < _COLS; ++x) {
-#pragma HLS PIPELINE II=2
+#pragma HLS PIPELINE II = 2
       ap_uint<24> color1 = _src0.read(idx);
       ap_uint<24> color2 = _src1.read(idx);
 
@@ -51,7 +51,7 @@ void calc_cost_map(
 
 template <int _ROWS, int _COLS, int _NPC, int _XFCVDEPTH>
 void calc_seam(xf::cv::Mat<COST_TYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &cost,
-               u16t *seam_path) {
+               u16a *seam_path) {
 
   ap_int<4> track[_ROWS][_COLS] = {0};
   u32t prev_dp[_COLS] = {0};
@@ -101,9 +101,10 @@ void calc_seam(xf::cv::Mat<COST_TYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &cost,
     // printf("%d ", track_x);
     track_x += track[y][track_x];
   }
-//   printf("\n");
+  //   printf("\n");
 
   return;
 }
 
-void update_seam(LProcPic &img0, LProcPic &img1, u16t *seam_path);
+void update_seam(SProcPic &img0, SProcPic &img1, u16a *seam_path,
+                 HalfPic &result);

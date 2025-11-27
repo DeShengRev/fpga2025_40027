@@ -3,6 +3,7 @@
 #include "calc_seam.hpp"
 #include "share.h"
 #include "utils.hpp"
+#include <etc/ap_common.h>
 
 // void pyramid_blend(ProcPic &img0, ProcPic &img1, hls::stream<u16t>
 // &seam_path,
@@ -39,25 +40,16 @@
 //   feathering_blend(ts0, ts1, ts);
 // }
 
-void base_seam_blend(LProcPic &img0, LProcPic &img1, bool draw_seam,
-                     u16t *seam_path, HalfPic &blend) {
+void base_blend_core(LProcPic &img0, LProcPic &img1, bool draw_seam,
+                     hls::stream<u16a> &seam_path, HalfPic &blend) {
 
   int idx = 0, idx0 = 0, idx1 = 0;
-  int seam_idx = 0;
   int spm = 765, spl = 765 - 32, spr = 765 + 32;
-  int cnt6 = 5;
 
   for (int y = 0; y < PROC_HEIGHT; ++y) {
-
-    if (cnt6 == 5) {
-      cnt6 = 0;
-      spm = seam_path[seam_idx++];
-      spl = spm - HALF_BLENDING_WIDTH;
-      spr = spm + HALF_BLENDING_WIDTH;
-      // printf(" read seam %d, %d\n", seam_idx, spm);
-    } else {
-      ++cnt6;
-    }
+    spm = seam_path.read();
+    spl = spm - HALF_BLENDING_WIDTH;
+    spr = spm + HALF_BLENDING_WIDTH;
 
     for (int x = 0; x < SRC_WIDTH; ++x) {
 #pragma HLS PIPELINE II = 1
@@ -93,4 +85,36 @@ void base_seam_blend(LProcPic &img0, LProcPic &img1, bool draw_seam,
 
     // printf("%d %d %d\n", idx, idx0, idx1);
   }
+}
+
+void _limit_split(u16a *seam_path, hls::stream<u16a> &seam_path_lim) {
+
+  for (int y = 0; y < COST_HEIGHT; ++y) {
+
+    u16a val = seam_path[y];
+    u16a valp = 0;
+
+    if (val < HALF_BLENDING_WIDTH) {
+      valp = HALF_BLENDING_WIDTH;
+    } else if (val < OVERLAP_WIDTH - HALF_BLENDING_WIDTH) {
+      valp = val;
+    } else {
+      valp = OVERLAP_WIDTH - 1 - HALF_BLENDING_WIDTH;
+    }
+    valp += UNDERLAP_WIDTH;
+    for (int i = 0; i < COST_SCALE; ++i) {
+#pragma HLS PIPELINE II = 1
+      seam_path_lim.write(valp);
+    }
+  }
+}
+void base_blend(SProcPic &img0, SProcPic &img1, bool draw_seam, u16a *seam_path,
+                HalfPic &blend) {
+#pragma HLS DATAFLOW
+  LProcPic img0_l, img1_l;
+  hls::stream<u16a> seam_path_lim;
+  #pragma HLS STREAM variable=seam_path_lim depth=64
+  _copy_mat_2(img0, img1, img0_l, img1_l);
+  _limit_split(seam_path, seam_path_lim);
+  base_blend_core(img0_l, img1_l, draw_seam, seam_path_lim, blend);
 }

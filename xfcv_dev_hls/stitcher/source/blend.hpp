@@ -101,5 +101,5 @@ inline u24a _wb(u24a val0, u24a val1, u16t w0, u16t w1) {
 //   }
 // }
 
-void base_seam_blend(LProcPic &img0, LProcPic &img1, bool draw_seam,
-                     u16t *seam_path, HalfPic &blend);
+void base_blend(SProcPic &img0, SProcPic &img1, bool draw_seam, u16a *seam_path,
+                HalfPic &blend) ;
