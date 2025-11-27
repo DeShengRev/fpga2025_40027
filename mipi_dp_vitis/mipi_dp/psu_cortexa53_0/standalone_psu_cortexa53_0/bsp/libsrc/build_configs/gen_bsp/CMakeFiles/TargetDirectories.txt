@@ -122,6 +122,13 @@ E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/CMakeFiles/install.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/CMakeFiles/install/local.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/ipipsu/src/CMakeFiles/install/strip.dir
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src/CMakeFiles/isp_stitcher.dir
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src/CMakeFiles/edit_cache.dir
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src/CMakeFiles/rebuild_cache.dir
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src/CMakeFiles/list_install_components.dir
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src/CMakeFiles/install.dir
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src/CMakeFiles/install/local.dir
+E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src/CMakeFiles/install/strip.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/mipicsiss/src/CMakeFiles/mipicsiss.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/mipicsiss/src/CMakeFiles/edit_cache.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/mipicsiss/src/CMakeFiles/rebuild_cache.dir
@@ -171,13 +178,6 @@ E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/CMakeFiles/install.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/CMakeFiles/install/local.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/CMakeFiles/install/strip.dir
-E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src/CMakeFiles/stitcher_remap.dir
-E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src/CMakeFiles/edit_cache.dir
-E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src/CMakeFiles/rebuild_cache.dir
-E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src/CMakeFiles/list_install_components.dir
-E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src/CMakeFiles/install.dir
-E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src/CMakeFiles/install/local.dir
-E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src/CMakeFiles/install/strip.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src/CMakeFiles/sysmonpsu.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src/CMakeFiles/edit_cache.dir
 E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src/CMakeFiles/rebuild_cache.dir

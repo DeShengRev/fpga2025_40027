@@ -29,19 +29,39 @@ void _extract_op1(SProcPic &img1, OverlapPic &op1) {
   }
 }
 
+void _fill_scan(HalfPic &result) {
+  static int spx = 0;
+
+  int idx = 0;
+  for (int y = 0; y < PROC_HEIGHT; ++y) {
+    for (int x = 0; x < SRC_WIDTH; ++x) {
+#pragma HLS PIPELINE II = 1
+      if (x == spx) {
+        result.write(idx++, 0);
+      } else {
+        result.write(idx++, 0xFFFFFF);
+      }
+    }
+  }
+
+  if (spx == SRC_WIDTH) {
+    spx = 0;
+  } else {
+    ++spx;
+  }
+}
 void update_seam(SProcPic &img0, SProcPic &img1, u16a *seam_path,
                  HalfPic &result) {
 
 #pragma HLS DATAFLOW
 
   OverlapPic op0, op1;
-  _fill_val(0xFFFFFFFF, result);
+  _fill_scan(result);
   _extract_op0(img0, op0);
   _extract_op1(img1, op1);
 
-  xf::cv::Mat<SRC_TYPE, COST_HEIGHT, COST_WIDTH, NPPCX, XF_CV_DEPTH> op0_res,
-      op1_res;
-  xf::cv::Mat<XF_16UC1, COST_HEIGHT, COST_WIDTH, NPPCX, XF_CV_DEPTH> cost;
+  xf::cv::Mat<SRC_TYPE, COST_HEIGHT, COST_WIDTH, NPPCX, 64> op0_res, op1_res;
+  xf::cv::Mat<XF_16UC1, COST_HEIGHT, COST_WIDTH, NPPCX, 64> cost;
 
   xf::cv::resize<XF_INTERPOLATION_BILINEAR, SRC_TYPE, PROC_HEIGHT,
                  OVERLAP_WIDTH, COST_HEIGHT, COST_WIDTH, NPPCX, false,

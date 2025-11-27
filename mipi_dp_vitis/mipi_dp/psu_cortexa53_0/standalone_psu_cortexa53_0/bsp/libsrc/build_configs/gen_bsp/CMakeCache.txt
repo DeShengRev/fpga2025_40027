@@ -486,6 +486,15 @@ ipipsu_IS_TOP_LEVEL:STATIC=OFF
 ipipsu_SOURCE_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/ipipsu/src
 
 //Value Computed by CMake
+isp_stitcher_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/isp_stitcher/src
+
+//Value Computed by CMake
+isp_stitcher_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+isp_stitcher_SOURCE_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/isp_stitcher/src
+
+//Value Computed by CMake
 libxil_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc
 
 //Value Computed by CMake
@@ -617,15 +626,6 @@ standalone_xpm_support:STRING=None
 //Disable or Enable Optimization for FSBL's BSP. ZynqMP FSBL will
 // set this to true
 standalone_zynqmp_fsbl_bsp:BOOL=OFF
-
-//Value Computed by CMake
-stitcher_remap_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/stitcher_remap/src
-
-//Value Computed by CMake
-stitcher_remap_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-stitcher_remap_SOURCE_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/stitcher_remap/src
 
 //Value Computed by CMake
 sysmonpsu_BINARY_DIR:STATIC=E:/Dev/QianSal/mipi_dp_vitis/mipi_dp/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp/libsrc/sysmonpsu/src

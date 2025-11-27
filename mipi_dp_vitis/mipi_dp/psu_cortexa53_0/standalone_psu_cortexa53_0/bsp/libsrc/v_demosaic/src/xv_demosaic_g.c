@@ -4,7 +4,7 @@ XV_demosaic_Config XV_demosaic_ConfigTable[] __attribute__ ((section (".drvcfg_s
 
 	{
 		"xlnx,v-demosaic-1.1", /* compatible */
-		0x80020000, /* reg */
+		0x80050000, /* reg */
 		0x1, /* xlnx,samples-per-clock */
 		0x780, /* xlnx,max-cols */
 		0x438, /* xlnx,max-rows */
@@ -15,7 +15,7 @@ XV_demosaic_Config XV_demosaic_ConfigTable[] __attribute__ ((section (".drvcfg_s
 	},
 	{
 		"xlnx,v-demosaic-1.1", /* compatible */
-		0x80040000, /* reg */
+		0x80060000, /* reg */
 		0x1, /* xlnx,samples-per-clock */
 		0x780, /* xlnx,max-cols */
 		0x438, /* xlnx,max-rows */

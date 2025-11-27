@@ -64,7 +64,7 @@ void switch_screen(FrameId id) {
   Xil_DCacheEnable();
 }
 
-int DpdmaVideoExample(UINTPTR cam_frame) {
+int DpdmaInit(UINTPTR cam_frame) {
   xil_printf("DPDMA Generic Video Example Test \r\n");
 
   u32 Status;

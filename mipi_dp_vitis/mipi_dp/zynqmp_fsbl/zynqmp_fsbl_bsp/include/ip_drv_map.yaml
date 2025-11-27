@@ -4,18 +4,9 @@ axi_vdma_0:
 axi_vdma_1:
 - axi_vdma
 - axivdma
-axi_vdma_2:
-- axi_vdma
-- axivdma
-axi_vdma_3:
-- axi_vdma
-- axivdma
-axi_vdma_4:
-- axi_vdma
-- axivdma
-axi_vdma_5:
-- axi_vdma
-- axivdma
+isp_stitcher_0:
+- isp_stitcher
+- isp_stitcher
 mipi_csi2_rx_subsyst_0:
 - mipi_csi2_rx_subsystem
 - mipicsiss
@@ -349,9 +340,6 @@ psu_usb_0:
 psu_usb_xhci_0:
 - psu_usb_xhci
 - usbpsu
-stitcher_remap_0:
-- stitcher_remap
-- stitcher_remap
 v_demosaic_0:
 - v_demosaic
 - v_demosaic

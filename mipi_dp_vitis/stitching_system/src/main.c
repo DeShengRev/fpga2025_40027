@@ -11,6 +11,7 @@
 #include "xiicps.h"
 #include "xil_cache.h"
 #include "xil_types.h"
+#include "xisp_stitcher.h"
 #include "xparameters.h"
 #include "xv_demosaic.h"
 #include <ctype.h>
@@ -21,6 +22,7 @@
 #include <xil_io.h>
 #include <xil_printf.h>
 #include <xstatus.h>
+#include "stitcher.h"
 
 u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
     __attribute__((__aligned__(256)));
@@ -30,12 +32,12 @@ u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
     __attribute__((__aligned__(256)));
 u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
     __attribute__((__aligned__(256)));
+u8 drop[SRC_HEIGHT][SRC_WIDTH][4] __attribute__((__aligned__(256)));
 int mapxy[MAPXY_LEN] __attribute__((__aligned__(256)));
-u8 remap_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
-    __attribute__((__aligned__(256)));
 
 extern XAxiVdma vdma0, vdma1, vdma2, vdma3, vdma4, vdma5;
 
+extern XIsp_stitcher stc;
 XGpioPs Gpio;
 
 int PsGpioSetup() {
@@ -84,7 +86,6 @@ void printx(u8 *start, int len) {
   printf("\n");
 }
 int main(void) {
-  int status;
   Xil_ICacheDisable();
   Xil_DCacheDisable();
 
@@ -95,7 +96,7 @@ int main(void) {
   vdma_init_all();
 
   stitcher_init();
-  DpdmaVideoExample((UINTPTR)cam0_frame[0]);
+  DpdmaInit((UINTPTR)stch_frame[0]);
 
   msleep(1000);
 
@@ -103,10 +104,10 @@ int main(void) {
   Xil_DCacheEnable();
 
   load_mapxy();
-//   buffer_init(cam0_frame, 0xFFFF0000, FRAME_PIXELS);
-//   buffer_init(cam1_frame, 0xFF0000FF, FRAME_PIXELS);
-//   buffer_init(bino_frame, 0xFF00FF00, FRAME_PIXELS);
-//   buffer_init(stch_frame, 0xFFFFFFFF, FRAME_PIXELS);
+  //   buffer_init(cam0_frame, 0xFFFF0000, FRAME_PIXELS);
+  //   buffer_init(cam1_frame, 0xFF0000FF, FRAME_PIXELS);
+  //   buffer_init(bino_frame, 0xFF00FF00, FRAME_PIXELS);
+  //   buffer_init(stch_frame, 0xFFFFFFFF, FRAME_PIXELS);
   Xil_DCacheFlush();
   Xil_DCacheInvalidate();
 
@@ -122,30 +123,31 @@ int main(void) {
 
   // }
 
+  //   while (1) {
+  //     char cmd = inbyte();
+
+  //     Xil_DCacheFlush();
+  //     Xil_DCacheInvalidate();
+
+  //     if (cmd == '0') {
+  //       XIsp_stitcher_Set_sel(&stc, 0b0000);
+  //     } else if (cmd == '1') {
+  //       XIsp_stitcher_Set_sel(&stc, 0b0001);
+  //     } else if (cmd == '2') {
+  //       XIsp_stitcher_Set_sel(&stc, 0b0011);
+  //     } else if (cmd == '3') {
+  //       XIsp_stitcher_Set_sel(&stc, 0b10111);
+  //     } else if (cmd == '4') {
+  //       XIsp_stitcher_Set_sel(&stc, 0b11111);
+  //     }
+
+  //   }
+  //   return 0;
+
+  msleep(100);
   while (1) {
-    char cmd = inbyte();
-
-    Xil_DCacheFlush();
-    Xil_DCacheInvalidate();
-
-    if (cmd == '0') {
-      switch_screen(CAM0_FRAME);
-      printx(cam0_frame, 10);
-    } else if (cmd == '1') {
-      switch_screen(CAM1_FRAME);
-      printx(cam1_frame, 10);
-    } else if (cmd == '2') {
-      switch_screen(BINO_FRAME);
-      printx(bino_frame, 10);
-    } else if (cmd == '3') {
-      switch_screen(STCH_FRAME);
-      printx(stch_frame, 10);
-    }
-
-    debug_vdma_status(&vdma2, "vdma2", XAXIVDMA_READ);
-    debug_vdma_status(&vdma3, "vdma3", XAXIVDMA_READ);
-    debug_vdma_status(&vdma4, "vdma4", XAXIVDMA_READ);
-    debug_vdma_status(&vdma5, "vdma5", XAXIVDMA_WRITE);
+      udpate_seam();
+      select_blend();
+      
   }
-  return 0;
 }

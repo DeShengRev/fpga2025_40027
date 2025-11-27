@@ -9,11 +9,9 @@ extern u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern int mapxy[MAPXY_LEN];
 
-XAxiVdma vdma0, vdma1, vdma2, vdma3, vdma4, vdma5;
-XAxiVdma_Config vdma0_cfg, vdma1_cfg, vdma2_cfg, vdma3_cfg, vdma4_cfg,
-    vdma5_cfg;
-XAxiVdma_DmaSetup vdma0_wr_cfg, vdma1_wr_cfg, vdma2_rd_cfg, vdma3_rd_cfg,
-    vdma4_rd_cfg, vdma5_wr_cfg;
+XAxiVdma vdma0, vdma1;
+XAxiVdma_Config vdma0_cfg, vdma1_cfg;
+XAxiVdma_DmaSetup vdma0_wr_cfg, vdma1_wr_cfg;
 
 u32 vdma_version(XAxiVdma *Vdma) { return XAxiVdma_GetVersion(Vdma); }
 
@@ -173,27 +171,11 @@ void vdma_init_all() {
   int status;
   status = vdma_write_init(XPAR_AXI_VDMA_0_BASEADDR, &vdma0, &vdma0_cfg,
                            &vdma0_wr_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
-                           (u32)cam0_frame);
+                           (u32)cam1_frame);
 
   status = vdma_write_init(XPAR_AXI_VDMA_1_BASEADDR, &vdma1, &vdma1_cfg,
                            &vdma1_wr_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
-                           (u32)cam1_frame);
-
-  status = vdma_read_init(XPAR_AXI_VDMA_2_BASEADDR, &vdma2, &vdma2_cfg,
-                          &vdma2_rd_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
-                          (u32)cam1_frame);
-
-  status = vdma_read_init(XPAR_AXI_VDMA_3_BASEADDR, &vdma3, &vdma3_cfg,
-                          &vdma3_rd_cfg, HORSIZE, SRC_HEIGHT, HORSIZE,
-                          (u32)cam0_frame);
-
-  status = vdma_read_init(XPAR_AXI_VDMA_4_BASEADDR, &vdma4, &vdma4_cfg,
-                          &vdma4_rd_cfg, PROC_WIDTH * 16, PROC_HEIGHT,
-                          PROC_WIDTH * 16, (u32)mapxy);
-
-  status = vdma_write_init(XPAR_AXI_VDMA_5_BASEADDR, &vdma5, &vdma5_cfg,
-                           &vdma5_wr_cfg, HORSIZE, PROC_HEIGHT, HORSIZE,
-                           (u32)stch_frame);
+                           (u32)cam0_frame);
 }
 
 void debug_vdma_status(XAxiVdma *vdma, const char *name, u16 Direction) {

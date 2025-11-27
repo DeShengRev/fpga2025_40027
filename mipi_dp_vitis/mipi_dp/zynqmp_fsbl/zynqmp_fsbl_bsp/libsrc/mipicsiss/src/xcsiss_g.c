@@ -4,8 +4,8 @@ XCsiSs_Config XCsiSs_ConfigTable[] __attribute__ ((section (".drvcfg_sec"))) = {
 
 	{
 		"xlnx,mipi-csi2-rx-subsystem-6.0", /* compatible */
-		0x80000000, /* reg */
-		0x80001fff, /* xlnx,highaddr */
+		0x80040000, /* reg */
+		0x80041fff, /* xlnx,highaddr */
 		0x0, /* xlnx,cmn-inc-iic */
 		0x2, /* xlnx,cmn-num-lanes */
 		0x1, /* xlnx,cmn-num-pixels */
@@ -32,8 +32,8 @@ XCsiSs_Config XCsiSs_ConfigTable[] __attribute__ ((section (".drvcfg_sec"))) = {
 	},
 	{
 		"xlnx,mipi-csi2-rx-subsystem-6.0", /* compatible */
-		0x80002000, /* reg */
-		0x80003fff, /* xlnx,highaddr */
+		0x80042000, /* reg */
+		0x80043fff, /* xlnx,highaddr */
 		0x0, /* xlnx,cmn-inc-iic */
 		0x2, /* xlnx,cmn-num-lanes */
 		0x1, /* xlnx,cmn-num-pixels */

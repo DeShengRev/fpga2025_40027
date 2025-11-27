@@ -72,7 +72,7 @@ int main() {
   //   remap_preproc_test(mapxy);
 
 
-  isp_stitcher(0b0011, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
+  isp_stitcher(0b10111, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
                (u128a *)mapxy, (u32a *)result_rgba.data);
 
   cv::cvtColor(result_rgba, result, cv::COLOR_RGBA2BGRA);
@@ -82,13 +82,13 @@ int main() {
 
   Sleep(33);
 
-//   isp_stitcher(0b1111, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
-//                (u128a *)mapxy, (u32a *)result_rgba.data);
-//   cv::cvtColor(result_rgba, result, cv::COLOR_RGBA2BGRA);
-//   cv::imwrite(get_path("result1.png"), result);
+  isp_stitcher(0b11111, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
+               (u128a *)mapxy, (u32a *)result_rgba.data);
+  cv::cvtColor(result_rgba, result, cv::COLOR_RGBA2BGRA);
+  cv::imwrite(get_path("result1.png"), result);
 
-//   printf("stitch1 finish\n");
-//   return 0;
+  printf("stitch1 finish\n");
+  return 0;
 }
 
 #endif

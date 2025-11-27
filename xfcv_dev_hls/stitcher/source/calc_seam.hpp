@@ -54,41 +54,49 @@ void calc_seam(xf::cv::Mat<COST_TYPE, _ROWS, _COLS, _NPC, _XFCVDEPTH> &cost,
                u16a *seam_path) {
 
   ap_int<4> track[_ROWS][_COLS] = {0};
-  u32t prev_dp[_COLS] = {0};
-  u32t curr_dp[_COLS] = {0};
+  u32a prev_dp[_COLS] = {0};
+  u32a curr_dp[_COLS] = {0};
 
-  prev_dp[0] = 0xFFFFFFFF;
-  prev_dp[_COLS - 1] = 0xFFFFFFFF;
+  prev_dp[0] = 0x7FFFFFFF;
+  prev_dp[_COLS - 1] = 0x7FFFFFFF;
+  curr_dp[0] = 0x7FFFFFFF;
+  curr_dp[_COLS - 1] = 0x7FFFFFFF;
+
+  int idx = 0;
 
   for (int y = 0; y < _ROWS; ++y) {
-    for (int x = 1; x < _COLS - 1; ++x) {
-#pragma HLS PIPELINE II = 2
-      u32t curr_cost = (u32t)cost.read(y * _COLS + x);
+    for (int x = 0; x < _COLS; ++x) {
+#pragma HLS PIPELINE II = 4
+      u16a curr_cost = cost.read(idx++);
 
-      bool cmp01 = prev_dp[x - 1] < prev_dp[x];
-      bool cmp02 = prev_dp[x - 1] < prev_dp[x + 1];
-      bool cmp12 = prev_dp[x] <= prev_dp[x + 1];
+      if (x > 0 && x < _COLS - 1) {
 
-      if (cmp01 && cmp02) {
-        curr_dp[x] = prev_dp[x - 1] + curr_cost;
-        track[y][x] = -1;
-      } else if ((!cmp01) && cmp12) {
-        curr_dp[x] = prev_dp[x] + curr_cost;
-        track[y][x] = 0;
-      } else {
-        curr_dp[x] = prev_dp[x + 1] + curr_cost;
-        track[y][x] = 1;
+        bool cmp01 = prev_dp[x - 1] < prev_dp[x];
+        bool cmp02 = prev_dp[x - 1] < prev_dp[x + 1];
+        bool cmp12 = prev_dp[x] <= prev_dp[x + 1];
+
+        if (cmp01 && cmp02) {
+          curr_dp[x] = prev_dp[x - 1] + curr_cost;
+          track[y][x] = -1;
+        } else if ((!cmp01) && cmp12) {
+          curr_dp[x] = prev_dp[x] + curr_cost;
+          track[y][x] = 0;
+        } else {
+          curr_dp[x] = prev_dp[x + 1] + curr_cost;
+          track[y][x] = 1;
+        }
       }
     }
 
-    for (int x = 1; x < _COLS - 1; ++x) {
+    for (int x = 0; x < _COLS; ++x) {
       prev_dp[x] = curr_dp[x];
     }
   }
-  u32t min_val = 0xFFFFFFFF;
+  u32t min_val = 0x7FFFFFFF;
   u16t track_x;
 
-  for (int x = 1; x < _COLS - 1; ++x) {
+  for (int x = 0; x < _COLS; ++x) {
+#pragma HLS PIPELINE II = 1
     if (curr_dp[x] < min_val) {
       min_val = curr_dp[x];
       track_x = x;

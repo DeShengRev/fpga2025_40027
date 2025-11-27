@@ -11,7 +11,6 @@
 #include "proj_align.hpp"
 #include "share.h"
 #include "utils.hpp"
-#include <etc/ap_common.h>
 
 template <int _PTYPE, int _ROWS, int _COLS, int _XFCVDEPTH_IN,
           int _XFCVDEPTH_OUT>
@@ -66,7 +65,7 @@ void _128arr_to_mapxy(u16a sel, u128a *m_axi_mapxy, MapPic &mapx0,
 
   constexpr int TOTAL_ITER_N = PROC_HEIGHT * PROC_WIDTH;
   bool input_mapxy = sel[0] && sel[1];
-    
+
   for (int i = 0; i < TOTAL_ITER_N; ++i) {
 #pragma HLS LOOP_TRIPCOUNT max = TOTAL_ITER_N min = TOTAL_ITER_N
 #pragma HLS PIPELINE II = 4
@@ -132,7 +131,7 @@ void _remap_2(SProcPic &img0_i, SProcPic &img1_i, SProcPic &img0_o,
 
 void _stitcher_isp(u16a sel, SProcPic &img0_i, SProcPic &img1_i,
                    SProcPic &img0_o, SProcPic &img1_o, HalfPic &result) {
-  if (sel[0] == 1) {
+  if (sel[0]) {
     _isp_2(img0_i, img1_i, img0_o, img1_o);
   } else {
     _stitch_2_quat(img0_i, img1_i, result);
@@ -155,25 +154,20 @@ void _stitcher_remap(u16a sel, SProcPic &img0_i, SProcPic &img1_i,
   }
 }
 
-void _stitcher_blend(u16a sel, SProcPic &img0_i, SProcPic &img1_i,
-                     HalfPic &last_result, HalfPic &result) {
+void _stitcher_seam_blend(u16a sel, SProcPic &img0_i, SProcPic &img1_i,
+                    HalfPic &last_result, HalfPic &result) {
 
-  static u16a seam_path[COST_HEIGHT];
-  bool draw_seam = sel[3];
-  static bool toggle_pc = true;
+  static u16a seam_path[COST_HEIGHT] = {0};
+  bool draw_seam = sel[4];
 
   if (sel[0] == 0 || sel[1] == 0) {
     _copy_mat(last_result, result);
-  } else if (sel[2] == 1 && toggle_pc) {
-    update_seam(img0_i, img1_i, seam_path, result);
-  } else if (sel[2] == 1 && !toggle_pc) {
-    base_blend(img0_i, img1_i, draw_seam, seam_path, result);
-  } else {
+  } else if (sel[2] == 0) {
     _stitch_2_quat(img0_i, img1_i, result);
-  }
-
-  if (sel[2] == 1) {
-    toggle_pc = !toggle_pc;
+  } else if (sel[3] == 0) {
+    update_seam(img0_i, img1_i, seam_path, result);
+  } else {
+    base_blend(img0_i, img1_i, draw_seam, seam_path, result);
   }
 }
 
@@ -191,7 +185,7 @@ void _stitcher_write(HalfPic &result, u32a *m_axi_out) {
 
 void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
                   u128a *m_axi_mapxy, u32a *m_axi_out) {
-#pragma HLS INTERFACE s_axilite port = sel bundle = CTRL
+#pragma HLS INTERFACE s_axilite port = sel
 #pragma HLS INTERFACE m_axi port = m_axi_in0 bundle = HP0 offset =             \
     slave depth = SRC_PIXELS
 #pragma HLS INTERFACE m_axi port = m_axi_in1 bundle = HP1 offset =             \
@@ -200,7 +194,7 @@ void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
     slave depth = PROC_PIXELS
 #pragma HLS INTERFACE m_axi port = m_axi_out bundle = HP3 offset =             \
     slave depth = SRC_PIXELS
-#pragma HLS INTERFACE s_axilite port = return bundle = CTRL
+#pragma HLS INTERFACE s_axilite port = return
 
 #pragma HLS DATAFLOW
 
@@ -247,8 +241,8 @@ void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
   HalfPic result3;
 #pragma HLS stream type = fifo variable = result3.data
 
-  _stitcher_blend(sel, img0_2, img1_2, result2, result3);
-  printf("pass blend\n");
+  _stitcher_seam_blend(sel, img0_2, img1_2, result2, result3);
+  printf("pass seam_blend\n");
 
   _stitcher_write(result3, m_axi_out);
   printf("pass write\n");
