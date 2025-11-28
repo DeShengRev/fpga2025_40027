@@ -18,7 +18,7 @@
 
 /****************************** Type Definitions ******************************/
 
-typedef enum { CAM0_FRAME, CAM1_FRAME, BINO_FRAME, STCH_FRAME } FrameId;
+typedef enum { CAM0_FRAME, CAM1_FRAME, STCH_FRAME } FrameId;
 
 typedef enum {
   LANE_COUNT_1 = 1,
@@ -65,7 +65,7 @@ void DpPsu_Run(Run_Config *RunCfgPtr);
 void DpPsu_IsrHpdEvent(void *ref);
 void DpPsu_IsrHpdPulse(void *ref);
 
-int DpdmaInit(UINTPTR cam_frame);
+int dpdma_init(UINTPTR cam_frame);
 void switch_screen(FrameId id);
 
 #endif /* SRC_DPDMA_VIDEO_EXAMPLE_H_ */

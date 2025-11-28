@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "11/28/25 00:45:13",
- "timestampMillis": "1764261913711",
+ "dateTimestamp": "11/28/25 16:53:15",
+ "timestampMillis": "1764319995614",
  "buildStep": {
-  "cmdId": "77b5d7f5-7152-412e-a450-49bcb78178b1",
+  "cmdId": "bcd3a35e-d31f-4dd6-affc-889280657807",
   "name": "vitis-run",
   "logFile": "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\stitcher\\logs\\stitcher.steps.log",
   "commandLine": "C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config E:\\Dev\\QianSal\\xfcv_dev_hls\\stitcher\\hls_config.cfg --work_dir stitcher ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/28/25 00:45:13",
- "timestampMillis": "1764261913712",
+ "dateTimestamp": "11/28/25 16:53:15",
+ "timestampMillis": "1764319995615",
  "status": {
-  "cmdId": "77b5d7f5-7152-412e-a450-49bcb78178b1",
+  "cmdId": "bcd3a35e-d31f-4dd6-affc-889280657807",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "11/28/25 00:45:21",
- "timestampMillis": "1764261921194",
+ "dateTimestamp": "11/28/25 16:53:23",
+ "timestampMillis": "1764320003218",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -68,8 +68,6 @@
      "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\blend.hpp",
      "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\calc_seam.cpp",
      "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\calc_seam.hpp",
-     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\proj_align.cpp",
-     "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\proj_align.hpp",
      "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\share.h",
      "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\stitch.cpp",
      "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\source\\stitch.hpp",
@@ -89,10 +87,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "11/28/25 00:45:21",
- "timestampMillis": "1764261921195",
+ "dateTimestamp": "11/28/25 16:53:23",
+ "timestampMillis": "1764320003219",
  "buildStep": {
-  "cmdId": "ee0a605b-2f26-4b7d-b42f-317d49f5caad",
+  "cmdId": "d0df1b18-24d3-4a0d-9531-a71bc3938702",
   "name": "",
   "logFile": "E:/Dev\\QianSal\\xfcv_dev_hls\\stitcher\\stitcher\\hls\\hls.log",
   "commandLine": "",
@@ -105,10 +103,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/28/25 00:45:21",
- "timestampMillis": "1764261921196",
+ "dateTimestamp": "11/28/25 16:53:23",
+ "timestampMillis": "1764320003220",
  "status": {
-  "cmdId": "ee0a605b-2f26-4b7d-b42f-317d49f5caad",
+  "cmdId": "d0df1b18-24d3-4a0d-9531-a71bc3938702",
   "state": "CS_RUNNING"
  }
 }
@@ -116,10 +114,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/28/25 00:47:33",
- "timestampMillis": "1764262053844",
+ "dateTimestamp": "11/28/25 16:55:41",
+ "timestampMillis": "1764320141273",
  "status": {
-  "cmdId": "ee0a605b-2f26-4b7d-b42f-317d49f5caad",
+  "cmdId": "d0df1b18-24d3-4a0d-9531-a71bc3938702",
   "state": "CS_PASSED"
  }
 }
@@ -127,10 +125,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "11/28/25 00:47:33",
- "timestampMillis": "1764262053995",
+ "dateTimestamp": "11/28/25 16:55:41",
+ "timestampMillis": "1764320141429",
  "status": {
-  "cmdId": "77b5d7f5-7152-412e-a450-49bcb78178b1",
+  "cmdId": "bcd3a35e-d31f-4dd6-affc-889280657807",
   "state": "CS_PASSED"
  }
 }
@@ -138,8 +136,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "11/28/25 00:47:33",
- "timestampMillis": "1764262053996",
+ "dateTimestamp": "11/28/25 16:55:41",
+ "timestampMillis": "1764320141430",
  "report": {
   "path": "",
   "name": "",
@@ -152,8 +150,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "11/28/25 00:47:33",
- "timestampMillis": "1764262053996",
+ "dateTimestamp": "11/28/25 16:55:41",
+ "timestampMillis": "1764320141430",
  "report": {
   "path": "",
   "name": "",

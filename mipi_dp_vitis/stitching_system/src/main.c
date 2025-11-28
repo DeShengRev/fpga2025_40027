@@ -7,11 +7,11 @@
 #include "ps_i2c.h"
 #include "share.h"
 #include "sleep.h"
+#include "stitcher.h"
 #include "xgpiops.h"
 #include "xiicps.h"
 #include "xil_cache.h"
 #include "xil_types.h"
-#include "xisp_stitcher.h"
 #include "xparameters.h"
 #include "xv_demosaic.h"
 #include <ctype.h>
@@ -22,25 +22,16 @@
 #include <xil_io.h>
 #include <xil_printf.h>
 #include <xstatus.h>
-#include "stitcher.h"
 
-u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
-    __attribute__((__aligned__(256)));
-u8 cam1_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
-    __attribute__((__aligned__(256)));
-u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
-    __attribute__((__aligned__(256)));
-u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4]
-    __attribute__((__aligned__(256)));
+u8 cam0_frame[SRC_HEIGHT][SRC_WIDTH][4] __attribute__((__aligned__(256)));
+u8 cam1_frame[SRC_HEIGHT][SRC_WIDTH][4] __attribute__((__aligned__(256)));
+u8 stch_frame[SRC_HEIGHT][SRC_WIDTH][4] __attribute__((__aligned__(256)));
 u8 drop[SRC_HEIGHT][SRC_WIDTH][4] __attribute__((__aligned__(256)));
-int mapxy[MAPXY_LEN] __attribute__((__aligned__(256)));
+int mapxy[PROC_HEIGHT][PROC_WIDTH][4] __attribute__((__aligned__(256)));
 
-extern XAxiVdma vdma0, vdma1, vdma2, vdma3, vdma4, vdma5;
-
-extern XIsp_stitcher stc;
 XGpioPs Gpio;
 
-int PsGpioSetup() {
+int ps_gpio_setup() {
   XGpioPs_Config *GPIO_CONFIG;
   int Status;
 
@@ -89,14 +80,14 @@ int main(void) {
   Xil_ICacheDisable();
   Xil_DCacheDisable();
 
-  PsGpioSetup();
+  ps_gpio_setup();
   cam_init_all();
   demosaic_init_all();
   gamma_lut_init_all();
   vdma_init_all();
 
   stitcher_init();
-  DpdmaInit((UINTPTR)stch_frame[0]);
+  dpdma_init((UINTPTR)stch_frame);
 
   msleep(1000);
 
@@ -104,10 +95,6 @@ int main(void) {
   Xil_DCacheEnable();
 
   load_mapxy();
-  //   buffer_init(cam0_frame, 0xFFFF0000, FRAME_PIXELS);
-  //   buffer_init(cam1_frame, 0xFF0000FF, FRAME_PIXELS);
-  //   buffer_init(bino_frame, 0xFF00FF00, FRAME_PIXELS);
-  //   buffer_init(stch_frame, 0xFFFFFFFF, FRAME_PIXELS);
   Xil_DCacheFlush();
   Xil_DCacheInvalidate();
 
@@ -146,8 +133,7 @@ int main(void) {
 
   msleep(100);
   while (1) {
-      udpate_seam();
-      select_blend();
-      
+    write_orig(stch_frame);
+    // write_remap(stch_frame[540]);
   }
 }

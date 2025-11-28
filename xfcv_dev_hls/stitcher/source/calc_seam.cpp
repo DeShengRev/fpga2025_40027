@@ -3,6 +3,11 @@
 #include "share.h"
 #include "utils.hpp"
 
+#ifndef __SYNTHESIS__
+cv::Mat cost_cv(COST_HEIGHT, COST_WIDTH, CV_8UC1);
+cv::Mat cost_cv_bgr(COST_HEIGHT, COST_WIDTH, CV_8UC3);
+#endif
+
 void _extract_op0(SProcPic &img0, OverlapPic &op0) {
   int idx = 0, op_idx = 0;
   for (int y = 0; y < PROC_HEIGHT; ++y) {

@@ -72,7 +72,7 @@ int main() {
   //   remap_preproc_test(mapxy);
 
 
-  isp_stitcher(0b10111, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
+  isp_stitcher(0b00111, (u32a *)img0_rgba.data, (u32a *)img1_rgba.data,
                (u128a *)mapxy, (u32a *)result_rgba.data);
 
   cv::cvtColor(result_rgba, result, cv::COLOR_RGBA2BGRA);

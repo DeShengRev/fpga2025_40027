@@ -1,4 +1,5 @@
 
+#pragma once
 
 #include "common/xf_types.hpp"
 #include "share.h"

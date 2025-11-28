@@ -36,8 +36,6 @@ XDpDma_FrameBuffer FrameBuffer;
 extern u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 cam1_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
-extern u8 bino_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
-extern u8 remap_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
 
 void switch_screen(FrameId id) {
 
@@ -49,13 +47,13 @@ void switch_screen(FrameId id) {
     frame_ptr = (u8 *)cam0_frame;
   } else if (id == CAM1_FRAME) {
     frame_ptr = (u8 *)cam1_frame;
-  } else if (id == BINO_FRAME) {
-    frame_ptr = (u8 *)bino_frame;
   } else if (id == STCH_FRAME) {
     frame_ptr = (u8 *)stch_frame;
   } else {
     return;
   }
+
+  
   FrameBuffer.Address = (UINTPTR)frame_ptr;
   XDpDma_DisplayGfxFrameBuffer(RunCfg.DpDmaPtr, &FrameBuffer);
 
@@ -64,7 +62,7 @@ void switch_screen(FrameId id) {
   Xil_DCacheEnable();
 }
 
-int DpdmaInit(UINTPTR cam_frame) {
+int dpdma_init(UINTPTR frame_addr) {
   xil_printf("DPDMA Generic Video Example Test \r\n");
 
   u32 Status;
@@ -80,7 +78,7 @@ int DpdmaInit(UINTPTR cam_frame) {
   }
 
   /* Populate the FrameBuffer structure with the frame attributes */
-  FrameBuffer.Address = cam_frame;
+  FrameBuffer.Address = frame_addr;
   FrameBuffer.Stride = HORSIZE;
   FrameBuffer.LineSize = HORSIZE;
   FrameBuffer.Size = BUFFERSIZE;

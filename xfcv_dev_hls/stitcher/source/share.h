@@ -54,8 +54,6 @@ typedef int16_t i16t;
 #define PROC_HEIGHT 540
 #define PROC_WIDTH 960
 
-#define DST_HEIGHT 1080
-#define DST_WIDTH 1920
 
 constexpr int SRC_PIXELS = SRC_HEIGHT * SRC_WIDTH;
 constexpr int HALF_PIXELS = PROC_HEIGHT * SRC_WIDTH;

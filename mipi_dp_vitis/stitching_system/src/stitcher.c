@@ -23,37 +23,55 @@ void stitcher_init() {
   XIsp_stitcher_Set_m_axi_mapxy(&stc, (u64)mapxy);
   XIsp_stitcher_Set_m_axi_out(&stc, (u64)stch_frame);
   XIsp_stitcher_Set_sel(&stc, 0b0000);
-  
+
   XIsp_stitcher_DisableAutoRestart(&stc);
 
   xil_printf("Stitcher module at %p initialized\n",
              XPAR_XISP_STITCHER_0_BASEADDR);
 }
 
-void start_stitching(u16 sel) {
-  XIsp_stitcher_Set_sel(&stc, (u32)sel);
-  XIsp_stitcher_Start(&stc);
-}
 void wait_stitching() {
-  while (!XIsp_stitcher_IsIdle(&stc)) ;
+  while (!XIsp_stitcher_IsIdle(&stc))
+    ;
 }
 
-
-
-void udpate_seam()
-{
-  XIsp_stitcher_Set_sel(&stc, 0b10111);
-  XIsp_stitcher_Set_m_axi_out(&stc, (u64) drop);
+void write_orig(u8 *addr) {
+  XIsp_stitcher_Set_sel(&stc, 0b00000);
+  XIsp_stitcher_Set_m_axi_out(&stc, (u64)addr);
   XIsp_stitcher_Start(&stc);
   wait_stitching();
 }
 
-void select_blend()
-{
-  XIsp_stitcher_Set_sel(&stc, 0b11111);
-  XIsp_stitcher_Set_m_axi_out(&stc, (u64) stch_frame);
+void write_isp(u8 *addr) {
+  XIsp_stitcher_Set_sel(&stc, 0b00001);
+  XIsp_stitcher_Set_m_axi_out(&stc, (u64)addr);
   XIsp_stitcher_Start(&stc);
   wait_stitching();
-
 }
-void select_blend();
+
+void write_remap(u8 *addr) {
+
+  XIsp_stitcher_Set_sel(&stc, 0b00011);
+  XIsp_stitcher_Set_m_axi_out(&stc, (u64)addr);
+  XIsp_stitcher_Start(&stc);
+  wait_stitching();
+}
+
+void write_blend(u8 *addr, u8 draw_seam) {
+
+  u16 sel = 0b01111;
+  sel = sel | ((draw_seam & 1) << 4);
+
+  XIsp_stitcher_Set_sel(&stc, sel);
+  XIsp_stitcher_Set_m_axi_out(&stc, (u64)addr);
+
+  XIsp_stitcher_Start(&stc);
+  wait_stitching();
+}
+
+void udpate_seam() {
+  XIsp_stitcher_Set_sel(&stc, 0b00111);
+  XIsp_stitcher_Set_m_axi_out(&stc, (u64)drop);
+  XIsp_stitcher_Start(&stc);
+  wait_stitching();
+}

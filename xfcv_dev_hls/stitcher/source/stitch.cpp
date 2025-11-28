@@ -11,6 +11,7 @@
 #include "proj_align.hpp"
 #include "share.h"
 #include "utils.hpp"
+#include <ap_fixed.h>
 
 template <int _PTYPE, int _ROWS, int _COLS, int _XFCVDEPTH_IN,
           int _XFCVDEPTH_OUT>
@@ -63,11 +64,9 @@ void _32arr_to_24mat(
 void _128arr_to_mapxy(u16a sel, u128a *m_axi_mapxy, MapPic &mapx0,
                       MapPic &mapy0, MapPic &mapx1, MapPic &mapy1) {
 
-  constexpr int TOTAL_ITER_N = PROC_HEIGHT * PROC_WIDTH;
   bool input_mapxy = sel[0] && sel[1];
 
-  for (int i = 0; i < TOTAL_ITER_N; ++i) {
-#pragma HLS LOOP_TRIPCOUNT max = TOTAL_ITER_N min = TOTAL_ITER_N
+  for (int i = 0; i < PROC_HEIGHT * PROC_WIDTH; ++i) {
 #pragma HLS PIPELINE II = 4
 
     u128a val = m_axi_mapxy[i];
@@ -95,16 +94,33 @@ void _24mat_to_32arr(xf::cv::Mat<XF_8UC3, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_src,
   }
 }
 
+inline u8a _clamp_multiply(ap_ufixed<16, 2> gain, u8a val) {
+  ap_ufixed<24, 10> product = val * gain;
+  if (product > 255) {
+    product = 255;
+  }
+
+  return (u8a)product;
+}
+
 void isp(SProcPic &_src, SProcPic &_dst) {
+
+  static ap_ufixed<16, 2> r_gain = 1.33400;
+  static ap_ufixed<16, 2> b_gain = 1.55053;
+
   int idx = 0;
   for (int y = 0; y < PROC_HEIGHT; ++y) {
     for (int x = 0; x < PROC_WIDTH; ++x) {
-
+#pragma HLS PIPELINE II=2
       u24a val = _src.read(idx);
       u24a valp = 0;
-      valp.range(7, 0) = val.range(23, 16);
-      valp.range(15, 8) = val.range(15, 8);
-      valp.range(23, 16) = val.range(7, 0);
+
+      u8a val_b = val.range(23, 16);
+      u8a val_g = val.range(15, 8);
+      u8a val_r = val.range(7, 0);
+      valp.range(23, 16) = _clamp_multiply(b_gain, val_b);
+      valp.range(15, 8) = val_g;
+      valp.range(7, 0) = _clamp_multiply(r_gain, val_r);
       _dst.write(idx, valp);
       ++idx;
     }
@@ -155,7 +171,7 @@ void _stitcher_remap(u16a sel, SProcPic &img0_i, SProcPic &img1_i,
 }
 
 void _stitcher_seam_blend(u16a sel, SProcPic &img0_i, SProcPic &img1_i,
-                    HalfPic &last_result, HalfPic &result) {
+                          HalfPic &last_result, HalfPic &result) {
 
   static u16a seam_path[COST_HEIGHT] = {0};
   bool draw_seam = sel[4];

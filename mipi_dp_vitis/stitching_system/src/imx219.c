@@ -105,8 +105,8 @@ int imx219_init(XIicPs *iic, u32 BaseAddress) {
   imx219_write(iic, 0x4793, 0x10);
   imx219_write(iic, 0x4797, 0x0E);
   imx219_write(iic, 0x479B, 0x0E);
-  imx219_write(iic, IMX219_ANA_GAIN_GLOBAL, 225);
-  imx219_write(iic, IMX219_COARSE_INT_TIME_HI, 0x0A);
+  imx219_write(iic, IMX219_ANA_GAIN_GLOBAL, 200);
+  imx219_write(iic, IMX219_COARSE_INT_TIME_HI, 0x08);
 
   imx219_write(iic, 0x0100, 0x01);
 
