@@ -94,7 +94,7 @@
 			xlnx,flush-fsync = <0x1>;
 			xlnx,select-xpm = <0>;
 			xlnx,s2mm-data-width = <0x40>;
-			xlnx,num-fstores = <0x1>;
+			xlnx,num-fstores = <0x3>;
 			xlnx,enable-s2mm-param-updt = <0>;
 			xlnx,enable-vidparam-reads = <0x1>;
 			xlnx,mm2s-genlock-repeat-en = <0>;
@@ -194,7 +194,7 @@
 			xlnx,flush-fsync = <0x1>;
 			xlnx,select-xpm = <0>;
 			xlnx,s2mm-data-width = <0x40>;
-			xlnx,num-fstores = <0x1>;
+			xlnx,num-fstores = <0x3>;
 			xlnx,enable-s2mm-param-updt = <0>;
 			xlnx,enable-vidparam-reads = <0x1>;
 			xlnx,mm2s-genlock-repeat-en = <0>;
@@ -229,7 +229,7 @@
 		};
 		isp_stitcher_0: isp_stitcher@80020000 {
 			compatible = "xlnx,isp-stitcher-1.0";
-			xlnx,ii = <8302182>;
+			xlnx,ii = <4151144>;
 			xlnx,machine = <64>;
 			xlnx,s-axi-control-addr-width = <7>;
 			xlnx,ip-name = "isp_stitcher";
@@ -241,7 +241,7 @@
 			status = "okay";
 			clock-names = "ap_clk";
 			xlnx,combinational = <0>;
-			xlnx,latency = <8302190>;
+			xlnx,latency = <4151149>;
 			xlnx,name = "isp_stitcher_0";
 		};
 		mipi_csi2_rx_subsyst_0: mipi_csi2_rx_subsystem@80040000 {

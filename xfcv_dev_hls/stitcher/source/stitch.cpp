@@ -48,26 +48,28 @@ void _stitch_2_quat(SProcPic &img0, SProcPic &img1, HalfPic &result) {
   _copy_mat_2(img0, img1, img0_l, img1_l);
   _stitch_2_quat_core(img0_l, img1_l, result);
 }
-template <int _ROWS, int _COLS, int _XFCVDEPTH_IN>
-void _32arr_to_24mat(
-    u32a *_src, xf::cv::Mat<XF_8UC3, _ROWS, _COLS, 1, _XFCVDEPTH_IN> &_dst) {
 
-  constexpr int TOTAL_ITER_N = _ROWS * _COLS;
-  for (int i = 0; i < TOTAL_ITER_N; ++i) {
-#pragma HLS LOOP_TRIPCOUNT max = TOTAL_ITER_N min = TOTAL_ITER_N
+template <int _ROWS, int _COLS, int _XFCVDEPTH_IN>
+void read_cam_frame(
+    u64a *_src, xf::cv::Mat<XF_8UC3, _ROWS, _COLS, 2, _XFCVDEPTH_IN> &_dst) {
+
+  for (int i = 0; i < _ROWS * _COLS / 2; ++i) {
 #pragma HLS PIPELINE II = 1
-    u24a val = _src[i].range(23, 0);
+    u64a val = _src[i];
+    u48a valp = 0;
+    valp.range(47, 24) = val.range(55, 32);
+    valp.range(23, 0) = val.range(23, 0);
     _dst.write(i, val);
   }
 }
 
-void _128arr_to_mapxy(u16a sel, u128a *m_axi_mapxy, MapPic &mapx0,
-                      MapPic &mapy0, MapPic &mapx1, MapPic &mapy1) {
+void read_mapxy(u16a sel, u128a *m_axi_mapxy, MapPic &mapx0, MapPic &mapy0,
+                MapPic &mapx1, MapPic &mapy1) {
 
   bool input_mapxy = sel[0] && sel[1];
 
   for (int i = 0; i < PROC_HEIGHT * PROC_WIDTH; ++i) {
-#pragma HLS PIPELINE II = 4
+#pragma HLS PIPELINE II = 2
 
     u128a val = m_axi_mapxy[i];
     if (input_mapxy) {
@@ -111,7 +113,7 @@ void isp(SProcPic &_src, SProcPic &_dst) {
   int idx = 0;
   for (int y = 0; y < PROC_HEIGHT; ++y) {
     for (int x = 0; x < PROC_WIDTH; ++x) {
-#pragma HLS PIPELINE II=2
+#pragma HLS PIPELINE II = 2
       u24a val = _src.read(idx);
       u24a valp = 0;
 
@@ -199,7 +201,24 @@ void _stitcher_write(HalfPic &result, u32a *m_axi_out) {
   }
 }
 
-void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
+template <int _ROWS, int _COLS, int _XFCVDEPTH_IN, int _XFCVDEPTH_OUT>
+void _convert_npc(xf::cv::Mat<SRC_TYPE, _ROWS, _COLS, 2, _XFCVDEPTH_IN> &_src,
+                  xf::cv::Mat<SRC_TYPE, _ROWS, _COLS, 1, _XFCVDEPTH_OUT> &_dst) {
+
+  int idx = 0;
+
+  for (int i = 0; i < _ROWS * _COLS / 2; ++i) {
+#pragma HLS PIPELINE II = 2
+    u48a val = _src.read(i);
+    u24a val0 = val.range(23, 0);
+    u24a val1 = val.range(47, 24);
+
+    _dst.write(idx++, val0);
+    _dst.write(idx++, val1);
+  }
+}
+
+void isp_stitcher(u16a sel, u64a *m_axi_in0, u64a *m_axi_in1,
                   u128a *m_axi_mapxy, u32a *m_axi_out) {
 #pragma HLS INTERFACE s_axilite port = sel
 #pragma HLS INTERFACE m_axi port = m_axi_in0 bundle = HP0 offset =             \
@@ -223,26 +242,35 @@ void isp_stitcher(u16a sel, u32a *m_axi_in0, u32a *m_axi_in1,
 #pragma HLS stream type = fifo variable = mapx1.data
 #pragma HLS stream type = fifo variable = mapy1.data
 
-  SProcPic img0_res, img1_res;
+  xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, 2, 8> img0_res, img1_res;
+  xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, 1, 8> img0_res_cp, img1_res_cp;
 #pragma HLS stream type = fifo variable = img0_res.data
 #pragma HLS stream type = fifo variable = img1_res.data
+#pragma HLS stream type = fifo variable = img0_res_cp.data
+#pragma HLS stream type = fifo variable = img1_res_cp.data
 
-  _32arr_to_24mat(m_axi_in0, img0);
-  _32arr_to_24mat(m_axi_in1, img1);
-  _128arr_to_mapxy(sel, m_axi_mapxy, mapx0, mapy0, mapx1, mapy1);
+  read_cam_frame(m_axi_in0, img0);
+  read_cam_frame(m_axi_in1, img1);
+  read_mapxy(sel, m_axi_mapxy, mapx0, mapy0, mapx1, mapy1);
 
   xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
-                 PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img0, img0_res);
+                 PROC_HEIGHT, PROC_WIDTH, 2, false, 2>(img0, img0_res);
   xf::cv::resize<XF_INTERPOLATION_NN, SRC_TYPE, SRC_HEIGHT, SRC_WIDTH,
-                 PROC_HEIGHT, PROC_WIDTH, NPPCX, false, 2>(img1, img1_res);
+                 PROC_HEIGHT, PROC_WIDTH, 2, false, 2>(img1, img1_res);
   printf("pass resize\n");
+
+  
+_convert_npc(img0_res, img0_res_cp);
+_convert_npc(img1_res, img1_res_cp);
+
 
   SProcPic img0_1, img1_1;
   HalfPic result1;
 #pragma HLS stream type = fifo variable = img0_1.data
 #pragma HLS stream type = fifo variable = img1_1.data
 #pragma HLS stream type = fifo variable = result1.data
-  _stitcher_isp(sel, img0_res, img1_res, img0_1, img1_1, result1);
+
+_stitcher_isp(sel, img0_res_cp, img1_res_cp, img0_1, img1_1, result1);
   printf("pass isp\n");
 
   SProcPic img0_2, img1_2;

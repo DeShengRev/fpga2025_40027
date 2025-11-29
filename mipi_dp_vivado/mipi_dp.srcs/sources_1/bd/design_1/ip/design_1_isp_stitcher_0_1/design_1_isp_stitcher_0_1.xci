@@ -4,13 +4,13 @@
     "xci_name": "design_1_isp_stitcher_0_1",
     "cell_name": "isp_stitcher_0",
     "component_reference": "xilinx.com:hls:isp_stitcher:1.0",
-    "ip_revision": "2114367298",
+    "ip_revision": "2114369309",
     "gen_directory": "../../../../../../mipi_dp.gen/sources_1/bd/design_1/ip/design_1_isp_stitcher_0_1",
     "parameters": {
       "component_parameters": {
         "C_M_AXI_HP0_ENABLE_ID_PORTS": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_M_AXI_HP0_ID_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_M_AXI_HP0_DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_M_AXI_HP0_DATA_WIDTH": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_M_AXI_HP0_ENABLE_USER_PORTS": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_M_AXI_HP0_AWUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "C_M_AXI_HP0_WUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
@@ -22,7 +22,7 @@
         "C_M_AXI_HP0_CACHE_VALUE": [ { "value": "\"0011\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M_AXI_HP1_ENABLE_ID_PORTS": [ { "value": "true", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_M_AXI_HP1_ID_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "C_M_AXI_HP1_DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_M_AXI_HP1_DATA_WIDTH": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_M_AXI_HP1_ENABLE_USER_PORTS": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "C_M_AXI_HP1_AWUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "C_M_AXI_HP1_WUSER_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
@@ -60,8 +60,8 @@
         "clk_period": [ { "value": "10", "enabled": false, "usage": "all" } ],
         "machine": [ { "value": "64", "enabled": false, "usage": "all" } ],
         "combinational": [ { "value": "0", "enabled": false, "usage": "all" } ],
-        "latency": [ { "value": "8302190", "enabled": false, "usage": "all" } ],
-        "II": [ { "value": "8302182", "enabled": false, "usage": "all" } ]
+        "latency": [ { "value": "4151149", "enabled": false, "usage": "all" } ],
+        "II": [ { "value": "4151144", "enabled": false, "usage": "all" } ]
       },
       "model_parameters": {
         "C_S_AXI_CONTROL_ADDR_WIDTH": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -126,7 +126,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2114367298" } ],
+        "IPREVISION": [ { "value": "2114369309" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../mipi_dp.gen/sources_1/bd/design_1/ip/design_1_isp_stitcher_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

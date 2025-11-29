@@ -3,7 +3,6 @@
 #include "calc_seam.hpp"
 #include "share.h"
 #include "utils.hpp"
-#include <etc/ap_common.h>
 
 // void pyramid_blend(ProcPic &img0, ProcPic &img1, hls::stream<u16t>
 // &seam_path,

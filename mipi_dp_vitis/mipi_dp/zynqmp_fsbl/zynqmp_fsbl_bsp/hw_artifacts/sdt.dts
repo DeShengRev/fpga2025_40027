@@ -4080,7 +4080,7 @@
                         xlnx,flush-fsync = <0x1>;
                         xlnx,select-xpm = <0x0>;
                         xlnx,s2mm-data-width = <0x40>;
-                        xlnx,num-fstores = <0x1>;
+                        xlnx,num-fstores = <0x3>;
                         xlnx,enable-s2mm-param-updt = <0x0>;
                         xlnx,enable-vidparam-reads = <0x1>;
                         xlnx,mm2s-genlock-repeat-en = <0x0>;
@@ -4186,7 +4186,7 @@
                         xlnx,flush-fsync = <0x1>;
                         xlnx,select-xpm = <0x0>;
                         xlnx,s2mm-data-width = <0x40>;
-                        xlnx,num-fstores = <0x1>;
+                        xlnx,num-fstores = <0x3>;
                         xlnx,enable-s2mm-param-updt = <0x0>;
                         xlnx,enable-vidparam-reads = <0x1>;
                         xlnx,mm2s-genlock-repeat-en = <0x0>;
@@ -4225,7 +4225,7 @@
 
                 isp_stitcher_0: isp_stitcher@80020000 {
                         compatible = "xlnx,isp-stitcher-1.0";
-                        xlnx,ii = <0x7eae66>;
+                        xlnx,ii = <0x3f5768>;
                         xlnx,machine = <0x40>;
                         xlnx,s-axi-control-addr-width = <0x7>;
                         xlnx,ip-name = "isp_stitcher";
@@ -4237,7 +4237,7 @@
                         status = "okay";
                         clock-names = "ap_clk";
                         xlnx,combinational = <0x0>;
-                        xlnx,latency = <0x7eae6e>;
+                        xlnx,latency = <0x3f576d>;
                         xlnx,name = "isp_stitcher_0";
                         phandle = <0xc>;
                 };

@@ -7,7 +7,8 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
@@ -4252,10 +4253,18 @@
       },
       "isp_stitcher_0": {
         "vlnv": "xilinx.com:hls:isp_stitcher:1.0",
-        "ip_revision": "2114367298",
+        "ip_revision": "2114369309",
         "xci_name": "design_1_isp_stitcher_0_1",
         "xci_path": "ip\\design_1_isp_stitcher_0_1\\design_1_isp_stitcher_0_1.xci",
         "inst_hier_path": "isp_stitcher_0",
+        "parameters": {
+          "C_M_AXI_HP0_DATA_WIDTH": {
+            "value": "32"
+          },
+          "C_M_AXI_HP1_DATA_WIDTH": {
+            "value": "32"
+          }
+        },
         "interface_ports": {
           "m_axi_HP0": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -4790,8 +4799,8 @@
           "mipi_csi2_rx_subsyst_1/lite_aresetn",
           "mipi_csi2_rx_subsyst_0/lite_aresetn",
           "mipi_csi2_rx_subsyst_0/video_aresetn",
-          "isp_stitcher_0/ap_rst_n",
-          "smartconnect_2/aresetn"
+          "smartconnect_2/aresetn",
+          "isp_stitcher_0/ap_rst_n"
         ]
       },
       "xlconcat_0_dout": {
@@ -4828,8 +4837,8 @@
           "zynq_ultra_ps_e_0/saxihpc0_fpd_aclk",
           "zynq_ultra_ps_e_0/saxihp2_fpd_aclk",
           "zynq_ultra_ps_e_0/saxihp3_fpd_aclk",
-          "isp_stitcher_0/ap_clk",
-          "smartconnect_2/aclk"
+          "smartconnect_2/aclk",
+          "isp_stitcher_0/ap_clk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_clk2": {

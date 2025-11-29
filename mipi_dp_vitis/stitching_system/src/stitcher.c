@@ -1,10 +1,13 @@
 
 #include "share.h"
+#include <sleep.h>
+#include <string.h>
+#include <xil_cache.h>
 #include <xisp_stitcher.h>
 
-extern u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
-extern u8 cam1_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
-extern u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
+extern u8 cam0_frame[SRC_HEIGHT][SRC_WIDTH][4];
+extern u8 cam1_frame[SRC_HEIGHT][SRC_WIDTH][4];
+extern u8 stch_frame[SRC_HEIGHT][SRC_WIDTH][4];
 extern u8 drop[SRC_HEIGHT][SRC_WIDTH][4];
 extern int mapxy[MAPXY_LEN];
 
@@ -74,4 +77,68 @@ void udpate_seam() {
   XIsp_stitcher_Set_m_axi_out(&stc, (u64)drop);
   XIsp_stitcher_Start(&stc);
   wait_stitching();
+}
+
+void _sw_stch(u8 id, u8 *addr) {
+  if (id == 1) {
+    write_orig(addr);
+  } else if (id == 2) {
+    write_isp(addr);
+  } else if (id == 3) {
+    write_remap(addr);
+  } else if (id == 4) {
+    udpate_seam();
+    write_blend(addr, 0);
+    write_blend(addr, 0);
+    write_blend(addr, 0);
+    write_blend(addr, 0);
+    write_blend(addr, 0);
+    write_blend(addr, 0);
+  } else if (id == 5) {
+    udpate_seam();
+    write_blend(addr, 1);
+    write_blend(addr, 1);
+    write_blend(addr, 1);
+    write_blend(addr, 1);
+    write_blend(addr, 1);
+    write_blend(addr, 1);
+  }
+}
+
+u8 clear_all = 0;
+u8 clear_1 = 0;
+void display_stitch(u8 id0, u8 id1) {
+  if (id0 == 0 && id1 == 0) {
+    if (!clear_all) {
+      Xil_DCacheDisable();
+      msleep(100);
+      memset(stch_frame, 0, BUFFERSIZE);
+      clear_all = 1;
+      msleep(100);
+      Xil_DCacheEnable();
+    }
+    write_orig((u8 *)drop);
+  } else if (id0 == 0 && id1 != 0) {
+    id0 = id1;
+    id1 = 0;
+  }
+
+  if (id1 == 0) {
+    clear_all = 1;
+    if (!clear_1) {
+      Xil_DCacheDisable();
+      msleep(100);
+      memset(stch_frame[540], 0, BUFFERSIZE / 2);
+      clear_1 = 1;
+
+      msleep(100);
+      Xil_DCacheEnable();
+    }
+    _sw_stch(id0, (u8 *)stch_frame);
+  } else {
+    clear_all = 1;
+    clear_1 = 1;
+    _sw_stch(id0, (u8 *)stch_frame);
+    _sw_stch(id1, (u8 *)stch_frame[540]);
+  }
 }

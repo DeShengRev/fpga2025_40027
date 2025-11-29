@@ -5,7 +5,7 @@ XAxiVdma_Config XAxiVdma_ConfigTable[] __attribute__ ((section (".drvcfg_sec")))
 	{
 		"xlnx,axi-vdma-6.3", /* compatible */
 		0x80000000, /* reg */
-		0x1, /* xlnx,num-fstores */
+		0x3, /* xlnx,num-fstores */
 		0x0, /* xlnx,include-mm2s */
 		0x0, /* xlnx,include-mm2s-dre */
 		0x40, /* xlnx,mm2s-data-width */
@@ -41,7 +41,7 @@ XAxiVdma_Config XAxiVdma_ConfigTable[] __attribute__ ((section (".drvcfg_sec")))
 	{
 		"xlnx,axi-vdma-6.3", /* compatible */
 		0x80010000, /* reg */
-		0x1, /* xlnx,num-fstores */
+		0x3, /* xlnx,num-fstores */
 		0x0, /* xlnx,include-mm2s */
 		0x0, /* xlnx,include-mm2s-dre */
 		0x40, /* xlnx,mm2s-data-width */
