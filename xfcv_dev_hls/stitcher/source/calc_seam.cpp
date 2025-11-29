@@ -65,14 +65,14 @@ void update_seam(SProcPic &img0, SProcPic &img1, u16a *seam_path,
   _extract_op0(img0, op0);
   _extract_op1(img1, op1);
 
-  xf::cv::Mat<SRC_TYPE, COST_HEIGHT, COST_WIDTH, NPPCX, 64> op0_res, op1_res;
-  xf::cv::Mat<XF_16UC1, COST_HEIGHT, COST_WIDTH, NPPCX, 64> cost;
+  xf::cv::Mat<SRC_TYPE, COST_HEIGHT, COST_WIDTH, 1, 64> op0_res, op1_res;
+  xf::cv::Mat<XF_16UC1, COST_HEIGHT, COST_WIDTH, 1, 64> cost;
 
   xf::cv::resize<XF_INTERPOLATION_BILINEAR, SRC_TYPE, PROC_HEIGHT,
-                 OVERLAP_WIDTH, COST_HEIGHT, COST_WIDTH, NPPCX, false,
+                 OVERLAP_WIDTH, COST_HEIGHT, COST_WIDTH, 1, false,
                  COST_SCALE>(op0, op0_res);
   xf::cv::resize<XF_INTERPOLATION_BILINEAR, SRC_TYPE, PROC_HEIGHT,
-                 OVERLAP_WIDTH, COST_HEIGHT, COST_WIDTH, NPPCX, false,
+                 OVERLAP_WIDTH, COST_HEIGHT, COST_WIDTH, 1, false,
                  COST_SCALE>(op1, op1_res);
 
   calc_cost_map(op0_res, op1_res, cost);

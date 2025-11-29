@@ -33,9 +33,9 @@ XScuGic Intr;
 Run_Config RunCfg;
 XDpDma_FrameBuffer FrameBuffer;
 
-extern u8 cam0_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
-extern u8 cam1_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
-extern u8 stch_frame[DISPLAY_NUM_FRAMES][SRC_HEIGHT][SRC_WIDTH][4];
+extern u8 cam0_frame[SRC_HEIGHT][SRC_WIDTH][4];
+extern u8 cam1_frame[SRC_HEIGHT][SRC_WIDTH][4];
+extern u8 stch_frame[SRC_HEIGHT][SRC_WIDTH][4];
 
 void switch_screen(FrameId id) {
 

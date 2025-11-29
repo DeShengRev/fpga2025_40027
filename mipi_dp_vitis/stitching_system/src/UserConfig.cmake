@@ -38,6 +38,7 @@ set(USER_COMPILE_SOURCES
 "vdma.c"
 "ccv.c"
 "ps_sd.c"
+"ps_uart.c"
 )
 
 # -----------------------------------------

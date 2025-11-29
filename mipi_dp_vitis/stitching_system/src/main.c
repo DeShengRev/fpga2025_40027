@@ -29,6 +29,9 @@ u8 stch_frame[SRC_HEIGHT][SRC_WIDTH][4] __attribute__((__aligned__(256)));
 u8 drop[SRC_HEIGHT][SRC_WIDTH][4] __attribute__((__aligned__(256)));
 int mapxy[PROC_HEIGHT][PROC_WIDTH][4] __attribute__((__aligned__(256)));
 
+u8 recv_cmd = 0;
+u8 display[2] = {0};
+
 XGpioPs Gpio;
 
 int ps_gpio_setup() {
@@ -79,8 +82,8 @@ void printx(u8 *start, int len) {
 int main(void) {
   Xil_ICacheDisable();
   Xil_DCacheDisable();
-
   ps_gpio_setup();
+  uart_init();
   cam_init_all();
   demosaic_init_all();
   gamma_lut_init_all();
@@ -133,7 +136,21 @@ int main(void) {
 
   msleep(100);
   while (1) {
-    write_orig(stch_frame);
-    // write_remap(stch_frame[540]);
+
+    if (recv_cmd) {
+      recv_cmd = 0;
+      if (display[0] == 6) {
+        switch_screen(CAM0_FRAME);
+      } else if (display[1] == 6) {
+        switch_screen(CAM1_FRAME);
+
+      } else {
+        switch_screen(STCH_FRAME);
+      }
+    }
+
+    if (display[0] != 6 && display[1] != 6) {
+      display_stitch(display[0], display[1]);
+    }
   }
 }

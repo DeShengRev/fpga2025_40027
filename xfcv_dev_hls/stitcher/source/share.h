@@ -36,7 +36,9 @@
 typedef ap_uint<8> u8a;
 typedef ap_uint<16> u16a;
 typedef ap_uint<24> u24a;
+typedef ap_uint<48> u48a;
 typedef ap_uint<32> u32a;
+typedef ap_uint<64> u64a;
 typedef ap_uint<128> u128a;
 
 typedef uint8_t u8t;
@@ -69,29 +71,28 @@ constexpr int OVERALL_WIDTH = PROC_WIDTH + UNDERLAP_WIDTH;
 #define REMAP_WIN_ROWS0 22
 #define REMAP_WIN_ROWS1 22
 
-#define NPPCX XF_NPPC1
-#define SRC_TYPE XF_8UC3
 
-#define XF_CV_DEPTH 4
+#define SRC_TYPE XF_8UC3
 #define XF_CV_DEPTH_SRC 2048
 #define XF_CV_DEPTH_PROC 1024
 
 #define HALF_BLENDING_WIDTH 32
 #define BLENDING_SHIFT 6
+
 constexpr int BLENDING_WIDTH = 2 * HALF_BLENDING_WIDTH + 1;
 
 
-typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, SRC_WIDTH, NPPCX, 1024>
+typedef xf::cv::Mat<XF_8UC3, SRC_HEIGHT, SRC_WIDTH, 2, 4> SrcPic;
+typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, SRC_WIDTH, 1, 1024>
     HalfPic;
-typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX, 4>
+typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, 1, 8>
     SProcPic;
-typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX, 1024>
+typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, PROC_WIDTH, 1, 1024>
     LProcPic;
-typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, UNDERLAP_WIDTH, NPPCX, XF_CV_DEPTH>
+typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, UNDERLAP_WIDTH, 1, 4>
     UnderlapPic;
-typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, OVERLAP_WIDTH, NPPCX, 512>
+typedef xf::cv::Mat<SRC_TYPE, PROC_HEIGHT, OVERLAP_WIDTH, 1, 512>
     OverlapPic;
-typedef xf::cv::Mat<SRC_TYPE, SRC_HEIGHT, SRC_WIDTH, NPPCX, 2048> SrcPic;
-typedef xf::cv::Mat<MAPXY_TYPE, PROC_HEIGHT, PROC_WIDTH, NPPCX, 1024>
+typedef xf::cv::Mat<MAPXY_TYPE, PROC_HEIGHT, PROC_WIDTH, 1, 1024>
     MapPic;
     
